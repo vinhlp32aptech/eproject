@@ -144,7 +144,7 @@
           <div class="row align-items-center">
             <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
               <h1>About WaterBoat</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+              <p>The 5-star cruise will give you the opportunity to enjoy great food with all entertainment services on par with the royal class.</p>
               <p><a href="#" class="btn btn-primary py-3 px-5">Contact</a></p>
             </div>
           </div>
