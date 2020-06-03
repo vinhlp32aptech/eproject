@@ -8,6 +8,17 @@ body {
   font-weight: 300;
   font-size: 1.1rem; }
 
+/*Vinh code*/
+
+#signinV{
+  padding-right: 0px;
+}
+
+#signupV{
+  padding-left: 0px;
+}
+
+/*Vinh code*/
 ::-moz-selection {
   background: #000;
   color: #fff; }
@@ -588,12 +599,6 @@ h1, h2, h3, h4, h5,
     padding-top: 10px !important;
     padding-bottom: 10px !important; }
 
-  .signinV{
-    padding: 0px;
-  }
-.signupV{
-  padding: 0px;
-}
 /* Blocks */
 .intro-section {
   background-size: cover;
