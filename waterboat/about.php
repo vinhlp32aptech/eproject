@@ -176,7 +176,7 @@
         <div class="row">
           <div class="col">
             <div class="counter-39392">
-              <h3>349</h3>
+              <h3>400</h3>
               <span>Number of Yacht</span>
             </div>
           </div>
@@ -298,7 +298,7 @@
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
             <h2 class="text-white">Get In Touch With Us</h2>
-            <p class="lead text-white">We are committed to Royal Caribbean as a pioneering cruise in providing the most valuable experience for travelers without any comparable tour.</p>
+            <p class="lead text-white">We are committed to Marina Fleet as a pioneering cruise in providing the most valuable experience for travelers without any comparable tour.</p>
             <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
           </div>
         </div>
@@ -311,8 +311,8 @@
         <div class="row">
           <div class="col-lg-3">
             <p class="mb-4"><img src="images/logo.png" alt="Image" class="img-fluid"></p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>  
-            <p><a href="#">Learn More</a></p>
+            <p>Not only can you experience the beautiful beaches but also be served anytime and anywhere.</p>
+            <p><a href="contact.php">Contact Us</a></p>
           </div>
           <div class="col-lg-3">
             <h3 class="footer-heading"><span>Our Company</span></h3>
