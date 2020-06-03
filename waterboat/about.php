@@ -74,7 +74,7 @@
         <div class="row">
           <div class="col">
             <div class="counter-39392">
-              <h3>349</h3>
+              <h3>400</h3>
               <span>Number of Yacht</span>
             </div>
           </div>
@@ -196,7 +196,7 @@
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
             <h2 class="text-white">Get In Touch With Us</h2>
-            <p class="lead text-white">We are committed to Royal Caribbean as a pioneering cruise in providing the most valuable experience for travelers without any comparable tour.</p>
+            <p class="lead text-white">We are committed to Marina Fleet as a pioneering cruise in providing the most valuable experience for travelers without any comparable tour.</p>
             <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
           </div>
         </div>
@@ -204,7 +204,63 @@
     </div>
 
     
+<<<<<<< HEAD
+    <div class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <p class="mb-4"><img src="images/logo.png" alt="Image" class="img-fluid"></p>
+            <p>Not only can you experience the beautiful beaches but also be served anytime and anywhere.</p>
+            <p><a href="contact.php">Contact Us</a></p>
+          </div>
+          <div class="col-lg-3">
+            <h3 class="footer-heading"><span>Our Company</span></h3>
+            <ul class="list-unstyled">
+                <li><a href="#">About</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+              <h3 class="footer-heading"><span>Our Services</span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="#">Industrial</a></li>
+                  <li><a href="#">Construction</a></li>
+                  <li><a href="#">Remodeling</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3">
+              <h3 class="footer-heading"><span>Contact</span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Support Community</a></li>
+                  <li><a href="#">Press</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Our Partners</a></li>
+              </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+=======
 <?php include_once "public/footer.php"?>
+>>>>>>> 573d051b75ad7c1ecff02b1174161ba943503204
 
   </div>
   <!-- .site-wrap -->
