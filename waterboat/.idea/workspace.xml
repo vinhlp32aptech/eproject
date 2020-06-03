@@ -14,6 +14,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
   <component name="ProjectId" id="1cnQUPqEvheg416mT0McJ2wuRZR" />
@@ -58,5 +59,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="538" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1591162942607" />
+    <state x="429" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591163843503">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state x="429" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.723@0.23.1280.723" timestamp="1591163843503" />
   </component>
 </project>
