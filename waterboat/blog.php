@@ -49,7 +49,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-6 col-lg-3">
-            <a href="index.html">
+            <a href="index.php">
               <img src="images/logo.png" alt="Image" class="img-fluid">
               <!-- <strong>Water</strong>Boat -->
             </a>
@@ -110,20 +110,20 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
                 <li>
-                  <a href="index.html" class="nav-link text-left">Home</a>
+                  <a href="index.php" class="nav-link text-left">Home</a>
                 </li>
                 <li>
-                  <a href="about.html" class="nav-link text-left">About Us</a>
-                </li>
-                <li class="active">
-                  <a href="services.html" class="nav-link text-left">Services</a>
+                  <a href="about.php" class="nav-link text-left">About Us</a>
                 </li>
                 <li>
-                    <a href="testimonials.html" class="nav-link text-left">Testimonials</a>
+                  <a href="services.php" class="nav-link text-left">Services</a>
                 </li>
-                <li><a href="blog.html" class="nav-link text-left">Blog</a></li>
                 <li>
-                    <a href="contact.html" class="nav-link text-left">Contact</a>
+                    <a href="testimonials.php" class="nav-link text-left">Testimonials</a>
+                </li>
+                <li class="active"><a href="blog.php" class="nav-link text-left">Blog</a></li>
+                <li>
+                    <a href="contact.php" class="nav-link text-left">Contact</a>
                   </li>
               </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>
@@ -143,150 +143,97 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-              <h1>Our Services</h1>
+              <h1>Blog Posts</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
-              <p><a href="#" class="btn btn-primary py-3 px-5">Contact</a></p>
             </div>
           </div>
         </div>
       </div>
-
-    
-
-    <div class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-yacht"></span>
-              </span>
-              <h3>Luxuries Yacht</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-shield"></span>
-              </span>
-              <h3>30 Years of Experience</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-captain"></span>
-              </span>
-              <h3>Good Captain</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-devices"></span>
-              </span>
-              <h3>Luxuries Yacht</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-badge"></span>
-              </span>
-              <h3>30 Years of Experience</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-captain-1"></span>
-              </span>
-              <h3>Good Captain</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     
     <div class="site-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Testimonial</span>
-            <h3 class="heading-92913 text-black text-center">What Customer Saying...</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-            <div class="testimony-39291">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laborum cumque commodi, unde doloribus.</p>
-              </blockquote>
-              <div class="d-flex vcard align-items-center">
-                <div class="pic mr-3">
-                  <img src="images/person_3_sq.jpg" alt="Image" class="img-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-lg-5 col-lg-4">
+                    <div class="blog-entry">
+                    <a href="blog-single.php" class="img-link">
+                        <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                    </a>
+                    <div class="blog-entry-contents">
+                        <h3><a href="#">Consectetur Adipisicing Elit Expedita Beatea</a></h3>
+                        <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
+                    </div>
+                    </div>
                 </div>
-                <div class="text">
-                  <strong class="d-block">John Doe</strong>
-                  <span>CEO and Co-Founder</span>
+                <div class="col-md-6 mb-5 mb-lg-5 col-lg-4">
+                    <div class="blog-entry">
+                    <a href="blog-single.php" class="img-link">
+                        <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                    </a>
+                    <div class="blog-entry-contents">
+                        <h3><a href="#">Consectetur Adipisicing Elit Expedita Beatea</a></h3>
+                        <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
+                    </div>
+                    </div>
                 </div>
-              </div>
+                <div class="col-md-6 mb-5 mb-lg-5 col-lg-4">
+                    <div class="blog-entry">
+                    <a href="blog-single.php" class="img-link">
+                        <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                    </a>
+                    <div class="blog-entry-contents">
+                        <h3><a href="#">Consectetur Adipisicing Elit Expedita Beatea</a></h3>
+                        <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-5 mb-lg-5 col-lg-4">
+                    <div class="blog-entry">
+                    <a href="blog-single.php" class="img-link">
+                        <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                    </a>
+                    <div class="blog-entry-contents">
+                        <h3><a href="#">Consectetur Adipisicing Elit Expedita Beatea</a></h3>
+                        <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-5 mb-lg-5 col-lg-4">
+                    <div class="blog-entry">
+                    <a href="blog-single.php" class="img-link">
+                        <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                    </a>
+                    <div class="blog-entry-contents">
+                        <h3><a href="#">Consectetur Adipisicing Elit Expedita Beatea</a></h3>
+                        <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-5 mb-lg-5 col-lg-4">
+                    <div class="blog-entry">
+                    <a href="blog-single.php" class="img-link">
+                        <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                    </a>
+                    <div class="blog-entry-contents">
+                        <h3><a href="#">Consectetur Adipisicing Elit Expedita Beatea</a></h3>
+                        <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
+                    </div>
+                    </div>
+                </div>
+                
             </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-            <div class="testimony-39291">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laborum cumque commodi, unde doloribus.</p>
-              </blockquote>
-              <div class="d-flex vcard align-items-center">
-                <div class="pic mr-3">
-                  <img src="images/person_4_sq.jpg" alt="Image" class="img-fluid">
+
+            <div class="row text-center mt-5">
+                <div class="col-12">
+                    <a href="#" class="p-3 d-inline-block">1</a>
+                    <a href="#" class="p-3 d-inline-block">2</a>
+                    <span class="p-3 d-inline-block text-black">3</span>
+                    <a href="#" class="p-3 d-inline-block">4</a>
+                    <a href="#" class="p-3 d-inline-block">5</a>
                 </div>
-                <div class="text">
-                  <strong class="d-block">John Doe</strong>
-                  <span>CEO and Co-Founder</span>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-            <div class="testimony-39291">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laborum cumque commodi, unde doloribus.</p>
-              </blockquote>
-              <div class="d-flex vcard align-items-center">
-                <div class="pic mr-3">
-                  <img src="images/person_3_sq.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="text">
-                  <strong class="d-block">John Doe</strong>
-                  <span>CEO and Co-Founder</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    
-    <div class="site-section bg-image overlay" style="background-image: url('images/hero_2.jpg');">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7 text-center">
-            <h2 class="text-white">Get In Touch With Us</h2>
-            <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
-          </div>
-        </div>
-      </div>
     </div>
 
     
