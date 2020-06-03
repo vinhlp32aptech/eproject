@@ -80,25 +80,25 @@
           </div>
           <div class="col">
             <div class="counter-39392">
-              <h3>7000+</h3>
+              <h3>8234+</h3>
               <span>Customers Satisfied</span>
             </div>
           </div>
           <div class="col">
             <div class="counter-39392">
-              <h3>120</h3>
+              <h3>100</h3>
               <span>Number of Staffs</span>
             </div>
           </div>
           <div class="col">
             <div class="counter-39392">
-              <h3>493</h3>
+              <h3>490</h3>
               <span>Sea Destinations</span>
             </div>
           </div>
           <div class="col">
             <div class="counter-39392">
-              <h3>230</h3>
+              <h3>300</h3>
               <span>Professional Sailors</span>
             </div>
           </div>
@@ -203,8 +203,7 @@
       </div>
     </div>
 
-    
-<<<<<<< HEAD
+
     <div class="footer bg-light">
       <div class="container">
         <div class="row">
@@ -258,9 +257,8 @@
       </div>
     </div>
     
-=======
+
 <?php include_once "public/footer.php"?>
->>>>>>> 573d051b75ad7c1ecff02b1174161ba943503204
 
   </div>
   <!-- .site-wrap -->
