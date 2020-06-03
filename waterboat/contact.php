@@ -50,7 +50,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-6 col-lg-3">
-            <a href="index.html">
+            <a href="index.php">
               <img src="images/logo.png" alt="Image" class="img-fluid">
             </a>
           </div>
@@ -110,7 +110,7 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
                 <li>
-                  <a href="index.html" class="nav-link text-left">Home</a>
+                  <a href="index.php" class="nav-link text-left">Home</a>
                 </li>
                 <li>
                   <a href="about.html" class="nav-link text-left">About Us</a>
@@ -147,7 +147,7 @@
           <div class="col-lg-12 mt-5" data-aos="fade-up">
             <h1>Get In Touch</h1>
             <p class="text-white text-center">
-              <a href="index.html">Home</a>
+              <a href="index.php">Home</a>
               <span class="mx-2">/</span>
               <span>Contact Us</span>
             </p>

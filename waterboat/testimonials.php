@@ -49,7 +49,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-6 col-lg-3">
-            <a href="index.html">
+            <a href="index.php">
               <img src="images/logo.png" alt="Image" class="img-fluid">
               <!-- <strong>Water</strong>Boat -->
             </a>
@@ -110,20 +110,20 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
                 <li>
-                  <a href="index.html" class="nav-link text-left">Home</a>
+                  <a href="index.php" class="nav-link text-left">Home</a>
                 </li>
                 <li>
-                  <a href="about.html" class="nav-link text-left">About Us</a>
+                  <a href="about.php" class="nav-link text-left">About Us</a>
+                </li>
+                <li>
+                  <a href="services.php" class="nav-link text-left">Services</a>
                 </li>
                 <li class="active">
-                  <a href="services.html" class="nav-link text-left">Services</a>
+                    <a href="testimonials.php" class="nav-link text-left">Testimonials</a>
                 </li>
+                <li><a href="blog.php" class="nav-link text-left">Blog</a></li>
                 <li>
-                    <a href="testimonials.html" class="nav-link text-left">Testimonials</a>
-                </li>
-                <li><a href="blog.html" class="nav-link text-left">Blog</a></li>
-                <li>
-                    <a href="contact.html" class="nav-link text-left">Contact</a>
+                    <a href="contact.php" class="nav-link text-left">Contact</a>
                   </li>
               </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>
@@ -143,77 +143,13 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-              <h1>Our Services</h1>
+              <h1>Customer Testimonials</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
               <p><a href="#" class="btn btn-primary py-3 px-5">Contact</a></p>
             </div>
           </div>
         </div>
       </div>
-
-    
-
-    <div class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-yacht"></span>
-              </span>
-              <h3>Luxuries Yacht</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-shield"></span>
-              </span>
-              <h3>30 Years of Experience</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-captain"></span>
-              </span>
-              <h3>Good Captain</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-devices"></span>
-              </span>
-              <h3>Luxuries Yacht</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-badge"></span>
-              </span>
-              <h3>30 Years of Experience</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-captain-1"></span>
-              </span>
-              <h3>Good Captain</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     
     <div class="site-section">
@@ -276,6 +212,62 @@
         </div>
       </div>
     </div>
+
+
+    <div class="site-section">
+        <div class="container">
+
+          <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center">
+            <span class="text-serif text-primary">Testimonial</span>
+            <h3 class="heading-92913 text-black text-center">More Testimonials Style</h3>
+          </div>
+        </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-md-5">
+                    <div class="testimonial">
+                    <img src="images/person_3_sq.jpg" alt="">
+                    <blockquote>
+                        <p>&ldquo;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?&rdquo;</p>
+                    </blockquote>
+                    <p class="client-name">Matt Keygen</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-5 mb-md-5">
+                    <div class="testimonial">
+                    <img src="images/person_4_sq.jpg" alt="">
+                    <blockquote>
+                        <p>&ldquo;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?&rdquo;</p>
+                    </blockquote>
+                    <p class="client-name">Matt Keygen</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-5 mb-md-5">
+                    <div class="testimonial">
+                    <img src="images/person_3_sq.jpg" alt="">
+                    <blockquote>
+                        <p>&ldquo;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?&rdquo;</p>
+                    </blockquote>
+                    <p class="client-name">Matt Keygen</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-5 mb-md-5">
+                    <div class="testimonial">
+                    <img src="images/person_4_sq.jpg" alt="">
+                    <blockquote>
+                        <p>&ldquo;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?&rdquo;</p>
+                    </blockquote>
+                    <p class="client-name">Matt Keygen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     
     <div class="site-section bg-image overlay" style="background-image: url('images/hero_2.jpg');">
       <div class="container">

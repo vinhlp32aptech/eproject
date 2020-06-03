@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Engineers &mdash; Website Template by Colorlib</title>
+  <title>WaterBoat &mdash; Website Template by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Muli:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Dancing+Script:400,700|Muli:300,400" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -50,15 +49,16 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-6 col-lg-3">
-            <a href="index.html">
+            <a href="index.php">
               <img src="images/logo.png" alt="Image" class="img-fluid">
+              <!-- <strong>Water</strong>Boat -->
             </a>
           </div>
           <div class="col-lg-3 d-none d-lg-block">
 
             <div class="quick-contact-icons d-flex">
               <div class="icon align-self-start">
-                <span class="flaticon-placeholder text-primary"></span>
+                <span class="icon-location-arrow text-primary"></span>
               </div>
               <div class="text">
                 <span class="h4 d-block">San Francisco</span>
@@ -70,7 +70,7 @@
           <div class="col-lg-3 d-none d-lg-block">
             <div class="quick-contact-icons d-flex">
               <div class="icon align-self-start">
-                <span class="flaticon-call text-primary"></span>
+                <span class="icon-phone text-primary"></span>
               </div>
               <div class="text">
                 <span class="h4 d-block">000 209 392 312</span>
@@ -82,7 +82,7 @@
           <div class="col-lg-3 d-none d-lg-block">
             <div class="quick-contact-icons d-flex">
               <div class="icon align-self-start">
-                <span class="flaticon-email text-primary"></span>
+                <span class="icon-envelope text-primary"></span>
               </div>
               <div class="text">
                 <span class="h4 d-block">info@gmail.com</span>
@@ -106,22 +106,22 @@
       <div class="container">
         <div class="d-flex align-items-center">
           
-          <div class="mr-auto">
+          <div class="mx-auto">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
                 <li>
-                  <a href="index.html" class="nav-link text-left">Home</a>
+                  <a href="index.php" class="nav-link text-left">Home</a>
                 </li>
-                <li>
+                <li class="active">
                   <a href="about.html" class="nav-link text-left">About Us</a>
                 </li>
                 <li>
-                  <a href="works.html" class="nav-link text-left">Our Projects</a>
+                  <a href="services.html" class="nav-link text-left">Services</a>
                 </li>
                 <li>
                     <a href="testimonials.html" class="nav-link text-left">Testimonials</a>
                 </li>
-                <li class="active"><a href="blog.html" class="nav-link text-left">Blog</a></li>
+                <li><a href="blog.html" class="nav-link text-left">Blog</a></li>
                 <li>
                     <a href="contact.html" class="nav-link text-left">Contact</a>
                   </li>
@@ -129,7 +129,6 @@
             </nav>
 
           </div>
-          
          
         </div>
       </div>
@@ -138,46 +137,180 @@
     
     </div>
     
+    
 
+      <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
+              <h1>About WaterBoat</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+              <p><a href="#" class="btn btn-primary py-3 px-5">Contact</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
+    
 
-    <div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/hero_1.jpg');">
+    <div class="site-section">
       <div class="container">
-        <div class="row align-items-center text-center border">
-          <div class="col-lg-12 mt-5" data-aos="fade-up">
-            <h1>Project Single Post</h1>
-            <p class="text-white text-center">
-              <a href="index.html">Home</a>
-              <span class="mx-2">/</span>
-              <span>Project Single</span>
-            </p>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <span class="text-serif text-primary">About Us</span>
+            <h3 class="heading-92913 text-black">Welcome To Our Website</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, illum, quasi. Odit velit deserunt eligendi unde, enim. Enim fugiat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eius ullam impedit architecto debitis facilis!</p>
+            <p><a href="#" class="btn btn-primary py-3 px-4">Learn More</a></p>
           </div>
         </div>
       </div>
     </div>
 
     
-    <div class="site-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 mb-4">
-                    <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="col-md-4 ml-auto">
-                    <h2 class="text-black mb-4">Project Details Here</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum beatae maxime iure dolores labore? Corporis harum ea fuga voluptatum nulla! Consectetur, sint odit modi maxime harum enim dolores aliquid distinctio ad itaque commodi?</p>
-                    <p class="mb-5">Atque rerum fugiat iste voluptas, magni mollitia, cupiditate corporis perferendis veniam</p>
-                    <p><a href="#" class="btn btn-primary rounded-0 py-3 px-5">Visit Site</a></p>
-                </div>
+    <div class="site-section bg-image overlay" style="background-image: url('images/hero_1.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="counter-39392">
+              <h3>349</h3>
+              <span>Number of Yacht</span>
             </div>
+          </div>
+          <div class="col">
+            <div class="counter-39392">
+              <h3>7000+</h3>
+              <span>Customers Satisfied</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="counter-39392">
+              <h3>120</h3>
+              <span>Number of Staffs</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="counter-39392">
+              <h3>493</h3>
+              <span>Sea Destinations</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="counter-39392">
+              <h3>230</h3>
+              <span>Professional Sailors</span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+
     
-    <div class="footer">
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center">
+            <span class="text-serif text-primary">Team</span>
+            <h3 class="heading-92913 text-black text-center">Our Team</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-lg-0">
+            <div class="person">
+              <figure>
+                <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                <div class="social">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </div>
+              </figure>
+              <div class="person-contents">
+                <h3>Craig Daniel</h3>
+                <span class="position">Engineer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-lg-0">
+            <div class="person">
+              <figure>
+                <img src="images/person_2.jpg" alt="Image" class="img-fluid">
+                <div class="social">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </div>
+              </figure>
+              <div class="person-contents">
+                <h3>Craig Daniel</h3>
+                <span class="position">Engineer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-lg-0">
+            <div class="person">
+              <figure>
+                <img src="images/person_3.jpg" alt="Image" class="img-fluid">
+                <div class="social">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </div>
+              </figure>
+              <div class="person-contents">
+                <h3>Craig Daniel</h3>
+                <span class="position">Engineer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-lg-0">
+            <div class="person">
+              <figure>
+                <img src="images/person_4.jpg" alt="Image" class="img-fluid">
+                <div class="social">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </div>
+              </figure>
+              <div class="person-contents">
+                <h3>Craig Daniel</h3>
+                <span class="position">Engineer</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div class="site-section bg-image overlay" style="background-image: url('images/hero_2.jpg');">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="text-white">Get In Touch With Us</h2>
+            <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="footer bg-light">
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <p class="mb-4"><img src="images/logo2.png" alt="Image" class="img-fluid"></p>
+            <p class="mb-4"><img src="images/logo.png" alt="Image" class="img-fluid"></p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>  
             <p><a href="#">Learn More</a></p>
           </div>
