@@ -196,9 +196,31 @@
                           </div>
                       </div>
                   </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="single-location mb-30">
+                          <div class="location-img">
+                              <img src="images/indonesia.jpg" alt="" height="360px" width="286px">
+                          </div>
+                          <div class="location-details">
+                              <p>indonesia</p>
+                              <a href="#" class="location-btn">78 <i class="ti-plus"></i> Location</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="single-location mb-30">
+                          <div class="location-img">
+                              <img src="images/indonesia.jpg" alt="" height="360px" width="286px">
+                          </div>
+                          <div class="location-details">
+                              <p>indonesia</p>
+                              <a href="#" class="location-btn">78 <i class="ti-plus"></i> Location</a>
+                          </div>
+                      </div>
+                  </div>
 </div>
                   <!-- .site-wrap -->
-kkjhjk
 
   <!-- loader -->
   <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
