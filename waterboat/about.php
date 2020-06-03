@@ -145,7 +145,7 @@
             <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
               <h1>About WaterBoat</h1>
               <p>The 5-star cruise will give you the opportunity to enjoy great food with all entertainment services on par with the royal class.</p>
-              <p><a href="#" class="btn btn-primary py-3 px-5">Contact</a></p>
+              <p><a href="contact.php" class="btn btn-primary py-3 px-5">Contact</a></p>
             </div>
           </div>
         </div>
@@ -162,9 +162,9 @@
           <div class="col-md-6">
             <span class="text-serif text-primary">About Us</span>
             <h3 class="heading-92913 text-black">Welcome To Our Website</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, illum, quasi. Odit velit deserunt eligendi unde, enim. Enim fugiat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eius ullam impedit architecto debitis facilis!</p>
-            <p><a href="#" class="btn btn-primary py-3 px-4">Learn More</a></p>
+            <p>During the past 40 years, we have constantly improved and upgraded the quality and service form to meet the needs of visitors.</p>
+            <p>It can be said that <strong style="color:#0b0b0b"> Marina Fleet </strong> is a boat tour designed with the breakthrough and leading in yacht service with the most interesting and special destinations and entertainment services.</p>
+            <p><a href="index.php" class="btn btn-primary py-3 px-4">Learn More</a></p>
           </div>
         </div>
       </div>
@@ -298,7 +298,7 @@
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
             <h2 class="text-white">Get In Touch With Us</h2>
-            <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="lead text-white">We are committed to Royal Caribbean as a pioneering cruise in providing the most valuable experience for travelers without any comparable tour.</p>
             <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
           </div>
         </div>
