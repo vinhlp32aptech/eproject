@@ -61,6 +61,39 @@
           </div>
         </div>
       </div>
+        <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
+                        <h1>Enjoy The Ocean With Your Family</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
+                        <h1>Enjoy The Ocean With Your Family</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
+                        <h1>Enjoy The Ocean With Your Family</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- END slider -->
