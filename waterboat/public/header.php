@@ -89,6 +89,10 @@
                             <li>
                                 <a href="contact.php" class="nav-link text-left">Contact</a>
                             </li>
+                            <li>
+                                <a href="signin.php" class="signinV nav-link text-left ">Sign-in/</a>
+                                <a href="signup.php" class="signupV nav-link text-left">Sign-up</a>
+                            </li>
                         </ul>                                                                                                                                                                                                                                                                                          </ul>
                     </nav>
 
