@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cb846249-9606-4b6a-87ff-165202d614a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +32,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -51,6 +54,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="308" y="112" key="#CLI_Interpreters" timestamp="1591162086724">
       <screen x="0" y="0" width="1440" height="900" />
@@ -60,14 +66,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="35" key="#PHP/0.0.1440.900@0.0.1440.900" timestamp="1591162089992" />
-    <state x="538" y="380" key="NewPhpFileDialog" timestamp="1591162942607">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="478" y="328" key="NewPhpFileDialog" timestamp="1591165184743">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="538" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1591162942607" />
-    <state x="483" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591166492956">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="478" y="328" key="NewPhpFileDialog/0.23.1280.723@0.23.1280.723" timestamp="1591165184743" />
+    <state x="429" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591167436915">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state x="483" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1591166492956" />
-    <state x="429" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.723@0.23.1280.723" timestamp="1591164101875" />
+    <state x="429" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.723@0.23.1280.723" timestamp="1591167436915" />
   </component>
 </project>
