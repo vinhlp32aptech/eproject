@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sign in</title>
+<title>Sign Up</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,49 +25,17 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<h1>Welcome to the yacht world</h1>
 		</div>
 
-		<div class="main-w3layouts-agileinfo">
+		<div class="main-w3layouts-agileinfo" id="link_signin">
 
 						<div class="wthree-form">
-							<h2> Sign in to your account </h2>
-							<form action="index.php" method="post">
-								<div class="form-sub-w3">
-									<input type="text" name="Username"  placeholder="Username " required="" />
+							<h2> Sign Up Successful.  <a href="signin.php"  >Back to Sign In</a></h2>
+							</div>
+                    	</div>
 
-								<div class="icon-w3">
-									<i class="fa fa-user" aria-hidden="true"></i>
-								</div>
-								</div>
-								<div class="form-sub-w3">
-									<input type="password" name="Password"  placeholder="Password" required="" />
 
-								<div class="icon-w3">
-									<i class="fa fa-unlock-alt" aria-hidden="true"></i>
-								</div>
-								</div>
-								<label class="anim">
-								<input type="checkbox" class="checkbox">
-									<span>Remember Me</span> 
-									<a href="ForgotPassword.php">Forgot Password</a>
-								</label> 
-								<div class="clear"></div>
-								<div class="submit-agileits">
-									<input type="submit" value="Sign in">
-								</div>
-
-							</form>
-
-						</div>
-                    </div>
-
-		<!-- </div>
-		<form action="..php" method="post">
-			<div class="submit-agileits">
-				<input type="submit" value="Login With Admin">
-			</div>
-		</form> -->
 
 		<div class="footer">
-			<p class="m-auto text-center text-white">The largest supercar store in the world <br>
+			<p class="m-auto text-center text-white">The largest yacht store in the world <br>
             Connect with us
                 <a href="#" ><i class="fab fa-facebook"></i></a>
                 <a href="#" ><i class="fab fa-twitter-square"></i></a>
@@ -78,3 +46,4 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </body>
 </html>
+
