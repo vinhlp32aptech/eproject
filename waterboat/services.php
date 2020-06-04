@@ -196,7 +196,10 @@
                           </div>
                       </div>
                   </div>
-</div>
+
+                  <?php include_once "public/footer.php"?>
+
+              </div>
                   <!-- .site-wrap -->
 
   <!-- loader -->

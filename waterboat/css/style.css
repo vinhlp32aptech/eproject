@@ -1194,8 +1194,8 @@ h1, h2, h3, h4, h5,
   border-right: 1px solid #efefef; }
 
 .header-top > .container {
-  padding-top: 40px;
-  padding-bottom: 40px; }
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 .header-top .quick-contact-icons .icon {
   margin-right: 10px;
