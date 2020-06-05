@@ -95,8 +95,14 @@ form {
 }
 .submit-agileits {
     text-align: center;
-    margin-top: 2em;
+	margin-top: 2em;
+	color: #fff;
 }
+
+#fixcolor{
+	color: white;
+}
+
 .form-sub-w3{
 	position:relative;
     margin-bottom: 20px;
@@ -154,7 +160,9 @@ label.anim span, label.anim a {
     font-size: 13px;
     display: inline;
     letter-spacing: 2px;
-    text-transform: capitalize;
+	text-transform: capitalize;
+	
+
 }
 label.anim  a {
     display: inline-block;
@@ -188,7 +196,7 @@ input.checkbox:before {
 	position: absolute;
 	width: 1.2em;
 	height: 1.2em;
-	background: inherit;
+	background: #00c6d7;
 	cursor: pointer;
 }
 input.checkbox:after {
@@ -593,10 +601,11 @@ input.checkbox:checked:after {
 	}
 }
 /*--- //Responsive Code ---*/
-.HAHAHA img {max-width:100% ;margin: 0 auto; display: block; }
-.Comeback{
-	color: white;
-}
+
+
 #link_signin a{
 	color: #00c6d7;
 }
+
+
+
