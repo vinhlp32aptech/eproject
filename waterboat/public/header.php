@@ -25,8 +25,8 @@
                         <span class="icon-location-arrow text-primary"></span>
                     </div>
                     <div class="text">
-                        <span class="h4 d-block">San Francisco</span>
-                        <span class="caption-text">Mountain View, Fake st., CA</span>
+                        <span class="h4 d-block">Viet Nam</span>
+                        <span class="caption-text">212-214 Nguyen Đinh Chieu, District 3, TPHCM</span>
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@
                         <span class="icon-phone text-primary"></span>
                     </div>
                     <div class="text">
-                        <span class="h4 d-block">000 209 392 312</span>
+                        <span class="h4 d-block">0912345678</span>
                         <span class="caption-text">Toll free</span>
                     </div>
                 </div>
@@ -49,8 +49,7 @@
                         <span class="icon-envelope text-primary"></span>
                     </div>
                     <div class="text">
-                        <span class="h4 d-block">info@gmail.com</span>
-                        <span class="caption-text">Gournadi, 1230 Bariasl</span>
+                        <span class="h4 d-block">marinafleet@gmail.com</span>
                     </div>
                 </div>
             </div>
@@ -93,7 +92,12 @@
                                 <a href="signin.php" class="nav-link text-left" id="signinV">Sign-in/</a>
                                 <a href="signup.php" class="nav-link text-left" id="signupV">Sign-up</a>
                             </li>
-                        </ul>                                                                                                                                                                                                                                                                                          </ul>
+                            <li>
+                                <form id="demo-2">
+                                    <input type="search" placeholder="Search">
+                                </form>
+                            </li>
+                        </ul>
                     </nav>
 
                 </div>

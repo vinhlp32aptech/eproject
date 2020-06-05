@@ -38,7 +38,7 @@
     <?php include_once "public/header.php" ?>
 
     <div class="hero-slide owl-carousel site-blocks-cover">
-      <div class="intro-section" style="background-image: url('images/hero_1.jpg');">
+      <div class="intro-section" style="background-image: url('images/yacht1.jpeg');">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-7 ml-auto text-right" data-aos="fade-up">
@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
+      <div class="intro-section" style="background-image: url('images/yacht2.jpg');">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
@@ -61,7 +61,7 @@
           </div>
         </div>
       </div>
-        <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
+        <div class="intro-section" style="background-image: url('images/yacht3.jpg');">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
+        <div class="intro-section" style="background-image: url('images/yacht4.jpg');">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
@@ -83,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
+        <div class="intro-section" style="background-image: url('images/yacht5.jpg');">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
@@ -96,7 +96,7 @@
         </div>
 
     </div>
-    <!-- END slider -->
+<!-- END slider -->
 
     <div class="site-section">
       <div class="container">
@@ -190,8 +190,8 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Destination</span>
-            <h3 class="heading-92913 text-black text-center">Our Destinations</h3>
+            <span class="text-serif text-primary">Products</span>
+            <h3 class="heading-92913 text-black text-center">Our Yacht</h3>
           </div>
         </div>
         <div class="row">
