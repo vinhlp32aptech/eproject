@@ -92,10 +92,12 @@
                                 <a href="signin.php" class="nav-link text-left" id="signinV">Sign-in/</a>
                                 <a href="signup.php" class="nav-link text-left" id="signupV">Sign-up</a>
                             </li>
+                            <li>
+                                <form id="demo-2">
+                                    <input type="search" placeholder="Search">
+                                </form>
+                            </li>
                         </ul>
-                        <div>
-                            <input type="text" name="" id="" class="searchV">
-                        </div>
                     </nav>
 
                 </div>
