@@ -190,17 +190,6 @@
 
     
 
-    <div class="site-section bg-image overlay" style="background-image: url('images/hero_2.jpg');">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7 text-center">
-            <h2 class="text-white">Get In Touch With Us</h2>
-            <p class="lead text-white">We are committed to Marina Fleet as a pioneering cruise in providing the most valuable experience for travelers without any comparable tour.</p>
-            <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
 

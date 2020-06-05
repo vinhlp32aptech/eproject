@@ -26,7 +26,7 @@
                     </div>
                     <div class="text">
                         <span class="h4 d-block">Viet Nam</span>
-                        <span class="caption-text">212-214 Nguyen Đinh Chieu, District 3, TPHCM</span>
+                        <span class="caption-text"> District 3, HCM City</span>
                     </div>
                 </div>
 
@@ -50,6 +50,7 @@
                     </div>
                     <div class="text">
                         <span class="h4 d-block">marinafleet@gmail.com</span>
+                        <span class="caption-text">Our mail</span>
                     </div>
                 </div>
             </div>
@@ -60,8 +61,6 @@
             </div>
         </div>
     </div>
-
-
 
 
     <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
@@ -82,7 +81,7 @@
                                 <a href="services.php" class="nav-link text-left">Services</a>
                             </li>
                             <li>
-                                <a href="testimonials.php" class="nav-link text-left">Testimonials</a>
+                                <a href="testimonials.php" class="nav-link text-left">Gallery</a>
                             </li>
                             <li><a href="blog.php" class="nav-link text-left">Blog</a></li>
                             <li>
