@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-      <div class="popular-location section-padding30">
+      <div class="popular-location ">
           <div class="container">
               <div class="row">
                   <div class="col-lg-12">
