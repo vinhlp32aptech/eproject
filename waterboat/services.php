@@ -62,8 +62,9 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/new_york.jpg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/new_york.jpg" alt="" height="360px" width="286px"></a>
                           </div>
+
                           <div class="location-details">
                               <p>New York</p>
                               <a href="#" class="location-btn">65 <i class="ti-plus"></i> Location</a>
@@ -73,7 +74,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/phap.png" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/phap.png" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>Paris</p>
@@ -84,7 +85,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/Rome.jpg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/Rome.jpg" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>Rome</p>
@@ -95,7 +96,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/italia.jpg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/italia.jpg" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>Italy</p>
@@ -106,7 +107,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/Vietna.jpeg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/Vietna.jpeg" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>Vietnam</p>
@@ -117,7 +118,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/indonesia.jpg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/indonesia.jpg" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>indonesia</p>
@@ -128,7 +129,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/singapore.jpg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/singapore.jpg" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>Singapore</p>
@@ -140,7 +141,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/malaysia-1.1.jpg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/malaysia-1.1.jpg" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>Malaysia</p>
@@ -152,7 +153,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/london.jpg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/london.jpg" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>London</p>
@@ -164,7 +165,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/hinh-anh-Dubai.jpg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/hinh-anh-Dubai.jpg" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>Dubai</p>
@@ -176,7 +177,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/Australia.jpg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/Australia.jpg" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>Australia</p>
@@ -188,7 +189,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="single-location mb-30">
                           <div class="location-img">
-                              <img src="images/DaiLoan.jpg" alt="" height="360px" width="286px">
+                              <a href="Lease.php" ><img src="images/DaiLoan.jpg" alt="" height="360px" width="286px"><a/>
                           </div>
                           <div class="location-details">
                               <p>Taiwan</p>
