@@ -11,7 +11,7 @@
     <main class="hoc container clear">
 
         <article class="group btmspace-80">
-            <div class="two_third first"><img class="borderedbox inspace-10" src="images/demo/660x360.png" alt=""></div>
+            <div class="two_third first"><img class="borderedbox inspace-10" src="images/Lease1.jpg" alt=""></div>
             <div class="one_third">
                 <h6 class="heading">Per inceptos himenaeos donec lacinia mollis vel</h6>
                 <ul class="nospace meta">
@@ -28,7 +28,7 @@
 
         <ul class="nospace group overview">
             <li class="one_third">
-                <article><a href="#"><img src="images/demo/320x240.png" alt=""></a>
+                <article><a href="#"><img src="images/Lease2.jpg" alt="" height="306px" width="182px"></a>
                     <h6 class="heading">Metus porta fringilla</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -39,7 +39,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/demo/320x240.png" alt=""></a>
+                <article><a href="#"><img src="images/Lease3.jpg" alt="" height="306px" width="182px"></a>
                     <h6 class="heading">Suspendisse sollicitudin</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -50,7 +50,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/demo/320x240.png" alt=""></a>
+                <article><a href="#"><img src="images/Lease4.jpg" alt="" height="306px" width="182px"></a>
                     <h6 class="heading">Lacus ultricies ac luctus</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -61,7 +61,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/demo/320x240.png" alt=""></a>
+                <article><a href="#"><img src="images/Lease5.jpg" alt="" height="306px" width="182px"></a>
                     <h6 class="heading">Senectus malesuada ac</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -72,7 +72,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/demo/320x240.png" alt=""></a>
+                <article><a href="#"><img src="images/Lease6.jpg" alt="" height="306px" width="182"></a>
                     <h6 class="heading">Porttitor elit vel lorem</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -83,7 +83,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/demo/320x240.png" alt=""></a>
+                <article><a href="#"><img src="images/Lease7.jpg" alt="" height="306px" width="182px"></a>
                     <h6 class="heading">Lobortis enim placerat</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
