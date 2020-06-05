@@ -96,7 +96,7 @@
         </div>
 
     </div>
-    <!-- END slider -->
+<!-- END slider -->
 
     <div class="site-section">
       <div class="container">
@@ -190,8 +190,8 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Destination</span>
-            <h3 class="heading-92913 text-black text-center">Our Destinations</h3>
+            <span class="text-serif text-primary">Products</span>
+            <h3 class="heading-92913 text-black text-center">Our Yacht</h3>
           </div>
         </div>
         <div class="row">

@@ -33,9 +33,8 @@
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
   <div class="site-wrap">
-      <?php include_once "public/header.php" ?>
 
-    
+      <?php include_once "public/header.php" ?>
 
       <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
         <div class="container">

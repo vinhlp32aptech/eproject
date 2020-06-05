@@ -20,6 +20,10 @@ body {
   margin-left: 0px;
 }
 
+.searchV{
+  border-radius: 20px;
+  border: none;
+}
 /*Vinh code*/
 ::-moz-selection {
   background: #000;
