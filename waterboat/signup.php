@@ -40,7 +40,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <body>
     
 <div class="header-w3l">
-		<?php include_once "public/header.php" ?>
 		</div>
 
 		<div class="main-w3layouts-agileinfo">

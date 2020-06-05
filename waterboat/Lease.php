@@ -5,13 +5,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="css/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Dancing+Script:400,700|Muli:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body id="top">
+
+<?php include_once "public/header.php"?>
+
 <div class="wrapper row3">
     <main class="hoc container clear">
 
         <article class="group btmspace-80">
-            <div class="two_third first"><img class="borderedbox inspace-10" src="images/Lease1.jpg" alt=""></div>
+            <div class="two_third first" id="fiximgV"><img class="borderedbox inspace-10" src="images/Lease1.jpg" alt="" height="555" width="555"></div>
             <div class="one_third">
                 <h6 class="heading">Per inceptos himenaeos donec lacinia mollis vel</h6>
                 <ul class="nospace meta">
@@ -28,7 +51,7 @@
 
         <ul class="nospace group overview">
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease2.jpg" alt="" height="306px" width="182px"></a>
+                <article><a href="#"><img src="images/Lease2.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Metus porta fringilla</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -39,7 +62,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease3.jpg" alt="" height="306px" width="182px"></a>
+                <article><a href="#"><img src="images/Lease3.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Suspendisse sollicitudin</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -50,7 +73,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease4.jpg" alt="" height="306px" width="182px"></a>
+                <article><a href="#"><img src="images/Lease4.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Lacus ultricies ac luctus</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -61,7 +84,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease5.jpg" alt="" height="306px" width="182px"></a>
+                <article><a href="#"><img src="images/Lease5.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Senectus malesuada ac</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -72,7 +95,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease6.jpg" alt="" height="306px" width="182"></a>
+                <article><a href="#"><img src="images/Lease6.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Porttitor elit vel lorem</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -83,7 +106,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease7.jpg" alt="" height="306px" width="182px"></a>
+                <article><a href="#"><img src="images/Lease7.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Lobortis enim placerat</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -99,20 +122,23 @@
 </div>
 
 
-<div class="wrapper row5">
-    <div id="copyright" class="hoc clear">
+<?php include_once "public/footer.php"?>
 
-        <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
-        <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
 
-    </div>
-</div>
-
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-
-<script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/jquery.backtotop.js"></script>
-<script src="layout/scripts/jquery.mobilemenu.js"></script>
-<script src="layout/scripts/jquery.flexslider-min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
