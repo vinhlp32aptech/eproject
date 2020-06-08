@@ -81,9 +81,9 @@
                                 <a href="services.php" class="nav-link text-left">Services</a>
                             </li>
                             <li>
-                                <a href="testimonials.php" class="nav-link text-left">Gallery</a>
+                                <a href="Gallery.php" class="nav-link text-left">Gallery</a>
                             </li>
-                            <li><a href="blog.php" class="nav-link text-left">Blog</a></li>
+<!--                            <li><a href="account.php" class="nav-link text-left">Account</a></li>-->
                             <li>
                                 <a href="contact.php" class="nav-link text-left">Contact</a>
                             </li>
