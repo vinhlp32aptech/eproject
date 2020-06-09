@@ -51,7 +51,7 @@
 
         <ul class="nospace group overview">
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease2.jpg" alt="" height="100px" width="100px"></a>
+                <article><a href="Product_detail.php"><img src="images/Lease2.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Metus porta fringilla</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -62,7 +62,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease3.jpg" alt="" height="100px" width="100px"></a>
+                <article><a href="Product_detail.php"><img src="images/Lease3.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Suspendisse sollicitudin</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -73,7 +73,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease4.jpg" alt="" height="100px" width="100px"></a>
+                <article><a href="Product%20informtion.php"><img src="images/Lease4.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Lacus ultricies ac luctus</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -84,7 +84,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease5.jpg" alt="" height="100px" width="100px"></a>
+                <article><a href="Product%20informtion.php"><img src="images/Lease5.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Senectus malesuada ac</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -95,7 +95,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease6.jpg" alt="" height="100px" width="100px"></a>
+                <article><a href="Product%20informtion.php"><img src="images/Lease6.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Porttitor elit vel lorem</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -106,7 +106,7 @@
                 </article>
             </li>
             <li class="one_third">
-                <article><a href="#"><img src="images/Lease7.jpg" alt="" height="100px" width="100px"></a>
+                <article><a href="Product%20informtion.php"><img src="images/Lease7.jpg" alt="" height="100px" width="100px"></a>
                     <h6 class="heading">Lobortis enim placerat</h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
