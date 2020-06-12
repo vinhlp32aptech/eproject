@@ -34,14 +34,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 
 
-		<div class="footer">
-			<p class="m-auto text-center text-white">The largest yacht store in the world <br>
-            Connect with us
-                <a href="#" ><i class="fab fa-facebook"></i></a>
-                <a href="#" ><i class="fab fa-twitter-square"></i></a>
-                <a href="#" ><i class="fab fa-youtube-square"></i></a>
-            </p>
-		</div>
+
 
 
 </body>

@@ -134,7 +134,11 @@
             <span id="b-1" class="th" tabindex="10">
       <img src="../images/Flybridge/Flybridge-42.jpg" alt="" id="p-1">
       <div class="title-1">
-        <h1>Flybridge-42</h1>-        <p>$220.306 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
+        <h1>Azimut 42-42</h1>
+          <p>$220.306 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
+          <p>
+                 <a href="https://drive.google.com/u/2/uc?id=1_cuDyDgtxLLYlcWjZJlzH8XbPsttYUDs&export=download">Download</a>
+          </p>
       </div>
     </span>
 
@@ -161,6 +165,8 @@
         <h1> Azimut 60</h1>
         <p>$505.341 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
 
+
+        </p>
       </div>
     </span>
 
@@ -173,8 +179,12 @@
                     <figure>
                         <figcaption class="title-1">
                             <h1> Azimut 42</h1>
-                            <p>$562.320 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
-
+                            <p>$562.320 <a href="https://drive.google.com/u/2/uc?id=1_cuDyDgtxLLYlcWjZJlzH8XbPsttYUDs&export=download"><i class="fas fa-arrow-circle-right"></i></a></p>
+                            <p>
+                                <a href="https://drive.google.com/u/2/uc?id=1_cuDyDgtxLLYlcWjZJlzH8XbPsttYUDs&export=download">
+                                    Download
+                                </a>
+                            </p>
                         </figcaption>
                         <img src="../images/Flybridge/Flybridge-42.jpg" alt="" id="i-1" class="f">
                     </figure>
