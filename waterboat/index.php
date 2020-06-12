@@ -3,7 +3,7 @@
 
 <head>
   <title>WaterBoat &mdash; Website Template by Colorlib</title>
-    <link rel="icon" href="images/globe-asia-solid.svg">
+    <link rel="icon" href="images/logo.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -126,7 +126,7 @@
                 <span class="flaticon-captain"></span>
               </span>
               <h3>Good Captain</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
+              <p>We have a team of experienced captains, have more than 30 years ' experience in driving. Will provide you with the satisfaction</p>
             </div>
           </div>
         </div>
