@@ -49,14 +49,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<h2> Sign in to your account </h2>
 							<form action="index.php" method="post">
 								<div class="form-sub-w3">
-									<input type="text" name="Username"  placeholder="Username " required="" />
+									<input type="text" name="username"  placeholder="Username " required="" />
 
 								<div class="icon-w3">
 									<i class="fa fa-user" aria-hidden="true"></i>
 								</div>
 								</div>
 								<div class="form-sub-w3">
-									<input type="password" name="Password"  placeholder="Password" required="" />
+									<input type="password" name="password"  placeholder="Password" required="" />
 
 								<div class="icon-w3">
 									<i class="fa fa-unlock-alt" aria-hidden="true"></i>

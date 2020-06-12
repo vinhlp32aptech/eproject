@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +83,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									<i class="fas fa-phone-square" aria-hidden="true"></i>
 								</div>
 								</div>
-							
+
+
+
 								<div class="clear"></div>
 
 								<div class="submit-agileits">
@@ -101,9 +104,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         </div>
                         
                     </div>
-                    
 
 
+        <script src="js/editimage.js"></script>
         <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
