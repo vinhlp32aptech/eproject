@@ -97,22 +97,7 @@
     </div>
 <!-- END slider -->
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-md-6">
-            <span class="text-serif text-primary">About Us</span>
-            <h3 class="heading-92913 text-black">Welcome To Our Website</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, illum, quasi. Odit velit deserunt eligendi unde, enim. Enim fugiat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eius ullam impedit architecto debitis facilis!</p>
-            <p><a href="#" class="btn btn-primary py-3 px-4">Learn More</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <div class="py-5">
       <div class="container">
@@ -123,7 +108,7 @@
                 <span class="flaticon-yacht"></span>
               </span>
               <h3>Luxuries Yacht</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
+              <p>Our domestic network extends the trading - procedures - operation & maintenance of the yacht and the international network of inspection - sales (Europe & Asia) to experts from European carriers. Europe like Italy, France, Poland ... Will help you a complete solution for you to enjoy the waves. </p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -132,7 +117,7 @@
                 <span class="flaticon-shield"></span>
               </span>
               <h3>30 Years of Experience</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
+              <p>Our team - who have negotiated take on the big yachts in the world - will help you journey into the world of yachts starting with knowledge - advice and finally remove the concerns for you to own your own yacht.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">

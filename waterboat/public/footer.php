@@ -3,6 +3,7 @@
 <div class="footer bg-light">
     <div class="container">
         <div class="row">
+            <div class="col-lg-3">
                 <a href="index.php"><p class="mb-4"><img src="images/logo.png" alt="Image" class="img-fluid"></p></a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>
                 <p><a href="about.php">Learn More</a></p>
@@ -50,4 +51,3 @@
         </div>
     </div>
 </div>
-
