@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cb846249-9606-4b6a-87ff-165202d614a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Product_detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/Atlantis-collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/Atlantis-collection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/bootstrap/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/bootstrap/mixins/_buttons.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +135,7 @@
       <workItem from="1591598949612" duration="9026000" />
       <workItem from="1591772586735" duration="6997000" />
       <workItem from="1591944787695" duration="8355000" />
-      <workItem from="1592037637066" duration="3736000" />
+      <workItem from="1592037637066" duration="5026000" />
     </task>
     <servers />
   </component>

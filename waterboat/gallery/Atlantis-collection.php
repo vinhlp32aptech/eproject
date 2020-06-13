@@ -12,23 +12,11 @@
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/jquery-ui.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-
     <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
-
-    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
-
-    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
-
-    <link rel="stylesheet" href="../css/aos.css">
     <link href="../css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
-
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/gallery.css">
-
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
@@ -43,66 +31,6 @@
 
     <?php include_once "header.php" ?>
 
-    <div class="hero-slide owl-carousel site-blocks-cover">
-        <div class="intro-section" style="background-image: url('../images/yacht1.jpeg');">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 ml-auto text-right" data-aos="fade-up">
-                        <h1>Explore, Discover The Ocean</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="intro-section" style="background-image: url('../images/yacht2.jpg');">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-                        <h1>Enjoy The Ocean With Your Family</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="intro-section" style="background-image: url('../images/yacht3.jpg');">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-                        <h1>Enjoy The Ocean With Your Family</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="intro-section" style="background-image: url('../images/yacht4.jpg');">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-                        <h1>Enjoy The Ocean With Your Family</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="intro-section" style="background-image: url('../images/yacht5.jpg');">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-                        <h1>Enjoy The Ocean With Your Family</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END slider -->
-    <hr>
     <div id="content-slider">
         <div class="wrap-slider">
 
