@@ -58,43 +58,26 @@
       </div>
     </div>
   <div class="row">
-        <div style="text-align:center" class="col-md-6">
+        <div style="text-align:center" class="col-md-5">
             <br><br><br><br>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4237543370045!2d106.68827279879031!3d10.778820881379646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3a9d92c4a7%3A0x6293396afcadc8a5!2zMjEyIE5ndXnhu4VuIMSQw6xuaCBDaGnhu4N1LCBQaMaw4budbmcgNiwgUXXhuq1uIDMsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1591975922656!5m2!1svi!2s" width="85%" height="70%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-7">
         <div class="site-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 form-group">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" class="form-control form-control-lg">
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" class="form-control form-control-lg">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 form-group">
+                    <div class="col-md-8">
+                        <form action="" method="post">
+                        <label for="fname">Full Name</label>
+                        <input type="text" id="fullname" class="form-control form-control-lg">
                         <label for="eaddress">Email Address</label>
-                        <input type="text" id="eaddress" class="form-control form-control-lg">
-                    </div>
-                    <div class="col-md-6 form-group">
+                        <input type="text" name="email" class="form-control form-control-lg">
                         <label for="tel">Tel. Number</label>
-                        <input type="text" id="tel" class="form-control form-control-lg">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
+                        <input type="text" name="phone" class="form-control form-control-lg">
                         <label for="message">Message</label>
-                        <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <input type="submit" value="Send Message" class="btn btn-primary rounded-0 px-3 px-5">
+                        <textarea name="message"  cols="30" rows="10" class="form-control"></textarea>
+                        <button type="submit"class="btn btn-primary rounded-0 px-3 px-5">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
