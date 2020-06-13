@@ -153,7 +153,7 @@
                                    <table class=" table-hover">
                                        <tbody>
                                        <tr>
-                                           <th class="col-2"><h1>Sell:</h1></th>
+                                           <th class="col-2"><h1>Price:</h1></th>
 
                                            <td class="col-2"><h1> <font color="#F00000">$416.668</font> </h1></td>
                                        </tr>

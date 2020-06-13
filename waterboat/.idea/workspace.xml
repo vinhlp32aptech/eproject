@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb846249-9606-4b6a-87ff-165202d614a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Product_detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +42,24 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="conn@192.168.64.2" type="feb32156:DbDataSourceImpl" />
         <item name="Eproject: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="conn@192.168.64.2" type="feb32156:DbDataSourceImpl" />
+        <item name="Eproject: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="invoice_details: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="conn@192.168.64.2" type="feb32156:DbDataSourceImpl" />
+        <item name="Eproject: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="photos: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="conn@192.168.64.2" type="feb32156:DbDataSourceImpl" />
+        <item name="Eproject: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="product: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -90,7 +111,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:conn@192.168.64.2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@3890ab69" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2a490a95" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -115,7 +136,9 @@
       <workItem from="1591340295921" duration="7451000" />
       <workItem from="1591364559434" duration="5115000" />
       <workItem from="1591598949612" duration="9026000" />
-      <workItem from="1591772586735" duration="6643000" />
+      <workItem from="1591772586735" duration="6997000" />
+      <workItem from="1591944787695" duration="8355000" />
+      <workItem from="1592037637066" duration="3736000" />
     </task>
     <servers />
   </component>
@@ -142,22 +165,22 @@
       <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.23.1280.723@0.23.1280.723" timestamp="1591341110822" />
-    <state width="846" height="179" key="GridCell.Tab.0.bottom" timestamp="1591342554467">
+    <state width="846" height="179" key="GridCell.Tab.0.bottom" timestamp="1592037865506">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="846" height="179" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1591342554467" />
-    <state width="846" height="179" key="GridCell.Tab.0.center" timestamp="1591342554466">
+    <state width="846" height="179" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1592037865506" />
+    <state width="846" height="179" key="GridCell.Tab.0.center" timestamp="1592037865504">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="846" height="179" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1591342554466" />
-    <state width="846" height="179" key="GridCell.Tab.0.left" timestamp="1591342554466">
+    <state width="846" height="179" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1592037865504" />
+    <state width="846" height="179" key="GridCell.Tab.0.left" timestamp="1592037865503">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="846" height="179" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1591342554466" />
-    <state width="846" height="179" key="GridCell.Tab.0.right" timestamp="1591342554467">
+    <state width="846" height="179" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1592037865503" />
+    <state width="846" height="179" key="GridCell.Tab.0.right" timestamp="1592037865505">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="846" height="179" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1591342554467" />
+    <state width="846" height="179" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1592037865505" />
     <state width="300" height="457" key="HiddenNamespacesPopup" timestamp="1591341203017">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
