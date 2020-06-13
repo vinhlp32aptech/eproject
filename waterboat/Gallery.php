@@ -114,7 +114,7 @@
                             <span class="text-serif text-primary">Collection</span>
                             <h3 class="heading-92913 text-black">Atlantis yacht Collection</h3>
                             <p>What will the name Atlantis remind you? For us it was simply an ocean ready to explore and the Atlantis collection was born for that reason...
-                            <p><a href="gallery/Atlantis-collection.php" class="btn btn-danger py-3 px-4">Watch now</a></p>
+                            <p><a href="gallery/Atlantis-collection.php" class="btn btn-primary py-3 px-4">Watch now</a></p>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                         <span class="text-serif text-primary">Collection</span>
                         <h3 class="heading-92913 text-black">Benetti yacht Collection</h3>
                         <p>From the imagined to the tangible, Benetti presents an inimitable reverie that has been able to charm the celebrity elite worldwide...
-                        <p><a href="gallery/Benetti-collection.php" class="btn btn-danger py-3 px-4">Watch now</a></p>
+                        <p><a href="gallery/Benetti-collection.php" class="btn btn-primary py-3 px-4">Watch now</a></p>
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@
                     <span class="text-serif text-primary">Collection</span>
                     <h3 class="heading-92913 text-black">Flybridge yacht Collection</h3>
                     <p>"Flybridge" is the phrase indicating the highest deck of a yacht, where you can enjoy the panoramic view, enjoy the feeling of freedom, mingle and open space with the sun and the wind...
-                    <p><a href="gallery/Flybridge-collection.php" class="btn btn-danger py-3 px-4">Watch now</a></p>
+                    <p><a href="gallery/Flybridge-collection.php" class="btn btn-primary py-3 px-4">Watch now</a></p>
                 </div>
             </div>
         </div>
@@ -164,7 +164,7 @@
                     <p>  Size from 34 to 58 feet. Affordable price, different design, superior facilities, luxury and comes from the world's number one brand of yachts...
                   </p>
 
-                    <p><a href="gallery/Grande-collection.php" class="btn btn-danger py-3 px-4">Watch now</a></p>
+                    <p><a href="gallery/Grande-collection.php" class="btn btn-primary py-3 px-4">Watch now</a></p>
                 </div>
             </div>
         </div>
@@ -180,18 +180,11 @@
                     <span class="text-serif text-primary">Collection</span>
                     <h3 class="heading-92913 text-black">Magellano yacht Collection</h3>
                     <p>Mangellano is Azimut's yacht line named after the famous explorer Mangellan. For adventure and adventure lovers, the name Mangellano will immediately arouse their passion.
-                     <p><a href="gallery/Magellano-collection.php" class="btn btn-danger py-3 px-4">Watch now</a></p>
+                     <p><a href="gallery/Magellano-collection.php" class="btn btn-primary py-3 px-4">Watch now</a></p>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <div class="site-section bg-light">
-
-    </div>
-
-
 
     <?php include_once "public/footer.php"?>
 

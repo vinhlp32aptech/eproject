@@ -35,18 +35,73 @@
   <div class="site-wrap">
 
       <?php include_once "public/header.php" ?>
-
-      <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-              <h1>Our Services</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
-              <p><a href="#" class="btn btn-primary py-3 px-5">Contact</a></p>
-            </div>
+      <div class="">
+          <!-- Slider -->
+          <div id="slider">
+              <div class="slides">
+                  <div class="slider">
+                      <div class="legend"></div>
+                      <div class="content">
+                          <div class="content-txt">
+                              <h1>Lorem ipsum dolor</h1>
+                              <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+                          </div>
+                      </div>
+                      <div class="image">
+                          <img src="https://cdn.stocksnap.io/img-thumbs/960w/VVHE6VHMAW.jpg">
+                      </div>
+                  </div>
+                  <div class="slider">
+                      <div class="legend"></div>
+                      <div class="content">
+                          <div class="content-txt">
+                              <h1>Lorem ipsum dolor</h1>
+                              <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+                          </div>
+                      </div>
+                      <div class="image">
+                          <img src="https://cdn.stocksnap.io/img-thumbs/960w/AKWVXIXFA8.jpg">
+                      </div>
+                  </div>
+                  <div class="slider">
+                      <div class="legend"></div>
+                      <div class="content">
+                          <div class="content-txt">
+                              <h1>Lorem ipsum dolor</h1>
+                              <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+                          </div>
+                      </div>
+                      <div class="image">
+                          <img src="https://cdn.stocksnap.io/img-thumbs/960w/TPLJK7JPRR.jpg">
+                      </div>
+                  </div>
+                  <div class="slider">
+                      <div class="legend"></div>
+                      <div class="content">
+                          <div class="content-txt">
+                              <h1>Lorem ipsum dolor</h1>
+                              <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+                          </div>
+                      </div>
+                      <div class="image">
+                          <img src="https://cdn.stocksnap.io/img-thumbs/960w/XJ2BKV9ASS.jpg">
+                      </div>
+                  </div>
+              </div>
+              <div class="switch">
+                  <ul>
+                      <li>
+                          <div class="on"></div>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                  </ul>
+              </div>
           </div>
-        </div>
+
       </div>
+
       <div class="popular-location ">
           <div class="container">
               <div class="row">
@@ -202,7 +257,6 @@
               </div>
                   <!-- .site-wrap -->
 </div>
-          </div>
       <?php include_once "public/footer.php"?>
 
   </div>
