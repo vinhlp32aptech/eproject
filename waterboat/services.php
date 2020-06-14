@@ -101,7 +101,7 @@
           </div>
 
       </div>
-
+      <hr/>
       <div class="popular-location ">
           <div class="container">
               <div class="row">

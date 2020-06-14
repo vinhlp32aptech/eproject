@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,41 +34,15 @@
 
 <div class="site-wrap">
     <div class="hero-slide owl-carousel site-blocks-cover">
-        <div class="intro-section" style="background-image: url('images/1.JPG');">
-            <div class="container">
-                <div class="row align-items-center">
-                </div>
-            </div>
-        </div>
+        <?php
+            $query = "select img from photos ";
+            $stmt = $db->selectData($query);
+        while($product = $stmt->fetch(PDO::FETCH_ASSOC)): echo $product['img'];?>
 
-        <div class="intro-section" style="background-image: url('images/4.png');">
-            <div class="container">
-                <div class="row align-items-center">
-
-                </div>
-            </div>
+        <div class="intro-section" style="background-image: url('images/<?= $product['img'];?>');">
         </div>
-        <div class="intro-section" style="background-image: url('images/3.jpeg');">
-            <div class="container">
-                <div class="row align-items-center">
+        <?php endwhile; ?>
 
-                </div>
-            </div>
-        </div>
-        <div class="intro-section" style="background-image: url('images/2.jpg');">
-            <div class="container">
-                <div class="row align-items-center">
-
-                </div>
-            </div>
-        </div>
-        <div class="intro-section" style="background-image: url('images/5.jpeg');">
-            <div class="container">
-                <div class="row align-items-center">
-
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <!-- END slider -->
@@ -86,16 +62,15 @@
        <div class="tab-content" id="pills-tabContent">
            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                <div class="row">
-                   <aside class="col-md-8"><h1>Azimut Magellano 43, 2014, Croatia</h1> <n/>
+                   <aside class="col-md-8"><h2>Azimut Magellano 43, 2014, Croatia</h2> <n/>
                        <p>The most popular line of Azimut Magellano Cruises, designed by a typical yacht designer Cor D. Rover. Magellano 43 stands out for its abilities when you do not just stop by going in the calm waters, but also can travel on the remote seas and large waves with your Magellano.
 
                            3 Cabins + 2 spacious bathrooms with separate standing bath (very noticeable on the size cruise), 4 lougne area/dining table around the boat. High-altitude roadblocks give you a sense of comfort and certainty
 
                            This Magellano 43 with 1 unique, well-maintained home by the original Azimut team.
+</p>
 
-                           <strong>Call us now for more details!</strong></p><n/>
-
-                       <h1>Featured Features</h1><n/>
+                       <h2>Featured Features</h2><n/>
                        <ul>
                            <li>Excellent yacht status</li>
                            <li>Joystick for easy docked</li>
@@ -103,7 +78,7 @@
                            <li>Machine canoe with Yamaha engine set apart. </li>
                        </ul>
                        <br/>
-                       <h1>Installed devices</h1><n/>
+                       <h2>Installed devices</h2><n/>
                        <h5>ADVANCED PACKAGE</h5>
                        <ul>
                            <li>11Kw Generator </li>

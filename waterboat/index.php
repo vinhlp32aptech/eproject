@@ -174,14 +174,14 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Products</span>
+            <h4 class="text-serif text-primary">Products</h4>
             <h3 class="heading-92913 text-black text-center">Our Yacht</h3>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-39381">
-              <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                <a href="#"><img src="images/hero_1.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4">
                 <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
                 <div class="d-flex">
