@@ -1,3 +1,17 @@
+<?php
+
+include_once "../conn/database.php";
+include_once "../conn/Pagination.php";
+
+$db = new database();
+
+
+
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,7 +38,7 @@
     <!--     SIDE AREA -->
     <div class="sideArea">
         <div class="avatar">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNOdyoIXDDBztO_GC8MFLmG_p6lZ2lTDh1ZnxSDawl1TZY_Zw" alt="">
+            <img src="../images/Lease2.jpg" alt="">
             <div class="avatarName">Welcome,<br>John Doe</div>
         </div>
         <ul class="sideMenu">
@@ -48,7 +62,7 @@
             <div class="account fr">
                 <div class="name has-submenu">John Doe<span class="fa fa-angle-down"></span></div>
                 <ul class="accountLinks submenu">
-                    <li><a href="">View website</a></li>
+                    <li><a href="../index.php">View website</a></li>
                     <li><a href="">Log out<span class="fa fa-sign-out fr"></span></a></li>
                 </ul>
             </div>
@@ -120,21 +134,36 @@
                 <div class="table">
                     <div class="row bg-1">
                         <div class="cell cell-50 text-center text-fff">ID</div>
-                        <div class="cell cell-100 text-center text-fff">CATEGORY</div>
-                        <div class="cell cell-100 text-fff">IMAGE</div>
-                        <div class="cell cell-100p text-fff">NAME</div>
+                        <div class="cell cell-100 text-center text-fff">PHOTO</div>
+                        <div class="cell cell-100 text-fff">NAME</div>
+                        <div class="cell cell-100 text-fff">PRICE</div>
+                        <div class="cell cell-50 text-fff">QUANTITY</div>
+                        <div class="cell cell-50 text-fff">STATUS</div>
+                        <div class="cell cell-50 text-fff">YEAR</div>
+                        <div class="cell cell-100 text-fff">CODE</div>
+
                         <div class="cell cell-100 text-center text-fff"><input type="checkbox" class="checkbox checkAll" name="statusAll" target=".status"></div>
                         <div class="cell cell-100 text-center text-fff">EDIT</div>
                     </div>
                     <!--   BEGIN LOOP -->
+                    <?php
+                    $query = "select * from product ";
+                    $stmt = $db->selectData($query);
+                    while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
+
                     <ul>
                         <li class="row">
-                            <div class="cell cell-50 text-center">1111</div>
-                            <div class="cell cell-100 text-center">1</div>
+                            <div class="cell cell-50 text-center"><?=$product['id_pro'];?></div>
                             <div class="cell cell-100 text-center">
-                                <a href=""><img src="http://bookstore.crunchpress.com/wp-content/uploads/2013/05/b2.jpg" alt="" width="50"></a>
+                                <a href=""><img src="../images/<?=$product['photo'];?>" alt="" width="50"></a>
                             </div>
-                            <div class="cell cell-100p"><a href="">PRODUCT 01</a></div>
+                                <div class="cell cell-100"><a href=""><?=$product['name_pro'];?></a></div>
+                                <div class="cell cell-100 text-center"><?=$product['price_pro'];?></div>
+                                <div class="cell cell-50 text-center"><?=$product['quantity_pro'];?></div>
+                                <div class="cell cell-50 text-center"><?=$product['status_pro'];?></div>
+                                <div class="cell cell-50 text-center"><?=$product['year_pro'];?></div>
+                                <div class="cell cell-100 text-center"><?=$product['code'];?></div>
+
                             <div class="cell cell-100 text-center">
                                 <input type="hidden" class="status" name="status" value="0">
                                 <input type="checkbox" class="btnSwitch status" name="status">
@@ -143,22 +172,9 @@
                                 <a href="" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                             </div>
                         </li>
-                        <li class="row">
-                            <div class="cell cell-50 text-center">1111</div>
-                            <div class="cell cell-100 text-center">1</div>
-                            <div class="cell cell-100 text-center">
-                                <a href=""><img src="http://bookstore.crunchpress.com/wp-content/uploads/2013/05/b2.jpg" alt="" width="50"></a>
-                            </div>
-                            <div class="cell cell-100p"><a href="">PRODUCT 01</a></div>
-                            <div class="cell cell-100 text-center">
-                                <input type="hidden" class="status" name="status" value="0">
-                                <input type="checkbox" class="btnSwitch status" name="status">
-                            </div>
-                            <div class="cell cell-100 text-center">
-                                <a href="" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="" class="btnRemove fa fa-remove bg-1 text-fff" onclick="return confirm('Do you really want to remove it ?')"></a>
-                            </div>
-                        </li>
                     </ul>
+                    <?php endwhile; ?>
+
                     <!--   END LOOP -->
                 </div>
             </form>
