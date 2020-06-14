@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
@@ -43,7 +44,7 @@
             <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-6">
-            <span class="text-serif text-primary">About Us</span>
+            <h4 class="text-serif text-primary">About Us</h4>
             <h3 class="heading-92913 text-black">Welcome To Our Website</h3>
             <p>During the past 40 years, we have constantly improved and upgraded the quality and service form to meet the needs of visitors.</p>
             <p>It can be said that <strong style="color:#0b0b0b"> Marina Fleet </strong> is a boat tour designed with the breakthrough and leading in yacht service with the most interesting and special destinations and entertainment services.</p>
@@ -97,7 +98,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Team</span>
+            <h4 class="text-serif text-primary">Team</h4>
             <h3 class="heading-92913 text-black text-center">Our Team</h3>
           </div>
         </div>

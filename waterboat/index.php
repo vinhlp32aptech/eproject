@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
@@ -174,14 +175,14 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Products</span>
+            <h4 class="text-serif text-primary">Products</h4>
             <h3 class="heading-92913 text-black text-center">Our Yacht</h3>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-39381">
-              <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                <a href="#"><img src="images/hero_1.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4">
                 <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
                 <div class="d-flex">
@@ -378,7 +379,12 @@
 
 
   <!-- loader -->
-  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
+  <div id="loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/>
+      </svg>
+  </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

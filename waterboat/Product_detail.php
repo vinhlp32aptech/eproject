@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,10 +22,8 @@
 
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/productdetail.css">
-
 </head>
 
 <body>
@@ -32,41 +32,15 @@
 
 <div class="site-wrap">
     <div class="hero-slide owl-carousel site-blocks-cover">
-        <div class="intro-section" style="background-image: url('images/1.JPG');">
-            <div class="container">
-                <div class="row align-items-center">
-                </div>
-            </div>
-        </div>
+        <?php
+            $query = "select img from photos ";
+            $stmt = $db->selectData($query);
+        while($product = $stmt->fetch(PDO::FETCH_ASSOC)): echo $product['img'];?>
 
-        <div class="intro-section" style="background-image: url('images/4.png');">
-            <div class="container">
-                <div class="row align-items-center">
-
-                </div>
-            </div>
+        <div class="intro-section" style="background-image: url('images/<?= $product['img'];?>');">
         </div>
-        <div class="intro-section" style="background-image: url('images/3.jpeg');">
-            <div class="container">
-                <div class="row align-items-center">
+        <?php endwhile; ?>
 
-                </div>
-            </div>
-        </div>
-        <div class="intro-section" style="background-image: url('images/2.jpg');">
-            <div class="container">
-                <div class="row align-items-center">
-
-                </div>
-            </div>
-        </div>
-        <div class="intro-section" style="background-image: url('images/5.jpeg');">
-            <div class="container">
-                <div class="row align-items-center">
-
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <!-- END slider -->
@@ -86,65 +60,29 @@
        <div class="tab-content" id="pills-tabContent">
            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                <div class="row">
-                   <aside class="col-md-8"><h1>Azimut Magellano 43, 2014, Croatia</h1> <n/>
-                       <p>The most popular line of Azimut Magellano Cruises, designed by a typical yacht designer Cor D. Rover. Magellano 43 stands out for its abilities when you do not just stop by going in the calm waters, but also can travel on the remote seas and large waves with your Magellano.
+                   <?php
+                   $query = "select info, featured, advanced, additional from desc_pro ";
+                   $stmt = $db->selectData($query);
+                   while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
-                           3 Cabins + 2 spacious bathrooms with separate standing bath (very noticeable on the size cruise), 4 lougne area/dining table around the boat. High-altitude roadblocks give you a sense of comfort and certainty
-
-                           This Magellano 43 with 1 unique, well-maintained home by the original Azimut team.
-
-                           <strong>Call us now for more details!</strong></p><n/>
-
-                       <h1>Featured Features</h1><n/>
+                   <aside class="col-md-8"><h2>Azimut Magellano 43, 2014, Croatia</h2> <n/>
+                        <?= $product['info'];?>
+                       <h2>Featured Features</h2><n/>
                        <ul>
-                           <li>Excellent yacht status</li>
-                           <li>Joystick for easy docked</li>
-                           <li>3rd Cabin</li>
-                           <li>Machine canoe with Yamaha engine set apart. </li>
+                           <?= $product['featured'];?>
                        </ul>
                        <br/>
-                       <h1>Installed devices</h1><n/>
+                       <h2>Installed devices</h2><n/>
                        <h5>ADVANCED PACKAGE</h5>
                        <ul>
-                           <li>11Kw Generator </li>
-                           <li>Air conditioning 40 000 BTU </li>
-                           <li>Double-Filter for motors </li>
-                           <li>6.3 Kw Motor Boat Propulsion</li>
-                           <li>Emergency pumps in a compartment </li>
-                           <li>Filters for the generator </li>
-                           <li>Wiring path waiting to be available from the cabin/driving station/Fly </li>
-                           <li>XENTA joystick for engine and propulsion</li>
-                           <li>Automatic Fire extinguishing system </li>
-                           <li>Chain Washing system </li>
-                           <li>Electronic search Lamp</li>
-                           <li>Outer sheath Set </li>
-                           <li>Open outer fence to open the boarding aisle </li>
-                           <li>Shore lines </li>
-                           <li>Control lamp from main helm </li>
-                           <li>"Exclusive" Decoration package </li>
-                           <li>Miele Kitchen Appliances </li>
+                           <?= $product['advanced'];?>
                        </ul>
                        <br/>
                        <h5>ADDITIONAL PAGES </h5>
                        <ul>
-                           <li>Roof for stern</li>
-                           <li>Hull for the stern </li>
-                           <li>Cockpit table </li>
-                           <li>Bimini on Fly </li>
-                           <li>Lifting table with sun loungers in the bow</li>
-                           <li>Teak on swimming floor </li>
-                           <li>Teak on Tail Board </li>
-                           <li>Road boarding the lifting ship </li>
-                           <li>Mosquito net</li>
-                           <li>3rd Cabin (Custom) </li>
-                           <li>Fridge and cooler Cabinet 195LT </li>
-                           <li>Refrigerators on the Fly </li>
-                           <li>Raymarine Silver Package </li>
-                           <li>TV with antenna </li>
-                           <li>3 TV Philip </li>
-                           <li>Canoe Capelli with Yamaha F6 4-stroke</li>
+                           <?= $product['additional'];?>
                        </ul>
-
+                       <?php endwhile; ?>
                    </aside>
                    <aside class="col-4">
                        <div class="container">
@@ -185,103 +123,109 @@
 
                            <table class="table table-striped">
                                <tbody>
+
+                               <?php
+                               $query = "select model, built_refit, builder, length, beam, draft, gross_tonnage, hull, stabilisers, engines, generators, cruising_maxspeed, cruise_range, economical_range, exterior_designer, interior_designer, classification, flag, stateroom, status from configuration ";
+                               $stmt = $db->selectData($query);
+                               while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
+
                                <tr>
                                    <th>Model</th>
-                                   <td>Azimut Magellano 43</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Year</th>
-                                   <td>2014</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Engine hours</th>
-                                   <td> 430 h</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Total length</th>
-                                   <td> 13.63  m</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Hull length</th>
-                                   <td> 12.96 m</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Horizontally</th>
-                                   <td> 4.40 m</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Draft max</th>
-                                   <td>1.20 m</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Turn water intake</th>
-                                   <td> 17.40 t</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Fuel tank</th>
-                                   <td>1680 l</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Water tank</th>
-                                   <td>600 l</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Black Water tank</th>
-                                   <td>130  l</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Grey Water tank</th>
-                                   <td>40  l</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Speed of fuel economy</th>
-                                   <td>16 NMI</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Max speed, nautical knots</th>
-                                   <td> 22 NMI</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Motor</th>
-                                   <td> 2 x 355 hp Cummins QSB 5.9 – V-drive</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Production materials</th>
-                                   <td>VTR/GRP</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Exterior design</th>
-                                   <td> Cor D. Rover Yacht Design</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Interior Design</th>
-                                   <td> Azimut Yachts</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Cabin</th>
-                                   <td>2</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Sleeping Place</th>
-                                   <td>4</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Locations</th>
-                                   <td> Croatia</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Flag</th>
-                                   <td> Jersey</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>VAT paid or not, which country</th>
-                                   <td>Not paid</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
                                <tr>
                                    <th>Shipbuilding</th>
-                                   <td> Azimut Yachts (Italy)</td>
+                                   <td><?= $product['model'];?></td>
                                </tr>
-
+<?php endwhile;?>
                                </tbody>
 
                            </table>
@@ -293,7 +237,7 @@
            </div>
        </div>
        <div id="loader" class="show fullscreen">
-           <svg class="circular" width="48px" height="48px">
+           <svg class="circular" width="48px" height="48px" >
                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/>
            </svg>

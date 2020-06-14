@@ -1,5 +1,11 @@
 <?php
+
+include_once "conn/Pagination.php";
+include_once "conn/database.php";
+$db = new database();
+
 ?>
+
 
 <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
@@ -107,4 +113,8 @@
 
     </div>
 
+</div>
+
+
+<div class=" to-top-btn hidden-xs hidden-sm">
 </div>
