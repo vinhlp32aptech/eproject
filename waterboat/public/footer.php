@@ -4,9 +4,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <p class="mb-4"><img src="images/logo.png" alt="Image" class="img-fluid"></p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>
-                <p><a href="#">Learn More</a></p>
+                <a href="index.php"><p class="mb-4"><img src="images/logo.png" alt="Image" class="img-fluid"></p></a>
+                <p>We are proud to be distributors largest yacht in the world.</p>
+                <p><a href="about.php">Learn More</a></p>
             </div>
             <div class="col-lg-3">
                 <h3 class="footer-heading"><span>Our Company</span></h3>
@@ -38,7 +38,6 @@
                 </ul>
             </div>
         </div>
-
         <div class="row">
             <div class="col-12">
                 <div class="copyright">
@@ -52,4 +51,3 @@
         </div>
     </div>
 </div>
-

@@ -1,5 +1,11 @@
 <?php
+
+include_once "conn/Pagination.php";
+include_once "conn/database.php";
+$db = new database();
+
 ?>
+
 
 <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
@@ -25,8 +31,8 @@
                         <span class="icon-location-arrow text-primary"></span>
                     </div>
                     <div class="text">
-                        <span class="h4 d-block">San Francisco</span>
-                        <span class="caption-text">Mountain View, Fake st., CA</span>
+                        <span class="h4 d-block">Viet Nam</span>
+                        <span class="caption-text"> District 3, HCM City</span>
                     </div>
                 </div>
 
@@ -37,7 +43,7 @@
                         <span class="icon-phone text-primary"></span>
                     </div>
                     <div class="text">
-                        <span class="h4 d-block">000 209 392 312</span>
+                        <span class="h4 d-block">0912345678</span>
                         <span class="caption-text">Toll free</span>
                     </div>
                 </div>
@@ -49,8 +55,8 @@
                         <span class="icon-envelope text-primary"></span>
                     </div>
                     <div class="text">
-                        <span class="h4 d-block">info@gmail.com</span>
-                        <span class="caption-text">Gournadi, 1230 Bariasl</span>
+                        <span class="h4 d-block">marinafleet@gmail.com</span>
+                        <span class="caption-text">Our mail</span>
                     </div>
                 </div>
             </div>
@@ -63,9 +69,7 @@
     </div>
 
 
-
-
-    <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+    <div class="site-navbar js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
 
         <div class="container">
             <div class="d-flex align-items-center">
@@ -83,9 +87,9 @@
                                 <a href="services.php" class="nav-link text-left">Services</a>
                             </li>
                             <li>
-                                <a href="testimonials.php" class="nav-link text-left">Testimonials</a>
+                                <a href="Gallery.php" class="nav-link text-left">Gallery</a>
                             </li>
-                            <li><a href="blog.php" class="nav-link text-left">Blog</a></li>
+<!--                            <li><a href="account.php" class="nav-link text-left">Account</a></li>-->
                             <li>
                                 <a href="contact.php" class="nav-link text-left">Contact</a>
                             </li>
@@ -93,7 +97,13 @@
                                 <a href="signin.php" class="nav-link text-left" id="signinV">Sign-in/</a>
                                 <a href="signup.php" class="nav-link text-left" id="signupV">Sign-up</a>
                             </li>
-                        </ul>                                                                                                                                                                                                                                                                                          </ul>
+                            <li>
+                                <form id="demo-2">
+                                    <input type="search" placeholder="Search">
+                                </form>
+                            </li>
+
+                        </ul>
                     </nav>
 
                 </div>
@@ -103,4 +113,8 @@
 
     </div>
 
+</div>
+
+
+<div class=" to-top-btn hidden-xs hidden-sm">
 </div>

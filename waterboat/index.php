@@ -3,7 +3,7 @@
 
 <head>
   <title>WaterBoat &mdash; Website Template by Colorlib</title>
-    <link rel="icon" href="images/globe-asia-solid.svg">
+    <link rel="icon" href="images/logo.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
@@ -38,7 +39,7 @@
     <?php include_once "public/header.php" ?>
 
     <div class="hero-slide owl-carousel site-blocks-cover">
-      <div class="intro-section" style="background-image: url('images/hero_1.jpg');">
+      <div class="intro-section" style="background-image: url('images/yacht1.jpeg');">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-7 ml-auto text-right" data-aos="fade-up">
@@ -50,7 +51,7 @@
         </div>
       </div>
 
-      <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
+      <div class="intro-section" style="background-image: url('images/yacht2.jpg');">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
@@ -61,26 +62,43 @@
           </div>
         </div>
       </div>
-
-    </div>
-    <!-- END slider -->
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-md-6">
-            <span class="text-serif text-primary">About Us</span>
-            <h3 class="heading-92913 text-black">Welcome To Our Website</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, illum, quasi. Odit velit deserunt eligendi unde, enim. Enim fugiat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eius ullam impedit architecto debitis facilis!</p>
-            <p><a href="#" class="btn btn-primary py-3 px-4">Learn More</a></p>
-          </div>
+        <div class="intro-section" style="background-image: url('images/yacht3.jpg');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
+                        <h1>Enjoy The Ocean With Your Family</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="intro-section" style="background-image: url('images/yacht4.jpg');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
+                        <h1>Enjoy The Ocean With Your Family</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro-section" style="background-image: url('images/yacht5.jpg');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
+                        <h1>Enjoy The Ocean With Your Family</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+<!-- END slider -->
+
+
 
     <div class="py-5">
       <div class="container">
@@ -91,7 +109,7 @@
                 <span class="flaticon-yacht"></span>
               </span>
               <h3>Luxuries Yacht</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
+              <p>Our domestic network extends the trading - procedures - operation & maintenance of the yacht and the international network of inspection - sales (Europe & Asia) to experts from European carriers. Europe like Italy, France, Poland ... Will help you a complete solution for you to enjoy the waves. </p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -100,7 +118,7 @@
                 <span class="flaticon-shield"></span>
               </span>
               <h3>30 Years of Experience</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
+              <p>Our team - who have negotiated take on the big yachts in the world - will help you journey into the world of yachts starting with knowledge - advice and finally remove the concerns for you to own your own yacht.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -109,7 +127,7 @@
                 <span class="flaticon-captain"></span>
               </span>
               <h3>Good Captain</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsa, ad ratione quos distinctio unde.</p>
+              <p>We have a team of experienced captains, have more than 30 years ' experience in driving. Will provide you with the satisfaction</p>
             </div>
           </div>
         </div>
@@ -157,14 +175,14 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Destination</span>
-            <h3 class="heading-92913 text-black text-center">Our Destinations</h3>
+            <h4 class="text-serif text-primary">Products</h4>
+            <h3 class="heading-92913 text-black text-center">Our Yacht</h3>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-39381">
-              <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                <a href="#"><img src="images/hero_1.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4">
                 <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
                 <div class="d-flex">
@@ -340,156 +358,13 @@
         </div>
       </div>
     </div>
-    
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Team</span>
-            <h3 class="heading-92913 text-black text-center">Our Team</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_3.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_4.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Testimonial</span>
-            <h3 class="heading-92913 text-black text-center">What Customer Saying...</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-            <div class="testimony-39291">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laborum cumque commodi, unde doloribus.</p>
-              </blockquote>
-              <div class="d-flex vcard align-items-center">
-                <div class="pic mr-3">
-                  <img src="images/person_3_sq.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="text">
-                  <strong class="d-block">John Doe</strong>
-                  <span>CEO and Co-Founder</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-            <div class="testimony-39291">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laborum cumque commodi, unde doloribus.</p>
-              </blockquote>
-              <div class="d-flex vcard align-items-center">
-                <div class="pic mr-3">
-                  <img src="images/person_4_sq.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="text">
-                  <strong class="d-block">John Doe</strong>
-                  <span>CEO and Co-Founder</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-            <div class="testimony-39291">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laborum cumque commodi, unde doloribus.</p>
-              </blockquote>
-              <div class="d-flex vcard align-items-center">
-                <div class="pic mr-3">
-                  <img src="images/person_3_sq.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="text">
-                  <strong class="d-block">John Doe</strong>
-                  <span>CEO and Co-Founder</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="site-section bg-image overlay" style="background-image: url('images/hero_2.jpg');">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
             <h2 class="text-white">Get In Touch With Us</h2>
-            <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="lead text-white">We are committed to Marina Fleet as a pioneering cruise in providing the most valuable experience for travelers without any comparable tour.</p>
             <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
           </div>
         </div>
@@ -504,7 +379,12 @@
 
 
   <!-- loader -->
-  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
+  <div id="loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/>
+      </svg>
+  </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -520,10 +400,6 @@
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/jquery.mb.YTPlayer.min.js"></script>
-
-
-
-
   <script src="js/main.js"></script>
 
 </body>

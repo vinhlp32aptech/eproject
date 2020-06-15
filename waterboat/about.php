@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
@@ -33,23 +34,8 @@
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
   <div class="site-wrap">
+
       <?php include_once "public/header.php" ?>
-
-    
-
-      <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-              <h1>About WaterBoat</h1>
-              <p>The 5-star cruise will give you the opportunity to enjoy great food with all entertainment services on par with the royal class.</p>
-              <p><a href="contact.php" class="btn btn-primary py-3 px-5">Contact</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    
 
     <div class="site-section">
       <div class="container">
@@ -58,7 +44,7 @@
             <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-6">
-            <span class="text-serif text-primary">About Us</span>
+            <h4 class="text-serif text-primary">About Us</h4>
             <h3 class="heading-92913 text-black">Welcome To Our Website</h3>
             <p>During the past 40 years, we have constantly improved and upgraded the quality and service form to meet the needs of visitors.</p>
             <p>It can be said that <strong style="color:#0b0b0b"> Marina Fleet </strong> is a boat tour designed with the breakthrough and leading in yacht service with the most interesting and special destinations and entertainment services.</p>
@@ -112,7 +98,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Team</span>
+            <h4 class="text-serif text-primary">Team</h4>
             <h3 class="heading-92913 text-black text-center">Our Team</h3>
           </div>
         </div>
@@ -191,19 +177,9 @@
 
     
 
-    <div class="site-section bg-image overlay" style="background-image: url('images/hero_2.jpg');">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7 text-center">
-            <h2 class="text-white">Get In Touch With Us</h2>
-            <p class="lead text-white">We are committed to Marina Fleet as a pioneering cruise in providing the most valuable experience for travelers without any comparable tour.</p>
-            <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
+<<<<<<< HEAD
     <div class="footer bg-light">
       <div class="container">
         <div class="row">
@@ -242,21 +218,9 @@
               </ul>
           </div>
         </div>
+=======
+>>>>>>> 8a584ed1ac1dedec239d0fd5e826ba1cb8e0f6cd
 
-        <div class="row">
-          <div class="col-12">
-            <div class="copyright">
-                <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
 
 <?php include_once "public/footer.php"?>
 

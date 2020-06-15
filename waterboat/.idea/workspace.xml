@@ -13,6 +13,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Product_detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/productdetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/productdetail.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +27,38 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set>
+        <option value="collation" />
+      </set>
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="conn@192.168.64.2" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="conn@192.168.64.2" type="feb32156:DbDataSourceImpl" />
+        <item name="Eproject: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="conn@192.168.64.2" type="feb32156:DbDataSourceImpl" />
+        <item name="Eproject: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="product: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -41,9 +77,44 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/admin" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:conn@192.168.64.2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:conn@192.168.64.2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2a490a95" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -55,16 +126,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591161892933</updated>
-      <workItem from="1591161894718" duration="7976000" />
-      <workItem from="1591340583314" duration="943000" />
-      <workItem from="1591342422408" duration="2119000" />
-      <workItem from="1591366233205" duration="205000" />
-      <workItem from="1591598332429" duration="2306000" />
-      <workItem from="1591627321488" duration="289000" />
-      <workItem from="1591777154249" duration="2705000" />
-      <workItem from="1592060310525" duration="2696000" />
-      <workItem from="1592145222733" duration="1633000" />
-      <workItem from="1592205357446" duration="977000" />
+      <workItem from="1591161894718" duration="5105000" />
+      <workItem from="1591272567919" duration="4238000" />
+      <workItem from="1591340198161" duration="77000" />
+      <workItem from="1591340295921" duration="7451000" />
+      <workItem from="1591364559434" duration="5115000" />
+      <workItem from="1591598949612" duration="9026000" />
+      <workItem from="1591772586735" duration="6997000" />
+      <workItem from="1591944787695" duration="8355000" />
+      <workItem from="1592037637066" duration="24084000" />
     </task>
     <servers />
   </component>
@@ -83,11 +153,47 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="35" key="#PHP/0.0.1440.900@0.0.1440.900" timestamp="1591162089992" />
-    <state x="538" y="380" key="NewPhpFileDialog" timestamp="1591600068849">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="240" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591340989820">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state x="538" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1591600068849" />
-    <state x="478" y="328" key="NewPhpFileDialog/0.23.1280.723@0.23.1280.723" timestamp="1591165184743" />
+    <state x="240" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.723@0.23.1280.723" timestamp="1591340989820" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1591341110822">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.23.1280.723@0.23.1280.723" timestamp="1591341110822" />
+    <state x="225" y="170" key="EditFileWatcherDialog" timestamp="1592044534644">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state x="225" y="170" key="EditFileWatcherDialog/0.23.1280.723@0.23.1280.723" timestamp="1592044534644" />
+    <state width="846" height="179" key="GridCell.Tab.0.bottom" timestamp="1592147110331">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state width="846" height="179" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1592147110331" />
+    <state width="846" height="179" key="GridCell.Tab.0.center" timestamp="1592147110330">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state width="846" height="179" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1592147110330" />
+    <state width="846" height="179" key="GridCell.Tab.0.left" timestamp="1592147110330">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state width="846" height="179" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1592147110330" />
+    <state width="846" height="179" key="GridCell.Tab.0.right" timestamp="1592147110331">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state width="846" height="179" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1592147110331" />
+    <state width="300" height="457" key="HiddenNamespacesPopup" timestamp="1591341203017">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state width="300" height="457" key="HiddenNamespacesPopup/0.23.1280.723@0.23.1280.723" timestamp="1591341203017" />
+    <state x="478" y="328" key="NewPhpFileDialog" timestamp="1592132428505">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state x="538" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1591162942607" />
+    <state x="478" y="328" key="NewPhpFileDialog/0.23.1280.723@0.23.1280.723" timestamp="1592132428505" />
+    <state x="149" y="23" key="SettingsEditor" timestamp="1591340276109">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state x="149" y="23" key="SettingsEditor/0.23.1280.723@0.23.1280.723" timestamp="1591340276109" />
     <state x="429" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591167436915">
       <screen x="0" y="23" width="1280" height="723" />
     </state>

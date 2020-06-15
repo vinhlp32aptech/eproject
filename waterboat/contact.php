@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="css/aos.css">
 
@@ -57,98 +58,52 @@
               </div>
           </div>
       </div>
+    </div>
+  <div class="row">
+        <div style="text-align:center" class="col-md-6">
+            <br><br><br><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4237543370045!2d106.68827279879031!3d10.778820881379646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3a9d92c4a7%3A0x6293396afcadc8a5!2zMjEyIE5ndXnhu4VuIMSQw6xuaCBDaGnhu4N1LCBQaMaw4budbmcgNiwgUXXhuq1uIDMsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1591975922656!5m2!1svi!2s" width="85%" height="70%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="col-md-6">
+        <div class="site-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" class="form-control form-control-lg">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" class="form-control form-control-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="eaddress">Email Address</label>
+                        <input type="text" id="eaddress" class="form-control form-control-lg">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="tel">Tel. Number</label>
+                        <input type="text" id="tel" class="form-control form-control-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label for="message">Message</label>
+                        <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <input type="submit" value="Send Message" class="btn btn-primary rounded-0 px-3 px-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
   </div>
-
-
-  <div class="site-section">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6 form-group">
-                  <label for="name">Full Name</label>
-                  <input type="text" id="name"  class="form-control form-control-lg">
-              </div>
-              <div>
-                  <p class="mb-4"><img src="images/logo_21.png" width="150px" height="100px" alt="Image" class="img-fluid"></p>
-              </div>
-
-          </div>
-          <div class="row">
-              <div class="col-md-6 form-group">
-                  <label for="email">Email Address</label>
-                  <input type="text" id="email" class="form-control form-control-lg">
-              </div>
-              <div>
-                  <p class="mb-4"><img src="images/logo_21.png" width="150px" height="100px" alt="Image" class="img-fluid"></p>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-6 form-group">
-                  <label for="Phone">Tel. Number</label>
-                  <input type="text" id="subject" class="form-control form-control-lg">
-              </div>
-              <div>
-                  <p class="mb-4"><img src="images/logo_21.png" width="150px" height="100px" alt="Image" class="img-fluid"></p>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-12 form-group">
-                  <label for="body">Message</label>
-                  <textarea name="" id="body" cols="30" rows="10" class="form-control"></textarea>
-              </div>
-          </div>
-
-          <div class="row">
-              <div class="col-12">
-                  <input type="submit" onclick="sendemail()" value="Send Message" class="btn btn-primary rounded-0 px-3 px-5">
-              </div>
-          </div>
-      </div>
-  </div>
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-      function sendemail() {
-          var name = $("#name");
-          var email = $("#email");
-          var subject = $("#subject");
-          var body = $("#body");
-
-          if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
-              $.ajax({
-                  url: 'sendEmail.php',
-                  method: 'POST',
-                  dataType: 'json',
-                  data: {
-                      name: name.val(),
-                      email: email.val(),
-                      subject: subject.val(),
-                      body: body.val()
-                  }, success: function (response) {
-                      if (response.status == "success")
-                          alert('We will contact you soonest!');
-                      else {
-                          alert('Please try again!');
-                          console.log(response);
-                      }
-                  }
-              });
-          }
-      }
-
-      function isNotEmpty(caller) {
-          if (caller.val() == "") {
-              caller.css('border', '1px solid red');
-              return false;
-          } else
-              caller.css('border', '');
-
-          return true;
-      }
-  </script>
-
-
-
-  
-
     <div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');">
         <div class="container">
           <div class="row">
@@ -172,60 +127,9 @@
           </div>
         </div>
       </div>
-    
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <p class="mb-4"><img src="images/logo2.png" alt="Image" class="img-fluid"></p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>  
-            <p><a href="#">Learn More</a></p>
-          </div>
-          <div class="col-lg-3">
-            <h3 class="footer-heading"><span>Our Company</span></h3>
-            <ul class="list-unstyled">
-                <li><a href="#">About</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Projects</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-              <h3 class="footer-heading"><span>Our Services</span></h3>
-              <ul class="list-unstyled">
-                  <li><a href="#">Industrial</a></li>
-                  <li><a href="#">Construction</a></li>
-                  <li><a href="#">Remodeling</a></li>
-              </ul>
-          </div>
-          <div class="col-lg-3">
-              <h3 class="footer-heading"><span>Contact</span></h3>
-              <ul class="list-unstyled">
-                  <li><a href="#">Help Center</a></li>
-                  <li><a href="#">Support Community</a></li>
-                  <li><a href="#">Press</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Our Partners</a></li>
-              </ul>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-12">
-            <div class="copyright">
-                <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+  <?php include_once "public/footer.php"?>
+
 
   </div>
   <!-- .site-wrap -->
