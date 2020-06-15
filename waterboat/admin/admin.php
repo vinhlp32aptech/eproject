@@ -135,11 +135,11 @@ $db = new database();
                     <div class="row bg-1">
                         <div class="cell cell-50 text-center text-fff">ID</div>
                         <div class="cell cell-100 text-center text-fff">PHOTO</div>
-                        <div class="cell cell-100 text-fff">NAME</div>
-                        <div class="cell cell-100 text-fff">PRICE</div>
-                        <div class="cell cell-50 text-fff">QUANTITY</div>
-                        <div class="cell cell-50 text-fff">STATUS</div>
-                        <div class="cell cell-50 text-fff">YEAR</div>
+                        <div class="cell cell-200 text-center">NAME</div>
+                        <div class="cell cell-100 text-center">PRICE</div>
+                        <div class="cell cell-100 text-fff">QUANTITY</div>
+                        <div class="cell cell-100 text-center">STATUS</div>
+                        <div class="cell cell-100 text-fff">YEAR</div>
                         <div class="cell cell-100 text-fff">CODE</div>
 
                         <div class="cell cell-100 text-center text-fff"><input type="checkbox" class="checkbox checkAll" name="statusAll" target=".status"></div>
@@ -157,12 +157,12 @@ $db = new database();
                             <div class="cell cell-100 text-center">
                                 <a href=""><img src="../images/<?=$product['photo'];?>" alt="" width="50"></a>
                             </div>
-                                <div class="cell cell-100"><a href=""><?=$product['name_pro'];?></a></div>
-                                <div class="cell cell-100 text-center"><?=$product['price_pro'];?></div>
-                                <div class="cell cell-50 text-center"><?=$product['quantity_pro'];?></div>
-                                <div class="cell cell-50 text-center"><?=$product['status_pro'];?></div>
-                                <div class="cell cell-50 text-center"><?=$product['year_pro'];?></div>
-                                <div class="cell cell-100 text-center"><?=$product['code'];?></div>
+                                <div class="cell cell-200 text-center"><a href=""><?=$product['name_pro'];?></a></div>
+                                <div class="cell cell-100 "><?=$product['price_pro'];?></div>
+                                <div class="cell cell-100 text-center"><?=$product['quantity_pro'];?></div>
+                                <div class="cell cell-100 text-center"><?=$product['status_pro'];?></div>
+                                <div class="cell cell-100 "><?=$product['year_pro'];?></div>
+                                <div class="cell cell-100"><?=$product['code'];?></div>
 
                             <div class="cell cell-100 text-center">
                                 <input type="hidden" class="status" name="status" value="0">
