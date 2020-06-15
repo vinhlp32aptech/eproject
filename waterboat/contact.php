@@ -23,9 +23,10 @@
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
   <link rel="stylesheet" href="css/aos.css">
-  <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 
 
 
@@ -38,63 +39,115 @@
       <?php include_once "public/header.php" ?>
 
 
+
     </div>
-    
 
 
 
-    <div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/hero_1.jpg');">
+  <div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/hero_1.jpg');">
       <div class="container">
-        <div class="row align-items-center text-center border">
-          <div class="col-lg-12 mt-5" data-aos="fade-up">
-            <h1>Get In Touch</h1>
-            <p class="text-white text-center">
-              <a href="index.php">Home</a>
-              <span class="mx-2">/</span>
-              <span>Contact Us</span>
-            </p>
+          <div class="row align-items-center text-center border">
+              <div class="col-lg-12 mt-5" data-aos="fade-up">
+                  <h1>Get In Touch</h1>
+                  <p class="text-white text-center">
+                      <a href="index.php">Home</a>
+                      <span class="mx-2">/</span>
+                      <span>Contact Us</span>
+                  </p>
+              </div>
           </div>
-        </div>
       </div>
-    </div>
+  </div>
 
-    
-    <div class="site-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 form-group">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" class="form-control form-control-lg">
-                </div>
-                <div class="col-md-6 form-group">
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" class="form-control form-control-lg">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 form-group">
-                    <label for="eaddress">Email Address</label>
-                    <input type="text" id="eaddress" class="form-control form-control-lg">
-                </div>
-                <div class="col-md-6 form-group">
-                    <label for="tel">Tel. Number</label>
-                    <input type="text" id="tel" class="form-control form-control-lg">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 form-group">
-                    <label for="message">Message</label>
-                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <input type="submit" value="Send Message" class="btn btn-primary rounded-0 px-3 px-5">
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="site-section">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name"  class="form-control form-control-lg">
+              </div>
+              <div>
+                  <p class="mb-4"><img src="images/logo_21.png" width="150px" height="100px" alt="Image" class="img-fluid"></p>
+              </div>
+
+          </div>
+          <div class="row">
+              <div class="col-md-6 form-group">
+                  <label for="email">Email Address</label>
+                  <input type="text" id="email" class="form-control form-control-lg">
+              </div>
+              <div>
+                  <p class="mb-4"><img src="images/logo_21.png" width="150px" height="100px" alt="Image" class="img-fluid"></p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6 form-group">
+                  <label for="Phone">Tel. Number</label>
+                  <input type="text" id="subject" class="form-control form-control-lg">
+              </div>
+              <div>
+                  <p class="mb-4"><img src="images/logo_21.png" width="150px" height="100px" alt="Image" class="img-fluid"></p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12 form-group">
+                  <label for="body">Message</label>
+                  <textarea name="" id="body" cols="30" rows="10" class="form-control"></textarea>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-12">
+                  <input type="submit" onclick="sendemail()" value="Send Message" class="btn btn-primary rounded-0 px-3 px-5">
+              </div>
+          </div>
+      </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+      function sendemail() {
+          var name = $("#name");
+          var email = $("#email");
+          var subject = $("#subject");
+          var body = $("#body");
+
+          if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+              $.ajax({
+                  url: 'sendEmail.php',
+                  method: 'POST',
+                  dataType: 'json',
+                  data: {
+                      name: name.val(),
+                      email: email.val(),
+                      subject: subject.val(),
+                      body: body.val()
+                  }, success: function (response) {
+                      if (response.status == "success")
+                          alert('We will contact you soonest!');
+                      else {
+                          alert('Please try again!');
+                          console.log(response);
+                      }
+                  }
+              });
+          }
+      }
+
+      function isNotEmpty(caller) {
+          if (caller.val() == "") {
+              caller.css('border', '1px solid red');
+              return false;
+          } else
+              caller.css('border', '');
+
+          return true;
+      }
+  </script>
+
+
+
+  
 
     <div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');">
         <div class="container">

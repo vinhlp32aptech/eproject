@@ -210,7 +210,7 @@
           <div class="col-lg-3">
             <p class="mb-4"><img src="images/logo.png" alt="Image" class="img-fluid"></p>
             <p>Not only can you experience the beautiful beaches but also be served anytime and anywhere.</p>
-            <p><a href="contact.php">Contact Us</a></p>
+            <p><a href="index.php" class="btn">Learn More</a></p>
           </div>
           <div class="col-lg-3">
             <h3 class="footer-heading"><span>Our Company</span></h3>
