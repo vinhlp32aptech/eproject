@@ -670,9 +670,12 @@ label {
     display: -webkit-flex;
     padding-left: 200px;
     transition: 0.5s;
+    padding-left: 0;
+
 }
 .container.is-click {
-    padding-left: 0;
+    padding-left: 200px;
+
 }
 .avatar {
     margin: 50px 1em;
@@ -707,9 +710,19 @@ label {
     bottom: 0;
     left: 0;
     transition: 0.5s;
+    left: -200px;
+
 }
 .container.is-click .sideArea {
-    left: -200px;
+    width: 200px;
+    min-width: 200px;
+    background: #2A3F54;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+
 }
 .sideArea li>a {
     display: block;
