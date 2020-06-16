@@ -4,6 +4,8 @@ if (!isset($_SESSION['user'])) {
     header('location:SigninwithAd.php');
 } else {
     echo "wellcome " . $_SESSION['user'];
+
+
 }
 ?>
 
