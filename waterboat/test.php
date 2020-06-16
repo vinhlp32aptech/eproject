@@ -1,14 +1,9 @@
 <?php
+// Mật khẩu là dammio
+$password = 'dammio';
 
-include_once "conn/database.php";
-$db = new database();
-
-$query = "SELECT id_photo, id_pro, img from photos ";
-$stmt = $db->selectData($query);
-while($product = $stmt->fetch(PDO::FETCH_ASSOC)):
-echo $product['img'];
-endwhile;
-
+echo 'Mật khẩu <b>' . $password . '</b> được mã hóa thành: <br/><br/>';
+echo 'MD5: <b>' . md5($password) . '</b><br/>'; // mật khẩu đã được mã hóa bằng md5
+echo 'SHA1: <b>' . sha1($password) . '</b>'; // mật khẩu đã được mã hóa bằng sha1
 ?>
-
 
