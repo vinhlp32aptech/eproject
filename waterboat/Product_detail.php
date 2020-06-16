@@ -33,7 +33,7 @@
 <div class="site-wrap">
     <div class="hero-slide owl-carousel site-blocks-cover">
         <?php
-            $query = "select img from photos ";
+            $query = "select img from photos where id_pro = 1 limit 5";
             $stmt = $db->selectData($query);
         while($product = $stmt->fetch(PDO::FETCH_ASSOC)): echo $product['img'];?>
 
@@ -61,7 +61,7 @@
            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                <div class="row">
                    <?php
-                   $query = "select info, featured, advanced, additional from desc_pro ";
+                   $query = "select info, featured, advanced, additional from desc_pro where id_pro = 1 ";
                    $stmt = $db->selectData($query);
                    while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
@@ -125,7 +125,7 @@
                                <tbody>
 
                                <?php
-                               $query = "select model, built_refit, builder, length, beam, draft, gross_tonnage, hull, stabilisers, engines, generators, cruising_maxspeed, cruise_range, economical_range, exterior_designer, interior_designer, classification, flag, stateroom, status from configuration ";
+                               $query = "select model, length_overall, beam, draft_max, draft_min, bridge_clearance, deadrise, dry_weight, fuel_tanks, water_tanks, Production_materials, Exterior_design, Interior_Design, passenger_capacity, cabins, manufacturer from configuration  where id_pro = 1";
                                $stmt = $db->selectData($query);
                                while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
@@ -135,95 +135,63 @@
                                </tr>
                                <tr>
                                    <th>Year</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['length_overall'];?></td>
                                </tr>
                                <tr>
                                    <th>Engine hours</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['beam'];?></td>
                                </tr>
                                <tr>
                                    <th>Total length</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['draft_max'];?></td>
                                </tr>
                                <tr>
                                    <th>Hull length</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['draft_min'];?></td>
                                </tr>
                                <tr>
                                    <th>Horizontally</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['bridge_clearance'];?></td>
                                </tr>
                                <tr>
                                    <th>Draft max</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['deadrise'];?></td>
                                </tr>
                                <tr>
                                    <th>Turn water intake</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['dry_weight'];?></td>
                                </tr>
                                <tr>
                                    <th>Fuel tank</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['fuel_tanks'];?></td>
                                </tr>
                                <tr>
                                    <th>Water tank</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['water_tanks'];?></td>
                                </tr>
                                <tr>
                                    <th>Black Water tank</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['Production_materials'];?></td>
                                </tr>
                                <tr>
                                    <th>Grey Water tank</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['Exterior_design'];?></td>
                                </tr>
                                <tr>
                                    <th>Speed of fuel economy</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['Interior_Design'];?></td>
                                </tr>
                                <tr>
                                    <th>Max speed, nautical knots</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['passenger_capacity'];?></td>
                                </tr>
                                <tr>
                                    <th>Motor</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['cabins'];?></td>
                                </tr>
                                <tr>
                                    <th>Production materials</th>
-                                   <td><?= $product['model'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Exterior design</th>
-                                   <td><?= $product['model'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Interior Design</th>
-                                   <td><?= $product['model'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Cabin</th>
-                                   <td><?= $product['model'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Sleeping Place</th>
-                                   <td><?= $product['model'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Locations</th>
-                                   <td><?= $product['model'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Flag</th>
-                                   <td><?= $product['model'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>VAT paid or not, which country</th>
-                                   <td><?= $product['model'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Shipbuilding</th>
-                                   <td><?= $product['model'];?></td>
+                                   <td><?= $product['manufacturer'];?></td>
                                </tr>
 <?php endwhile;?>
                                </tbody>

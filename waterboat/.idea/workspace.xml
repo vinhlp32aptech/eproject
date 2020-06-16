@@ -2,17 +2,976 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb846249-9606-4b6a-87ff-165202d614a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (23).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (24).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (25).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (26).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (27).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (28).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (29).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (30).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (31).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (32).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (33).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (34).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (35).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (36).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/25 Metri (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis34 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis43 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (23).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (24).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (25).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis50 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Atlantis51 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut50-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut54- (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (23).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (24).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (25).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (26).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (27).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (28).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (29).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (30).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (31).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (32).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (33).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (34).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (35).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (36).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut55s (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut60 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (23).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (24).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut66 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (23).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (24).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (25).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (26).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (27).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (28).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (29).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (30).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (31).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut72 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (23).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (24).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (25).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (26).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (27).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (28).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (29).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (30).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (31).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (32).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (33).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (34).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut77s (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (23).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (24).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (25).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (26).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (27).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (28).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (29).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (30).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (31).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (32).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (33).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (34).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (35).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimut80 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts6 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (23).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (24).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (25).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Azimuts7 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (23).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano43 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano53 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano66 (9).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (11).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (12).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (13).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (14).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (15).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (16).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (17).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (19).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (20).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (21).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (22).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (23).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (24).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (25).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (26).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (27).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (28).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (29).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (30).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (31).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (32).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (33).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (34).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (35).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (36).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (37).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (38).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (39).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (40).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (41).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (8).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Magellano76 (9).jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoginWithAdmin/SigninwithAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/LoginWithAdmin/SigninwithAd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoginWithAdmin/SigninwithAd2.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/LoginWithAdmin/SigninwithAd2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoginWithAdmin/SignoutAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/LoginWithAdmin/SignoutAd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoginWithAdmin/indexAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/LoginWithAdmin/indexAd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conn/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/conn/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Product_detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (23).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (24).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (25).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (26).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (27).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (28).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (29).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (30).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (31).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (32).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (33).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (34).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (35).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (36).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/25METRI/25 Metri (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS34/Atlantis34 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS43/Atlantis43 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (23).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (24).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (25).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS50/Atlantis50 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/ATLANTIS51/Atlantis51 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT50/Azimut50-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT54/Azimut54- (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55/Azimut55 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (23).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (24).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (25).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (26).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (27).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (28).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (29).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (30).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (31).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (32).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (33).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (34).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (35).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (36).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT55S/Azimut55s (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT60/Azimut60 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (23).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (24).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT66/Azimut66 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (23).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (24).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (25).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (26).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (27).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (28).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (29).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (30).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (31).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT72/Azimut72 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (23).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (24).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (25).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (26).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (27).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (28).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (29).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (30).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (31).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (32).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (33).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (34).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT77S/Azimut77s (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (23).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (24).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (25).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (26).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (27).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (28).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (29).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (30).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (31).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (32).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (33).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (34).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (35).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUT80/Azimut80 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS6/Azimuts6 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (23).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (24).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (25).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/AZIMUTS7/Azimuts7 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (23).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO43/Magellano43 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO53/Magellano53 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO66/Magellano66 (9).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (11).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (12).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (13).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (14).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (15).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (16).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (17).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (19).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (20).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (21).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (22).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (23).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (24).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (25).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (26).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (27).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (28).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (29).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (30).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (31).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (32).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (33).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (34).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (35).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (36).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (37).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (38).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (39).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (40).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (41).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (5).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (6).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (7).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (8).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AZIMUT/MAGELLANO76/Magellano76 (9).jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +1005,12 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="conn@192.168.64.2" type="feb32156:DbDataSourceImpl" />
         <item name="Eproject: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="conn@192.168.64.2" type="feb32156:DbDataSourceImpl" />
+        <item name="Eproject: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="configuration: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -132,7 +1097,9 @@
       <workItem from="1592037637066" duration="24084000" />
       <workItem from="1592205636736" duration="2308000" />
       <workItem from="1592232760168" duration="3942000" />
-      <workItem from="1592282824401" duration="8606000" />
+      <workItem from="1592282824401" duration="8866000" />
+      <workItem from="1592292766063" duration="120000" />
+      <workItem from="1592292894945" duration="1178000" />
     </task>
     <servers />
   </component>
@@ -155,6 +1122,10 @@
       <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="240" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.723@0.23.1280.723" timestamp="1591340989820" />
+    <state x="232" y="23" key="CommitChangelistDialog2" timestamp="1592294086598">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state x="232" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1592294086598" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1591341110822">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
