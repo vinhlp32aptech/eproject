@@ -27,7 +27,7 @@
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="">
 
 
 </head>
@@ -37,12 +37,7 @@
   <div class="site-wrap">
 
       <?php include_once "public/header.php" ?>
-
-
     </div>
-    
-
-
 
     <div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/hero_1.jpg');">
       <div class="container">
@@ -68,7 +63,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <form action="" method="post">
+                        <form action="contactform.php" method="post">
                         <label for="fname">Full Name</label>
                         <input type="text" id="fullname" class="form-control form-control-lg">
                         <label for="eaddress">Email Address</label>
