@@ -30,7 +30,7 @@ a {
 span, label {
     display: inline-block;
 }
-input, textarea, select, button {
+input, textarea, select {
     font-size: 1em;
     border: 1px solid #ccc;
     outline: none;
@@ -724,9 +724,45 @@ label {
     transition: 0.5s;
 
 }
-.sideArea li>a {
+.sideArea li>button {
+    font-size: 1em;
+    vertical-align: top;
+    color: white;
+background-color: #2A3F54;
     display: block;
-    color: #fff;
+    padding: 1em;
+    border: 0px ;
+
+}
+.sideArea li>button:hover {
+    background: rgba(255,255,255,0.1);
+}
+.sideArea li>button>.fa {
+    width: 2em;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.propad{
+    padding-right: 73px;
+}
+.catpad{
+    padding-right: 65px;
+}
+.mepad{
+    padding-right: 106px;
+}
+.invpad{
+    padding-right: 89px;
+}
+.userpad{
+    padding-right: 108px;
+}
+
+
+.sideArea li>a {
+    color: white;
+    display: block;
     padding: 1em;
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
@@ -734,10 +770,12 @@ label {
     background: rgba(255,255,255,0.1);
 }
 .sideArea li>a>.fa {
-    width: 1em;
+    width: 2em;
     text-align: center;
     margin-right: 10px;
 }
+
+
 .submenu {
     display: none;
     border-bottom: 1px solid rgba(255,255,255,0.2);

@@ -19,24 +19,24 @@ if (!isset($_SESSION['user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Dancing+Script:400,700|Muli:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../../fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jquery-ui.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
 
-    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="../../fonts/flaticon/font/flaticon.css">
 
-    <link rel="stylesheet" href="../css/aos.css">
-    <link href="../css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/aos.css">
+    <link href="../../css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
 
 
@@ -58,8 +58,8 @@ if (!isset($_SESSION['user'])) {
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-6 col-lg-3">
-                    <a href="../index.php">
-                        <img src="../images/logo.png" alt="Image" class="img-fluid">
+                    <a href="../../index.php">
+                        <img src="../../images/logo.png" alt="Image" class="img-fluid">
                         <!-- <strong>Water</strong>Boat -->
                     </a>
                 </div>
@@ -219,7 +219,7 @@ if (!isset($_SESSION['user'])) {
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="../images/hero_2.jpg" alt="Image" class="img-fluid">
+                    <img src="../../images/hero_2.jpg" alt="Image" class="img-fluid">
                 </div>
                 <div class="col-md-6">
                     <span class="text-serif text-primary">About Us</span>
@@ -314,7 +314,7 @@ if (!isset($_SESSION['user'])) {
             <div class="row">
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="service-39381">
-                        <img src="../images/hero_1.jpg" alt="Image" class="img-fluid">
+                        <img src="../../images/hero_1.jpg" alt="Image" class="img-fluid">
                         <div class="p-4">
                             <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
                             <div class="d-flex">
@@ -332,7 +332,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="service-39381">
-                        <img src="../images/hero_2.jpg" alt="Image" class="img-fluid">
+                        <img src="../../images/hero_2.jpg" alt="Image" class="img-fluid">
                         <div class="p-4">
                             <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
                             <div class="d-flex">
@@ -350,7 +350,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="service-39381">
-                        <img src="../images/hero_1.jpg" alt="Image" class="img-fluid">
+                        <img src="../../images/hero_1.jpg" alt="Image" class="img-fluid">
                         <div class="p-4">
                             <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
                             <div class="d-flex">
@@ -369,7 +369,7 @@ if (!isset($_SESSION['user'])) {
 
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="service-39381">
-                        <img src="../images/hero_2.jpg" alt="Image" class="img-fluid">
+                        <img src="../../images/hero_2.jpg" alt="Image" class="img-fluid">
                         <div class="p-4">
                             <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
                             <div class="d-flex">
@@ -387,7 +387,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="service-39381">
-                        <img src="../images/hero_1.jpg" alt="Image" class="img-fluid">
+                        <img src="../../images/hero_1.jpg" alt="Image" class="img-fluid">
                         <div class="p-4">
                             <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
                             <div class="d-flex">
@@ -405,7 +405,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="service-39381">
-                        <img src="../images/hero_2.jpg" alt="Image" class="img-fluid">
+                        <img src="../../images/hero_2.jpg" alt="Image" class="img-fluid">
                         <div class="p-4">
                             <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
                             <div class="d-flex">
@@ -430,7 +430,7 @@ if (!isset($_SESSION['user'])) {
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <p><img src="../images/hero_1.jpg" alt="Image" class="img-fluid"></p>
+                    <p><img src="../../images/hero_1.jpg" alt="Image" class="img-fluid"></p>
                 </div>
                 <div class="col-md-5">
                     <span class="text-serif text-primary">Book Now</span>
@@ -504,7 +504,7 @@ if (!isset($_SESSION['user'])) {
     </div>
 
 
-    <?php include_once "../public/footer.php"?>
+    <?php include_once "../public/footer.php" ?>
 
 </div>
 <!-- .site-wrap -->
@@ -513,21 +513,21 @@ if (!isset($_SESSION['user'])) {
 <!-- loader -->
 <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
 
-<script src="../js/jquery-3.3.1.min.js"></script>
-<script src="../js/jquery-migrate-3.0.1.min.js"></script>
-<script src="../js/jquery-ui.js"></script>
-<script src="../js/popper.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/owl.carousel.min.js"></script>
-<script src="../js/jquery.stellar.min.js"></script>
-<script src="../js/jquery.countdown.min.js"></script>
-<script src="../js/bootstrap-datepicker.min.js"></script>
-<script src="../js/jquery.easing.1.3.js"></script>
-<script src="../js/aos.js"></script>
-<script src="../js/jquery.fancybox.min.js"></script>
-<script src="../js/jquery.sticky.js"></script>
-<script src="../js/jquery.mb.YTPlayer.min.js"></script>
-<script src="../js/main.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/popper.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/jquery.stellar.min.js"></script>
+<script src="../../js/jquery.countdown.min.js"></script>
+<script src="../../js/bootstrap-datepicker.min.js"></script>
+<script src="../../js/jquery.easing.1.3.js"></script>
+<script src="../../js/aos.js"></script>
+<script src="../../js/jquery.fancybox.min.js"></script>
+<script src="../../js/jquery.sticky.js"></script>
+<script src="../../js/jquery.mb.YTPlayer.min.js"></script>
+<script src="../../js/main.js"></script>
 
 </body>
 

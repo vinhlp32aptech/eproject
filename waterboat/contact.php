@@ -82,8 +82,8 @@
                         <input type="text" id="eaddress" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-6 form-group">
-                        <label for="tel">Tel. Number</label>
-                        <input type="text" id="tel" class="form-control form-control-lg">
+                        <label for="phone">Tel. Number</label>
+                        <input type="tel" id="phone" class="form-control form-control-lg" maxlength="11" minlength="10">
                     </div>
                 </div>
                 <div class="row">
@@ -92,7 +92,6 @@
                         <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12">
                         <input type="submit" value="Send Message" class="btn btn-primary rounded-0 px-3 px-5">
