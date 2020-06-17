@@ -77,7 +77,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <form action="sendemail.php" method="post">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" class="form-control form-control-lg">
                         <label for="email">Email Address</label>
