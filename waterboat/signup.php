@@ -1,4 +1,8 @@
-
+<?php
+$connect = mysqli_connect('localhost','C1908I1','C1908I1','eproject');
+mysqli_set_charset($connect,"utf8");
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +41,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
     
@@ -47,31 +53,33 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 						<div class="wthree-form">
 							<br><h2> Create an account </h2>
+
+
 							<form action="signupSuccessful.php" method="post">
 								<div class="form-sub-w3">
-									<input type="text" name="Username"  placeholder="Username " required="" />
+									<input type="text" name="user_name"  placeholder="Username " required="" />
 								    <div class="icon-w3">
 									<i class="fa fa-user" aria-hidden="true"></i>
 								    </div>
 								</div>
 								<div class="form-sub-w3">
-									<input type="password" name="Password"  placeholder="Password" required="" />
+									<input  required type="password" name="pass1"  placeholder="Password" required="" />
 
 								<div class="icon-w3">
 									<i class="fas fa-lock" aria-hidden="true"></i>
 								</div>
 								</div>
                                 <div class="form-sub-w3">
-									<input type="password" name="Password"  placeholder="Confirm password" required="" />
+									<input required type="password" name="pass2"  placeholder="Confirm password" required="" />
 
 								<div class="icon-w3">
 									<i class="fas fa-lock" aria-hidden="true"></i>
 								</div>
 								</div>
-							
+
 								<div class="clear"></div>
                                 <div class="form-sub-w3">
-									<input type="text" name="mail"  placeholder="Email" required="" />
+									<input type="text" name="email"  placeholder="Email" required="" />
 								    <div class="icon-w3">
 									<i class="fas fa-envelope-square" aria-hidden="true"></i>
 								    </div>
@@ -89,11 +97,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<div class="clear"></div>
 
 								<div class="submit-agileits">
-									<input type="submit" value="Sign Up">
+									<input type="submit" name="dangky" value="Sign Up">
 								</div>
 
 							</form>
-                            
+
                             <div class="submit-agileits " id="link_signin" style="color: white;">
                              Do you already have an account? 
                              <a href="Signin.php">Signin now ! </a>
