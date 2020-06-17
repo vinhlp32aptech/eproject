@@ -11,7 +11,6 @@ $db = new database();
 ?>
 
 
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,7 +32,9 @@ $db = new database();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="fixed-nav sticky-footer " id="page-top">
+
 <div class="container">
     <!--     SIDE AREA -->
     <div class="sideArea">
@@ -44,14 +45,17 @@ $db = new database();
         <ul class="sideMenu">
             <li><a href="javascript:void(0)" class="has-submenu"><span class="fa fa-table"></span>PRODUCT</a>
                 <ul class="submenu">
-                    <li><a href="index.php?c=product&a=list01"><span class="fa fa-list"></span>Product List</a></li>
-                    <li><a href="index.php?c=product&a=list02"><span class="fa fa-tags"></span>Category List</a></li>
+                    <form action="#">
+                    <li><button class="propad"><span class="fa fa-list"></span>Product List</button></li>
+                    <li><button class="catpad"><span class="fa fa-tags"></span>Category List</button></li>
+                    </form>
                 </ul>
             </li>
-            <li><a href="menu_list.php"><span class="fa fa-sitemap"></span>MENU</a></li>
-            <li><a href="invoice_list.php"><span class="fa fa-money"></span>INVOICE</a></li>
-            <li><a href="user_list.php"><span class="fa fa-user-o"></span>USER</a></li>
-            <li><a href="contact_list.php"><span class="fa fa-envelope-o"></span>CONTACT</a></li>
+            <form action="#">
+            <li><button class="mepad"><span class="fa fa-sitemap"></span>MENU</button></li>
+            <li><button class="invpad"><span class="fa fa-money"></span>INVOICE</button></li>
+            <li><button class="userpad"><span class="fa fa-user-o"></span>USER</button></li>
+            </form>
         </ul>
     </div>
     <!--     SIDE AREA -->
@@ -63,7 +67,7 @@ $db = new database();
                 <div class="name has-submenu">John Doe<span class="fa fa-angle-down"></span></div>
                 <ul class="accountLinks submenu">
                     <li><a href="../index.php">View website</a></li>
-                    <li><a href="">Log out<span class="fa fa-sign-out fr"></span></a></li>
+                    <li><a href="LoginWithAdmin/indexAd.php">Log out<span class="fa fa-sign-out fr"></span></a></li>
                 </ul>
             </div>
         </nav>
@@ -135,15 +139,15 @@ $db = new database();
                     <div class="row bg-1">
                         <div class="cell cell-50 text-center text-fff">ID</div>
                         <div class="cell cell-100 text-center text-fff">PHOTO</div>
-                        <div class="cell cell-200 text-center">NAME</div>
-                        <div class="cell cell-100 text-center">PRICE</div>
-                        <div class="cell cell-100 text-fff">QUANTITY</div>
-                        <div class="cell cell-100 text-center">STATUS</div>
-                        <div class="cell cell-100 text-fff">YEAR</div>
-                        <div class="cell cell-100 text-fff">CODE</div>
+                        <div class="cell cell-200 text-center text-fff">NAME</div>
+                        <div class="cell cell-100 text-center text-fff">PRICE</div>
+                        <div class="cell cell-100 text-center text-fff">QUANTITY</div>
+                        <div class="cell cell-100 text-center text-fff">STATUS</div>
+                        <div class="cell cell-100 text-center text-fff">YEAR</div>
+                        <div class="cell cell-100 text-center text-fff">CODE</div>
 
-                        <div class="cell cell-100 text-center text-fff"><input type="checkbox" class="checkbox checkAll" name="statusAll" target=".status"></div>
-                        <div class="cell cell-100 text-center text-fff">EDIT</div>
+                        <div class="cell cell-50 text-center text-fff"><input type="checkbox" class="checkbox checkAll" name="statusAll" target=".status"></div>
+                        <div class="cell cell-50 text-center text-fff">EDIT</div>
                     </div>
                     <!--   BEGIN LOOP -->
                     <?php
