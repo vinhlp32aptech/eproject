@@ -77,7 +77,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <form action="contactform.php" method="post">
                         <label for="fname">Full Name</label>
                         <input type="text" id="fullname" class="form-control form-control-lg">
                         <label for="eaddress">Email Address</label>
