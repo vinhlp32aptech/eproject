@@ -1,3 +1,33 @@
+<?php
+$connect = mysqli_connect('localhost','C1908I1','C1908I1','eproject');
+mysqli_set_charset($connect,"utf8");
+session_start();
+?>
+<?php
+if(isset($_POST['dangky'])){
+    $user_name = $_POST["user_name"];
+    $pass1 = $_POST["pass1"];
+    $pass2 = $_POST["pass2"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+
+
+
+    if($pass1!=$pass2){
+        header("location:signup.php?page=dangky");
+
+    }
+    else{
+        $pass = md5($pass1);
+        mysqli_query($connect,"
+                                        insert into account (user_name,password,email,phone)
+                                        values ('$user_name','$pass','$email','$phone')
+                                    ");
+
+    }
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

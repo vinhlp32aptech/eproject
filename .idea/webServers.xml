@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="7fbaa37d-1c68-48e3-8c8b-d07c3d55a65a" name="doan" url="http://localhost:9999\DOAN\eproject">
-        <fileTransfer mountedRoot="C:\xampp\htdocs\DOAN\eproject" accessType="MOUNT" port="0" />
+      <webServer id="7fbaa37d-1c68-48e3-8c8b-d07c3d55a65a" name="doan" url="http://localhost:9999\eproject">
+        <fileTransfer mountedRoot="C:\xampp\htdocs\eproject" accessType="MOUNT" port="0" />
       </webServer>
     </option>
   </component>
