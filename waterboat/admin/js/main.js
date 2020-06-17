@@ -61,13 +61,15 @@ function getImg(x){
             }
             var img = document.createElement("img");
             img.setAttribute("src",imgSrc);
-            img.style.width = "80px";
+            img.style.width = "200px";
             img.style.verticalAlign = "top";
             parent.appendChild(img);
         }
         fr.readAsDataURL(x.files[0]);
     }
 }
+
+
 
 // NEW INPUT
 for(var i=0,len=elm(".btnNewInput").length; i<len; i++){
