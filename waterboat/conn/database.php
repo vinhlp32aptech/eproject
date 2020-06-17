@@ -2,7 +2,7 @@
 include_once  "errorPHP.php";
 class database
 {
-    private $host     = "mysql:host=192.168.64.3; dbname=Eproject; charset=utf8";
+    private $host     = "mysql:host=192.168.64.2; dbname=Eproject; charset=utf8";
     private $username = "C1908I1";
     private $password = "C1908I1";
     private $pdo;
