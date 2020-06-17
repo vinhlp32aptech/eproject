@@ -77,32 +77,71 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <form action="contactform.php" method="post">
-                        <label for="fname">Full Name</label>
-                        <input type="text" id="fullname" class="form-control form-control-lg">
-                        <label for="eaddress">Email Address</label>
-                        <input type="text" id="eaddress" class="form-control form-control-lg">
+                        <form action="sendemail.php" method="post">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control form-control-lg">
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-6 form-group">
-                        <label for="phone">Tel. Number</label>
-                        <input type="tel" id="phone" class="form-control form-control-lg" maxlength="11" minlength="10">
+                        <label for="subject">Tel. Number</label>
+                        <input type="tel" id="subject" class="form-control form-control-lg" maxlength="11" minlength="10">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 form-group">
-                        <label for="message">Message</label>
-                        <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                        <label for="body">Message</label>
+                        <textarea name="" id="body" cols="30" rows="10" class="form-control"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <input type="submit" value="Send Message" class="btn btn-primary rounded-0 px-3 px-5">
+                        <input type="submit" onclick="sendemail()" value="Send Message" class="btn btn-primary rounded-0 px-3 px-5">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+      <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+          function sendemail() {
+              var name = $("#name");
+              var email = $("#email");
+              var subject = $("#subject");
+              var body = $("#body");
 
+              if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+                  $.ajax({
+                      url: 'sendEmail.php',
+                      method: 'POST',
+                      dataType: 'json',
+                      data: {
+                          name: name.val(),
+                          email: email.val(),
+                          subject: subject.val(),
+                          body: body.val()
+                      }, success: function (response) {
+                          if (response.status == "success")
+                              alert('We will contact you soonest!');
+                          else {
+                              alert('Please try again!');
+                              console.log(response);
+                          }
+                      }
+                  });
+              }
+          }
+
+          function isNotEmpty(caller) {
+              if (caller.val() == "") {
+                  caller.css('border', '1px solid red');
+                  return false;
+              } else
+                  caller.css('border', '');
+
+              return true;
+          }
+      </script>
   </div>
     <div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');">
         <div class="container">
