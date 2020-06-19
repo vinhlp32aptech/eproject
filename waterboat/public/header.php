@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once "conn/Pagination.php";
 include_once "conn/database.php";
 $db = new database();
@@ -93,10 +93,23 @@ $db = new database();
                             <li>
                                 <a href="contact.php" class="nav-link text-left">Contact</a>
                             </li>
+                            <?php
+
+                            if(isset($_SESSION['gotoindex'])):?>
+                                <li>
+                                    <a href="account.php" class="nav-link text-left">Account</a>
+                                </li>
+                            <li>
+                                <a href="signin.php?logout" class="nav-link text-left">Log out</a>
+                            </li>
+                            <?php else:?>
                             <li>
                                 <a href="signin.php" class="nav-link text-left" id="signinV">Sign-in/</a>
                                 <a href="signup.php" class="nav-link text-left" id="signupV">Sign-up</a>
                             </li>
+                            <?php endif;?>
+
+
                             <li>
                                 <form action="Lease.php" id="demo-2">
                                     <input type="search" name="search" placeholder="Search">

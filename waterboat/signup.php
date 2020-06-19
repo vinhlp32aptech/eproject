@@ -1,13 +1,28 @@
 <?php
-$connect = mysqli_connect('localhost','C1908I1','C1908I1','eproject');
-mysqli_set_charset($connect,"utf8");
 session_start();
+
+include_once "conn/database.php";
+$db = new database();
+//insert data
+if(isset($_POST['signup'])):
+    $query = "insert into account( user_name, password, email, phone) values(:user_name, :password, :email, :phone)";
+    $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $param = [
+        "user_name"        => $_POST['user_name'],
+        "password"      =>$hash,
+        "email"         => $_POST['email'],
+        "phone"      => $_POST['phone']
+    ];
+    $stmt = $db->insertdataparam($query, $param);
+    echo "<script> alert('Sign up Successful. Please Sign in!')</script>";
+endif;
+//insert data
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sign in</title>
+<title>Sign up</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -55,22 +70,22 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<br><h2> Create an account </h2>
 
 
-							<form action="signupSuccessful.php" method="post">
+							<form action="#" method="post" enctype="multipart/form-data">
 								<div class="form-sub-w3">
-									<input type="text" name="user_name"  placeholder="Username " required="" />
+									<input type="text" name="user_name"  placeholder="Username" required="" />
 								    <div class="icon-w3">
 									<i class="fa fa-user" aria-hidden="true"></i>
 								    </div>
 								</div>
 								<div class="form-sub-w3">
-									<input  required type="password" name="pass1"  placeholder="Password" required="" />
+									<input  required type="password" name="password"  placeholder="Password" required="" />
 
 								<div class="icon-w3">
 									<i class="fas fa-lock" aria-hidden="true"></i>
 								</div>
 								</div>
                                 <div class="form-sub-w3">
-									<input required type="password" name="pass2"  placeholder="Confirm password" required="" />
+									<input required type="password" id="confirmpass"  placeholder="Confirm password" required="" />
 
 								<div class="icon-w3">
 									<i class="fas fa-lock" aria-hidden="true"></i>
@@ -85,7 +100,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								    </div>
 								</div>
 								<div class="form-sub-w3">
-									<input type="text" name="phone"  placeholder="Phone Number" required="" />
+									<input type="text" name="phone"  placeholder="Phone Number" maxlength="11" required="" />
 
 								<div class="icon-w3">
 									<i class="fas fa-phone-square" aria-hidden="true"></i>
@@ -97,7 +112,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<div class="clear"></div>
 
 								<div class="submit-agileits">
-									<input type="submit" name="dangky" value="Sign Up">
+									<input type="submit" name="signup" value="Sign Up">
 								</div>
 
 							</form>

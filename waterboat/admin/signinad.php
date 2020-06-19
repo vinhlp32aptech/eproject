@@ -59,10 +59,10 @@ endif;
     <form action="signinad.php" method="post" enctype="multipart/form-data">
         <span><?= isset($_SESSION['usernameorpasswordwrong'])?$_SESSION['usernameorpasswordwrong']: "";?></span><br/><br/>
 
-        <input type="text" name="user_name" value="" placeholder="Username"/>
+        <input type="text" name="user_name" value="" placeholder="Username" required=""/>
         <span><?= isset($_SESSION['usernamewrong'])?$_SESSION['usernamewrong']: "";?></span><br/><br/>
 
-        <input type="password" name="password" value="" placeholder="Password"/>
+        <input type="password" name="password" value="" placeholder="Password" required=""/>
         <span><?= isset($_SESSION['passwordwrong'])?$_SESSION['passwordwrong']: "";?></span><br/><br/>
 
         <button type="submit" name="login" >Signin</button>

@@ -58,6 +58,10 @@ body {
   padding: 0;
 }
 
+.signinwhite{
+  color: white;
+}
+
 #fontlogout{
   color: red;
 }

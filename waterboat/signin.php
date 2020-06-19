@@ -1,4 +1,48 @@
+<?php
+session_start();
+?>
 
+<?php
+
+include_once "conn/database.php";
+$db = new database();
+
+if(isset($_GET['logout'])):
+    session_destroy();
+endif;
+
+if(isset($_POST['signin'])):
+
+    $username = trim($_POST['user_name']);
+    $password = trim($_POST['password']);
+
+    $query = "select user_name,password from account where user_name = :user_name";
+    $param=[
+        "user_name" => $username,
+    ];
+
+    $stmt = $db->selectdataparam($query, $param);
+    $account = $stmt->fetch(PDO::FETCH_ASSOC);
+    if($account > 0):
+        $_SESSION['gotoindex'] = $account['user_name'];
+        if($username === $account['user_name'] && password_verify($password, $account['password'])):
+            header('location: index.php');
+        else:
+            if(password_verify($password, $account['password'])):
+
+                header('location: index.php');
+
+            else:
+                $_SESSION['passwordwrong']  = "Password is wrong";
+                session_destroy();
+            endif;
+        endif;
+    else:
+        $_SESSION['usernamewrong']  = "Username is wrong";
+        session_destroy();
+    endif;
+endif;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,17 +91,17 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<div class="wthree-form">
                         <br>
 							<h2> Sign in to your account </h2>
-							<form action="index.php" method="post">
-								<div class="form-sub-w3">
-									<input type="text" name="username"  placeholder="Username " required="" />
-
+							<form action="#" method="post">
+                                <div class="form-sub-w3">
+									<input type="text" name="user_name"  placeholder="Username " required="" />
+                                    <span class="signinwhite"><?= isset($_SESSION['usernamewrong'])?$_SESSION['usernamewrong']: "";?></span>
 								<div class="icon-w3">
 									<i class="fa fa-user" aria-hidden="true"></i>
 								</div>
 								</div>
 								<div class="form-sub-w3">
 									<input type="password" name="password"  placeholder="Password" required="" />
-
+                                    <span class="signinwhite"><?= isset($_SESSION['passwordwrong'])?$_SESSION['passwordwrong']: "";?></span>
 								<div class="icon-w3">
 									<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 								</div>
@@ -70,7 +114,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								</label> 
 								<div class="clear"></div>
 								<div class="submit-agileits">
-									<input type="submit" value="Sign in">
+									<input type="submit" value="Sign in" name="signin">
 								</div>
 
 							</form>
