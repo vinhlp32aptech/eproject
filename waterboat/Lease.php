@@ -5,7 +5,7 @@ include_once "conn/Pagination.php";
 $db = new database();
 
 if(isset($_GET['search'])):
-    $query = "select * from product where concat(name_pro,price_pro) like ?  ";
+    $query = "select * from product where concat(name_pro,price_pro,year_pro,code) like ?  ";
 
     $param = [
         "%{$_GET['search']}%"
@@ -24,7 +24,7 @@ if(isset($_GET['search'])):
     ];
     $paging = new Pagination();
     $paging->init($config);
-    $query = "select * from product  where concat(name_pro,price_pro) like ?  {$paging->get_limit()}";
+    $query = "select * from product  where concat(name_pro,price_pro,year_pro,code) like ?  {$paging->get_limit()}";
     $stmt = $db->selectdataparam($query, $param);
 
 else:
@@ -108,11 +108,11 @@ endif;
                 <article><a href="Product_detail.php"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
                     <h6 class="heading"><?= $product['name_pro'];?></h6>
                     <ul class="nospace meta">
-                        <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                        <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
+                        <li><i class="fa fa-user"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
+                        <li><i class="fa fa-tag"></i> <a href="#">Classify:<?= $product['code'];?></a></li>
                     </ul>
-                    <p>Vestibulum porttitor rhoncus mi porta consectetur dui consequat vitae vivamus vitae urna quis urna pulvinar&hellip;</p>
-                    <footer class="nospace"><a class="btn" href="#">Full Story &raquo;</a></footer>
+                    <p style="font-size: 20px;color: red"><i class="fa fa-dollar"></i><?= $product['price_pro'];?></p>
+                    <footer class="nospace"><a class="btn" href="#">Real More &raquo;</a></footer>
                 </article>
             </li>
             <?php
@@ -120,6 +120,11 @@ endif;
             $db->closeConn();
             ?>
         </ul>
+
+        <br>
+        <hr class="btmspace-80">
+
+
         <?php
         if(isset($paging)):
             echo $paging->html();
