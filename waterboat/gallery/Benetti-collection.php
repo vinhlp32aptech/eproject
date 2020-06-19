@@ -48,8 +48,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 ml-auto text-right" data-aos="fade-up">
-                        <h1>Explore, Discover The Ocean</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <h1>Business principles</h1>
+                        <p>The value behind Azimut Yachts' success is the formula that values ​​the value of every Azimut yacht buyer. Azimut's business principles have been recorded and published in books so that future generations can gain encouragement and thus guide the company in the future.</p>
                         <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
                     </div>
                 </div>
@@ -60,8 +60,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-                        <h1>Enjoy The Ocean With Your Family</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <h1>Azimut Benetti Group</h1>
+                        <p>The group includes major brands such as Azimut Yachts, Azimut Grande, Atlantis and Benetti Yachts, Yachtique, Fraser Yachts, Lusben, Marina di Varazze and Royal Yacht club Moscow, giving customers a range of products spread from Atlantis 30 feet of sport with superyachts built on 70 meters from Benetti.</p>
                         <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
                     </div>
                 </div>
@@ -71,8 +71,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-                        <h1>Enjoy The Ocean With Your Family</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <h1>Our history</h1>
+                        <p>Azimut Yachts is a success story from 1969, and like many other success stories, it is the story of a symbol, a symbol of Paolo Vitelli.</p>
                         <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
                     </div>
                 </div>
@@ -82,8 +82,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-                        <h1>Enjoy The Ocean With Your Family</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <h1>In The World</h1>
+                        <p>Azimut Benetti has a wide sales network throughout the yacht industry worldwide. With more than 138 agents in 68 countries, creating close relationships with yacht owners around the world is the standard of our customer service.</p>
                         <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
                     </div>
                 </div>
@@ -93,8 +93,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-                        <h1>Enjoy The Ocean With Your Family</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
+                        <h1>Azimut and the environment</h1>
+                        <p>Azimut Yachts has received ISO 14001 certification for its tireless efforts to reduce the environmental impact of manufacturing operations.</p>
                         <p><a href="#" class="btn btn-primary py-3 px-5">Read More</a></p>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
 
             <!-- 	IMAGE NAVIGATION pic -->
             <span id="b-1" class="th" tabindex="10">
-      <img src="../images/Benetti/Benetti-B.YOND37M.jpg" alt="" id="p-1">
+      <img src="../images/Benetti-B.YOND37M.jpg" alt="" id="p-1">
       <div class="title-1">
         <h1>Benetti-B.YOND37M</h1>
         <p>$22.910.306 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
@@ -140,7 +140,7 @@
     </span>
 
             <span id="b-2" class="th" tabindex="11">
-      <img src="../images/Benetti/Benetti-CLS132.jpg" alt="" id="p-2">
+      <img src="../images/Benetti-CLS132.jpg" alt="" id="p-2">
       <div class="title-2">
        <h1>Benetti-CLS132</h1>
         <p>$20.951.808 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
@@ -148,7 +148,7 @@
       </div>
     </span>
             <span id="b-3" class="th" tabindex="12">
-      <img src="../images/Benetti/Benetti-DEL95.jpg" alt="" id="p-3">
+      <img src="../images/Benetti-DEL95.jpg" alt="" id="p-3">
       <div class="title-3">
          <h1>Benetti-DEL95</h1>
         <p>$9.993.274 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
@@ -157,7 +157,7 @@
     </span>
 
             <span id="b-4" class="th" tabindex="13">
-      <img src="../images/Benetti/Benetti-FAST125.jpg" alt="" id="p-4">
+      <img src="../images/Benetti-FAST125.jpg" alt="" id="p-4">
       <div class="title-4">
         <h1>Benetti-FAST125</h1>
         <p>$19.986.549 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
@@ -177,7 +177,7 @@
                             <p>$22.910.306 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
 
                         </figcaption>
-                        <img src="../images/Benetti/Benetti-B.YOND37M.jpg" alt="" id="i-1" class="f">
+                        <img src="../images/Benetti-B.YOND37M.jpg" alt="" id="i-1" class="f">
                     </figure>
 
                     <figure>
@@ -186,7 +186,7 @@
                             <p>$20.951.808 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
 
                         </figcaption>
-                        <img src="../images/Benetti/Benetti-CLS132.jpg" alt="" id="i-2" class="f">
+                        <img src="../images/Benetti-CLS132.jpg" alt="" id="i-2" class="f">
                     </figure>
 
                     <figure>
@@ -195,7 +195,7 @@
                             <p>$9.993.274 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
 
                         </figcaption>
-                        <img src="../images/Benetti/Benetti-DEL95.jpg" alt="" id="i-3" class="f">
+                        <img src="../images/Benetti-DEL95.jpg" alt="" id="i-3" class="f">
                     </figure>
 
                     <figure>
@@ -204,7 +204,7 @@
                             <p>$19.986.549 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
 
                         </figcaption>
-                        <img src="../images/Benetti/Benetti-FAST125.jpg" alt="" id="i-4" class="f">
+                        <img src="../images/Benetti-FAST125.jpg" alt="" id="i-4" class="f">
                     </figure>
 
 
@@ -214,7 +214,7 @@
                             <p>$16.901.549 <a href="#"><i class="fas fa-arrow-circle-right"></i></a></p>
 
                         </figcaption>
-                        <img src="../images/Benetti/Benetti-MED116.jpg" alt="" id="i-5" class="f">
+                        <img src="../images/Benetti-MED116.jpg" alt="" id="i-5" class="f">
                     </figure>
                 </div>
             </div>

@@ -556,3 +556,8 @@ span#b-5:focus ~ .slider .inset { margin-left:-400%; }
         -moz-column-gap: 3rem;
         column-gap: 3rem;
     }
+.about-text{
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}

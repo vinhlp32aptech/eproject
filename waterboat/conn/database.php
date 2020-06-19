@@ -2,7 +2,7 @@
 include_once  "errorPHP.php";
 class database
 {
-    private $host     = "mysql:host=localhost dbname=Eproject; charset=utf8";
+    private $host     = "mysql:host=localhost; dbname=Eproject; charset=utf8";
     private $username = "C1908I1";
     private $password = "C1908I1";
     private $pdo;
@@ -81,6 +81,11 @@ class database
             ErrorPHP::showmessage($e->getMessage());
         }
     }
+    public function closeConn()
+    {
+        $this->pdo=null;
+    }
+
 
 }
 

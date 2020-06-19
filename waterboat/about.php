@@ -24,7 +24,7 @@
 
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="css/gallery.css">
   <link rel="stylesheet" href="css/style.css">
 
 
@@ -91,8 +91,35 @@
         </div>
       </div>
     </div>
+      <br>
+      <br>
 
-    
+      <div class="block-text">
+          <div class="text">
+              <h2 class="serif">Introducing Marina Fleet </h2>
+              <br>
+              <div >
+                  <p style="font-size: 17px;
+                            font-weight: bold;
+                            font-style: italic;">
+                      "Marina Fleet" is a company that supplies motor boats and yachts in all countries around the world</p>
+                  <p>We are the official exclusive distributor in Vietnam of the following brands:  </p>
+                  <p>Azimut Yachts (premium Italian yacht from 12 to 35 meters),</p>
+                  <p>Monterey Boats (US motorboat),</p>
+                  <p>Nautique (professional boat for surfing and windsurfing in the US),</p>
+                  <p>Sessa Marine (Italian canoes and yachts)</p>
+                  <p>Gulf Craft (United Arab Emirates passenger boat)</p>
+                  <p>In addition, Marina Fleet  also sells used motorboats and yachts, and provides warranty and maintenance services as well as installation of additional equipment.</p>
+                  <p>Marina Fleet  has an international support network of companies that have been at least 17 years in the yacht market, to provide a comprehensive solution to yacht or canoe buyers, product consultants. used boats, shipping boats to the world, customs procedures and registration at the Agency of the Maritime Administration in the country.</p>
+                  <p style="font-size: 17px;
+                            font-weight: bold;
+                            font-style: italic;">We also consult, assist in recruiting crews, find berths for yachts and canoes, and schedule maintenance.</p>
+                  <p>Our core principles are high service standards, partnering with leading manufacturers in the market, providing high quality equipment and committing to fulfill our responsibility, to bring you. Best products and services.</p>
+
+              </div>
+
+          </div>
+      </div>
 
     <div class="site-section">
       <div class="container">
@@ -148,7 +175,7 @@
                 </div>
               </figure>
               <div class="person-contents">
-                <h3>Craig Daniel</h3>
+                  <h3>Craig Daniel</h3>
                 <span class="position">Engineer</span>
               </div>
             </div>
@@ -177,49 +204,6 @@
 
     
 
-
-
-<<<<<<< HEAD
-    <div class="footer bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <p class="mb-4"><img src="images/logo.png" alt="Image" class="img-fluid"></p>
-            <p>Not only can you experience the beautiful beaches but also be served anytime and anywhere.</p>
-            <p><a href="index.php" class="btn">Learn More</a></p>
-          </div>
-          <div class="col-lg-3">
-            <h3 class="footer-heading"><span>Our Company</span></h3>
-            <ul class="list-unstyled">
-                <li><a href="#">About</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Projects</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-              <h3 class="footer-heading"><span>Our Services</span></h3>
-              <ul class="list-unstyled">
-                  <li><a href="#">Industrial</a></li>
-                  <li><a href="#">Construction</a></li>
-                  <li><a href="#">Remodeling</a></li>
-              </ul>
-          </div>
-          <div class="col-lg-3">
-              <h3 class="footer-heading"><span>Contact</span></h3>
-              <ul class="list-unstyled">
-                  <li><a href="#">Help Center</a></li>
-                  <li><a href="#">Support Community</a></li>
-                  <li><a href="#">Press</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Our Partners</a></li>
-              </ul>
-          </div>
-        </div>
-=======
->>>>>>> 8a584ed1ac1dedec239d0fd5e826ba1cb8e0f6cd
 
 
 <?php include_once "public/footer.php"?>

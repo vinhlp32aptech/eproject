@@ -1,3 +1,51 @@
+<?php
+include_once "conn/database.php";
+include_once "conn/Pagination.php";
+
+$db = new database();
+
+if(isset($_GET['search'])):
+    $query = "select * from product where concat(name_pro,price_pro) like ?  ";
+
+    $param = [
+        "%{$_GET['search']}%"
+    ];
+
+    $stmt = $db->selectdataparam($query, $param);
+
+    $total = $stmt->rowCount();
+    $config = [
+        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
+        'total_record'  => $total,
+        'limit'         => 6,
+        'link_full'     => (trim($_GET['search'])=="")?'Lease.php?page={page}':"Lease.php?page={page}&search={$_GET['search']}",
+        'link_first'    => (trim($_GET['search'])=="")?'Lease.php':"Lease.php?search={$_GET['search']}",
+        'range'         => 5,
+    ];
+    $paging = new Pagination();
+    $paging->init($config);
+    $query = "select * from product  where concat(name_pro,price_pro) like ?  {$paging->get_limit()}";
+    $stmt = $db->selectdataparam($query, $param);
+
+else:
+    $query = "select * from product";
+    $stmt = $db->selectdata($query);
+    $total = $stmt->rowCount();
+    $config = [
+        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
+        'total_record'  => $total,
+        'limit'         => 6,
+        'link_full'     => 'Lease.php?page={page}',
+        'link_first'    => 'Lease.php',// Link trang đầu tiên
+        'range'         => 5, // Số button trang bạn muốn hiển thị
+    ];
+    $paging = new Pagination();
+    $paging->init($config);
+    $query = "select * from product  {$paging->get_limit()}";
+    $stmt = $db->selectdata($query);
+endif;
+?>
+
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -50,10 +98,14 @@
 
         <hr class="btmspace-80">
 
+
         <ul class="nospace group overview">
+            <?php
+            while($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+            ?>
             <li class="one_third">
-                <article><a href="Product_detail.php"><img src="images/Lease2.jpg" alt="" height="100px" width="100px"></a>
-                    <h6 class="heading">Metus porta fringilla</h6>
+                <article><a href="Product_detail.php"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
+                    <h6 class="heading"><?= $product['name_pro'];?></h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
                         <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
@@ -62,62 +114,16 @@
                     <footer class="nospace"><a class="btn" href="#">Full Story &raquo;</a></footer>
                 </article>
             </li>
-            <li class="one_third">
-                <article><a href="Product_detail.php"><img src="images/Lease3.jpg" alt="" height="100px" width="100px"></a>
-                    <h6 class="heading">Suspendisse sollicitudin</h6>
-                    <ul class="nospace meta">
-                        <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                        <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
-                    </ul>
-                    <p>Lorem a mauris accumsan iaculis rutrum libero aenean fringilla risus eu varius blandit donec convallis nunc et&hellip;</p>
-                    <footer class="nospace"><a class="btn" href="#">Full Story &raquo;</a></footer>
-                </article>
-            </li>
-            <li class="one_third">
-                <article><a href="Product_detail.php"><img src="images/Lease4.jpg" alt="" height="100px" width="100px"></a>
-                    <h6 class="heading">Lacus ultricies ac luctus</h6>
-                    <ul class="nospace meta">
-                        <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                        <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
-                    </ul>
-                    <p>Neque tincidunt vestibulum finibus efficitur nisi sit amet elementum lorem efficitur eget habitant tristique&hellip;</p>
-                    <footer class="nospace"><a class="btn" href="#">Full Story &raquo;</a></footer>
-                </article>
-            </li>
-            <li class="one_third">
-                <article><a href="Product_detail.php"><img src="images/Lease5.jpg" alt="" height="100px" width="100px"></a>
-                    <h6 class="heading">Senectus malesuada ac</h6>
-                    <ul class="nospace meta">
-                        <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                        <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
-                    </ul>
-                    <p>Turpis egestas aenean commodo imperdiet ligula eget varius morbi quis scelerisque orci ut consequat augue nulla&hellip;</p>
-                    <footer class="nospace"><a class="btn" href="#">Full Story &raquo;</a></footer>
-                </article>
-            </li>
-            <li class="one_third">
-                <article><a href="Product_detail.php"><img src="images/Lease6.jpg" alt="" height="100px" width="100px"></a>
-                    <h6 class="heading">Porttitor elit vel lorem</h6>
-                    <ul class="nospace meta">
-                        <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                        <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
-                    </ul>
-                    <p>Sollicitudin ut suscipit justo hendrerit morbi semper purus at dapibus pharetra nulla et tristique nulla donec&hellip;</p>
-                    <footer class="nospace"><a class="btn" href="#">Full Story &raquo;</a></footer>
-                </article>
-            </li>
-            <li class="one_third">
-                <article><a href="Product_detail.php"><img src="images/Lease7.jpg" alt="" height="100px" width="100px"></a>
-                    <h6 class="heading">Lobortis enim placerat</h6>
-                    <ul class="nospace meta">
-                        <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                        <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
-                    </ul>
-                    <p>Est consequat non vestibulum quis tortor nulla cras a condimentum dolor nulla porttitor dolor id feugiat quisque&hellip;</p>
-                    <footer class="nospace"><a class="btn" href="#">Full Story &raquo;</a></footer>
-                </article>
-            </li>
+            <?php
+            endwhile;
+            $db->closeConn();
+            ?>
         </ul>
+        <?php
+        if(isset($paging)):
+            echo $paging->html();
+        endif;
+        ?>
         <div class="clear"></div>
     </main>
 </div>

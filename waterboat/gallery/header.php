@@ -1,4 +1,11 @@
 <?php
+
+
+include_once "../conn/Pagination.php";
+include_once "../conn/database.php";
+$db = new database();
+
+
 ?>
 
 <div class="site-mobile-menu site-navbar-target">
