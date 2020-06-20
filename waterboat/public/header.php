@@ -1,9 +1,32 @@
 <?php
-
+session_start();
 include_once "conn/Pagination.php";
 include_once "conn/database.php";
 $db = new database();
 
+if(isset($_GET['about'])):
+    $_SESSION['about'] = 'active';
+    session_destroy();
+
+elseif(isset($_GET['service'])):
+    $_SESSION['service'] = 'active';
+    session_destroy();
+
+elseif(isset($_GET['gallery'])):
+    $_SESSION['gallery'] = 'active';
+    session_destroy();
+
+elseif(isset($_GET['contact'])):
+    $_SESSION['contact'] = 'active';
+    session_destroy();
+
+elseif(isset($_GET['account'])):
+    $_SESSION['account'] = 'active';
+    session_destroy();
+else:
+    $_SESSION['index'] = 'active';
+    session_destroy();
+endif;
 ?>
 
 
@@ -77,26 +100,38 @@ $db = new database();
                 <div class="mx-auto">
                     <nav class="site-navigation position-relative text-right" role="navigation">
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
-                            <li class="active">
-                                <a href="index.php" class="nav-link text-left">Home</a>
+                            <li class="<?= isset($_SESSION['index'])? $_SESSION['index'] : '' ;?>">
+                                <a href="index.php?index" class="nav-link text-left">Home</a>
                             </li>
+                            <li class="<?= isset($_SESSION['about'])? $_SESSION['about'] : '' ;?>">
+                                <a href="about.php?about" class="nav-link text-left">About Us</a>
+                            </li>
+                            <li class="<?= isset($_SESSION['service'])? $_SESSION['service'] : '' ;?>">
+                                <a href="services.php?service" class="nav-link text-left">Services</a>
+                            </li>
+                            <li class="<?= isset($_SESSION['gallery'])? $_SESSION['gallery'] : '' ;?>">
+                                <a href="Gallery.php?gallery" class="nav-link text-left">Gallery</a>
+                            </li>
+                            <li class="<?= isset($_SESSION['contact'])? $_SESSION['contact'] : '' ;?>">
+                                <a href="contact.php?contact" class="nav-link text-left">Contact</a>
+                            </li>
+                            <?php
+
+                            if(isset($_COOKIE['gotoindex'])):?>
+                                <li class="<?= isset($_SESSION['account'])? $_SESSION['account'] : '' ;?>">
+                                    <a href="account.php?account" class="nav-link text-left">Account</a>
+                                </li>
                             <li>
-                                <a href="about.php" class="nav-link text-left">About Us</a>
+                                <a href="signin.php?logout" class="nav-link text-left">Log out</a>
                             </li>
-                            <li>
-                                <a href="services.php" class="nav-link text-left">Services</a>
-                            </li>
-                            <li>
-                                <a href="Gallery.php" class="nav-link text-left">Gallery</a>
-                            </li>
-<!--                            <li><a href="account.php" class="nav-link text-left">Account</a></li>-->
-                            <li>
-                                <a href="contact.php" class="nav-link text-left">Contact</a>
-                            </li>
+                            <?php else:?>
                             <li>
                                 <a href="signin.php" class="nav-link text-left" id="signinV">Sign-in/</a>
                                 <a href="signup.php" class="nav-link text-left" id="signupV">Sign-up</a>
                             </li>
+                            <?php endif;?>
+
+
                             <li>
                                 <form action="Lease.php" id="demo-2">
                                     <input type="search" name="search" placeholder="Search">

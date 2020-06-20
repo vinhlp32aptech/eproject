@@ -58,6 +58,20 @@ body {
   padding: 0;
 }
 
+.text1{
+  font-size: 1rem;
+  max-width: 768px;
+  margin: 0 auto 2rem;
+}
+
+.serif{
+  font-family: 'PT Serif';
+  text-align: center;
+}
+.signinwhite{
+  color: white;
+}
+
 #fontlogout{
   color: red;
 }
