@@ -49,7 +49,8 @@ endif;
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <title>Lease</title>
+    <title>Product</title>
+    <link rel="icon" href="images/logo.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="css/layout.css" rel="stylesheet" type="text/css" media="all">

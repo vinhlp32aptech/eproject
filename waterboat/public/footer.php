@@ -13,8 +13,8 @@
                 <ul class="list-unstyled">
                     <li><a href="about.php">About</a></li>
                     <li><a href="service.php">Service</a></li>
-                    <li><a href="#php">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="Gallery.php">Gallery</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
