@@ -157,8 +157,8 @@
           </div>
           <div class="col">
             <div class="counter-39392">
-              <h3>493</h3>
-              <span>Sea Destinations</span>
+              <h3>20</h3>
+              <span>Available in 20 countries</span>
             </div>
           </div>
           <div class="col">
@@ -184,7 +184,8 @@
             <div class="service-39381">
                 <a href="#"><img src="images/hero_1.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4">
-                <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
+                <h3><a href="#">
+                        <span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
                 <div class="d-flex">
                   <div class="mr-auto">
                     <span class="icon-date_range"></span>

@@ -151,7 +151,7 @@ endif;
             <div class="col-lg-12">
                 <!-- Section Tittle -->
                 <div class="section-tittle text-center mb-80">
-
+                    <h4 class="text-serif text-primary">Products</h4>
                     <h2>Classification of ships</h2>
                 </div>
             </div>
