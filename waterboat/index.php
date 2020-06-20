@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>WaterBoat &mdash; Website Template by Colorlib</title>
+  <title>Home</title>
     <link rel="icon" href="images/logo.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -175,118 +175,72 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
-            <h4 class="text-serif text-primary">Products</h4>
-            <h3 class="heading-92913 text-black text-center">Our Yacht</h3>
+            <h4 class="text-serif text-primary">World Cruise Magazines</h4>
+            <h1 class="heading-92913 text-black text-center">News </h1>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-39381">
-                <a href="#"><img src="images/hero_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="https://www.boatinternational.com/yachts/news/bering-145-yacht--43805">
+                    <img src="images/news1.gif" alt="Image" class="img-fluid"></a>
               <div class="p-4">
-                <h3><a href="#">
-                        <span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
-                <div class="d-flex">
-                  <div class="mr-auto">
-                    <span class="icon-date_range"></span>
-                    Sep. 05 &mdash; Oct. 15
-                  </div>
-                  <div class="ml-auto price">
-                    <span class="bg-primary">$600</span>
-                  </div>
-                  
-                </div>
+                <h3><a href="https://www.boatinternational.com/yachts/news/bering-145-yacht--43805">
+
+                        FIRST BERING 145 FLAGSHIP YACHT UNDER CONSTRUCTION
+                        </a>
+                
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-39381">
-              <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
+                <a href="https://www.boatinternational.com/yachts/news/boat-online-design-competition-challenge-designer--43803"><img src="images/news2.jpg" alt="Image" class="img-fluid"></a>
+
               <div class="p-4">
-                <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
-                <div class="d-flex">
-                  <div class="mr-auto">
-                    <span class="icon-date_range"></span>
-                    Sep. 05 &mdash; Oct. 15
-                  </div>
-                  <div class="ml-auto price">
-                    <span class="bg-primary">$600</span>
-                  </div>
-                  
-                </div>
+                <h3><a href="https://www.boatinternational.com/yachts/news/boat-online-design-competition-challenge-designer--43803">
+                        ONLINE DESIGN COMPETITION: CHALLENGE A SUPERYACHT DESIGNER</a></h3>
+
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-39381">
-              <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                <a href="https://www.boatinternational.com/yachts/news/gulf-craft-coronavirus--43799"><img src="images/news3.gif" alt="Image" class="img-fluid"></a>
               <div class="p-4">
-                <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
-                <div class="d-flex">
-                  <div class="mr-auto">
-                    <span class="icon-date_range"></span>
-                    Sep. 05 &mdash; Oct. 15
-                  </div>
-                  <div class="ml-auto price">
-                    <span class="bg-primary">$600</span>
-                  </div>
-                  
-                </div>
+                <h3><a href="https://www.boatinternational.com/yachts/news/gulf-craft-coronavirus--43799">GULF CRAFT ISSUES CORONAVIRUS COMPANY UPDATE</a></h3>
+
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-39381">
-              <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
+                <a href="https://www.boatinternational.com/yachts/news/project-florentia-rossinavi-yacht--35201"><img src="images/news4.gif" alt="Image" class="img-fluid"></a>
               <div class="p-4">
-                <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
-                <div class="d-flex">
-                  <div class="mr-auto">
-                    <span class="icon-date_range"></span>
-                    Sep. 05 &mdash; Oct. 15
-                  </div>
-                  <div class="ml-auto price">
-                    <span class="bg-primary">$600</span>
-                  </div>
-                  
-                </div>
+                <h3><a href="https://www.boatinternational.com/yachts/news/project-florentia-rossinavi-yacht--35201">
+                        ROSSINAVI LAUNCHES 52 METRE YACHT FLORENTIA</a></h3>
+
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-39381">
-              <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                <a href="https://www.boatinternational.com/yachts/news/escalade-trimonoran-yacht-concept--43797"><img src="images/news5.gif" alt="Image" class="img-fluid"></a>
               <div class="p-4">
-                <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
-                <div class="d-flex">
-                  <div class="mr-auto">
-                    <span class="icon-date_range"></span>
-                    Sep. 05 &mdash; Oct. 15
-                  </div>
-                  <div class="ml-auto price">
-                    <span class="bg-primary">$600</span>
-                  </div>
-                  
-                </div>
+                <h3><a href="https://www.boatinternational.com/yachts/news/escalade-trimonoran-yacht-concept--43797">
+                        INSIDE THE 25 METRE TRIMONORAN YACHT CONCEPT ESCALADE</a></h3>
+
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-39381">
-              <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
+                <a href="https://www.boatinternational.com/charter/luxury-yacht-charter-advice/coronavirus-advice-superyacht-charter--42949"><img src="images/news6.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4">
-                <h3><a href="#"><span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a></h3>
-                <div class="d-flex">
-                  <div class="mr-auto">
-                    <span class="icon-date_range"></span>
-                    Sep. 05 &mdash; Oct. 15
-                  </div>
-                  <div class="ml-auto price">
-                    <span class="bg-primary">$600</span>
-                  </div>
-                  
-                </div>
+                <h3><a href="https://www.boatinternational.com/charter/luxury-yacht-charter-advice/coronavirus-advice-superyacht-charter--42949">
+                        EVERYTHING YOU NEED TO KNOW ABOUT CHARTERING A YACHT POST COVID-19 </a></h3>
+
               </div>
             </div>
           </div>
@@ -295,70 +249,6 @@
       </div>
     </div>
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7">
-            <p><img src="images/hero_1.jpg" alt="Image" class="img-fluid"></p>
-          </div>
-          <div class="col-md-5">
-            <span class="text-serif text-primary">Book Now</span>
-            <h3 class="heading-92913 text-black">Book A Yacht</h3>
-            <form action="#" class="row">
-              <div class="form-group col-md-6">
-                <label for="input-1">Full Name:</label>
-                <input type="text" class="form-control" id="input-1">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="input-2">Number of People:</label>
-                <input type="text" class="form-control" id="input-2">
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="input-3">Date From:</label>
-                <input type="text" class="form-control datepicker" id="input-3">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="input-4">Date To:</label>
-                <input type="text" class="form-control datepicker" id="input-4">
-              </div>
-
-              <div class="form-group col-md-12">
-                <label for="input-5">Yacht You're Interested in:</label>
-                <select name="" id="input-5" class="form-control">
-                  <option value="">Motor Yacht</option>
-                  <option value="">Hi-Speed Yacht</option>
-                  <option value="">Premium Yacht</option>
-                  <option value="">Presidential Yacht</option>
-                </select>
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="input-6">Email Address</label>
-                <input type="text" class="form-control" id="input-6">
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="input-7">Phone Number</label>
-                <input type="text" class="form-control" id="input-7">
-              </div>
-
-
-              
-              <div class="form-group col-md-12">
-                <label for="input-8">Notes</label>
-                <textarea name="" id="input-8" cols="30" rows="5" class="form-control"></textarea>
-              </div>
-
-              <div class="form-group col-md-12">
-                <input type="submit" class="btn btn-primary py-3 px-5" value="Book Now">
-              </div>
-
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="site-section bg-image overlay" style="background-image: url('images/hero_2.jpg');">
       <div class="container">
@@ -366,7 +256,7 @@
           <div class="col-md-7 text-center">
             <h2 class="text-white">Get In Touch With Us</h2>
             <p class="lead text-white">We are committed to Marina Fleet as a pioneering cruise in providing the most valuable experience for travelers without any comparable tour.</p>
-            <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
+            <p class="mb-0"><a href="contact.php" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
           </div>
         </div>
       </div>
