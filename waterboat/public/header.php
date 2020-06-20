@@ -8,8 +8,8 @@ if(isset($_GET['about'])):
     $_SESSION['about'] = 'active';
     session_destroy();
 
-elseif(isset($_GET['service'])):
-    $_SESSION['service'] = 'active';
+elseif(isset($_GET['services'])):
+    $_SESSION['services'] = 'active';
     session_destroy();
 
 elseif(isset($_GET['gallery'])):
@@ -106,8 +106,8 @@ endif;
                             <li class="<?= isset($_SESSION['about'])? $_SESSION['about'] : '' ;?>">
                                 <a href="about.php?about" class="nav-link text-left">About Us</a>
                             </li>
-                            <li class="<?= isset($_SESSION['service'])? $_SESSION['service'] : '' ;?>">
-                                <a href="services.php?service" class="nav-link text-left">Services</a>
+                            <li class="<?= isset($_SESSION['services'])? $_SESSION['services'] : '' ;?>">
+                                <a href="services.php?services" class="nav-link text-left">Services</a>
                             </li>
                             <li class="<?= isset($_SESSION['gallery'])? $_SESSION['gallery'] : '' ;?>">
                                 <a href="Gallery.php?gallery" class="nav-link text-left">Gallery</a>
