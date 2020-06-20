@@ -93,7 +93,7 @@ endif;
                 </ul>
                 <p>Aliquam mauris morbi tristique orci sit amet sapien tincidunt ut rutrum dui tincidunt.</p>
                 <p class="btmspace-30">Cras eget lacinia magna nunc ut est est cras aliquam erat sem at dapibus lorem luctus sed nunc sagittis leo in&hellip;</p>
-                <footer class="nospace"><a class="btn" href="#">Full Story &raquo;</a></footer>
+                <footer class="nospace"><a class="bt     n" href="#">Full Story &raquo;</a></footer>
             </div>
         </article>
 

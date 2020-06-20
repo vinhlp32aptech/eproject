@@ -99,19 +99,16 @@
                                    </table>
                                </div>
                                <table class="table table-condensed">
-                                   <thead>
-                                   <tr>
-                                       <th>Length</th>
-                                       <th>Cabin</th>
-                                       <th>Year</th>
 
-                                   </tr>
-                                   </thead>
                                    <tbody>
                                    <tr>
-                                       <td>13.63</td>
-                                       <td>2</td>
-                                       <td>2014</td>
+                                       <td>
+                                           <button type="button" class="btn btn-danger">Buy Now</button>
+                                       </td>
+                                       <td>
+                                           <button type="button" class="btn btn-primary">ADD Cart</button>
+                                       </td>
+
                                    </tr>
                                    <tbody/>
 

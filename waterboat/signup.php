@@ -1,6 +1,5 @@
 <?php
-$connect = mysqli_connect('localhost','C1908I1','C1908I1','eproject');
-mysqli_set_charset($connect,"utf8");
+include_once "conn/database.php";
 session_start();
 ?>
 
