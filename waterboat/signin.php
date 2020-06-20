@@ -8,7 +8,7 @@ include_once "conn/database.php";
 $db = new database();
 
 if(isset($_GET['logout'])):
-    session_destroy();
+    setcookie('gotoindex','',time()-86400);
 endif;
 
 if(isset($_POST['signin'])):
@@ -24,7 +24,7 @@ if(isset($_POST['signin'])):
     $stmt = $db->selectdataparam($query, $param);
     $account = $stmt->fetch(PDO::FETCH_ASSOC);
     if($account > 0):
-        $_SESSION['gotoindex'] = $account['user_name'];
+        setcookie('gotoindex',$account['user_name'],time()+86400);
         if($username === $account['user_name'] && password_verify($password, $account['password'])):
             header('location: index.php');
         else:

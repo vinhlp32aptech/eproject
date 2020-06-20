@@ -24,7 +24,6 @@
 
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/gallery.css">
   <link rel="stylesheet" href="css/style.css">
 
 
@@ -95,7 +94,7 @@
       <br>
 
       <div class="block-text">
-          <div class="text">
+          <div class="text1">
               <h2 class="serif">Introducing Marina Fleet </h2>
               <br>
               <div >
