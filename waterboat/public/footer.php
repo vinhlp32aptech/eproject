@@ -11,18 +11,16 @@
             <div class="col-lg-3">
                 <h3 class="footer-heading"><span>Our Company</span></h3>
                 <ul class="list-unstyled">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="service.php">Service</a></li>
+                    <li><a href="#php">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
                 <h3 class="footer-heading"><span>Our Services</span></h3>
                 <ul class="list-unstyled">
-                    <li><a href="#">Industrial</a></li>
+                    <li><a href="#">Travel</a></li>
                     <li><a href="#">Construction</a></li>
                     <li><a href="#">Remodeling</a></li>
                 </ul>
@@ -43,7 +41,7 @@
                 <div class="copyright">
                     <p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
