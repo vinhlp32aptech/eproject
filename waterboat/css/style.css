@@ -1808,4 +1808,16 @@ h1, h2, h3, h4, h5,
     margin-bottom: 4px; }
   .testimony-39291 .text span {
     font-size: 14px;
-    color: #ccc; }
+    color: #ccc;
+  }
+#homepage-banner {
+  padding: 14px;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+  color: #171717;
+}
+#homepage-banner .image-divide img {
+  height: 100%;
+  opacity: .4;
+}

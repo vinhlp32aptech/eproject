@@ -7758,23 +7758,14 @@ element.style {
     padding-top: 20px;
     padding-bottom: 0px;
 }
-button{
-     float: right;
-     margin-top: 20px;
-     width: 175px;
-     height: 50px;
-     border-radius: 40px;
-     outline: 0;
-     border: 0;
-     background-color: rgba(125, 231, 202,1);
-     color: rgba(255,255,255,1);
-     font: normal 500 13px/30px 'Raleway', sans-serif;
-     letter-spacing: 3px;
-     text-transform: uppercase;
- }
-
-button:hover{
-    cursor: pointer;
-    background-color: rgba(92, 200, 170,1);
-    transition: background-color 0.5s ease-out;
+.homepage-banner {
+    padding: 14px;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: #171717;
+}
+.homepage-banner .image-divide img {
+    height: 100%;
+    opacity: .4;
 }

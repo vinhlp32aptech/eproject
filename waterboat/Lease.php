@@ -86,14 +86,12 @@ endif;
         <article class="group btmspace-80">
             <div class="two_third first" id="fiximgV"><img class="borderedbox inspace-10" src="images/Lease1.jpg" alt="" height="555" width="555"></div>
             <div class="one_third">
-                <h6 class="heading">Per inceptos himenaeos donec lacinia mollis vel</h6>
+                <h6 class="heading">Welcome to our product page</h6>
                 <ul class="nospace meta">
-                    <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                    <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
-                </ul>
-                <p>Aliquam mauris morbi tristique orci sit amet sapien tincidunt ut rutrum dui tincidunt.</p>
-                <p class="btmspace-30">Cras eget lacinia magna nunc ut est est cras aliquam erat sem at dapibus lorem luctus sed nunc sagittis leo in&hellip;</p>
-                <footer class="nospace"><a class="bt     n" href="#">Full Story &raquo;</a></footer>
+                    <br>
+                <p>Here we offer three different types of boats: luxury, sports and surfing.</p>
+                <p class="btmspace-30">We have been working on the market of yachts and motor boats for over 17 years which allows us provide a comprehensive solution to issues related to purchasing a motor yacht or a boat. This includes construction on request or selecting a used boat, delivery to Vietnam, customs clearance and registration. We also provide consulting services and assistance in hiring crew, finding berthing area, setting up maintenance plans&hellip;</p>
+                <footer class="nospace"><a class="bt     n" href="about.php">Full Story &raquo;</a></footer>
             </div>
         </article>
 
