@@ -5,16 +5,28 @@ html {
   background:rgb(241,245,248);
   border-top: 1px solid #dee2e6;
 }
-.style {
-  padding-bottom: 30px;
-}
 
 body {
   line-height: 1.7;
   font-weight: 300;
   font-size: 13px;
 }
+
+
+
 /*Vinh code*/
+
+.quantitypro{
+  width: 50px;
+}
+
+.quantity{
+  padding: 3px 0px 0px 25px;
+}
+
+#pricepro{
+  padding-top: 17px;
+}
 
 .to-top-btn {
   position: fixed;

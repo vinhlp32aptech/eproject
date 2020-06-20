@@ -86,35 +86,33 @@
                    </aside>
                    <aside class="col-4">
                        <div class="container">
-                           <div class="backgruod">
-                               <div class="style">
-                                   <table class=" table-hover">
-                                       <tbody>
-                                       <tr>
-                                           <th class="col-2"><h1>Price:</h1></th>
-
-                                           <td class="col-2"><h1> <font color="#F00000">$416.668</font> </h1></td>
-                                       </tr>
-                                       </tbody>
-                                   </table>
-                               </div>
-                               <table class="table table-condensed">
-
-                                   <tbody>
-                                   <tr>
-                                       <td>
-                                           <button type="button" class="btn btn-danger">Buy Now</button>
-                                       </td>
-                                       <td>
-                                           <button type="button" class="btn btn-primary">ADD Cart</button>
-                                       </td>
-
+                               <table class="table">
+                                   <thead>
+                                   <tr class="table-active">
+                                       <th scope="col"><h3>Price:</h3></th>
+                                       <td scope="col" id="pricepro"><h4>$329,000</h4></td>
                                    </tr>
-                                   <tbody/>
-
+                                   </thead>
+                                   <tbody>
+                                   <tr class="table-active">
+                                       <th><h5>Year:</h5></th>
+                                       <td id="pricepro"><h6>3456</h6></td>
+                                   </tr>
+                                   </tbody>
                                </table>
-
-                           </div>
+                           <form action="#" method="get">
+                             <div class="row">
+                                <div class="col-md-3 quantity">
+                                    <input type="number" name="quantity_shop" id="" class="quantitypro">
+                                </div>
+                                 <div class="col-md-4">
+                                     <button type="submit" class="btn btn-info">Buy Now</button>
+                                 </div>
+                                 <div class="col-md-4">
+                                     <button type="submit" class="btn btn-success">ADD Cart</button>
+                                 </div>
+                             </div>
+                           </form>
                            <p><h2>Specification</h2></p>
                            <br/>
 
