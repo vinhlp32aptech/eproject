@@ -198,15 +198,16 @@ endif;
         <!-- .site-wrap -->
     </div>
 <div class="wrapper row3">
-    <main class="hoc container clear">
+    <main class="hoc container clear servicetop">
 
 
 
-        <hr class="btmspace-80">
+        <hr class="btmspace-30">
         <div class="section-tittle text-center mb-80">
 
             <h2>Featured Boats</h2>
         </div>
+        <form action="#">
 
         <ul class="nospace group overview">
             <?php
@@ -220,7 +221,7 @@ endif;
                             <li><i class="fa fa-tag"></i> <a href="#">Classify:<?= $product['code'];?></a></li>
                         </ul>
                         <p style="font-size: 20px;color: red"><i class="fa fa-dollar"></i><?= $product['price_pro'];?></p>
-                        <footer class="nospace"><a class="btn" href="#">Real More &raquo;</a></footer>
+                        <footer class="nospace"><a class="btn" type="submit" href="Product_detail.php?id_pro=<?= $product['id_pro'];?>">Real More &raquo;</a></footer>
                     </article>
                 </li>
             <?php
@@ -228,7 +229,7 @@ endif;
             $db->closeConn();
             ?>
         </ul>
-
+        </form>
         <br>
         <hr class="btmspace-80">
 
