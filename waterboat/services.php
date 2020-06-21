@@ -4,46 +4,7 @@ include_once "conn/Pagination.php";
 
 $db = new database();
 
-if(isset($_GET['search'])):
-    $query = "select * from product where concat(name_pro,price_pro,year_pro,code) like ?  ";
 
-    $param = [
-        "%{$_GET['search']}%"
-    ];
-
-    $stmt = $db->selectdataparam($query, $param);
-
-    $total = $stmt->rowCount();
-    $config = [
-        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
-        'total_record'  => $total,
-        'limit'         => 6,
-        'link_full'     => (trim($_GET['search'])=="")?'Lease.php?page={page}':"Lease.php?page={page}&search={$_GET['search']}",
-        'link_first'    => (trim($_GET['search'])=="")?'Lease.php':"Lease.php?search={$_GET['search']}",
-        'range'         => 5,
-    ];
-    $paging = new Pagination();
-    $paging->init($config);
-    $query = "select * from product  where concat(name_pro,price_pro,year_pro,code) like ?  {$paging->get_limit()}";
-    $stmt = $db->selectdataparam($query, $param);
-
-else:
-    $query = "select * from product";
-    $stmt = $db->selectdata($query);
-    $total = $stmt->rowCount();
-    $config = [
-        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
-        'total_record'  => $total,
-        'limit'         => 6,
-        'link_full'     => 'Lease.php?page={page}',
-        'link_first'    => 'Lease.php',// Link trang đầu tiên
-        'range'         => 5, // Số button trang bạn muốn hiển thị
-    ];
-    $paging = new Pagination();
-    $paging->init($config);
-    $query = "select * from product  {$paging->get_limit()}";
-    $stmt = $db->selectdata($query);
-endif;
 ?>
 
 <!DOCTYPE html>

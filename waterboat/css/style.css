@@ -9,6 +9,14 @@ body {
 }
 /*Vinh code*/
 
+.quantitypro{
+  width: 50px;
+}
+
+.quantity{
+  padding: 3px 0px 0px 25px;
+}
+
 .footercolor li a{
   color: white;
 }

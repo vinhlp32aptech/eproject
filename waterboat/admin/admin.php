@@ -1,20 +1,4 @@
 <?php
-////
-//create trigger xoasanpham --câu này là mún xoá dữ liệu ở bảng 1 trước tiên đi kiểm tra xoá ở bảng nhiều trước rồi mới quay lại xoá bảng 1
-//on Product
-//instead of delete
-//as
-//begin
-//    declare @ProID int
-//    select @ProID = deleted.ProID from deleted
-//    delete from OrderDetails where ProID = @ProID
-//end
-//go
-//
-//delete from Product
-//where ProID = 1
-//
-
 
 include_once "../conn/database.php";
 include_once "../conn/Pagination.php";
@@ -95,7 +79,7 @@ session_start();
 
 
 if(isset($_GET['user'])):
-    $_SESSION['user'] = $_GET['user'];
+    $_SESSION['user'] = 'kkkk';
 unset($_SESSION['invoice']); unset($_SESSION['product']);
 elseif(isset($_GET['invoice'])):
     $_SESSION['invoice'] = $_GET['invoice'];
@@ -312,51 +296,9 @@ endif;
 
 /////update data
 
-//////sesarch 2 invoice
-if(isset($_GET['searchinv'])):
-    $query ="select * from invoice_details where status = 1 && concat(status,name_pro,price,date_of_purchase,phone, addr) like ? ";
-    $param = [
-        "%{$_GET['searchinv']}%"
-    ];
-    $stmt = $db->selectDataParam($query, $param);
-    $total = $stmt->rowCount();
-    $config = [
-        'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-        'total_record'  => $total, // Tổng số record -> tong so hang
-        'limit'         => 10,// limit
-        'link_full'     => (trim($_GET['searchinv'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchinv={$_GET['searchinv']}",// Link full có dạng như sau: domain/com/page/{page}
-        'link_first'    => (trim($_GET['searchinv'])=="")?'admin.php':"admin.php?searchinv={$_GET['searchinv']}",// Link trang đầu tiên
-        'range'         => 5, // Số button trang bạn muốn hiển thị
-    ];
-    $paging = new Pagination();
-    $paging->init($config);
-    $query = "select * from invoice_details where status = 1 && concat(status,name_pro,price,date_of_purchase,phone, addr) like ? " .$paging->get_limit();
-    $stmt = $db->selectdataparam($query,$param);
-endif;
-
-//////sesarch  account
-if(isset($_GET['searchacc'])):
-    $query ="select * from account where status = 1 && concat(user_name,email,phone,fullname,dob,addr) like ? ";
-    $param = [
-        "%{$_GET['searchacc']}%"
-    ];
-    $stmt = $db->selectDataParam($query, $param);
-    $total = $stmt->rowCount();
-    $config = [
-        'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-        'total_record'  => $total, // Tổng số record -> tong so hang
-        'limit'         => 10,// limit
-        'link_full'     => (trim($_GET['searchacc'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchacc={$_GET['searchacc']}",// Link full có dạng như sau: domain/com/page/{page}
-        'link_first'    => (trim($_GET['searchacc'])=="")?'admin.php':"admin.php?searchacc={$_GET['searchacc']}",// Link trang đầu tiên
-        'range'         => 5, // Số button trang bạn muốn hiển thị
-    ];
-    $paging = new Pagination();
-    $paging->init($config);
-    $query = "select * from account where status = 1 && concat(user_name,email,phone,fullname,dob,addr) like ? " .$paging->get_limit();
-    $stmt = $db->selectdataparam($query,$param);
-endif;
 
 if(isset($_SESSION['product'])):
+        echo  $_SESSION['product'];
 ///////--------------
 //show data, search and paging
 if(isset($_GET['searchpro'])):
@@ -402,7 +344,7 @@ $stmt = $db->selectdata($query);
             <!-- LIST FORM -->
             <div class="row filterGroup">
                 <form action="#" method="get" class="formSearch fl">
-                    <input type="text" class="inputSearch" placeholder="Search" name="search1">
+                    <input type="text" class="inputSearch" placeholder="Search" name="searchpro">
                     <button type="submit" class="btnSearch"><i class="fa fa-search"></i></button>
                 </form>
                 <!--                <div class="areaFilter fr row">-->

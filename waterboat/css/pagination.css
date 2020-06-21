@@ -1,0 +1,82 @@
+.login {
+    text-decoration: none;
+    color: rgb(17, 40, 248);
+    font-weight: bold;
+}
+
+.login:hover {
+    color: #e01368;
+}
+
+#searchForm {
+    margin-left: 100px;
+    float: left;
+}
+
+#addForm {
+    float: left;
+    margin-left: 100px;
+}
+
+#loginForm {
+    margin-right: 100px;
+    float: right;
+}
+
+#clearSearch {
+    float: left;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+#product {
+    padding-top: 20px;
+    clear: both;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#product table tr td {
+    width: 120px;
+}
+
+#product table tr th {
+    width: 120px;
+}
+
+.panigation {
+    margin: 0px auto;
+    text-align: center;
+    overflow: auto;
+    width: 50%;
+    margin-top: 0px;
+    padding-left: 50px;
+}
+
+
+
+.panigation li {
+    float:left;
+    margin: 10px 5px 5px 5px;
+    border: none;
+    list-style: none;
+    font-size: 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+.panigation a {
+    padding: 10px 13px;
+    text-decoration: none;
+}
+
+.panigation span {
+    display:inline-block;
+    padding: 4px 11px;
+    background: #35b44d;
+    color:white;
+    border-radius: 290486px;
+}
+
+
