@@ -35,7 +35,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
-
+    <link rel="stylesheet" href="css/hotline.css">
 
 </head>
 

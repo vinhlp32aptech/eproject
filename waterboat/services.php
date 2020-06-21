@@ -37,7 +37,7 @@ $db = new database();
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="admin/css/pagination.css">
-
+    <link rel="stylesheet" href="css/hotline.css">
 </head>
 <body id="top">
 
