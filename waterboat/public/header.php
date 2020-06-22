@@ -119,12 +119,17 @@ endif;
                             <?php
 
                             if(isset($_COOKIE['gotoindex'])):?>
-                                <li class="<?= isset($_SESSION['account'])? $_SESSION['account'] : '' ;?>">
-                                    <a href="account.php?account" class="nav-link text-left">Account</a>
+                                <li class="<?= isset($_SESSION['account'])? $_SESSION['account'] : '' ;?> nav-item dropdown" >
+                                    <a href="account.php?account" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Account</a>
+
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="nav-link text-left" style="color:black" href="account.php">Profile</a><br>
+                                        <a class="nav-link text-left" style="color:black"href="cart.php">Cart</a><br>
+                                        <a href="signin.php?logout" class="nav-link text-left" style="color:black">Log out</a>
+                                    </div>
+
                                 </li>
-                            <li>
-                                <a href="signin.php?logout" class="nav-link text-left">Log out</a>
-                            </li>
+
                             <?php else:?>
                             <li>
                                 <a href="signin.php" class="nav-link text-left" id="signinV">Sign-in/</a>
