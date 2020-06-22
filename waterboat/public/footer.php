@@ -42,7 +42,7 @@
                     <div class="hotline-phone-ring-circle-fill"></div>
                     <div class="hotline-phone-ring-img-circle">
                         <a href="tel:0913271429" class="pps-btn-img">
-                            <img src="https://nguyenhung.net/wp-content/uploads/2019/05/icon-call-nh.png" alt="Gọi điện thoại" width="50">
+                            <img src="https://nguyenhung.net/wp-content/uploads/2019/05/icon-call-nh.png"  width="50">
                         </a>
                     </div>
                 </div>

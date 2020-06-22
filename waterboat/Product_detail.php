@@ -106,7 +106,7 @@
                            <form action="#" method="get">
                              <div class="row">
                                 <div class="col-md-3 quantity">
-                                    <input type="number" name="quantity_shop" id="" class="quantitypro">
+                                    <input type="number" name="quantity_shop" id="" class="quantitypro" min="1" max="100">
                                 </div>
                                  <div class="col-md-4">
                                      <button type="submit" class="btn btn-info">Buy Now</button>
@@ -209,9 +209,27 @@
            </svg>
        </div>
        <!-- loader -->
+       <hr>
 
-
-
+       <form action="">
+           <legend> Send your feedback about this product</legend><br>
+           <table>
+               <tr>
+                   <td><input type="date" ><br></td>
+               </tr>
+               <tr>
+                   <td>
+                       <textarea name="" PLACEHOLDER="Your comment" style="width: 600px; height: 150px"></textarea>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <input class="btn-warning" type="reset" value="Reset">
+                       <input class="btn-danger" type="submit" value="Submit">
+                   </td>
+               </tr>
+           </table>
+       </form><br><br>
 
    </div>
 
