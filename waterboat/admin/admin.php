@@ -770,12 +770,12 @@ $stmt = $db->selectdata($query);
                         <label class="inputGroup" for="gender">
                             <span>Gender</span>
                             <span>
-                             <select class="custom-select mr-sm-2" id="genders">
-                                <option selected>Choose...</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Other">Other</option>
-                              </select>
+                                  <input list="genders" name="gender" id="gender">
+                                  <datalist id="genders">
+                                    <option value="Male">
+                                    <option value="Female">
+                                    <option value="Other">
+                                  </datalist>
                             </span>
 
                         </label>
@@ -808,7 +808,7 @@ $stmt = $db->selectdata($query);
         <?php if(isset($_GET['addacc'])):?>
             <form action="admin.php?user" method="post" enctype="multipart/form-data" class="form">
                 <div class="formHeader row">
-                    <h2 class="text-1 fl">Add Product</h2>
+                    <h2 class="text-1 fl">Add Account</h2>
                     <div class="fr">
                         <button type="submit" class="btnSave bg-1 text-fff text-bold fr" name="addacc">SAVE</button><a href="" class="btnAdd fa fa-plus bg-1 text-fff"></a>
                     </div>
@@ -835,14 +835,13 @@ $stmt = $db->selectdata($query);
                         <label class="inputGroup" for="gender">
                             <span>Gender</span>
                             <span>
-                             <select class="custom-select mr-sm-2" id="genders">
-                                <option selected>Choose...</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Other">Other</option>
-                              </select>
+                                  <input list="genders" name="gender" id="gender" class="p2">
+                                  <datalist id="genders">
+                                    <option value="Male">
+                                    <option value="Female">
+                                    <option value="Other">
+                                  </datalist>
                             </span>
-
                         </label>
                     </div>
                     <div class="column s-6">
