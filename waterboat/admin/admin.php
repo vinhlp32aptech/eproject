@@ -168,22 +168,24 @@ endif;
 //////
 //-------------------------delete data-do not save
 //        -----delete product
-if(isset($_POST['delpro'])):
-    $query = "delete  from product where id = " . $_GET['id'];
+if(isset($_GET['delpro'])):
+    echo "lllll";
+echo $_GET['delpro'];
+    $query = "delete from product where id_pro = " . $_GET['delpro'];
     $stmt = $db->deletedata($query);
-    header('location: '. $_SERVER['REQUEST_URI']);
+//    header('location: '. $_SERVER['REQUEST_URI']);
 endif;
         //        -----delete product
-        if(isset($_POST['delinv'])):
-            $query = "delete  from invoice_details where id = " . $_GET['id'];
+        if(isset($_GET['delinv'])):
+            $query = "delete  from invoice_details where id_inv = " . $_GET['delinv'];
             $stmt = $db->deletedata($query);
-            header('location: '. $_SERVER['REQUEST_URI']);
+//            header('location: '. $_SERVER['REQUEST_URI']);
         endif;
         //        -----delete product
-        if(isset($_POST['delacc'])):
-            $query = "delete  from account where id = " . $_GET['id'];
+        if(isset($_GET['delacc'])):
+            $query = "delete  from account where id_acc = " . $_GET['delacc'];
             $stmt = $db->deletedata($query);
-            header('location: '. $_SERVER['REQUEST_URI']);
+//            header('location: '. $_SERVER['REQUEST_URI']);
         endif;
 
 //delete data and save it
@@ -439,7 +441,7 @@ $stmt = $db->selectdata($query);
                                     <input type="checkbox" class="btnSwitch status" name="status">
                                 </div>
                                 <div class="cell cell-100 text-center">
-                                    <a href="admin.php?id_pro=<?=$product['id_pro'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
+                                    <a href="admin.php?id_pro=<?=$product['id_pro'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?delpro=<?=$product['id_pro'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                                 </div>
                             </li>
                         </ul>
