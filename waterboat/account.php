@@ -114,6 +114,12 @@
                                    type="text">
                         </div>
                     </div>
+                    <div>
+                            <label for="browser">Choose your browser from the list:</label>
+                            <input list="browsers" name="browser" id="browser">
+
+                    </div>
+
                     <div class="form-group row">
                         <label for="publicinfo" class="col-4 col-form-label">Address</label>
                         <div class="col-8">

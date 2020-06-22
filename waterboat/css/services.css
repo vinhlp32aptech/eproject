@@ -570,13 +570,10 @@ a:focus, .button:focus {
     outline: none
 }
 
-a {
-    color: #635c5c
+a{
+    color: #1089ff;
 }
 
-a:hover {
-    color: #fff
-}
 
 a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
     text-decoration: none

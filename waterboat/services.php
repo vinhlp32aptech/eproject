@@ -186,10 +186,10 @@ endif;
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-location mb-30">
                     <div class="location-img">
-                        <a href="Lease.php" ><img src="images/wakesurf-boat.jpg" alt="" height="360px" width="286px"><a/>
+                        <a href="Lease.php" ><img src="images/fishing.jpg" alt="" height="360px" width="286px"><a/>
                     </div>
                     <div class="location-details">
-                        <p>Wakesurf & Wakeboard</p>
+                        <p>Fishing boats</p>
                         <a href="Lease.php" class="location-btn">50 <i class="ti-plus"></i> Location</a>
                     </div>
                 </div>

@@ -32,7 +32,7 @@ session_start();
 
 <div class="container">
 
-    <!--     SIDE AREA -->
+<!--         SIDE AREA-->
     <div class="sideArea">
         <div class="avatar">
             <?php
@@ -146,7 +146,7 @@ endif;
                 $photo = $_POST['oldphoto'];
             endif;
 
-            $query = "insert into account( user_name, password, email, phone, fullname , dob , addr, photo_acc) values ( :user_name,  :password, :email, :phone, :fullname, :dob, :addr, :photo_acc)";
+            $query = "insert into account( user_name, password, email, phone, fullname , gender,  dob , addr, photo_acc) values ( :user_name,  :password, :email, :phone, :fullname, :gender, :dob, :addr, :photo_acc)";
             $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
             $param = [
@@ -155,6 +155,7 @@ endif;
                 "email"          =>$_POST['email'],
                 "phone"        =>$_POST['phone'],
                 "fullname"       =>$_POST['fullname'],
+                "gender"       =>$_POST['gender'],
                 "dob"       =>$_POST['dob'],
                 "addr"       =>$_POST['addr'],
                 "photo_acc"             =>$photo,
@@ -766,6 +767,18 @@ $stmt = $db->selectdata($query);
                             <span>Full name</span>
                             <span><input type="text" name="fullname" value="<?=$product['fullname'];?>"></span>
                         </label>
+                        <label class="inputGroup" for="gender">
+                            <span>Gender</span>
+                            <span>
+                             <select class="custom-select mr-sm-2" id="genders">
+                                <option selected>Choose...</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                              </select>
+                            </span>
+
+                        </label>
                 </div>
                     <div class="column s-6">
                         <label class="inputGroup">
@@ -819,7 +832,18 @@ $stmt = $db->selectdata($query);
                             <span>Full name</span>
                             <span><input type="text" name="fullname" ></span>
                         </label>
+                        <label class="inputGroup" for="gender">
+                            <span>Gender</span>
+                            <span>
+                             <select class="custom-select mr-sm-2" id="genders">
+                                <option selected>Choose...</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                              </select>
+                            </span>
 
+                        </label>
                     </div>
                     <div class="column s-6">
                         <label class="inputGroup">
