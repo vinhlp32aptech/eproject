@@ -249,7 +249,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a href="../gallery/Atlantis-collection.php"><img src="../images/Atlantis/Atlantis-34.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="../gallery/Atlantis-collection.php"><img src="../images/Atlantis-34.jpg" alt="Image" class="img-fluid"></a>
                 </div>
                 <div class="col-md-6">
                     <span class="text-serif text-primary">Collection</span>
@@ -267,7 +267,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a href="../gallery/Flybridge-collection.php"><img src="../images/Flybridge/Flybridge-42.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="../gallery/Flybridge-collection.php"><img src="../images/Flybridge-42.jpg" alt="Image" class="img-fluid"></a>
                 </div>
                 <div class="col-md-6">
                     <span class="text-serif text-primary">Collection</span>
@@ -283,7 +283,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a href="../gallery/Grande-collection.php"><img src="../images/Grande/Grande-25METRI.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="../gallery/Grande-collection.php"><img src="../images/Grande-25METRI.jpg" alt="Image" class="img-fluid"></a>
                 </div>
                 <div class="col-md-6">
                     <span class="text-serif text-primary">Collection</span>
@@ -302,7 +302,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a href="../gallery/Magellano-collection.php"><img src="../images/Magellano/Magellano-25METRI.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="../gallery/Magellano-collection.php"><img src="../images/Magellano-25METRI.jpg" alt="Image" class="img-fluid"></a>
                 </div>
                 <div class="col-md-6">
                     <span class="text-serif text-primary">Collection</span>
