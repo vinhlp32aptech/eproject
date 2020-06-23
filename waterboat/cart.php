@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/hotline.css">
     <link rel="stylesheet" href="css/theme.css">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
 
 
 </head>
@@ -41,9 +42,9 @@
     <?php include_once "public/header.php" ?>
     <div class="container">
         <div class="col-md-12">
-            <br><br><br><br><br><br><br>
-            <h3 class="title-5 m-b-35">Your cart</h3>
-            <div class="table-responsive table-responsive-data2">
+            <br><br><br><br><br><br>
+            <h3 class="text-center">Your cart</h3><br>
+            <div class="table-responsive table-responsive-data2" >
                 <table class="table table-data2">
                     <thead>
                     <tr>
@@ -70,29 +71,20 @@
                                 <span class="au-checkmark"></span>
                             </label>
                         </td>
-                        <td>Lori Lynch</td>
+                        <td>Azimut Magellano 43 HT</td>
                         <td>
-                            <span class="block-email">lori@example.com</span>
+                            <span class="">$ 517 907</span>
                         </td>
-                        <td class="desc">Samsung S8 Black</td>
-                        <td>2018-09-27 02:12</td>
+                        <td class="">Beauty and comfort, safety...</td>
+                        <td><input type="number"></td>
                         <td>
-                            <span class="status--process">Processed</span>
+                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
                         </td>
-                        <td>$679.00</td>
+                        <td>1</td>
                         <td>
                             <div class="table-data-feature">
                                 <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
-                                    <i class="zmdi zmdi-mail-send"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
-                                    <i class="zmdi zmdi-edit"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                                    <i class="zmdi zmdi-delete"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="More">
-                                    <i class="zmdi zmdi-more"></i>
+                                    <i class="fas fa-trash"></i>
                                 </button>
                             </div>
                         </td>
@@ -105,29 +97,20 @@
                                 <span class="au-checkmark"></span>
                             </label>
                         </td>
-                        <td>Lori Lynch</td>
+                        <td>Azimut Magellano 43 HT</td>
                         <td>
-                            <span class="block-email">john@example.com</span>
+                            <span class="">$ 517 907</span>
                         </td>
-                        <td class="desc">iPhone X 64Gb Grey</td>
-                        <td>2018-09-29 05:57</td>
+                        <td class="">Beauty and comfort, safety...</td>
+                        <td><input type="number"></td>
                         <td>
-                            <span class="status--process">Processed</span>
+                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
                         </td>
-                        <td>$999.00</td>
+                        <td>1</td>
                         <td>
                             <div class="table-data-feature">
                                 <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
-                                    <i class="zmdi zmdi-mail-send"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
-                                    <i class="zmdi zmdi-edit"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                                    <i class="zmdi zmdi-delete"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="More">
-                                    <i class="zmdi zmdi-more"></i>
+                                    <i class="fas fa-trash"></i>
                                 </button>
                             </div>
                         </td>
@@ -140,29 +123,20 @@
                                 <span class="au-checkmark"></span>
                             </label>
                         </td>
-                        <td>Lori Lynch</td>
+                        <td>Azimut Magellano 43 HT</td>
                         <td>
-                            <span class="block-email">lyn@example.com</span>
+                            <span class="">$ 517 907</span>
                         </td>
-                        <td class="desc">iPhone X 256Gb Black</td>
-                        <td>2018-09-25 19:03</td>
+                        <td class="">Beauty and comfort, safety...</td>
+                        <td><input type="number"></td>
                         <td>
-                            <span class="status--denied">Denied</span>
+                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
                         </td>
-                        <td>$1199.00</td>
+                        <td>1</td>
                         <td>
                             <div class="table-data-feature">
                                 <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
-                                    <i class="zmdi zmdi-mail-send"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
-                                    <i class="zmdi zmdi-edit"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                                    <i class="zmdi zmdi-delete"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="More">
-                                    <i class="zmdi zmdi-more"></i>
+                                    <i class="fas fa-trash"></i>
                                 </button>
                             </div>
                         </td>
@@ -175,40 +149,113 @@
                                 <span class="au-checkmark"></span>
                             </label>
                         </td>
-                        <td>Lori Lynch</td>
+                        <td>Azimut Magellano 43 HT</td>
                         <td>
-                            <span class="block-email">doe@example.com</span>
+                            <span class="">$ 517 907</span>
                         </td>
-                        <td class="desc">Camera C430W 4k</td>
-                        <td>2018-09-24 19:10</td>
+                        <td class="">Beauty and comfort, safety...</td>
+                        <td><input type="number"></td>
                         <td>
-                            <span class="status--process">Processed</span>
+                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
                         </td>
-                        <td>$699.00</td>
+                        <td>1</td>
                         <td>
                             <div class="table-data-feature">
                                 <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
-                                    <i class="zmdi zmdi-mail-send"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
-                                    <i class="zmdi zmdi-edit"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                                    <i class="zmdi zmdi-delete"></i>
-                                </button>
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="More">
-                                    <i class="zmdi zmdi-more"></i>
+                                    <i class="fas fa-trash"></i>
                                 </button>
                             </div>
                         </td>
                     </tr>
                     </tbody>
                 </table>
-            </div>
-            <!-- END DATA TABLE -->
+            </div><br><button type="submit"  class="btn btn-danger btn pull-right" >CONFIRM CART</button>
         </div>
     </div>
+    <br><br><hr>
+    <div></div>
+    <div class="container">
+        <div class="col-md-12">
+            <br><br><br><br><br><br>
+            <h3 class="text-center">Purchase history</h3><br>
+            <div class="table-responsive table-responsive-data2" >
+                <table class="table table-data2">
+                    <thead>
+                    <tr>
 
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Image</th>
+                        <th>status</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tr-shadow">
+
+                        <td>Azimut Magellano 43 HT</td>
+                        <td>
+                            <span class="">$ 517 907</span>
+                        </td>
+                        <td class="">Beauty and comfort, safety...</td>
+                        <td><input type="number"></td>
+                        <td>
+                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
+                        </td>
+                        <td>1</td>
+
+                    </tr>
+                    <tr class="spacer"></tr>
+                    <tr class="tr-shadow">
+
+                        <td>Azimut Magellano 43 HT</td>
+                        <td>
+                            <span class="">$ 517 907</span>
+                        </td>
+                        <td class="">Beauty and comfort, safety...</td>
+                        <td><input type="number"></td>
+                        <td>
+                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
+                        </td>
+                        <td>1</td>
+
+                    </tr>
+                    <tr class="spacer"></tr>
+                    <tr class="tr-shadow">
+
+                        <td>Azimut Magellano 43 HT</td>
+                        <td>
+                            <span class="">$ 517 907</span>
+                        </td>
+                        <td class="">Beauty and comfort, safety...</td>
+                        <td><input type="number"></td>
+                        <td>
+                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
+                        </td>
+                        <td>1</td>
+
+                    </tr>
+                    <tr class="spacer"></tr>
+                    <tr class="tr-shadow">
+                       
+                        <td>Azimut Magellano 43 HT</td>
+                        <td>
+                            <span class="">$ 517 907</span>
+                        </td>
+                        <td class="">Beauty and comfort, safety...</td>
+                        <td><input type="number"></td>
+                        <td>
+                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
+                        </td>
+                        <td>1</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
     <?php include_once "public/footer.php"?>
 
