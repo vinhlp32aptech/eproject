@@ -184,17 +184,64 @@ endif;
                            </form>
                            <?php
                            endwhile; ?>
-
+                           <div style="font-size: 15px">
                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                               <div class="modal-dialog modal-md">
+                               <div class="modal-dialog modal-lg">
                                    <div class="modal-content w-auto">
-<!--                                       noi dung modal o day-->
+<!--                                       --------------->
+                                       <div class="row">
+                                           <div class="col-md-3  alert alert-info">
+                                               <b>Full Name</b>
+                                           </div>
+                                           <div class="col-md-9  alert alert-info">Le Phat Zinh</div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-md-3  alert alert-info">
+                                               <b>Address</b>
+                                           </div>
+                                           <div class="col-md-9  alert alert-info">69 đường Betta, xã cành cây, tỉnh Dân Chơi </div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-md-3  alert alert-info">
+                                               <b>Phone Number</b>
+                                           </div>
+                                           <div class="col-md-9  alert alert-info">1900376122</div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-md-3  alert alert-info">
+                                               <b>Email</b>
+                                           </div>
+                                           <div class="col-md-9  alert alert-info">LePhatZinh@gmail.com</div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-md-3  alert alert-info">
+                                               <b>Azimut 50</b>
+                                           </div>
+                                           <div class="col-md-3  alert alert-info"><b>Price</b> $ 9 000</div>
+                                           <div class="col-md-3  alert alert-info"><img src="images/Azimut50-1.jpg" height="100" width="150" alt=""></div>
+                                           <div class="col-md-3  alert alert-info"><b>Quantity:1</b></div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-md-3  alert alert-info">
+                                               <b>Shipping Fee</b>
+                                           </div>
+                                           <div class="col-md-9  alert alert-info">$ 10 000</div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-md-3  alert alert-info">
+                                               <b>Voucher code</b>
+                                           </div>
+                                           <div class="col-md-9  alert alert-info"><input type="text" placeholder="Enter voucher code"></div>
+                                       </div>
+
+<!--                                       ------------------------->
                                    </div>
                                    <div class="modal-footer">
-                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                       <button type="submit" class="btn btn-primary">Save changes</button>
+                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                       <button type="submit" class="btn btn-primary">Payment orders</button>
                                    </div>
                                </div>
+                           </div>
                            </div>
                            <p><h2>Specification</h2></p>
                            <br/>

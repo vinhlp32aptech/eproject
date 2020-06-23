@@ -1825,3 +1825,6 @@ h1, h2, h3, h4, h5,
   background-color: rgba(92, 200, 170,1);
   transition: background-color 0.5s ease-out;
 }
+#textmodal{
+  font-size: 20px;
+}
