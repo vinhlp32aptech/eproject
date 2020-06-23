@@ -9,6 +9,7 @@ $db = new database();
 
 if(isset($_GET['logout'])):
     setcookie('gotoindex','',time()-86400);
+header('location: index.php');
 endif;
 
 if(isset($_POST['signin'])):
