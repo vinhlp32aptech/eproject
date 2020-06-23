@@ -1,3 +1,50 @@
+<?php
+include_once "conn/database.php";
+include_once "conn/Pagination.php";
+
+$db = new database();
+
+if(isset($_GET['search'])):
+    $query = "select * from product where concat(name_pro,price_pro,year_pro,code) like ?  ";
+
+    $param = [
+        "%{$_GET['search']}%"
+    ];
+
+    $stmt = $db->selectdataparam($query, $param);
+
+    $total = $stmt->rowCount();
+    $config = [
+        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
+        'total_record'  => $total,
+        'limit'         => 6,
+        'link_full'     => (trim($_GET['search'])=="")?'index.php?page={page}':"index.php?page={page}&search={$_GET['search']}",
+        'link_first'    => (trim($_GET['search'])=="")?'index.php':"index.php?search={$_GET['search']}",
+        'range'         => 5,
+    ];
+    $paging = new Pagination();
+    $paging->init($config);
+    $query = "select * from product  where concat(name_pro,price_pro,year_pro,code) like ?  {$paging->get_limit()}";
+    $stmt = $db->selectdataparam($query, $param);
+
+else:
+    $query = "select * from product";
+    $stmt = $db->selectdata($query);
+    $total = $stmt->rowCount();
+    $config = [
+        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
+        'total_record'  => $total,
+        'limit'         => 6,
+        'link_full'     => 'index.php?page={page}',
+        'link_first'    => 'index.php',// Link trang đầu tiên
+        'range'         => 5, // Số button trang bạn muốn hiển thị
+    ];
+    $paging = new Pagination();
+    $paging->init($config);
+    $query = "select * from product  {$paging->get_limit()}";
+    $stmt = $db->selectdata($query);
+endif;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +75,7 @@
 
   <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/hotline.css">
-
+    <link rel="stylesheet" href="css/layout.css">
 
 
 </head>
@@ -172,7 +219,54 @@
       </div>
     </div>
 
-    <div class="site-section bg-light">
+
+
+
+          <div class="wrapper row3">
+              <main class="hoc container clear servicetop">
+
+                  <hr class="btmspace-30">
+                  <div style="text-align: center">
+                      <img src="images/bestsellerbanner4.png" id="img-seller">
+                  </div>
+                  <br>
+                  <br>
+                  <form action="#">
+                      <ul class="nospace group overview">
+                          <?php
+                          while($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+                              ?>
+                              <li class="one_third">
+                                  <article>
+                                      <a href="Product_detail.php"> <img  style="position: absolute;height:100px; width:100px ;" src="images/bestseller1.png" >
+                                          <img src="images/<?= $product['photo'];?>"  height="100px" width="100px" >
+                                      </a>
+                                      <h6 class="heading"><?= $product['name_pro'];?></h6>
+                                      <ul class="nospace meta">
+                                          <li><i class="fa fa-user"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
+                                          <li><i class="fa fa-tag"></i> <a href="#">Classify:<?= $product['code'];?></a></li>
+                                      </ul>
+                                      <p style="font-size: 20px;color: red"><i class="fa fa-dollar"></i><?= $product['price_pro'];?></p>
+                                      <footer class="nospace"><a class="btn" type="submit" href="Product_detail.php?id_pro=<?= $product['id_pro'];?>">Real More &raquo;</a></footer>
+                                  </article>
+                              </li>
+                          <?php
+                          endwhile;
+                          $db->closeConn();
+                          ?>
+                      </ul>
+                  </form>
+                  <br>
+                  <hr class="btmspace-80">
+
+
+                  <div class="clear"></div>
+              </main>
+          </div>
+
+
+
+      <div class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">

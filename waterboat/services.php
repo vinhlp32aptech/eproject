@@ -72,7 +72,7 @@ endif;
 
     <link rel="stylesheet" href="css/aos.css">
     <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/pagination.css">
@@ -144,7 +144,7 @@ endif;
     </div>
 </div>
 
-</div>
+
 <hr/>
 <div class="popular-location ">
     <div class="container">
@@ -197,8 +197,6 @@ endif;
     </div>
 <div class="wrapper row3">
     <main class="hoc container clear servicetop">
-
-
 
         <hr class="btmspace-30">
         <div class="section-tittle text-center mb-80">

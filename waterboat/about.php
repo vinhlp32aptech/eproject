@@ -35,61 +35,78 @@
   <div class="site-wrap">
 
       <?php include_once "public/header.php" ?>
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
+      <br><br><br>
+      <div class="py-5">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6 col-lg-4">
+                      <div class="service-29283">
+              <span class="wrap-icon-39293">
+                <span class="flaticon-yacht"></span>
+              </span>
+                          <h3>Luxuries Yacht</h3>
+                          <p>Our domestic network extends the trading - procedures - operation & maintenance of the yacht and the international network of inspection - sales (Europe & Asia) to experts from European carriers. Europe like Italy, France, Poland ... Will help you a complete solution for you to enjoy the waves. </p>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                      <div class="service-29283">
+              <span class="wrap-icon-39293">
+                <span class="flaticon-shield"></span>
+              </span>
+                          <h3>30 Years of Experience</h3>
+                          <p>Our team - who have negotiated take on the big yachts in the world - will help you journey into the world of yachts starting with knowledge - advice and finally remove the concerns for you to own your own yacht.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                      <div class="service-29283">
+              <span class="wrap-icon-39293">
+                <span class="flaticon-captain"></span>
+              </span>
+                          <h3>Good Captain</h3>
+                          <p>We have a team of experienced captains, have more than 30 years ' experience in driving. Will provide you with the satisfaction</p>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="col-md-6">
-            <h4 class="text-serif text-primary">About Us</h4>
-            <h3 class="heading-92913 text-black">Welcome To Our Website</h3>
-            <p>During the past 40 years, we have constantly improved and upgraded the quality and service form to meet the needs of visitors.</p>
-            <p>It can be said that <strong style="color:#0b0b0b"> Marina Fleet </strong> is a boat tour designed with the breakthrough and leading in yacht service with the most interesting and special destinations and entertainment services.</p>
-            <p><a href="index.php" class="btn btn-primary py-3 px-4">Learn More</a></p>
-          </div>
-        </div>
       </div>
-    </div>
 
-    
-    <div class="site-section bg-image overlay" style="background-image: url('images/hero_1.jpg');">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="counter-39392">
-              <h3>400</h3>
-              <span>Number of Yacht</span>
-            </div>
+      <div class="site-section bg-image overlay" style="background-image: url('images/hero_1.jpg');">
+          <div class="container">
+              <div class="row">
+                  <div class="col">
+                      <div class="counter-39392">
+                          <h3>349</h3>
+                          <span>Number of Yacht</span>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="counter-39392">
+                          <h3>7000+</h3>
+                          <span>Customers Satisfied</span>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="counter-39392">
+                          <h3>120</h3>
+                          <span>Number of Staffs</span>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="counter-39392">
+                          <h3>20</h3>
+                          <span>Available in 20 countries</span>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="counter-39392">
+                          <h3>230</h3>
+                          <span>Professional Sailors</span>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="col">
-            <div class="counter-39392">
-              <h3>8234+</h3>
-              <span>Customers Satisfied</span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="counter-39392">
-              <h3>100</h3>
-              <span>Number of Staffs</span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="counter-39392">
-              <h3>490</h3>
-              <span>Sea Destinations</span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="counter-39392">
-              <h3>300</h3>
-              <span>Professional Sailors</span>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+
       <br>
       <br>
 
