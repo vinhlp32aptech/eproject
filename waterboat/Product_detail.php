@@ -277,7 +277,7 @@ endif;
            <legend> Send your feedback about this product</legend><br>
            <table>
                <tr>
-                   <td><input type="date" ><br></td>
+                   <td><input type="text" ><br></td>
                </tr>
                <tr>
                    <td>
