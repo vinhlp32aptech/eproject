@@ -15,6 +15,13 @@ body {
 
 
 /*Vinh code*/
+.inputform{
+  width: 250px;
+}
+
+.margintable{
+  margin-right: 30px;
+}
 
 .quantitypro{
   width: 50px;

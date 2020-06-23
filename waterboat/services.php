@@ -213,7 +213,7 @@ endif;
                     <article><a href="Product_detail.php?id_pro=<?= $product['id_pro'];?>"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
                         <h6 class="heading"><?= $product['name_pro'];?></h6>
                         <ul class="nospace meta">
-                            <li><i class="fa fa-user"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
+                            <li><i class="fa fa-calendar"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
                             <li><i class="fa fa-tag"></i> <a href="#">Classify:<?= $product['code'];?></a></li>
                         </ul>
                         <p style="font-size: 20px;color: red"><i class="fa fa-dollar"></i><?= $product['price_pro'];?></p>

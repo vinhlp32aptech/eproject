@@ -30,24 +30,17 @@
 
 <body>
 
+
+
 <?php
 if(isset($_GET['id_pro'])):
-include_once "public/header.php";
+    include_once "public/header.php";
 else:
-header('location: services.php');
+    header('location: services.php');
 endif;
-?>
 
-<?php
 //insert product-----------
 if(isset($_POST['addcart'])):
-    echo $_COOKIE['gotoindex'];
-echo $_GET['id_pro'];
-echo $_POST['name_shop'];
-    echo $_POST['price_shop'];
-    echo $_POST['quantity_shop'];
-    echo $_POST['photo_shop'];
-
     if (isset($_COOKIE['gotoindex'])):
         $query = "insert into shopping_cart(id_acc, id_pro, name_shop, price_shop, quantity_shop, photo_shop) values(:id_acc, :id_pro, :name_shop, :price_shop, :quantity_shop, :photo_shop)";
         $param = [
@@ -65,6 +58,20 @@ echo $_POST['name_shop'];
     endif;
 endif;
 
+if(isset($_POST['feedback'])):
+    if(isset($_COOKIE['gotoindex'])):
+        $query = "insert into feedback(id_pro, id_acc , user_name, content) values(:id_pro, :id_acc, :user_name, :content)";
+        $param = [
+            "id_pro"             =>$_GET['id_pro'],
+            "id_acc"            =>$_COOKIE['gotoindex'],
+            "user_name"          =>$_POST['user_name'],
+            "content"           =>$_POST['content'],
+        ];
+        $db->insertdataparam($query, $param);
+        else:
+            echo "<script>alert('Please Sign in or Sign up to continue!');</script>";
+        endif;
+endif;
 ?>
 
 
@@ -166,11 +173,10 @@ endif;
                                     <input type="hidden" name="name_shop" value="<?=$product['name_pro'];?>">
                                     <input type="hidden" name="price_shop" value="<?=$product['price_pro'];?>">
                                     <input type="hidden" name="photo_shop" value="<?=$product['photo'];?>">
-                                    <input type="number" name="quantity_shop" id="" class="quantitypro" min="1" max="100">
+                                    <input type="number" name="quantity_shop" id="" class="quantitypro" min="1" max="100" value="1">
                                 </div>
                                  <div class="col-md-4">
-                                     <button type="submit" class="btn btn-info" name="buypro">Buy Now</button>
-                                 </div>
+                                     <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg"  name="addcart">Buy Now</button>                                 </div>
                                  <div class="col-md-4">
                                      <button type="submit" class="btn btn-success" name="addcart" >ADD Cart</button>
                                  </div>
@@ -178,6 +184,18 @@ endif;
                            </form>
                            <?php
                            endwhile; ?>
+
+                           <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                               <div class="modal-dialog modal-md">
+                                   <div class="modal-content w-auto">
+<!--                                       noi dung modal o day-->
+                                   </div>
+                                   <div class="modal-footer">
+                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                       <button type="submit" class="btn btn-primary">Save changes</button>
+                                   </div>
+                               </div>
+                           </div>
                            <p><h2>Specification</h2></p>
                            <br/>
 
@@ -273,21 +291,21 @@ endif;
        <!-- loader -->
        <hr>
 
-       <form action="">
-           <legend> Send your feedback about this product</legend><br>
+       <form action="#" method="post">
+           <legend> Send your feedback about this product.</legend><br>
            <table>
                <tr>
-                   <td><input type="text" ><br></td>
+                   <td><input type="text" placeholder="Enter your name" name="user_name"><br></td>
                </tr>
                <tr>
                    <td>
-                       <textarea name="" PLACEHOLDER="Your comment" style="width: 600px; height: 150px"></textarea>
+                       <textarea name="content" PLACEHOLDER="Your comment" style="width: 600px; height: 150px"></textarea>
                    </td>
                </tr>
                <tr>
                    <td>
-                       <input class="btn-warning" type="reset" value="Reset">
-                       <input class="btn-danger" type="submit" value="Submit">
+                       <input class="btn-secondary" type="reset" value="Reset">
+                       <input class="btn-primary" type="submit" value="Submit" name="feedback">
                    </td>
                </tr>
            </table>
