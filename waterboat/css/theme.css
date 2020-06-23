@@ -108,6 +108,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.paddingbottom{
+    padding-bottom: 30px;
+}
+
 h1,
 h2,
 h3,

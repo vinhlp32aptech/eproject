@@ -97,26 +97,19 @@ if(isset($_COOKIE['gotoindex'])):
            $account = $stmt->fetch(PDO::FETCH_ASSOC);
            if($account > 0):
                if(password_verify($password, $account['password'])):
-                   header('location: admin.php?product');
+                   $query = "update account set  password=:password where id_acc = :id_acc ";
+                   $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                   $param = [
+                       "password"          =>$hash,
+                       "id_acc"                =>$_COOKIE['gotoindex']
+                   ];
+                   $db->updatedataparam($query, $param);
+                   echo "<script>alert('Password changed successfully!')</script>";
                else:
+                   echo "<script>alert('Your password is wrong!')</script>";
                    endif;
            endif;
 //
-       $query = "update account set  password=:password where id_acc = :id_acc ";
-       $param = [
-           "user_name"          =>$_POST['user_name'],
-           "email"          =>$_POST['email'],
-           "phone"        =>$_POST['phone'],
-           "fullname"       =>$_POST['fullname'],
-           "gender"       =>$_POST['gender'],
-           "dob"       =>$_POST['dob'],
-           "addr"       =>$_POST['addr'],
-           "photo_acc"          =>$photo,
-           "id_acc"                =>$_COOKIE['gotoindex']
-
-       ];
-       $db->updatedataparam($query, $param);
-//       header('location: admin.php?id_acc='.$_GET['id_acc']);
    endif;
 
    $query = "select * from account where id_acc = " . $_COOKIE['gotoindex'];
@@ -200,7 +193,7 @@ if(isset($_COOKIE['gotoindex'])):
                     <?php endwhile;?>
                     <hr>
                     <h5>Change your Password ?</h5>
-                    <form>
+                    <form action="#" method="post">
                         <div class="form-group row">
                             <label for="password" class="col-4 col-form-label">Current Password</label>
                             <div class="col-8">

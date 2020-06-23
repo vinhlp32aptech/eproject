@@ -41,9 +41,10 @@
 
     <?php
     if (isset($_COOKIE['gotoindex'])):
-    include_once "public/header.php" ?>
+    include_once "public/header.php";
+        if(isset($_GET['cart'])):?>
     <div class="container">
-        <div class="col-md-12">
+        <div class="col-md-12 paddingbottom">
             <br><br><br><br><br><br>
             <h3 class="text-center">Your cart</h3><br>
             <div class="table-responsive table-responsive-data2" >
@@ -174,10 +175,9 @@
             </div><br><button type="submit"  class="btn btn-danger btn pull-right" >CONFIRM CART</button>
         </div>
     </div>
-    <br><br><hr>
-    <div></div>
+    <?php else:?>
     <div class="container">
-        <div class="col-md-12">
+        <div class="col-md-12 paddingbottom">
             <br><br><br><br><br><br>
             <h3 class="text-center">Purchase history</h3><br>
             <div class="table-responsive table-responsive-data2" >
@@ -258,8 +258,8 @@
             </div>
         </div>
     </div>
-
-    <?php include_once "public/footer.php";
+    <?php endif;
+        include_once "public/footer.php";
     else:
     header('location: index.php');
     endif;
