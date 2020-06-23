@@ -1,3 +1,50 @@
+<?php
+include_once "conn/database.php";
+include_once "conn/Pagination.php";
+
+$db = new database();
+
+if(isset($_GET['search'])):
+    $query = "select * from product where concat(name_pro,price_pro,year_pro,code) like ?  ";
+
+    $param = [
+        "%{$_GET['search']}%"
+    ];
+
+    $stmt = $db->selectdataparam($query, $param);
+
+    $total = $stmt->rowCount();
+    $config = [
+        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
+        'total_record'  => $total,
+        'limit'         => 6,
+        'link_full'     => (trim($_GET['search'])=="")?'index.php?page={page}':"index.php?page={page}&search={$_GET['search']}",
+        'link_first'    => (trim($_GET['search'])=="")?'index.php':"index.php?search={$_GET['search']}",
+        'range'         => 5,
+    ];
+    $paging = new Pagination();
+    $paging->init($config);
+    $query = "select * from product  where concat(name_pro,price_pro,year_pro,code) like ?  {$paging->get_limit()}";
+    $stmt = $db->selectdataparam($query, $param);
+
+else:
+    $query = "select * from product";
+    $stmt = $db->selectdata($query);
+    $total = $stmt->rowCount();
+    $config = [
+        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
+        'total_record'  => $total,
+        'limit'         => 6,
+        'link_full'     => 'index.php?page={page}',
+        'link_first'    => 'index.php',// Link trang đầu tiên
+        'range'         => 5, // Số button trang bạn muốn hiển thị
+    ];
+    $paging = new Pagination();
+    $paging->init($config);
+    $query = "select * from product  {$paging->get_limit()}";
+    $stmt = $db->selectdata($query);
+endif;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +72,7 @@
 
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="css/services.css">
   <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/hotline.css">
 
@@ -172,7 +219,106 @@
       </div>
     </div>
 
-    <div class="site-section bg-light">
+
+      <hr/>
+      <div class="popular-location ">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <!-- Section Tittle -->
+                      <div class="section-tittle text-center mb-80">
+                          <h4 class="text-serif text-primary">Products</h4>
+                          <h2>Classification of ships</h2>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="single-location mb-30">
+                          <div class="location-img">
+                              <a href="Lease.php" ><img src="images/Luxury-yachts.jpg" alt="" height="360px" width="286px"></a>
+                          </div>
+
+                          <div class="location-details">
+                              <p>Luxury yachts</p>
+                              <a href="Lease.php" class="location-btn">
+
+                                  <i class="ti-plus"></i> Location</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="single-location mb-30">
+                          <div class="location-img">
+                              <a href="Lease.php" ><img src="images/sport-boat.jpg" alt="" height="360px" width="286px"><a/>
+                          </div>
+                          <div class="location-details">
+                              <p>Sport Boat</p>
+                              <a href="Lease.php" class="location-btn">60 <i class="ti-plus"></i> Location</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="single-location mb-30">
+                          <div class="location-img">
+                              <a href="Lease.php" ><img src="images/fishing.jpg" alt="" height="360px" width="286px"><a/>
+                          </div>
+                          <div class="location-details">
+                              <p>Fishing boats</p>
+                              <a href="Lease.php" class="location-btn">50 <i class="ti-plus"></i> Location</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- .site-wrap -->
+          </div>
+          <div class="wrapper row3">
+              <main class="hoc container clear servicetop">
+
+                  <hr class="btmspace-30">
+                  <div class="section-tittle text-center mb-80">
+
+                      <h2>Featured Boats</h2>
+                  </div>
+                  <form action="#">
+
+                      <ul class="nospace group overview">
+                          <?php
+                          while($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+                              ?>
+                              <li class="one_third">
+                                  <article><a href="Product_detail.php"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
+                                      <h6 class="heading"><?= $product['name_pro'];?></h6>
+                                      <ul class="nospace meta">
+                                          <li><i class="fa fa-user"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
+                                          <li><i class="fa fa-tag"></i> <a href="#">Classify:<?= $product['code'];?></a></li>
+                                      </ul>
+                                      <p style="font-size: 20px;color: red"><i class="fa fa-dollar"></i><?= $product['price_pro'];?></p>
+                                      <footer class="nospace"><a class="btn" type="submit" href="Product_detail.php?id_pro=<?= $product['id_pro'];?>">Real More &raquo;</a></footer>
+                                  </article>
+                              </li>
+                          <?php
+                          endwhile;
+                          $db->closeConn();
+                          ?>
+                      </ul>
+                  </form>
+                  <br>
+                  <hr class="btmspace-80">
+                  <?php
+                  if(isset($paging)):
+                      echo $paging->html();
+                  endif;
+                  ?>
+
+
+                  <div class="clear"></div>
+              </main>
+          </div>
+
+
+
+      <div class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">

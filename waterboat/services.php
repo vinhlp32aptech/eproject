@@ -144,7 +144,7 @@ endif;
     </div>
 </div>
 
-</div>
+
 <hr/>
 <div class="popular-location ">
     <div class="container">
@@ -199,8 +199,6 @@ endif;
     </div>
 <div class="wrapper row3">
     <main class="hoc container clear servicetop">
-
-
 
         <hr class="btmspace-30">
         <div class="section-tittle text-center mb-80">
