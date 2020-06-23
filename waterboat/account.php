@@ -92,34 +92,14 @@ if(isset($_COOKIE['gotoindex'])):
            $id_acc = trim($_COOKIE['gotoindex']);
            $password = trim($_POST['oldpassword']);
 
-           $query = "select password from account where id_acc ";
-           $param=[
-               "user_name" => $id_acc,
-           ];
-
-           $stmt = $db->selectdataparam($query, $param);
+           $query = "select password from account where id_acc = " .$id_acc;
+           $stmt = $db->selectdata($query);
            $account = $stmt->fetch(PDO::FETCH_ASSOC);
            if($account > 0):
-               $_SESSION['gotoadmin'] = $account['user_name'];
-               if($username === $account['user_name'] && password_verify($password, $account['password'])):
+               if(password_verify($password, $account['password'])):
                    header('location: admin.php?product');
                else:
-                   if(password_verify($password, $account['password'])):
-
-                       header('location: admin.php?product');
-
-                   else:
-                       $_SESSION['passwordwrong']  = "password is wrong";
-                       session_destroy();
                    endif;
-               endif;
-           elseif($_POST['user_name'] === '' || $_POST['user_name'] === ''):
-               $_SESSION['usernameorpasswordwrong']  = "Please fill in fields";
-               session_destroy();
-
-           else:
-               $_SESSION['usernamewrong']  = "Username is wrong";
-               session_destroy();
            endif;
 //
        $query = "update account set  password=:password where id_acc = :id_acc ";
