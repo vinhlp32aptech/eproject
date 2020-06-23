@@ -189,49 +189,56 @@ endif;
                                <div class="modal-dialog modal-lg">
                                    <div class="modal-content w-auto">
 <!--                                       --------------->
+
                                        <div class="row">
-                                           <div class="col-md-3  alert alert-info">
+                                           <div class="col-md-3 alert-info">
                                                <b>Full Name</b>
                                            </div>
-                                           <div class="col-md-9  alert alert-info">Le Phat Zinh</div>
+                                           <div class="col-md-9 alert-info">Le Phat Zinh</div><br>
                                        </div>
+
                                        <div class="row">
-                                           <div class="col-md-3  alert alert-info">
+                                           <div class="col-md-3  alert-info">
                                                <b>Address</b>
                                            </div>
-                                           <div class="col-md-9  alert alert-info">69 đường Betta, xã cành cây, tỉnh Dân Chơi </div>
+                                           <div class="col-md-9 alert-info">69 đường Betta, xã cành cây, tỉnh Dân Chơi </div><br>
                                        </div>
+
                                        <div class="row">
-                                           <div class="col-md-3  alert alert-info">
+                                           <div class="col-md-3 alert-info">
                                                <b>Phone Number</b>
                                            </div>
-                                           <div class="col-md-9  alert alert-info">1900376122</div>
+                                           <div class="col-md-9 alert-info">1900376122</div>
                                        </div>
+
                                        <div class="row">
-                                           <div class="col-md-3  alert alert-info">
+                                           <div class="col-md-3 alert-info">
                                                <b>Email</b>
                                            </div>
-                                           <div class="col-md-9  alert alert-info">LePhatZinh@gmail.com</div>
+                                           <div class="col-md-9  alert-info">LePhatZinh@gmail.com</div>
                                        </div>
+
                                        <div class="row">
-                                           <div class="col-md-3  alert alert-info">
+                                           <div class="col-md-3  alert-info">
                                                <b>Azimut 50</b>
                                            </div>
-                                           <div class="col-md-3  alert alert-info"><b>Price</b> $ 9 000</div>
-                                           <div class="col-md-3  alert alert-info"><img src="images/Azimut50-1.jpg" height="100" width="150" alt=""></div>
-                                           <div class="col-md-3  alert alert-info"><b>Quantity:1</b></div>
+                                           <div class="col-md-3   alert-info"><b>Price</b> $ 9 000</div>
+                                           <div class="col-md-3  alert-info"><img src="images/Azimut50-1.jpg" height="100" width="150" alt=""></div>
+                                           <div class="col-md-3  alert-info"><b>Quantity:1</b> </div>
                                        </div>
+
                                        <div class="row">
-                                           <div class="col-md-3  alert alert-info">
+                                           <div class="col-md-3  alert-info">
                                                <b>Shipping Fee</b>
                                            </div>
-                                           <div class="col-md-9  alert alert-info">$ 10 000</div>
+                                           <div class="col-md-9  alert-info">$ 10 000</div>
                                        </div>
+
                                        <div class="row">
-                                           <div class="col-md-3  alert alert-info">
+                                           <div class="col-md-3   alert-info">
                                                <b>Voucher code</b>
                                            </div>
-                                           <div class="col-md-9  alert alert-info"><input type="text" placeholder="Enter voucher code"></div>
+                                           <div class="col-md-9  alert-info"><input type="text" placeholder="Enter voucher code"></div>
                                        </div>
 
 <!--                                       ------------------------->
