@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="css/hotline.css">
     <link rel="stylesheet" href="css/productdetail.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 

@@ -117,7 +117,7 @@ endif;
                         <li><i class="fa fa-tag"></i> <a href="#">Classify:<?= $product['code'];?></a></li>
                     </ul>
                     <p style="font-size: 20px;color: red"><i class="fa fa-dollar"></i><?= $product['price_pro'];?></p>
-                    <footer class="nospace"><a class="btn" href="#">Real More &raquo;</a></footer>
+                    <footer class="nospace"><a class="btn" href="Product_detail.php?id_pro=<?= $product['id_pro'];?>">Real More &raquo;</a></footer>
                 </article>
             </li>
             <?php

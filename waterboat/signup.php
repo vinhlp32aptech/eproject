@@ -56,7 +56,20 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="css/style.css">
-
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#signup").click(function () {
+                var password = $("#password").val();
+                var confirmPassword = $("#confirmpass").val();
+                if (password != confirmPassword) {
+                    alert("Passwords do not match!");
+                    return false;
+                }
+                return true;
+            });
+        });
+    </script>
 
 </head>
 <body>
@@ -78,12 +91,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								    </div>
 								</div>
 								<div class="form-sub-w3">
-									<input  required type="password" name="password"  placeholder="Password" required="" />
+									<input  required type="password" name="password" id="password" placeholder="Password" required="" />
 
 								<div class="icon-w3">
 									<i class="fas fa-lock" aria-hidden="true"></i>
 								</div>
 								</div>
+
                                 <div class="form-sub-w3">
 									<input required type="password" id="confirmpass"  placeholder="Confirm password" required="" />
 
@@ -112,7 +126,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<div class="clear"></div>
 
 								<div class="submit-agileits">
-									<input type="submit" name="signup" value="Sign Up">
+									<input type="submit" name="signup" id="signup" value="Sign Up">
 								</div>
 
 							</form>
