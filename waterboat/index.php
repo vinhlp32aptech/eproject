@@ -72,10 +72,10 @@ endif;
 
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/services.css">
+
   <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/hotline.css">
-
+    <link rel="stylesheet" href="css/layout.css">
 
 
 </head>
@@ -220,74 +220,27 @@ endif;
     </div>
 
 
-      <hr/>
-      <div class="popular-location ">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <!-- Section Tittle -->
-                      <div class="section-tittle text-center mb-80">
-                          <h4 class="text-serif text-primary">Products</h4>
-                          <h2>Classification of ships</h2>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-lg-4 col-md-6 col-sm-6">
-                      <div class="single-location mb-30">
-                          <div class="location-img">
-                              <a href="Lease.php" ><img src="images/Luxury-yachts.jpg" alt="" height="360px" width="286px"></a>
-                          </div>
 
-                          <div class="location-details">
-                              <p>Luxury yachts</p>
-                              <a href="Lease.php" class="location-btn">
 
-                                  <i class="ti-plus"></i> Location</a>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-sm-6">
-                      <div class="single-location mb-30">
-                          <div class="location-img">
-                              <a href="Lease.php" ><img src="images/sport-boat.jpg" alt="" height="360px" width="286px"><a/>
-                          </div>
-                          <div class="location-details">
-                              <p>Sport Boat</p>
-                              <a href="Lease.php" class="location-btn">60 <i class="ti-plus"></i> Location</a>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-sm-6">
-                      <div class="single-location mb-30">
-                          <div class="location-img">
-                              <a href="Lease.php" ><img src="images/fishing.jpg" alt="" height="360px" width="286px"><a/>
-                          </div>
-                          <div class="location-details">
-                              <p>Fishing boats</p>
-                              <a href="Lease.php" class="location-btn">50 <i class="ti-plus"></i> Location</a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- .site-wrap -->
-          </div>
           <div class="wrapper row3">
               <main class="hoc container clear servicetop">
 
                   <hr class="btmspace-30">
-                  <div class="section-tittle text-center mb-80">
-
-                      <h2>Featured Boats</h2>
+                  <div style="text-align: center">
+                      <img src="images/bestsellerbanner4.png" id="img-seller">
                   </div>
+                  <br>
+                  <br>
                   <form action="#">
-
                       <ul class="nospace group overview">
                           <?php
                           while($product = $stmt->fetch(PDO::FETCH_ASSOC)):
                               ?>
                               <li class="one_third">
-                                  <article><a href="Product_detail.php"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
+                                  <article>
+                                      <a href="Product_detail.php"> <img  style="position: absolute;height:100px; width:100px ;" src="images/bestseller1.png" >
+                                          <img src="images/<?= $product['photo'];?>"  height="100px" width="100px" >
+                                      </a>
                                       <h6 class="heading"><?= $product['name_pro'];?></h6>
                                       <ul class="nospace meta">
                                           <li><i class="fa fa-user"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
@@ -305,11 +258,6 @@ endif;
                   </form>
                   <br>
                   <hr class="btmspace-80">
-                  <?php
-                  if(isset($paging)):
-                      echo $paging->html();
-                  endif;
-                  ?>
 
 
                   <div class="clear"></div>
