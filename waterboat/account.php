@@ -1,8 +1,13 @@
+<?php
+
+if(isset($_COOKIE['gotoindex'])):
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Home</title>
+    <title>Profie</title>
     <link rel="icon" href="images/logo.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,11 +43,16 @@
 
 <div class="site-wrap">
 
-    <?php include_once "public/header.php" ?>
-    <br><br><br><br><br><br><br><br>
+
+
+
+   <?php include_once "public/header.php"?>
+
+    <div class=" to-top-btn hidden-xs hidden-sm">
+    </div>    <br><br><br><br>
     <div class="container">
         <div class="row profile">
-            <div class="col-md-3">
+            <div class="col-md-3 top30">
                 <div class="profile-sidebar">
                     <div class="profile-img">
                         <img id="imgavatar" src="images/Avatar-leader.png" height="100px" id="photo"><br/>
@@ -161,7 +171,10 @@
 </div>
 <!-- .site-wrap -->
 
-
+<?php else:
+header('location: index.php');
+endif;
+?>
 <!-- loader -->
 <div id="loader" class="show fullscreen">
     <svg class="circular" width="48px" height="48px">

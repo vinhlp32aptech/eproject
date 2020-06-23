@@ -4,47 +4,60 @@ include_once "conn/Pagination.php";
 
 $db = new database();
 
-if(isset($_GET['search'])):
-    $query = "select * from product where concat(name_pro,price_pro,year_pro,code) like ?  ";
-
-    $param = [
-        "%{$_GET['search']}%"
-    ];
-
-    $stmt = $db->selectdataparam($query, $param);
-
-    $total = $stmt->rowCount();
-    $config = [
-        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
-        'total_record'  => $total,
-        'limit'         => 6,
-        'link_full'     => (trim($_GET['search'])=="")?'Lease.php?page={page}':"Lease.php?page={page}&search={$_GET['search']}",
-        'link_first'    => (trim($_GET['search'])=="")?'Lease.php':"Lease.php?search={$_GET['search']}",
-        'range'         => 5,
-    ];
-    $paging = new Pagination();
-    $paging->init($config);
-    $query = "select * from product  where concat(name_pro,price_pro,year_pro,code) like ?  {$paging->get_limit()}";
-    $stmt = $db->selectdataparam($query, $param);
-
-else:
-    $query = "select * from product";
+if(isset($_GET['Travel'])):
+    $query = "select * from product where status = 1 && code = 'Travel' ";
     $stmt = $db->selectdata($query);
     $total = $stmt->rowCount();
     $config = [
         'current_page'  => isset($_GET['page'])?$_GET['page']:1,
         'total_record'  => $total,
         'limit'         => 6,
-        'link_full'     => 'Lease.php?page={page}',
+        'link_full'     => 'Lease.php?Travel&page={page}',
         'link_first'    => 'Lease.php',// Link trang đầu tiên
         'range'         => 5, // Số button trang bạn muốn hiển thị
     ];
     $paging = new Pagination();
     $paging->init($config);
-    $query = "select * from product  {$paging->get_limit()}";
+    $query = "select * from product where status = 1 && code = 'Travel' " .$paging->get_limit();
     $stmt = $db->selectdata($query);
-endif;?>
+  elseif(isset($_GET['Sport'])):
+      $query = "select * from product where code = 'Sport' && status = 1 ";
+      $stmt = $db->selectdata($query);
+      $total = $stmt->rowCount();
+      $config = [
+          'current_page'  => isset($_GET['page'])?$_GET['page']:1,
+          'total_record'  => $total,
+          'limit'         => 6,
+          'link_full'     => 'Lease.php?Sport&page={page}',
+          'link_first'    => 'Lease.php',// Link trang đầu tiên
+          'range'         => 5, // Số button trang bạn muốn hiển thị
+      ];
+      $paging = new Pagination();
+      $paging->init($config);
+      $query = "select * from product where code = 'Sport' && status = 1  " .$paging->get_limit();
+      $stmt = $db->selectdata($query);
 
+elseif(isset($_GET['Fishing'])):
+    $query = "select * from product where code = 'Fishing' && status = 1 ";
+    $stmt = $db->selectdata($query);
+    $total = $stmt->rowCount();
+    $config = [
+        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
+        'total_record'  => $total,
+        'limit'         => 6,
+        'link_full'     => 'Lease.php?Fishing&page={page}',
+        'link_first'    => 'Lease.php',// Link trang đầu tiên
+        'range'         => 5, // Số button trang bạn muốn hiển thị
+    ];
+    $paging = new Pagination();
+    $paging->init($config);
+    $query = "select * from product where code = 'Fishing' && status = 1 " .$paging->get_limit();
+    $stmt = $db->selectdata($query);
+
+else:
+    header('location: services.php');
+endif;
+?>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -79,31 +92,25 @@ endif;?>
 <body id="top">
 
 <?php include_once "public/header.php"?>
-
+<h2></h2>
 <div class="wrapper row3">
     <main class="hoc container clear">
-
-        <article class="group btmspace-80">
-            <div class="two_third first" id="fiximgV"><a href="#"><img class="borderedbox inspace-10" src="images/Lease1.jpg" alt="" height="555" width="555"></a></div>
-            <div class="one_third">
-                <h6 class="heading">Welcome to our product page</h6>
-                <h6 class="heading text-danger">32423423</h6>
-                <ul class="nospace meta">
-                    <br>
-                <p>Here we offer three different types of boats: luxury, sports and surfing.</p>
-                <p class="btmspace-30">We have been working on the market of yachts and motor boats for over 17 years which allows us provide a comprehensive solution to issues related to purchasing a motor yacht or a boat. This includes construction on request or selecting a used boat, delivery to Vietnam, customs clearance and registration. We also provide consulting services and assistance in hiring crew, finding berthing area, setting up maintenance plans&hellip;</p>
-            </div>
-        </article>
-
-        <hr class="btmspace-80">
-
-
+        <?php if (isset($_GET['Travel'])):
+        echo '<h2>Luxury yachts</h2>';
+            elseif(isset($_GET['Sport'])):
+                echo '<h2>Sport Boat</h2>';
+        elseif(isset($_GET['Fishing'])):
+        echo '<h2>Fishing boats</h2>';
+        endif;
+        ?>
+        <h2></h2>
+        <hr class="btmspace-50">
         <ul class="nospace group overview">
             <?php
             while($product = $stmt->fetch(PDO::FETCH_ASSOC)):
             ?>
             <li class="one_third">
-                <article><a href="Product_detail.php"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
+                <article><a href="Product_detail.php?id_pro=<?= $product['id_pro'];?>"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
                     <h6 class="heading"><?= $product['name_pro'];?></h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-user"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
@@ -114,6 +121,7 @@ endif;?>
                 </article>
             </li>
             <?php
+
             endwhile;
             $db->closeConn();
             ?>

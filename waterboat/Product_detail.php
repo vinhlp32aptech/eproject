@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,19 +30,58 @@
 
 <body>
 
-<?php include_once "public/header.php" ?>
+<?php
+if(isset($_GET['id_pro'])):
+include_once "public/header.php";
+else:
+header('location: services.php');
+endif;
+?>
+
+<?php
+//insert product-----------
+if(isset($_POST['addcart'])):
+    echo $_COOKIE['gotoindex'];
+echo $_GET['id_pro'];
+echo $_POST['name_shop'];
+    echo $_POST['price_shop'];
+    echo $_POST['quantity_shop'];
+    echo $_POST['photo_shop'];
+
+    if (isset($_COOKIE['gotoindex'])):
+        $query = "insert into shopping_cart(id_acc, id_pro, name_shop, price_shop, quantity_shop, photo_shop) values(:id_acc, :id_pro, :name_shop, :price_shop, :quantity_shop, :photo_shop)";
+        $param = [
+            "id_acc"          =>$_COOKIE['gotoindex'],
+            "id_pro"             =>$_GET['id_pro'],
+            "name_shop"          =>$_POST['name_shop'],
+            "price_shop"       =>$_POST['price_shop'],
+            "quantity_shop"       =>$_POST['quantity_shop'],
+            "photo_shop"       =>$_POST['photo_shop'],
+        ];
+        $db->insertdataparam($query, $param);
+//    header('location: admin.php?product');
+    else:
+        echo "<script>alert('Please Sign in or Sign up to continue!');</script>";
+    endif;
+endif;
+
+?>
+
 
 <div class="site-wrap">
     <div class="hero-slide owl-carousel site-blocks-cover">
         <?php
-            $query = "select img from photos where id_pro = 1 limit 5";
-            $stmt = $db->selectData($query);
-        while($product = $stmt->fetch(PDO::FETCH_ASSOC)): echo $product['img'];?>
-
+        if(isset($_GET['id_pro'])):
+        $query = "select img from photos where id_pro=:id_pro limit 5";
+        $param = [
+            "id_pro" => $_GET['id_pro']
+        ];
+        $stmt = $db->selectdataparam($query,$param);
+        endif;
+        while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
         <div class="intro-section" style="background-image: url('images/<?= $product['img'];?>');">
         </div>
         <?php endwhile; ?>
-
     </div>
 </div>
 <!-- END slider -->
@@ -64,11 +102,16 @@
            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                <div class="row">
                    <?php
-                   $query = "select info, featured, advanced, additional from desc_pro where id_pro = 1 ";
-                   $stmt = $db->selectData($query);
+                   if(isset($_GET['id_pro'])):
+                   $query = "select info, featured, advanced, additional from desc_pro where id_pro =:id_pro  ";
+                       $param = [
+                           "id_pro" => $_GET['id_pro']
+                       ];
+                       $stmt = $db->selectdataparam($query,$param);
+                       endif;
                    while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
-                   <aside class="col-md-8"><h2>Azimut Magellano 43, 2014, Croatia</h2> <n/>
+                   <aside class="col-md-8"><n/>
                         <?= $product['info'];?>
                        <h2>Featured Features</h2><n/>
                        <ul>
@@ -89,33 +132,52 @@
                    </aside>
                    <aside class="col-4">
                        <div class="container">
+                           <?php
+                           if(isset($_GET['id_pro'])):
+                               $query = "select * from product where id_pro=:id_pro limit 1";
+                               $param = [
+                                   "id_pro" => $_GET['id_pro']
+                               ];
+                               $stmt = $db->selectdataparam($query,$param);
+                           endif;
+                           while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+                               ?>
                                <table class="table">
                                    <thead>
                                    <tr class="table-active">
+                                       <th colspan="2"><h3><?=$product['name_pro'];?></h3></th>
+                                   </tr>
+                                   <tr class="table-active">
                                        <th scope="col"><h3>Price:</h3></th>
-                                       <td scope="col" id="pricepro"><h4 class="text-danger">$329,000</h4></td>
+                                       <td scope="col" id="pricepro"><h4 class="text-danger">$<?=$product['price_pro'];?></h4></td>
                                    </tr>
                                    </thead>
                                    <tbody>
                                    <tr class="table-active">
                                        <th><h5>Year:</h5></th>
-                                       <td id="pricepro"><h6>3456</h6></td>
+                                       <td id="pricepro"><h6><?=$product['year_pro'];?></h6></td>
                                    </tr>
                                    </tbody>
                                </table>
-                           <form action="#" method="get">
+
+                           <form action="#" method="post">
                              <div class="row">
                                 <div class="col-md-3 quantity">
+                                    <input type="hidden" name="name_shop" value="<?=$product['name_pro'];?>">
+                                    <input type="hidden" name="price_shop" value="<?=$product['price_pro'];?>">
+                                    <input type="hidden" name="photo_shop" value="<?=$product['photo'];?>">
                                     <input type="number" name="quantity_shop" id="" class="quantitypro" min="1" max="100">
                                 </div>
                                  <div class="col-md-4">
-                                     <button type="submit" class="btn btn-info">Buy Now</button>
+                                     <button type="submit" class="btn btn-info" name="buypro">Buy Now</button>
                                  </div>
                                  <div class="col-md-4">
-                                     <button type="submit" class="btn btn-success">ADD Cart</button>
+                                     <button type="submit" class="btn btn-success" name="addcart" >ADD Cart</button>
                                  </div>
                              </div>
                            </form>
+                           <?php
+                           endwhile; ?>
                            <p><h2>Specification</h2></p>
                            <br/>
 

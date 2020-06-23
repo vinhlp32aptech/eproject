@@ -9,15 +9,16 @@ $db = new database();
 
 if(isset($_GET['logout'])):
     setcookie('gotoindex','',time()-86400);
-header('location: index.php');
-endif;
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    exit;
+    endif;
 
 if(isset($_POST['signin'])):
 
     $username = trim($_POST['user_name']);
     $password = trim($_POST['password']);
 
-    $query = "select user_name,password from account where user_name = :user_name";
+    $query = "select id_acc, user_name,password from account where user_name = :user_name";
     $param=[
         "user_name" => $username,
     ];
@@ -25,7 +26,7 @@ if(isset($_POST['signin'])):
     $stmt = $db->selectdataparam($query, $param);
     $account = $stmt->fetch(PDO::FETCH_ASSOC);
     if($account > 0):
-        setcookie('gotoindex',$account['user_name'],time()+86400);
+        setcookie('gotoindex',$account['id_acc'],time()+86400);
         if($username === $account['user_name'] && password_verify($password, $account['password'])):
             header('location: index.php');
         else:

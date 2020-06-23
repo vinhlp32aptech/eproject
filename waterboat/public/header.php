@@ -120,11 +120,11 @@ endif;
 
                             if(isset($_COOKIE['gotoindex'])):?>
                                 <li class="<?= isset($_SESSION['account'])? $_SESSION['account'] : '' ;?> nav-item dropdown" >
-                                    <a href="account.php?account" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Account</a>
+                                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Account</a>
 
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="nav-link text-left" style="color:black" href="account.php">Profile</a><br>
-                                        <a class="nav-link text-left" style="color:black"href="cart.php">Cart</a><br>
+                                        <a class="nav-link text-left" style="color:black" href="account.php?account">Profile</a><br>
+                                        <a class="nav-link text-left" style="color:black"href="cart.php?account">Cart</a><br>
                                         <a href="signin.php?logout" class="nav-link text-left" style="color:black">Log out</a>
                                     </div>
 

@@ -4,7 +4,7 @@ include_once "conn/Pagination.php";
 
 $db = new database();
 
-if(isset($_GET['search'])):
+if(isset($_GET['aaa'])):
     $query = "select * from product where concat(name_pro,price_pro,year_pro,code) like ?  ";
 
     $param = [
@@ -161,36 +161,34 @@ endif;
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-location mb-30">
                     <div class="location-img">
-                        <a href="Lease.php" ><img src="images/Luxury-yachts.jpg" alt="" height="360px" width="286px"></a>
+                        <a href="Lease.php?Travel" ><img src="images/Luxury-yachts.jpg" alt="" height="360px" width="286px"></a>
                     </div>
 
                     <div class="location-details">
                         <p>Luxury yachts</p>
-                        <a href="Lease.php" class="location-btn">
-
-                            <i class="ti-plus"></i> Location</a>
+                            <a href="Lease.php?Travel" class="location-btn">60 <i class="ti-plus"></i> Location</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-location mb-30">
                     <div class="location-img">
-                        <a href="Lease.php" ><img src="images/sport-boat.jpg" alt="" height="360px" width="286px"><a/>
+                        <a href="Lease.php?Sport" ><img src="images/sport-boat.jpg" alt="" height="360px" width="286px"><a/>
                     </div>
                     <div class="location-details">
                         <p>Sport Boat</p>
-                        <a href="Lease.php" class="location-btn">60 <i class="ti-plus"></i> Location</a>
+                        <a href="Lease.php?Sport" class="location-btn">60 <i class="ti-plus"></i> Location</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-location mb-30">
                     <div class="location-img">
-                        <a href="Lease.php" ><img src="images/fishing.jpg" alt="" height="360px" width="286px"><a/>
+                        <a href="Lease.php?Fishing" ><img src="images/fishing.jpg" alt="" height="360px" width="286px"><a/>
                     </div>
                     <div class="location-details">
                         <p>Fishing boats</p>
-                        <a href="Lease.php" class="location-btn">50 <i class="ti-plus"></i> Location</a>
+                        <a href="Lease.php?Fishing" class="location-btn">50 <i class="ti-plus"></i> Location</a>
                     </div>
                 </div>
             </div>
@@ -214,7 +212,7 @@ endif;
             while($product = $stmt->fetch(PDO::FETCH_ASSOC)):
                 ?>
                 <li class="one_third">
-                    <article><a href="Product_detail.php"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
+                    <article><a href="Product_detail.php?id_pro=<?= $product['id_pro'];?>"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
                         <h6 class="heading"><?= $product['name_pro'];?></h6>
                         <ul class="nospace meta">
                             <li><i class="fa fa-user"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
