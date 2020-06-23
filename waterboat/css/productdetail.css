@@ -1139,11 +1139,11 @@ h1, h2, h3, h4, h5,
     margin-bottom: 30px;
     text-transform: uppercase; }
     .footer .footer-heading > span {
-      border-bottom: 2px solid #1089ff; }
+      border-bottom: 2px solid white; }
   .footer ul li {
     margin-bottom: 10px; }
   .footer a:hover {
-    color: #1089ff;
+    color: white;
     text-decoration: underline; }
   .footer .copyright {
     padding-top: 1rem;

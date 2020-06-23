@@ -12,7 +12,7 @@ if(isset($_POST['login'])):
     $username = trim($_POST['user_name']);
     $password = trim($_POST['password']);
 
-    $query = "select user_name,password from account where user_name = :user_name";
+    $query = "select user_name,password from account where user_name = :user_name && admin = 1 ";
     $param=[
         "user_name" => $username,
     ];

@@ -1,7 +1,5 @@
 <?php
-
 if(isset($_COOKIE['gotoindex'])):
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +32,20 @@ if(isset($_COOKIE['gotoindex'])):
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/account.css">
     <link rel="stylesheet" href="css/hotline.css">
-
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#updatepass").click(function () {
+                var password = $("#password").val();
+                var confirmPassword = $("#confirmpassword").val();
+                if (password != confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+                return true;
+            });
+        });
+    </script>
 
 
 </head>
@@ -46,23 +57,103 @@ if(isset($_COOKIE['gotoindex'])):
 
 
 
-   <?php include_once "public/header.php"?>
+   <?php
+   include_once "public/header.php";
+   /////uppdate account
+   if(isset($_POST['update'])):
+       if($_FILES['photo_acc']['name'] != ''):
+           move_uploaded_file($_FILES['photo_acc']['tmp_name'], 'images/'.$_FILES['photo_acc']['name']);
+           $photo = $_FILES['photo_acc']['name'];
+       else:
+           $photo = $_POST['oldphoto'];
+       endif;
 
+       $query = "update account set  user_name=:user_name, email = :email, phone = :phone, fullname = :fullname, gender = :gender, dob = :dob, addr = :addr, photo_acc = :photo_acc where id_acc = :id_acc ";
+       $param = [
+           "user_name"          =>$_POST['user_name'],
+           "email"          =>$_POST['email'],
+           "phone"        =>$_POST['phone'],
+           "fullname"       =>$_POST['fullname'],
+           "gender"       =>$_POST['gender'],
+           "dob"       =>$_POST['dob'],
+           "addr"       =>$_POST['addr'],
+           "photo_acc"          =>$photo,
+           "id_acc"                =>$_COOKIE['gotoindex']
+
+       ];
+       $db->updatedataparam($query, $param);
+//       header('location: admin.php?id_acc='.$_GET['id_acc']);
+   endif;
+
+//   --- update password
+   /////uppdate account
+   if(isset($_POST['updatepass'])):
+
+           $id_acc = trim($_COOKIE['gotoindex']);
+           $password = trim($_POST['oldpassword']);
+
+           $query = "select password from account where id_acc ";
+           $param=[
+               "user_name" => $id_acc,
+           ];
+
+           $stmt = $db->selectdataparam($query, $param);
+           $account = $stmt->fetch(PDO::FETCH_ASSOC);
+           if($account > 0):
+               $_SESSION['gotoadmin'] = $account['user_name'];
+               if($username === $account['user_name'] && password_verify($password, $account['password'])):
+                   header('location: admin.php?product');
+               else:
+                   if(password_verify($password, $account['password'])):
+
+                       header('location: admin.php?product');
+
+                   else:
+                       $_SESSION['passwordwrong']  = "password is wrong";
+                       session_destroy();
+                   endif;
+               endif;
+           elseif($_POST['user_name'] === '' || $_POST['user_name'] === ''):
+               $_SESSION['usernameorpasswordwrong']  = "Please fill in fields";
+               session_destroy();
+
+           else:
+               $_SESSION['usernamewrong']  = "Username is wrong";
+               session_destroy();
+           endif;
+//
+       $query = "update account set  password=:password where id_acc = :id_acc ";
+       $param = [
+           "user_name"          =>$_POST['user_name'],
+           "email"          =>$_POST['email'],
+           "phone"        =>$_POST['phone'],
+           "fullname"       =>$_POST['fullname'],
+           "gender"       =>$_POST['gender'],
+           "dob"       =>$_POST['dob'],
+           "addr"       =>$_POST['addr'],
+           "photo_acc"          =>$photo,
+           "id_acc"                =>$_COOKIE['gotoindex']
+
+       ];
+       $db->updatedataparam($query, $param);
+//       header('location: admin.php?id_acc='.$_GET['id_acc']);
+   endif;
+
+   $query = "select * from account where id_acc = " . $_COOKIE['gotoindex'];
+   $stmt = $db->selectdata($query);
+   while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
     <div class=" to-top-btn hidden-xs hidden-sm">
     </div>    <br><br><br><br>
     <div class="container">
+        <form action="#" method="post" enctype="multipart/form-data">
         <div class="row profile">
             <div class="col-md-3 top30">
                 <div class="profile-sidebar">
                     <div class="profile-img">
-                        <img id="imgavatar" src="images/Avatar-leader.png" height="100px" id="photo"><br/>
-                    </div>
-                    <div class="profile-usermenu">
-                        <ul class="nav">
-                            <li class="active">
-                                <input type="file" name="photo" > <br/><br/>
-                            </li>
-                        </ul>
+                        <input type="hidden" name="user_name" value="<?=$product['user_name'];?>">
+                        <input type="hidden" name="oldphoto" value="<?=$product['photo_acc'];?>">
+                        <img src="images/<?=$product['photo_acc'];?>" id="photo_acc"><br/>
+                        <input type="file" name="photo_acc" onchange="getImg(this)" multiple><br/>
                     </div>
                 </div>
             </div>
@@ -74,87 +165,86 @@ if(isset($_COOKIE['gotoindex'])):
                             <br>
                         </div>
                     </div>
-                    <form>
+
                         <div class="form-group row">
-                            <label for="username" class="col-4 col-form-label">Full Name</label>
+                            <label for="fullname" class="col-4 col-form-label">Full Name</label>
                             <div class="col-8">
-                                <input id="username" name="username" placeholder="Full Name" class="form-control here"
-                                       required="required" type="text">
+                                <input id="fullname" name="fullname" placeholder="Full Name" class="form-control here"
+                                       required="required" type="text" value="<?=$product['fullname']?>">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="Phone" class="col-4 col-form-label">Phone Number</label>
+                            <label for="phone" class="col-4 col-form-label">Phone Number</label>
                             <div class="col-8">
-                                <input id="lastname" name="Phone" placeholder="Phone" class="form-control here"
-                                       type="number">
+                                <input id="phone" name="phone" placeholder="Phone" class="form-control here"
+                                       type="number" value="<?=$product['phone']?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="text" class="col-4 col-form-label">Date of birth</label>
+                            <label for="dob" class="col-4 col-form-label">Date of birth</label>
                             <div class="col-8">
-                                <input id="text" name="text" placeholder="Date of birth" class="form-control here" required="required"
-                                       type="date">
+                                <input id="dob" name="dob" placeholder="Date of birth" class="form-control here" required="required" type="date" value="<?=$product['dob']?>">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="email" class="col-4 col-form-label">Email*</label>
                             <div class="col-8">
-                                <input id="email" name="email" placeholder="Email" class="form-control here" required="required"
-                                       type="text">
+                                <input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text" value="<?=$product['email']?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="sex" class="col-4 col-form-label">Sex</label>
+                            <label for="gender" class="col-4 col-form-label">Gender</label>
                             <div class="col-8">
-                                <select name="" id="text" class="form-control here">
-                                    <option value="">Male</option>
-                                    <option value="">Female</option>
-                                    <option value="">Other</option>
+                                <select name="gender" id="gender" class="form-control here">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="publicinfo" class="col-4 col-form-label">Address</label>
+                            <label for="addr" class="col-4 col-form-label">Address</label>
                             <div class="col-8">
-                                <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>
+                                <textarea id="addr" name="addr" cols="40" rows="4" class="form-control"><?=$product['addr']?></textarea>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="offset-4 col-8">
-                                <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
+                                <button name="update" type="submit" class="btn btn-primary">Update My Profile</button>
                             </div>
                         </div>
-                    </form>
+        </form>
+                    <?php endwhile;?>
                     <hr>
-                    <h5>Change you Password ?</h5>
+                    <h5>Change your Password ?</h5>
                     <form>
                         <div class="form-group row">
                             <label for="password" class="col-4 col-form-label">Current Password</label>
                             <div class="col-8">
-                                <input  name="password" placeholder="Password" class="form-control here"
+                                <input  name="oldpassword" placeholder="Password" class="form-control here"
                                        required="required" type="password">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="password" class="col-4 col-form-label">New Password</label>
                             <div class="col-8">
-                                <input  name="newpassword" placeholder="New Password" class="form-control here"
+                                <input  name="password" id="password" placeholder="New Password" class="form-control here"
                                        required="required" type="password">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="password" class="col-4 col-form-label">Confirm New Password</label>
                             <div class="col-8">
-                                <input  name="confirmpassword" placeholder="Confirm New Password" class="form-control here"
+                                <input  name="confirmpassword" id="confirmpassword" placeholder="Confirm New Password" class="form-control here"
                                        required="required" type="password">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="offset-4 col-8">
-                                <button name="submit" type="submit" class="btn btn-danger">Update My Password</button>
+                                <button name="updatepass" id="updatepass" type="submit" class="btn btn-danger">Update My Password</button>
                             </div>
                         </div>
 
