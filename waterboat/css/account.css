@@ -3,6 +3,9 @@ body {
     font-family: "Open Sans";
 }
 
+.top30{
+    padding-top: 30px;
+}
 /* Profile container */
 .profile {
     margin: 20px 0;

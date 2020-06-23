@@ -182,7 +182,7 @@ endif;
       </div>
     </div>
 
-    <div class="site-section bg-image overlay" style="background-image: url('images/hero_1.jpg');">
+    <div class="site-section bg-image overlay" style="background-image: url('images/yacht1.jpeg');">
       <div class="container">
         <div class="row">
           <div class="col">

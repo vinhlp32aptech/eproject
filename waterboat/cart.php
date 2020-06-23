@@ -39,7 +39,9 @@
 
 <div class="site-wrap">
 
-    <?php include_once "public/header.php" ?>
+    <?php
+    if (isset($_COOKIE['gotoindex'])):
+    include_once "public/header.php" ?>
     <div class="container">
         <div class="col-md-12">
             <br><br><br><br><br><br>
@@ -257,7 +259,11 @@
         </div>
     </div>
 
-    <?php include_once "public/footer.php"?>
+    <?php include_once "public/footer.php";
+    else:
+    header('location: index.php');
+    endif;
+    ?>
 
 </div>
 <!-- .site-wrap -->

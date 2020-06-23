@@ -113,6 +113,7 @@ endif;
             header('location: admin.php?product');
         endif;
         //insert invoice-----------
+
         if(isset($_POST['addinv'])):
             if($_FILES['photo_inv']['name'] != ''):
                 move_uploaded_file($_FILES['photo_inv']['tmp_name'], '../images/'.$_FILES['photo_inv']['name']);
@@ -165,56 +166,33 @@ endif;
             header('location: admin.php?user');
         endif;
 
-//////
-//-------------------------delete data-do not save
-//        -----delete product
-if(isset($_GET['delpro'])):
-    echo "lllll";
-echo $_GET['delpro'];
-    $query = "delete from product where id_pro = " . $_GET['delpro'];
-    $stmt = $db->deletedata($query);
-//    header('location: '. $_SERVER['REQUEST_URI']);
-endif;
-        //        -----delete product
-        if(isset($_GET['delinv'])):
-            $query = "delete  from invoice_details where id_inv = " . $_GET['delinv'];
-            $stmt = $db->deletedata($query);
-//            header('location: '. $_SERVER['REQUEST_URI']);
-        endif;
-        //        -----delete product
-        if(isset($_GET['delacc'])):
-            $query = "delete  from account where id_acc = " . $_GET['delacc'];
-            $stmt = $db->deletedata($query);
-//            header('location: '. $_SERVER['REQUEST_URI']);
-        endif;
-
 //delete data and save it
 //        ----hide product
-if(isset($_POST['hidepro'])):
-    $query = "update product set id_del = 0 where id = :id" ;
+if(isset($_GET['hidepro'])):
+    $query = "update product set status = 0 where id_pro = :id_pro" ;
     $param = [
-        "id" => $_GET['id'],
+        "id_pro" => $_GET['hidepro'],
     ];
     $stmt = $db->updatedataparam($query, $param);
-    header('location: '. $_SERVER['REQUEST_URI']);
+//    header('location: '. $_SERVER['REQUEST_URI']);
 endif;
         //        ----hide product
-        if(isset($_POST['hideinv'])):
-            $query = "update invoice_details set id_del = 0 where id = :id" ;
+        if(isset($_GET['hideinv'])):
+            $query = "update invoice_details set status = 0 where id_inv = :id_inv" ;
             $param = [
-                "id" => $_GET['id'],
+                "id_inv" => $_GET['hideinv'],
             ];
             $stmt = $db->updatedataparam($query, $param);
-            header('location: '. $_SERVER['REQUEST_URI']);
+//            header('location: '. $_SERVER['REQUEST_URI']);
         endif;
         //        ----hide product
-        if(isset($_POST['hideacc'])):
-            $query = "update account set id_del = 0 where id = :id" ;
+        if(isset($_GET['hideacc'])):
+            $query = "update account set status = 0 where id_acc = :id_acc" ;
             $param = [
-                "id" => $_GET['id'],
+                "id_acc" => $_GET['hideacc'],
             ];
             $stmt = $db->updatedataparam($query, $param);
-            header('location: '. $_SERVER['REQUEST_URI']);
+//            header('location: '. $_SERVER['REQUEST_URI']);
         endif;
 ////-------------------------update data---------------------------------------------
 //////update product
@@ -251,7 +229,7 @@ if(isset($_POST['savechangeacc'])):
         $photo = $_POST['oldphoto'];
     endif;
 
-    $query = "update account set user_name = :user_name, password = :password, email = :email, phone = :phone, fullname = :fullname, dob = :dob, addr = :addr, photo_acc = :photo_acc where id_acc= :id_acc";
+    $query = "update account set user_name = :user_name, password = :password, email = :email, phone = :phone, fullname = :fullname, gender = :gender, dob = :dob, addr = :addr, photo_acc = :photo_acc where id_acc= :id_acc";
     $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     $param = [
@@ -260,6 +238,7 @@ if(isset($_POST['savechangeacc'])):
         "email"          =>$_POST['email'],
         "phone"        =>$_POST['phone'],
         "fullname"       =>$_POST['fullname'],
+        "gender"       =>$_POST['gender'],
         "dob"       =>$_POST['dob'],
         "addr"       =>$_POST['addr'],
         "photo_acc"             =>$photo,
@@ -301,11 +280,11 @@ endif;
 
 
 if(isset($_SESSION['product'])):
-        echo  $_SESSION['product'];
 ///////--------------
 //show data, search and paging
 if(isset($_GET['searchpro'])):
-    $query ="select * from product where status = 1 && concat(status,name_pro,price_pro,year_pro,code) like ? ";
+
+    $query ="select * from product where status = 1 && concat(name_pro, price_pro, status_pro, year_pro, code) like ? ";
     $param = [
         "%{$_GET['searchpro']}%"
     ];
@@ -321,10 +300,9 @@ if(isset($_GET['searchpro'])):
     ];
     $paging = new Pagination();
     $paging->init($config);
-    $query = "select * from product where status = 1 && concat(status,name_pro,price_pro,year_pro,code) like ? " .$paging->get_limit();
+    $query = "select * from product where status = 1 && concat(name_pro, price_pro, status_pro, year_pro, code) like ? " .$paging->get_limit();
     $stmt = $db->selectdataparam($query,$param);
 else:
-
 $query = "select * from product where status = 1 ";
 $stmt = $db->selectData($query);
 $total = $stmt->rowCount();
@@ -340,7 +318,7 @@ $paging = new Pagination();
 $paging->init($config);
 $query = "select * from product where status = 1 " .$paging->get_limit();
 $stmt = $db->selectdata($query);
-
+endif;
 ?>
 
         <div class="mainContent">
@@ -441,7 +419,7 @@ $stmt = $db->selectdata($query);
                                     <input type="checkbox" class="btnSwitch status" name="status">
                                 </div>
                                 <div class="cell cell-100 text-center">
-                                    <a href="admin.php?id_pro=<?=$product['id_pro'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?delpro=<?=$product['id_pro'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
+                                    <a href="admin.php?id_pro=<?=$product['id_pro'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hidepro=<?=$product['id_pro'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                                 </div>
                             </li>
                         </ul>
@@ -568,9 +546,6 @@ $stmt = $db->selectdata($query);
         </div>
         <!-- END CONTAINER  -->
     </div>
-    <?php endif;?>
-
-
 </div>
 
 <!--//////----------------user--------------------------------------------->
@@ -586,7 +561,7 @@ $stmt = $db->selectdata($query);
 
     //show data, search and paging
     if(isset($_GET['searchuser'])):
-        $query ="select * from account where status = 1 && concat(user_name, email, phone, fullname, dob, addr, phone_acc) like ? ";
+        $query ="select * from account where status = 1 && concat(user_name, email, phone, fullname, dob, addr) like ? ";
         $param = [
             "%{$_GET['searchuser']}%"
         ];
@@ -602,7 +577,7 @@ $stmt = $db->selectdata($query);
         ];
         $paging = new Pagination();
         $paging->init($config);
-        $query = "select * from account where status = 1 && concat(user_name, email, phone, fullname, dob, addr, phone_acc) like ? " .$paging->get_limit();
+        $query = "select * from account where status = 1 && concat(user_name, email, phone, fullname, dob, addr) like ? " .$paging->get_limit();
         $stmt = $db->selectdataparam($query,$param);
     else:
 
@@ -621,6 +596,7 @@ $stmt = $db->selectdata($query);
     $paging->init($config);
     $query = "select * from account where status = 1 " .$paging->get_limit();
     $stmt = $db->selectdata($query);
+    endif;
     ?>
 
     <div class="mainContent">
@@ -718,7 +694,7 @@ $stmt = $db->selectdata($query);
                                 <input type="checkbox" class="btnSwitch status" name="status">
                             </div>
                             <div class="cell cell-100 text-center">
-                                <a href="admin.php?id_acc=<?=$product['id_acc'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?id_acc=<?=$product['id_acc'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
+                                <a href="admin.php?id_acc=<?=$product['id_acc'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hideacc=<?=$product['id_acc'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                             </div>
                         </li>
                     </ul>
@@ -789,7 +765,7 @@ $stmt = $db->selectdata($query);
                         </label>
                         <label class="inputGroup">
                             <span>Phone</span>
-                            <span><input type="tel" name="phone" value="<?=$product['phone'];?>" maxlength="11"></span>
+                            <span><input type="number" name="phone" value="<?=$product['phone'];?>" maxlength="11"></span>
                         </label>
                         <label class="inputGroup">
                             <span>Address</span>
@@ -812,7 +788,7 @@ $stmt = $db->selectdata($query);
                 <div class="formHeader row">
                     <h2 class="text-1 fl">Add Account</h2>
                     <div class="fr">
-                        <button type="submit" class="btnSave bg-1 text-fff text-bold fr" name="addacc">SAVE</button><a href="" class="btnAdd fa fa-plus bg-1 text-fff"></a>
+                        <button type="submit" class="btnSave bg-1 text-fff text-bold fr" name="addacc">ADD</button><a href="" class="btnAdd fa fa-plus bg-1 text-fff"></a>
                     </div>
                 </div>
 
@@ -853,7 +829,7 @@ $stmt = $db->selectdata($query);
                         </label>
                         <label class="inputGroup">
                             <span>Phone</span>
-                            <span><input type="tel" name="phone" maxlength="11"></span>
+                            <span><input type="number" name="phone" maxlength="11"></span>
                         </label>
                         <label class="inputGroup">
                             <span>Address</span>
@@ -873,9 +849,6 @@ $stmt = $db->selectdata($query);
     </div>
     <!-- END CONTAINER  -->
 </div>
-<?php endif;?>
-
-
 </div>
 <?php
     else:
@@ -916,6 +889,7 @@ $paging = new Pagination();
 $paging->init($config);
 $query = "select * from invoice_details where status = 1 " .$paging->get_limit();
 $stmt = $db->selectdata($query);
+endif;
 ?>
 
     <div class="mainContent">
@@ -1014,7 +988,7 @@ $stmt = $db->selectdata($query);
                                 <input type="checkbox" class="btnSwitch status" name="status">
                             </div>
                             <div class="cell cell-100 text-center">
-                                <a href="admin.php?id_inv=<?=$product['id_inv'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?id_inv=<?=$product['id_inv'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
+                                <a href="admin.php?id_inv=<?=$product['id_inv'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hideinv=<?=$product['id_inv'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                             </div>
                         </li>
                     </ul>
@@ -1165,7 +1139,6 @@ $stmt = $db->selectdata($query);
 </div>
 <?php endif;?>
 </div>
-<?php endif;?>
 </div>
 </script>
 <script src="js/main.js"></script>
