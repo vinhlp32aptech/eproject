@@ -15,6 +15,10 @@ body {
 
 
 /*Vinh code*/
+.paddingtop{
+  padding-top: 20px;
+}
+
 .inputform{
   width: 250px;
 }

@@ -39,18 +39,65 @@ if(isset($_GET['id_pro'])):
 else:
     header('location: services.php');
 endif;
+if(isset($_COOKIE['gotoindex'])):
+$query = "select * from account where id_acc = " . $_COOKIE['gotoindex'];
+$stmt = $db->selectdata($query);
+while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+    $_SESSION['addr'] = $product['addr'];
+$_SESSION['phone'] = $product['phone'];
+endwhile;
+endif;
 
-//insert product-----------
+//insert shopping cart-----------
 if(isset($_POST['addcart'])):
     if (isset($_COOKIE['gotoindex'])):
-        $query = "insert into shopping_cart(id_acc, id_pro, name_shop, price_shop, quantity_shop, photo_shop) values(:id_acc, :id_pro, :name_shop, :price_shop, :quantity_shop, :photo_shop)";
+        $query = "select id_pro, quantity_shop from shopping_cart where id_acc = " . $_COOKIE['gotoindex'];
+        $stmt = $db->selectdata($query);
+        while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+//            $_SESSION['quantity_shop'] = $product['quantity_shop'] + $_POST['quantity_shop'];
+//        $_SESSION['id_pro'] = $product['id_pro'];
+
+//
+            if($product['id_pro'] == $_GET['id_pro']):
+
+                $query = "update shopping_cart set quantity_shop=:quantity_shop where id_pro = " .$_GET['id_pro'];
+                $param = [
+                    "quantity_shop"       =>$product['quantity_shop'],
+                ];
+                $db->updatedataparam($query, $param);
+            else:
+                $query = "insert into shopping_cart(id_acc, id_pro, name_shop, price_shop, quantity_shop, photo_shop) values(:id_acc, :id_pro, :name_shop, :price_shop, :quantity_shop, :photo_shop)";
+                $param = [
+                    "id_acc"          =>$_COOKIE['gotoindex'],
+                    "id_pro"             =>$_GET['id_pro'],
+                    "name_shop"          =>$_POST['name_shop'],
+                    "price_shop"       =>$_POST['price_shop'],
+                    "quantity_shop"       =>$_POST['quantity_shop'],
+                    "photo_shop"       =>$_POST['photo_shop'],
+                ];
+                $db->insertdataparam($query, $param);
+            endif;
+
+        endwhile;
+    else:
+        echo "<script>alert('Please Sign in or Sign up to continue!');</script>";
+    endif;
+endif;
+
+//----------insert invoice
+if(isset($_POST['buynow'])):
+    if (isset($_COOKIE['gotoindex'])):
+        $total = $_POST['price_shop'] * $_POST['quantity_shop'];
+    $date = date('Y-m-d H:i:s');
+        $query = "insert into invoice(id_acc, photo_inv, name_pro, date_of_purchase, addr, phone, total) values(:id_acc, :photo_inv, :name_pro, :date_of_purchase, :addr, :phone, :total)";
         $param = [
             "id_acc"          =>$_COOKIE['gotoindex'],
-            "id_pro"             =>$_GET['id_pro'],
-            "name_shop"          =>$_POST['name_shop'],
-            "price_shop"       =>$_POST['price_shop'],
-            "quantity_shop"       =>$_POST['quantity_shop'],
-            "photo_shop"       =>$_POST['photo_shop'],
+            "photo_inv"       =>$_POST['photo_shop'],
+            "name_pro"          =>$_POST['name_shop'],
+            "date_of_purchase"       =>$date,
+            "addr"       =>$_SESSION['addr'],
+            "phone"       =>$_SESSION['phone'],
+            "total"       =>$total,
         ];
         $db->insertdataparam($query, $param);
 //    header('location: admin.php?product');
@@ -95,32 +142,27 @@ endif;
 <!-- END slider -->
 
 
-   <div class="container">
-
-
-       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-           <li class="nav-item" role="presentation">
-               <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Info</a>
-           </li>
-           <li class="nav-item" role="presentation">
-               <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Images</a>
-           </li>
-       </ul>
-       <div class="tab-content" id="pills-tabContent">
-           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-               <div class="row">
+   <div class="container ">
+       <nav>
+           <div class="nav nav-tabs" id="nav-tab" role="tablist">
+               <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">INFO</a>
+               <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">IMAGES</a>
+           </div>
+       </nav>
+       <div class="tab-content" id="nav-tabContent">
+           <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">               <div class="row">
                    <?php
                    if(isset($_GET['id_pro'])):
-                   $query = "select info, featured, advanced, additional from desc_pro where id_pro =:id_pro  ";
+                       $query = "select info, featured, advanced, additional from desc_pro where id_pro =:id_pro  ";
                        $param = [
                            "id_pro" => $_GET['id_pro']
                        ];
                        $stmt = $db->selectdataparam($query,$param);
-                       endif;
+                   endif;
                    while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
                    <aside class="col-md-8"><n/>
-                        <?= $product['info'];?>
+                       <?= $product['info'];?>
                        <h2>Featured Features</h2><n/>
                        <ul>
                            <?= $product['featured'];?>
@@ -168,88 +210,88 @@ endif;
                                    </tbody>
                                </table>
 
-                           <form action="#" method="post">
-                             <div class="row">
-                                <div class="col-md-3 quantity">
-                                    <input type="hidden" name="name_shop" value="<?=$product['name_pro'];?>">
-                                    <input type="hidden" name="price_shop" value="<?=$product['price_pro'];?>">
-                                    <input type="hidden" name="photo_shop" value="<?=$product['photo'];?>">
-                                    <input type="number" name="quantity_shop" id="" class="quantitypro" min="1" max="100" value="1">
-                                </div>
-                                 <div class="col-md-4">
-                                     <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg"  name="addcart">Buy Now</button>                                 </div>
-                                 <div class="col-md-4">
-                                     <button type="submit" class="btn btn-success" name="addcart" >ADD Cart</button>
-                                 </div>
-                             </div>
-                           </form>
+                               <form action="#" method="post">
+                                   <div class="row">
+                                       <div class="col-md-3 quantity">
+                                           <input type="hidden" name="name_shop" value="<?=$product['name_pro'];?>">
+                                           <input type="hidden" name="price_shop" value="<?=$product['price_pro'];?>">
+                                           <input type="hidden" name="photo_shop" value="<?=$product['photo'];?>">
+                                           <input type="number" name="quantity_shop" id="" class="quantitypro" min="1" max="100" value="1">
+                                       </div>
+                                       <div class="col-md-4">
+                                           <button type="submit" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg"  name="buynow">Buy Now</button>                                 </div>
+                                       <div class="col-md-4">
+                                           <button type="submit" class="btn btn-success" name="addcart" >ADD Cart</button>
+                                       </div>
+                                   </div>
+                               </form>
                            <?php
                            endwhile; ?>
                            <div style="font-size: 15px">
-                           <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                               <div class="modal-dialog modal-lg">
-                                   <div class="modal-content w-auto">
-<!--                                       --------------->
+                               <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                   <div class="modal-dialog modal-lg">
+                                       <div class="modal-content w-auto">
+                                           <!--                                       --------------->
 
-                                       <div class="row">
-                                           <div class="col-md-3 alert-info">
-                                               <b>Full Name</b>
+                                           <div class="row">
+                                               <div class="col-md-3 alert-info">
+                                                   <b>Full Name</b>
+                                               </div>
+                                               <div class="col-md-9 alert-info">Le Phat Zinh</div><br>
                                            </div>
-                                           <div class="col-md-9 alert-info">Le Phat Zinh</div><br>
-                                       </div>
 
-                                       <div class="row">
-                                           <div class="col-md-3  alert-info">
-                                               <b>Address</b>
+                                           <div class="row">
+                                               <div class="col-md-3  alert-info">
+                                                   <b>Address</b>
+                                               </div>
+                                               <div class="col-md-9 alert-info">69 đường Betta, xã cành cây, tỉnh Dân Chơi </div><br>
                                            </div>
-                                           <div class="col-md-9 alert-info">69 đường Betta, xã cành cây, tỉnh Dân Chơi </div><br>
-                                       </div>
 
-                                       <div class="row">
-                                           <div class="col-md-3 alert-info">
-                                               <b>Phone Number</b>
+                                           <div class="row">
+                                               <div class="col-md-3 alert-info">
+                                                   <b>Phone Number</b>
+                                               </div>
+                                               <div class="col-md-9 alert-info">1900376122</div>
                                            </div>
-                                           <div class="col-md-9 alert-info">1900376122</div>
-                                       </div>
 
-                                       <div class="row">
-                                           <div class="col-md-3 alert-info">
-                                               <b>Email</b>
+                                           <div class="row">
+                                               <div class="col-md-3 alert-info">
+                                                   <b>Email</b>
+                                               </div>
+                                               <div class="col-md-9  alert-info">LePhatZinh@gmail.com</div>
                                            </div>
-                                           <div class="col-md-9  alert-info">LePhatZinh@gmail.com</div>
-                                       </div>
 
-                                       <div class="row">
-                                           <div class="col-md-3  alert-info">
-                                               <b>Azimut 50</b>
+                                           <div class="row">
+                                               <div class="col-md-3  alert-info">
+                                                   <b>Azimut 50</b>
+                                               </div>
+                                               <div class="col-md-3   alert-info"><b>Price</b> $ 9 000</div>
+                                               <div class="col-md-3  alert-info"><img src="images/Azimut50-1.jpg" height="100" width="150" alt=""></div>
+                                               <div class="col-md-3  alert-info"><b>Quantity:1</b> </div>
                                            </div>
-                                           <div class="col-md-3   alert-info"><b>Price</b> $ 9 000</div>
-                                           <div class="col-md-3  alert-info"><img src="images/Azimut50-1.jpg" height="100" width="150" alt=""></div>
-                                           <div class="col-md-3  alert-info"><b>Quantity:1</b> </div>
-                                       </div>
 
-                                       <div class="row">
-                                           <div class="col-md-3  alert-info">
-                                               <b>Shipping Fee</b>
+                                           <div class="row">
+                                               <div class="col-md-3  alert-info">
+                                                   <b>Shipping Fee</b>
+                                               </div>
+                                               <div class="col-md-9  alert-info">$ 10 000</div>
                                            </div>
-                                           <div class="col-md-9  alert-info">$ 10 000</div>
-                                       </div>
 
-                                       <div class="row">
-                                           <div class="col-md-3   alert-info">
-                                               <b>Voucher code</b>
+                                           <div class="row">
+                                               <div class="col-md-3   alert-info">
+                                                   <b>Voucher code</b>
+                                               </div>
+                                               <div class="col-md-9  alert-info"><input type="text" placeholder="Enter voucher code"></div>
                                            </div>
-                                           <div class="col-md-9  alert-info"><input type="text" placeholder="Enter voucher code"></div>
-                                       </div>
 
-<!--                                       ------------------------->
-                                   </div>
-                                   <div class="modal-footer">
-                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                       <button type="submit" class="btn btn-primary">Payment orders</button>
+                                           <!--                                       ------------------------->
+                                       </div>
+                                       <div class="modal-footer">
+                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                           <button type="submit" class="btn btn-primary">Payment orders</button>
+                                       </div>
                                    </div>
                                </div>
-                           </div>
                            </div>
                            <p><h2>Specification</h2></p>
                            <br/>
@@ -262,81 +304,89 @@ endif;
                                $stmt = $db->selectData($query);
                                while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
-                               <tr>
-                                   <th>Model</th>
-                                   <td><?= $product['model'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Year</th>
-                                   <td><?= $product['length_overall'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Engine hours</th>
-                                   <td><?= $product['beam'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Total length</th>
-                                   <td><?= $product['draft_max'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Hull length</th>
-                                   <td><?= $product['draft_min'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Horizontally</th>
-                                   <td><?= $product['bridge_clearance'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Draft max</th>
-                                   <td><?= $product['deadrise'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Turn water intake</th>
-                                   <td><?= $product['dry_weight'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Fuel tank</th>
-                                   <td><?= $product['fuel_tanks'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Water tank</th>
-                                   <td><?= $product['water_tanks'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Black Water tank</th>
-                                   <td><?= $product['Production_materials'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Grey Water tank</th>
-                                   <td><?= $product['Exterior_design'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Speed of fuel economy</th>
-                                   <td><?= $product['Interior_Design'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Max speed, nautical knots</th>
-                                   <td><?= $product['passenger_capacity'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Motor</th>
-                                   <td><?= $product['cabins'];?></td>
-                               </tr>
-                               <tr>
-                                   <th>Production materials</th>
-                                   <td><?= $product['manufacturer'];?></td>
-                               </tr>
-<?php endwhile;?>
+                                   <tr>
+                                       <th>Model</th>
+                                       <td><?= $product['model'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Year</th>
+                                       <td><?= $product['length_overall'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Engine hours</th>
+                                       <td><?= $product['beam'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Total length</th>
+                                       <td><?= $product['draft_max'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Hull length</th>
+                                       <td><?= $product['draft_min'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Horizontally</th>
+                                       <td><?= $product['bridge_clearance'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Draft max</th>
+                                       <td><?= $product['deadrise'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Turn water intake</th>
+                                       <td><?= $product['dry_weight'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Fuel tank</th>
+                                       <td><?= $product['fuel_tanks'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Water tank</th>
+                                       <td><?= $product['water_tanks'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Black Water tank</th>
+                                       <td><?= $product['Production_materials'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Grey Water tank</th>
+                                       <td><?= $product['Exterior_design'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Speed of fuel economy</th>
+                                       <td><?= $product['Interior_Design'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Max speed, nautical knots</th>
+                                       <td><?= $product['passenger_capacity'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Motor</th>
+                                       <td><?= $product['cabins'];?></td>
+                                   </tr>
+                                   <tr>
+                                       <th>Production materials</th>
+                                       <td><?= $product['manufacturer'];?></td>
+                                   </tr>
+                               <?php endwhile;?>
                                </tbody>
 
                            </table>
                        </div>
                </div>
            </div>
-           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-               <img src="images/3.jpeg" alt="">
+           <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+               <table>
+                   <tr>
+                       <td>               <img src="images/3.jpeg" alt="" width=100%">
+                       </td>
+                       <td>               <img src="images/3.jpeg" alt="" width="100%">
+                       </td>
+                   </tr>
+               </table>
            </div>
        </div>
+<!---->
        <div id="loader" class="show fullscreen">
            <svg class="circular" width="48px" height="48px" >
                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
