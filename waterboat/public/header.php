@@ -52,7 +52,7 @@ endif;
 
                 <div class="quick-contact-icons d-flex">
                     <div class="icon align-self-start">
-                        <span class="icon-location-arrow text-primary"></span>
+                        <a href="https://goo.gl/maps/tuMx4DfevqNAwpDa7"><span class="icon-location-arrow text-primary"></span></a>
                     </div>
                     <div class="text">
                         <span class="h4 d-block">Viet Nam</span>
@@ -76,7 +76,7 @@ endif;
             <div class="col-lg-3 d-none d-lg-block">
                 <div class="quick-contact-icons d-flex">
                     <div class="icon align-self-start">
-                        <span class="icon-envelope text-primary"></span>
+                        <a href="contact.php"> <span class="icon-envelope text-primary"></span></a>
                     </div>
                     <div class="text">
                         <span class="h4 d-block">marinafleet@gmail.com</span>

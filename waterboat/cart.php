@@ -44,89 +44,67 @@
     include_once "public/header.php";
         if(isset($_GET['cart'])):?>
             <div class="container-fluid">
+                <div class="container">
                 <div class="col-md-12 paddingbottom">
                     <br><br><br><br><br><br>
-                    <h3 class="text-center">Purchase history</h3><br>
+                    <h3 class="text-center">Your Cart</h3><br>
                     <div class="table-responsive table-responsive-data2" >
                         <table class="table table-data2">
                             <thead>
                             <tr>
-
+                                <th>Image</th>
                                 <th>Name</th>
                                 <th>Price</th>
-                                <th>Description</th>
                                 <th>Quantity</th>
-                                <th>Image</th>
-                                <th>status</th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr class="tr-shadow">
 
-                                <td>Azimut Magellano 43 HT</td>
-                                <td>
-                                    <span class="">$ 517 907</span>
-                                </td>
-                                <td class="">Beauty and comfort, safety...</td>
-                                <td><input type="number"></td>
-                                <td>
-                                    <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                                </td>
-                                <td>1</td>
-
-                            </tr>
                             <tr class="spacer"></tr>
                             <tr class="tr-shadow">
-
+                                <td>
+                                    <img src="images/news6.jpg" width="100px" height="100px" alt="">
+                                </td>
                                 <td>Azimut Magellano 43 HT</td>
                                 <td>
                                     <span class="">$ 517 907</span>
                                 </td>
-                                <td class="">Beauty and comfort, safety...</td>
-                                <td><input type="number"></td>
                                 <td>
-                                    <img src="images/news6.jpg" width="100px" height="100px" alt="">
+                                    <input class="badge-light" type="number" style="width: 40px">
+                                    <button class="btn-danger" type="submit">Save</button>
                                 </td>
-                                <td>1</td>
 
+                                <td>
+                                    <div class="table-data-feature">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
                             </tr>
-                            <tr class="spacer"></tr>
-                            <tr class="tr-shadow">
-
-                                <td>Azimut Magellano 43 HT</td>
-                                <td>
-                                    <span class="">$ 517 907</span>
-                                </td>
-                                <td class="">Beauty and comfort, safety...</td>
-                                <td><input type="number"></td>
-                                <td>
-                                    <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                                </td>
-                                <td>1</td>
-
-                            </tr>
-                            <tr class="spacer"></tr>
-                            <tr class="tr-shadow">
-
-                                <td>Azimut Magellano 43 HT</td>
-                                <td>
-                                    <span class="">$ 517 907</span>
-                                </td>
-                                <td class="">Beauty and comfort, safety...</td>
-                                <td><input type="number"></td>
-                                <td>
-                                    <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                                </td>
-                                <td>1</td>
+                            <tr class="spacer">
                             </tr>
                             </tbody>
                         </table>
+                        <hr>
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <div class="btn">Total: 1 454 000$</div>
+                                    <br>
+                                    <br><button type="submit"  class="btn btn-danger btn ">CONFIRM CART</button>
+                                </div>
+
+                            </div>
                     </div>
+                </div><br>
+                </div>
                 </div>
             </div>
+<br><br><br><br>
     <?php else:?>
     <div class="container-fluid">
+        <div class="container">
         <div class="col-md-12 paddingbottom">
             <br><br><br><br><br><br>
             <h3 class="text-center">Purchase history</h3><br>
@@ -134,78 +112,38 @@
                 <table class="table table-data2">
                     <thead>
                     <tr>
-
+                        <th>ID</th>
+                        <th>Image</th>
                         <th>Name</th>
                         <th>Price</th>
-                        <th>Description</th>
+                        <th>Date</th>
                         <th>Quantity</th>
-                        <th>Image</th>
-                        <th>status</th>
-                        <th></th>
+                        <th>Total</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr class="tr-shadow">
-
+                        <td>1</td>
+                        <td>
+                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
+                        </td>
                         <td>Azimut Magellano 43 HT</td>
                         <td>
                             <span class="">$ 517 907</span>
                         </td>
-                        <td class="">Beauty and comfort, safety...</td>
-                        <td><input type="number"></td>
-                        <td>
-                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                        </td>
-                        <td>1</td>
+                        <td><i class="far fa-calendar-alt"></i>17/1/2020</td>
+                        <td>3</td>
+                        <td>$ 1 012 000</td>
 
                     </tr>
                     <tr class="spacer"></tr>
-                    <tr class="tr-shadow">
 
-                        <td>Azimut Magellano 43 HT</td>
-                        <td>
-                            <span class="">$ 517 907</span>
-                        </td>
-                        <td class="">Beauty and comfort, safety...</td>
-                        <td><input type="number"></td>
-                        <td>
-                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                        </td>
-                        <td>1</td>
 
-                    </tr>
-                    <tr class="spacer"></tr>
-                    <tr class="tr-shadow">
 
-                        <td>Azimut Magellano 43 HT</td>
-                        <td>
-                            <span class="">$ 517 907</span>
-                        </td>
-                        <td class="">Beauty and comfort, safety...</td>
-                        <td><input type="number"></td>
-                        <td>
-                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                        </td>
-                        <td>1</td>
-
-                    </tr>
-                    <tr class="spacer"></tr>
-                    <tr class="tr-shadow">
-                       
-                        <td>Azimut Magellano 43 HT</td>
-                        <td>
-                            <span class="">$ 517 907</span>
-                        </td>
-                        <td class="">Beauty and comfort, safety...</td>
-                        <td><input type="number"></td>
-                        <td>
-                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                        </td>
-                        <td>1</td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
+        </div>
         </div>
     </div>
     <?php endif;
