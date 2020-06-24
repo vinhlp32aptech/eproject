@@ -11,28 +11,27 @@
             <div class="col-lg-3">
                 <h3 class="footer-heading"><span>Our Services</span></h3>
                 <ul class="list-unstyled footercolor">
-                    <li><a href="#">Travel</a></li>
-                    <li><a href="#">Construction</a></li>
-                    <li><a href="#">Remodeling</a></li>
+                    <li><a href="services.php">Travel</a></li>
+                    <li><a href="services.php">Construction</a></li>
+                    <li><a href="services.php">Remodeling</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
                 <h3 class="footer-heading"><span>Account</span></h3>
                 <ul class="list-unstyled footercolor">
                     <li><a href="account.php?account">Profie</a></li>
-                    <li><a href="account.php?account">Order</a></li>
-                    <li><a href="account.php?account">Your cart</a></li>
+                    <li><a href="cart.php?account">Order</a></li>
+                    <li><a href="cart.php?account">Your cart</a></li>
                     <li><a href="account.php?account">Change your infomation</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
                 <h3 class="footer-heading"><span>Contact</span></h3>
                 <ul class="list-unstyled footercolor">
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Support Community</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Our Partners</a></li>
+                    <li>Email: Marinafleet@gmail.com</li>
+                    <li>Phone: 0123456789</li>
+                    <li>Address: District 3, HCM city, VietNam</li>
+                    <li>Fage: FB/Marinafleet.com</li>
                 </ul>
             </div>
 <!------------------hotline--------------------->
