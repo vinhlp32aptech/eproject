@@ -87,48 +87,36 @@ endif;
             <div class="legend"></div>
             <div class="content">
                 <div class="content-txt">
-                    <h1>Azimut and the environment</h1>
-                    <h2>Azimut Benetti has a wide sales network throughout the yacht industry worldwide. With more than 138 agents in 68 countries, creating close relationships with yacht owners around the world is the standard of our customer service.</h2>
+                    <h1>Luxury yacht</h1>
+                    <h2>Azimut Yachts is a legendary name in the shipbuilding industry, a leading yacht builder with a length of 12 meters.</h2>
                 </div>
             </div>
             <div class="image">
-                <img src="images/Yacht-services.jpg">
+                <img src="images/luxuxyboatslider.jpg">
             </div>
         </div>
         <div class="slider">
             <div class="legend"></div>
             <div class="content">
                 <div class="content-txt">
-                    <h1>Azimut Benetti Group</h1>
-                    <h2>The group includes major brands such as Azimut Yachts, Azimut Grande, Atlantis and Benetti Yachts, Yachtique, Fraser Yachts, Lusben, Marina di Varazze and Royal Yacht club Moscow, giving customers a range of products spread from Atlantis 30 feet of sport with superyachts built on 70 meters from Benetti.</h2>
+                    <h1>Sport Boat</h1>
+                    <h2>Monterey Boats is a famous motor boat brand from the US. The value of each Monterey Boats product brings customers not only the superior technology, high practicality but also creativity and technical solutions.</h2>
                 </div>
             </div>
             <div class="image">
-                <img src="images/Yacht-services1.jpg">
+                <img src="images/SportBoatSlider.jpg">
             </div>
         </div>
         <div class="slider">
             <div class="legend"></div>
             <div class="content">
                 <div class="content-txt">
-                    <h1>Our history</h1>
-                    <h2>Azimut Yachts is a success story from 1969, and like many other success stories, it is the story of a symbol, a symbol of Paolo Vitelli.</h2>
+                    <h1>Fishing Boat</h1>
+                    <h2>Nautique (brand from the United States) is a professional boat manufacturer for surfing and windsurfing. Appeared on the market in 1924 and always achieved the best business results and satisfaction index, especially in the wave boat segment.</h2>
                 </div>
             </div>
             <div class="image">
-                <img src="images/Yacht-services2.jpg">
-            </div>
-        </div>
-        <div class="slider">
-            <div class="legend"></div>
-            <div class="content">
-                <div class="content-txt">
-                    <h1>Business principles</h1>
-                    <h2>The value behind Azimut Yachts' success is the formula that values ​​the value of every Azimut yacht buyer. Azimut's business principles have been recorded and published in books so that future generations can gain encouragement and thus guide the company in the future.</h2>
-                </div>
-            </div>
-            <div class="image">
-                <img src="images/Yacht-services3.jpg">
+                <img src="images/Fishingboatslider.jpg">
             </div>
         </div>
     </div>
@@ -137,7 +125,6 @@ endif;
             <li>
                 <div class="on"></div>
             </li>
-            <li></li>
             <li></li>
             <li></li>
         </ul>
