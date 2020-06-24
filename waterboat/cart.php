@@ -43,45 +43,35 @@
     if (isset($_COOKIE['gotoindex'])):
     include_once "public/header.php";
         if(isset($_GET['cart'])):?>
-    <div class="container">
+    <div class="container-fluid">
         <div class="col-md-12 paddingbottom">
             <br><br><br><br><br><br>
             <h3 class="text-center">Your cart</h3><br>
             <div class="table-responsive table-responsive-data2" >
                 <table class="table table-data2">
                     <thead>
-                    <tr>
-                        <th>
-                            <label class="au-checkbox">
-
-
-                            </label>
-                        </th>
+                    <tr class="text-center">
                         <th>Name</th>
                         <th>Price</th>
                         <th>Description</th>
-                        <th>Quantity</th>
                         <th>Image</th>
-                        <th>status</th>
+                        <th>Quantity</th>
                         <th></th>
+                        <th>status</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="tr-shadow">
-                        <td>
-                            <label class="au-checkbox">
-                                <input type="checkbox">
-                                <span class="au-checkmark"></span>
-                            </label>
-                        </td>
-                        <td>Azimut Magellano 43 HT</td>
+                    <tr class="tr-shadow text-center">
+                        <td id="paddingtop">Azimut Magellano 43 HT</td>
                         <td>
                             <span class="">$ 517 907</span>
                         </td>
                         <td class="">Beauty and comfort, safety...</td>
-                        <td><input type="number"></td>
+                        <td>                            <img src="images/news6.jpg" width="150px" height="150px" alt="">
+                           </td>
                         <td>
-                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
+                            <div class="col-md-6"><input type="number" name="" id=""></div>
+                            <div class="col-md-6"><input type="submit" value="save"></div>
                         </td>
                         <td>1</td>
                         <td>
@@ -93,86 +83,9 @@
                         </td>
                     </tr>
                     <tr class="spacer"></tr>
-                    <tr class="tr-shadow">
-                        <td>
-                            <label class="au-checkbox">
-                                <input type="checkbox">
-                                <span class="au-checkmark"></span>
-                            </label>
-                        </td>
-                        <td>Azimut Magellano 43 HT</td>
-                        <td>
-                            <span class="">$ 517 907</span>
-                        </td>
-                        <td class="">Beauty and comfort, safety...</td>
-                        <td><input type="number"></td>
-                        <td>
-                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                        </td>
-                        <td>1</td>
-                        <td>
-                            <div class="table-data-feature">
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="spacer"></tr>
-                    <tr class="tr-shadow">
-                        <td>
-                            <label class="au-checkbox">
-                                <input type="checkbox">
-                                <span class="au-checkmark"></span>
-                            </label>
-                        </td>
-                        <td>Azimut Magellano 43 HT</td>
-                        <td>
-                            <span class="">$ 517 907</span>
-                        </td>
-                        <td class="">Beauty and comfort, safety...</td>
-                        <td><input type="number"></td>
-                        <td>
-                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                        </td>
-                        <td>1</td>
-                        <td>
-                            <div class="table-data-feature">
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="spacer"></tr>
-                    <tr class="tr-shadow">
-                        <td>
-                            <label class="au-checkbox">
-                                <input type="checkbox">
-                                <span class="au-checkmark"></span>
-                            </label>
-                        </td>
-                        <td>Azimut Magellano 43 HT</td>
-                        <td>
-                            <span class="">$ 517 907</span>
-                        </td>
-                        <td class="">Beauty and comfort, safety...</td>
-                        <td><input type="number"></td>
-                        <td>
-                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                        </td>
-                        <td>1</td>
-                        <td>
-                            <div class="table-data-feature">
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
+
                     </tbody>
                 </table>
-            </div><br><button type="submit"  class="btn btn-danger btn pull-right" >CONFIRM CART</button>
         </div>
     </div>
     <?php else:?>

@@ -64,7 +64,8 @@ textarea:focus {
 }
 
 input, textarea {
-    border: none;
+    border: 1;
+    width: 60px;
 }
 
 button {
@@ -110,6 +111,10 @@ body {
 
 .paddingbottom{
     padding-bottom: 30px;
+}
+
+#paddingtop{
+    padding-top: 56px;
 }
 
 h1,
@@ -4498,7 +4503,7 @@ section {
     border: none;
     font-weight: 600;
     vertical-align: top;
-    padding: 15px 40px;
+    padding: 5px 40px;
     padding-right: 10px;
 }
 
@@ -4743,19 +4748,9 @@ section {
 }
 
 /* ----- Footer ----- */
-.copyright {
-    text-align: center;
-    padding: 60px 0;
-    padding-top: 20px;
-}
 
-.copyright p {
-    font-size: 14px;
-    color: #666;
-    line-height: -webkit-calc(24/14);
-    line-height: -moz-calc(24/14);
-    line-height: calc(24/14);
-}
+
+
 
 /* ----- Breadcrumb ----- */
 .au-breadcrumb {
