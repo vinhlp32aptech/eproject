@@ -43,7 +43,7 @@
     if (isset($_COOKIE['gotoindex'])):
     include_once "public/header.php";
         if(isset($_GET['cart'])):?>
-    <div class="container-fluid">
+    <div class="container paddingcon">
         <div class="col-md-12 paddingbottom">
             <br><br><br><br><br><br>
             <h3 class="text-center">Your cart</h3><br>
@@ -89,7 +89,7 @@
         </div>
     </div>
     <?php else:?>
-    <div class="container">
+    <div class="container-fluid">
         <div class="col-md-12 paddingbottom">
             <br><br><br><br><br><br>
             <h3 class="text-center">Purchase history</h3><br>
