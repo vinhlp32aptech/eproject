@@ -123,6 +123,8 @@
                             </tbody>
                         </table>
                     </div>
+                    <!-- END DATA TABLE -->
+                </div><br><button type="submit"  class="btn btn-danger btn pull-right" >CONFIRM CART</button>
                 </div>
             </div>
     <?php else:?>

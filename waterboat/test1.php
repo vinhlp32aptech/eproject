@@ -1,4 +1,4 @@
 <?php
-echo $_COOKIE['gotoindex'];
-
+$total = 2 * 3;
+echo $total;
 ?>
