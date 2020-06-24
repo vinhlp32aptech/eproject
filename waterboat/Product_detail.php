@@ -54,15 +54,11 @@ if(isset($_POST['addcart'])):
         $query = "select id_pro, quantity_shop from shopping_cart where id_acc = " . $_COOKIE['gotoindex'];
         $stmt = $db->selectdata($query);
         while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
-//            $_SESSION['quantity_shop'] = $product['quantity_shop'] + $_POST['quantity_shop'];
-//        $_SESSION['id_pro'] = $product['id_pro'];
-
-//
+            $newquantity = $product['quantity_shop'] + $_POST['quantity_shop'];
             if($product['id_pro'] == $_GET['id_pro']):
-
                 $query = "update shopping_cart set quantity_shop=:quantity_shop where id_pro = " .$_GET['id_pro'];
                 $param = [
-                    "quantity_shop"       =>$product['quantity_shop'],
+                    "quantity_shop"       =>$newquantity,
                 ];
                 $db->updatedataparam($query, $param);
             else:
@@ -219,7 +215,7 @@ endif;
                                            <input type="number" name="quantity_shop" id="" class="quantitypro" min="1" max="100" value="1">
                                        </div>
                                        <div class="col-md-4">
-                                           <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg" >Buy Now</button>                                 </div>
+                                           <button type="submit" name="buynow" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg" >Buy Now</button>                                 </div>
                                        <div class="col-md-4">
                                            <button type="submit" class="btn btn-success" name="addcart" >ADD Cart</button>
                                        </div>
@@ -227,72 +223,6 @@ endif;
                                </form>
                            <?php
                            endwhile; ?>
-                           <div style="font-size: 15px">
-                               <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                   <div class="modal-dialog modal-lg">
-                                       <div class="modal-content w-auto">
-                                           <!--                                       --------------->
-
-                                           <div class="row">
-                                               <div class="col-md-3 alert-info">
-                                                   <b>Full Name</b>
-                                               </div>
-                                               <div class="col-md-9 alert-info">Le Phat Zinh</div><br>
-                                           </div>
-
-                                           <div class="row">
-                                               <div class="col-md-3  alert-info">
-                                                   <b>Address</b>
-                                               </div>
-                                               <div class="col-md-9 alert-info">69 đường Betta, xã cành cây, tỉnh Dân Chơi </div><br>
-                                           </div>
-
-                                           <div class="row">
-                                               <div class="col-md-3 alert-info">
-                                                   <b>Phone Number</b>
-                                               </div>
-                                               <div class="col-md-9 alert-info">1900376122</div>
-                                           </div>
-
-                                           <div class="row">
-                                               <div class="col-md-3 alert-info">
-                                                   <b>Email</b>
-                                               </div>
-                                               <div class="col-md-9  alert-info">LePhatZinh@gmail.com</div>
-                                           </div>
-
-                                           <div class="row">
-                                               <div class="col-md-3  alert-info">
-                                                   <b>Azimut 50</b>
-                                               </div>
-                                               <div class="col-md-3   alert-info"><b>Price</b> $ 9 000</div>
-                                               <div class="col-md-3  alert-info"><img src="images/Azimut50-1.jpg" height="100" width="150" alt=""></div>
-                                               <div class="col-md-3  alert-info"><b>Quantity:1</b> </div>
-                                           </div>
-
-                                           <div class="row">
-                                               <div class="col-md-3  alert-info">
-                                                   <b>Shipping Fee</b>
-                                               </div>
-                                               <div class="col-md-9  alert-info">$ 10 000</div>
-                                           </div>
-
-                                           <div class="row">
-                                               <div class="col-md-3   alert-info">
-                                                   <b>Voucher code</b>
-                                               </div>
-                                               <div class="col-md-9  alert-info"><input type="text" placeholder="Enter voucher code"></div>
-                                           </div>
-
-                                           <!--                                       ------------------------->
-                                       </div>
-                                       <div class="modal-footer">
-                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                           <button type="submit" name="buynow" class="btn btn-primary">Payment orders</button>
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
                            <p><h2>Specification</h2></p>
                            <br/>
 
