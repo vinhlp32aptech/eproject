@@ -125,8 +125,8 @@ if(isset($_COOKIE['gotoindex'])):
                     <div class="profile-img">
                         <input type="hidden" name="user_name" value="<?=$product['user_name'];?>">
                         <input type="hidden" name="oldphoto" value="<?=$product['photo_acc'];?>">
-                        <img src="images/<?=$product['photo_acc'];?>" id="photo_acc"><br/>
-                        <input type="file" name="photo_acc" onchange="getImg(this)" multiple><br/>
+                        <img src="images/<?=$product['photo_acc'];?>" id="photo_acc">
+                        <input type="file" name="photo_acc" onchange="changepicture();" multiple>
                     </div>
                 </div>
             </div>
@@ -138,7 +138,6 @@ if(isset($_COOKIE['gotoindex'])):
                             <br>
                         </div>
                     </div>
-
                         <div class="form-group row">
                             <label for="fullname" class="col-4 col-form-label">Full Name</label>
                             <div class="col-8">

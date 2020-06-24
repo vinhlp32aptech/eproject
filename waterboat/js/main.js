@@ -1,3 +1,11 @@
+//change img
+
+function changepicture(){
+	$("#photo_acc").attr('src',URL.createObjectURL(event.target.files[0]));
+}
+
+
+//---
  AOS.init({
  	duration: 800,
  	easing: 'slide',

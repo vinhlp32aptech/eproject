@@ -41,14 +41,37 @@
 
     <?php
     if (isset($_COOKIE['gotoindex'])):
-    include_once "public/header.php";
-        if(isset($_GET['cart'])):?>
+            if(isset($_GET['cart'])):
+                include_once "public/header.php";
+            if(isset($_GET['savequantity'])):
+                if(isset($_COOKIE['gotoindex'])):
+
+                        $query = "update shopping_cart set quantity_shop = :quantity_shop where id_pro = :id_pro,id_acc = :id_acc ";
+                        $param = [
+                                "quantity_shop"  =>  $_SESSION['quantity_cart'],
+                                "id_pro"  => $_SESSION['id_pro'],
+                                "id_acc"  => $_COOKIE['gotoindex']
+                        ];
+                        $stmt = $db->updatedataparam($query,$param);
+                    endif;
+            endif;
+                ?>
+
             <div class="container-fluid">
                 <div class="container">
                 <div class="col-md-12 paddingbottom">
                     <br><br><br><br><br><br>
                     <h3 class="text-center">Your Cart</h3><br>
+
                     <div class="table-responsive table-responsive-data2" >
+                        <?php
+                        $query = "select * from shopping_cart where id_acc = " .$_COOKIE['gotoindex'];
+                        $stmt = $db->selectdata($query);
+                        while ($product = $stmt->fetch(PDO::FETCH_ASSOC)): $total= $product['quantity_shop'] * $product['price_shop'];
+                        $_SESSION['quantity_cart'] = $product['quantity_shop'];
+                            $_SESSION['id_pro'] = $product['id_pro'];
+                        ?>
+                            <form action="#" method="get">
                         <table class="table table-data2">
                             <thead>
                             <tr>
@@ -64,20 +87,20 @@
                             <tr class="spacer"></tr>
                             <tr class="tr-shadow">
                                 <td>
-                                    <img src="images/news6.jpg" width="100px" height="100px" alt="">
+                                    <img src="images/<?=$product['photo_shop'];?>" width="100px" height="100px" alt="">
                                 </td>
-                                <td>Azimut Magellano 43 HT</td>
+                                <td><?=$product['name_shop'];?></td>
                                 <td>
-                                    <span class="">$ 517 907</span>
+                                    <span class="">$<?=$product['price_shop'];?></span>
                                 </td>
                                 <td>
-                                    <input class="badge-light" type="number" style="width: 40px">
-                                    <button class="btn-danger" type="submit">Save</button>
+                                    <input class="badge-light" type="number" name="quantity_shop" value="<?=$product['quantity_shop'];?>" style="width: 50px" min="1" max="999" maxlength="3">
+                                    <button href="cart.php?account&cart&savequantity" class="btn-warning" type="submit">Save</button>
                                 </td>
 
                                 <td>
                                     <div class="table-data-feature">
-                                        <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
+                                       <button class="item" href="cart.php?account&cart&delcart" type="submit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </div>
@@ -87,67 +110,30 @@
                             </tr>
                             </tbody>
                         </table>
+                            </form>
+                        <?php endwhile;?>
                         <hr>
                             <div class="row">
                                 <div class="col-md-12 text-right">
-                                    <div class="btn">Total: 1 454 000$</div>
+                                    <div class="btn"><h4>Total: $<?=$total?></h4></div>
                                     <br>
-                                    <br><button type="submit"  class="btn btn-danger btn ">CONFIRM CART</button>
+                                    <br><button type="submit"  name="buypro" class="btn btn-info btn ">CONFIRM CART</button>
                                 </div>
 
                             </div>
                     </div>
+
                 </div><br>
                 </div>
                 </div>
             </div>
 <br><br><br><br>
-    <?php else:?>
-    <div class="container-fluid">
-        <div class="container">
-        <div class="col-md-12 paddingbottom">
-            <br><br><br><br><br><br>
-            <h3 class="text-center">Purchase history</h3><br>
-            <div class="table-responsive table-responsive-data2" >
-                <table class="table table-data2">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Date</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="tr-shadow">
-                        <td>1</td>
-                        <td>
-                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
-                        </td>
-                        <td>Azimut Magellano 43 HT</td>
-                        <td>
-                            <span class="">$ 517 907</span>
-                        </td>
-                        <td><i class="far fa-calendar-alt"></i>17/1/2020</td>
-                        <td>3</td>
-                        <td>$ 1 012 000</td>
+    <?php
+    include_once "public/footer.php";
+    else:
+    header('location: index.php');
 
-                    </tr>
-                    <tr class="spacer"></tr>
-
-
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        </div>
-    </div>
-    <?php endif;
-        include_once "public/footer.php";
+endif;
     else:
     header('location: index.php');
     endif;
