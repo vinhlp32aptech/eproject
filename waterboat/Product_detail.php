@@ -219,7 +219,7 @@ endif;
                                            <input type="number" name="quantity_shop" id="" class="quantitypro" min="1" max="100" value="1">
                                        </div>
                                        <div class="col-md-4">
-                                           <button type="submit" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg"  name="buynow">Buy Now</button>                                 </div>
+                                           <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg" >Buy Now</button>                                 </div>
                                        <div class="col-md-4">
                                            <button type="submit" class="btn btn-success" name="addcart" >ADD Cart</button>
                                        </div>
@@ -288,7 +288,7 @@ endif;
                                        </div>
                                        <div class="modal-footer">
                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                           <button type="submit" class="btn btn-primary">Payment orders</button>
+                                           <button type="submit" name="buynow" class="btn btn-primary">Payment orders</button>
                                        </div>
                                    </div>
                                </div>
