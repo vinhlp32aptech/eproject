@@ -153,7 +153,7 @@ endif;
 
                     <div class="location-details">
                         <p>Luxury yachts</p>
-                            <a href="Lease.php?services&Travel" class="location-btn">20 <i class="ti-plus"></i> Location</a>
+                            <a href="Lease.php?services&Travel" class="location-btn"><?php echo $db->counttravel();?> <i class="ti-plus"></i> Yachts</a>
                     </div>
                 </div>
             </div>
@@ -164,7 +164,7 @@ endif;
                     </div>
                     <div class="location-details">
                         <p>Sport Boat</p>
-                        <a href="Lease.php?services&Sport" class="location-btn">20 <i class="ti-plus"></i> Location</a>
+                        <a href="Lease.php?services&Sport" class="location-btn"><?php echo  $db->countsport();?> <i class="ti-plus"></i> Boat</a>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@ endif;
                     </div>
                     <div class="location-details">
                         <p>Fishing boats</p>
-                        <a href="Lease.php?services&Fishing" class="location-btn">20 <i class="ti-plus"></i> Location</a>
+                        <a href="Lease.php?services&Fishing" class="location-btn"><?php echo $db->countfish();?> <i class="ti-plus"></i> Boat</a>
                     </div>
                 </div>
             </div>

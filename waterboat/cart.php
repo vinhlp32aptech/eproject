@@ -83,22 +83,8 @@
         $addr = $_SESSION['addr'];
         $total = $product['quantity_shop'] * $product['price_shop'];
         $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
-        echo "<script>alert('Thanks for buying!');</script>";
-    $db->insertinvoicedetails($result, $id_pro, $photo_inv, $name_pro, $date_purchase,$addr,$phone,$quantity, $price, $total);
-//        $query = "insert into invoice_details(id_inv, id_pro, photo_inv, name_pro, date_purchase, addr, phone, quantity, price, total) values(:id_inv , :id_pro , :photo_inv , :name_pro , :date_purchase , :addr , :phone, :quantity, :price, :total )";
-//        $param = [
-//            "id_inv"  =>$result,
-//            "id_pro"    =>$id_pro,
-//            "photo_inv"     =>$photo_inv,
-//            "name_pro"     =>$name_pro,
-//            "date_purchase"     =>$date_purchase,
-//            "addr"     =>$_SESSION['addr'],
-//            "phone"     =>$_SESSION['phone'],
-//            "quantity"     =>$quantity,
-//            "price"     =>$price,
-//            "total"     =>$total,
-//        ];
-//        $stmt = $db->insertdataparam($query,$param);
+        $db->insertinvoicedetails($result, $id_pro, $photo_inv, $name_pro, $date_purchase,$addr,$phone,$quantity, $price, $total);
+        $db->deletecart();
     endwhile;
 
     endif;

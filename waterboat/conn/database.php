@@ -147,12 +147,81 @@ class database
         ];
             $this->stmt = $this->pdo->prepare($sql);
             $this->stmt->execute($param);
-            $last_id = $this->pdo->lastInsertId();
-            return $last_id;
+        return $this->stmt;
         } catch (PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
 
     }
+
+
+    public function counttravel(){
+        try{
+        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $query = "select id_pro from product where code = 'Travel' ";
+        $this->stmt = $this->pdo->prepare($query);
+        $this->stmt->execute();
+        $count = $this->stmt->rowCount();
+        return $count;
+            } catch (Exception $e) {
+        ErrorPHP::showmessage($e->getMessage());
+        }
+    }
+
+    public function countsport(){
+        try{
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $query = "select id_pro from product where code = 'Sport' ";
+            $this->stmt = $this->pdo->prepare($query);
+            $this->stmt->execute();
+            $count = $this->stmt->rowCount();
+            return $count;
+        } catch (Exception $e) {
+            ErrorPHP::showmessage($e->getMessage());
+        }
+    }
+
+    public function countfish(){
+        try{
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $query = "select id_pro from product where code = 'Fishing' ";
+            $this->stmt = $this->pdo->prepare($query);
+            $this->stmt->execute();
+            $count = $this->stmt->rowCount();
+            return $count;
+        } catch (Exception $e) {
+            ErrorPHP::showmessage($e->getMessage());
+        }
+    }
+
+    public function deletecart(){
+        try{
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $query = "delete from shopping_cart ";
+            $this->stmt = $this->pdo->prepare($query);
+            $this->stmt->execute();
+            return true;
+        } catch (Exception $e) {
+            ErrorPHP::showmessage($e->getMessage());
+        }
+    }
+
+
+    public function changequantity($id_pro,$change){
+        try{
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $query = "update product set quantity_pro =:quantity_pro where id_pro = " .$id_pro ;
+            $param = [
+                    "quantity_pro"  => $change,
+            ];
+            $this->stmt = $this->pdo->prepare($query);
+            $this->stmt->execute($param);
+            return true;
+        } catch (Exception $e) {
+            ErrorPHP::showmessage($e->getMessage());
+        }
+    }
+
+
 }
 
