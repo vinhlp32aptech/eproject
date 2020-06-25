@@ -1,246 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- CONTAINER  -->
+<head>
+    <title>Cart</title>
+    <link rel="icon" href="images/logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Dancing+Script:400,700|Muli:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hotline.css">
+    <link rel="stylesheet" href="css/theme.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+<div class="site-wrap">
+
     <?php
+    if (isset($_COOKIE['gotoindex'])):
+    include_once "public/header.php";
 
-    //show data, search and paging
-    if(isset($_GET['searchuser'])):
-        $query ="select * from account where status = 1 && concat(user_name, email, phone, fullname, dob, addr) like ? ";
+    $query = "select * from account where id_acc = " . $_COOKIE['gotoindex'];
+    $stmt = $db->selectdata($query);
+    while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+        $_SESSION['addr'] = $product['addr'];
+        $_SESSION['phone'] = $product['phone'];
+    endwhile;
+    if(isset($_POST['savequantity'])):
+
+        $query = "update shopping_cart set quantity_shop = :quantity_shop where id_pro = " .$_POST['id_pro'];
         $param = [
-            "%{$_GET['searchuser']}%"
+            "quantity_shop"  => $_POST['quantity_shop'],
         ];
-        $stmt = $db->selectDataParam($query, $param);
-        $total = $stmt->rowCount();
-        $config = [
-            'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-            'total_record'  => $total, // Tổng số record -> tong so hang
-            'limit'         => 10,// limit
-            'link_full'     => (trim($_GET['searchuser'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchuser={$_GET['searchuser']}",// Link full có dạng như sau: domain/com/page/{page}
-            'link_first'    => (trim($_GET['searchuser'])=="")?'admin.php':"admin.php?searchuser={$_GET['searchuser']}",// Link trang đầu tiên
-            'range'         => 5, // Số button trang bạn muốn hiển thị
-        ];
-        $paging = new Pagination();
-        $paging->init($config);
-        $query = "select * from account where status = 1 && concat(user_name, email, phone, fullname, dob, addr) like ? " .$paging->get_limit();
-        $stmt = $db->selectdataparam($query,$param);
-    else:
+        $stmt = $db->updatedataparam($query,$param);
+    endif;
+    if(isset($_POST['delshop'])):
 
-        $query = "select * from account where status = 1 ";
-        $stmt = $db->selectData($query);
-        $total = $stmt->rowCount();
-        $config = [
-            'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-            'total_record'  => $total, // Tổng số record -> tong so hang
-            'limit'         => 10,// limit
-            'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
-            'link_first'    => 'admin.php',// Link trang đầu tiên
-            'range'         => 5, // Số button trang bạn muốn hiển thị
-        ];
-        $paging = new Pagination();
-        $paging->init($config);
-        $query = "select * from account where status = 1 " .$paging->get_limit();
-        $stmt = $db->selectdata($query);
+        $query = "delete from shopping_cart  where id_pro = " .$_POST['id_pro'];
+
+        $stmt = $db->deletedata($query);
+    endif;
+
+    //
+    if(isset($_POST['buypro'])):
+        if (isset($_COOKIE['gotoindex'])):
+            $total = $_POST['price_shop'] * $_POST['quantity_shop'];
+            $id_acc = $_COOKIE['gotoindex'];
+            $name_pro = $_POST['name_shop'];
+            $date_purchase = date('Y-m-d H:i:s');
+
+            $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
+            echo "<script>alert('Thanks for buying!');</script>";
+
+            $query = "insert into invoice_details(id_inv, id_pro, photo_inv, name_pro, date_purchase, addr, phone, quantity, price, total) values(:id_inv , :id_pro , :photo_inv , :name_pro , :date_purchase , :addr , :phone, :quantity, :price, :total )";
+            $param = [
+                "id_inv"  =>$result,
+                "id_pro"    =>$_POST['id_pro'],
+                "photo_inv"     =>$_POST['photo_shop'],
+                "name_pro"     =>$_POST['name_shop'],
+                "date_purchase"     =>$date_purchase,
+                "addr"     =>$_SESSION['addr'],
+                "phone"     =>$_SESSION['phone'],
+                "quantity"     =>$_POST['quantity_shop'],
+                "price"     =>$_POST['price_shop'],
+                "total"     =>$total,
+            ];
+            $stmt = $db->insertdataparam($query,$param);
+        else:
+            echo "<script>alert('Please Sign in or Sign up to continue!');</script>";
+        endif;
     endif;
     ?>
 
-    <div class="mainContent">
-        <!-- LIST FORM -->
-        <div class="row filterGroup">
-            <form action="#" method="get" class="formSearch fl">
-                <input type="text" class="inputSearch" placeholder="Search" name="searchuser">
-                <button type="submit" class="btnSearch"><i class="fa fa-search"></i></button>
-            </form>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="col-md-12 paddingbottom">
+                <br><br><br><br><br><br>
+                <h3 class="text-center">Your Cart</h3><br>
+
+                <div class="table-responsive table-responsive-data2" >
+                    <?php
+                    $query = "select * from shopping_cart where id_acc = " .$_COOKIE['gotoindex'];
+                    $stmt = $db->selectdata($query);
+                    $total = 0;
+                    while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+                    $total    = $product['quantity_shop'] * $product['price_shop'] + $total;
+
+
+                    ?>
+                    <form action="#" method="post">
+                        <table class="table table-data2">
+                            <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr class="spacer"></tr>
+                            <tr class="tr-shadow">
+                                <td>
+                                    <img src="images/<?=$product['photo_shop'];?>" width="100px" height="100px" alt="">
+                                </td>
+                                <td><?=$product['name_shop'];?></td>
+                                <td>
+                                    <span class="">$<?php echo number_format($product['price_shop']);?></span>
+                                </td>
+                                <td>
+                                    <!--                                    <input type="hidden" name="price_shop" value="--><?//=$product['price_shop'];?><!--">-->
+                                    <!--                                    <input type="hidden" name="name_shop" value="--><?//=$product['name_shop'];?><!--">-->
+                                    <input type="hidden" name="id_pro" value="<?=$product['id_pro'];?>">
+                                    <!--                                    <input type="hidden" name="photo_shop" value="--><?//=$product['photo_shop'];?><!--">-->
+
+                                    <input class="badge-light" type="number" name="quantity_shop" value="<?=$product['quantity_shop'];?>" style="width: 50px" min="1" max="999" maxlength="3">
+                                    <button class="btn-warning" type="submit" name="savequantity">Save</button>
+                                </td>
+
+                                <td>
+                                    <div class="table-data-feature">
+                                        <button class="item" type="submit" name="delshop" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="spacer">
+                            </tr>
+                            </tbody>
+                        </table>
+                        <?php endwhile; $db->closeconnect();?>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <div class="btn"><h4>Total: $<?php echo number_format($total);?></h4></div>
+                                <br>
+                                <br><button type="submit"  name="buypro" class="btn btn-info btn ">CONFIRM CART</button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+
+            </div><br>
         </div>
-        <form action="#" method="GET" name="listForm" class="form scrollX">
-            <div class="formHeader row">
-                <h2 class="text-1 fl">User List</h2>
-                <div class="fr">
-                    <a href="admin.php?addacc" class="btnAdd fa fa-plus bg-1 text-fff"></a>
-                </div>
-            </div>
-            <div class="table">
-                <div class="row bg-1">
-                    <div class="cell cell-50 text-center text-fff">ID</div>
-                    <div class="cell cell-200 text-center text-fff">PHOTO</div>
-                    <div class="cell cell-200 text-center text-fff">USER_NAME</div>
-                    <div class="cell cell-100p text-center text-fff">EMAIL</div>
-                    <div class="cell cell-200 text-center text-fff">FULLNAME</div>
-
-                    <div class="cell cell-150 text-center text-fff">DOB</div>
-
-                    <div class="cell cell-100 text-center text-fff">PHONE</div>
-                    <div class="cell cell-100 text-center text-fff">EDIT</div>
-                </div>
-                <!--   BEGIN LOOP -->
-                <?php
-                while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
-                    <ul>
-                        <li class="row">
-                            <div class="cell cell-50 text-center"><?=$product['id_acc'];?></div>
-                            <div class="cell cell-200 text-center">
-                                <a href="admin.php?id_acc=<?=$product['photo_acc'];?>"><img src="../images/<?=$product['photo_acc'];?>" alt="" width="100"></a>
-                            </div>
-                            <div class="cell cell-200 text-center"><a href="admin.php?id_pro=<?=$product['user_name'];?>"><?=$product['user_name'];?></a></div>
-                            <div class="cell cell-100p text-center"><?=$product['email'];?></div>
-                            <div class="cell cell-200 text-center"><?=$product['fullname'];?></div>
-
-                            <div class="cell cell-150 text-center"><?=$product['dob'];?></div>
-
-                            <div class="cell cell-100 text-center"><?=$product['phone'];?></div>
-
-                            <div class="cell cell-100 text-center"> <a href="admin.php?id_acc=<?=$product['id_acc'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hideacc=<?=$product['id_acc'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
-                            </div>
-                        </li>
-                    </ul>
-                <?php endwhile; ?>
-
-                <!--   END LOOP -->
-            </div>
-
-        </form>
-        <?php if(isset($paging)):
-            echo $paging->html();
-        endif; ?>
-
-        <!-- DETAIL FORM -->
-        <?php
-        if(isset($_GET['id_acc'])):
-            $query =  "select * from account where id_acc = :id_acc";
-            $param = [
-                "id_acc"=>$_GET['id_acc']
-            ];
-
-            $stmt = $db->selectdataparam($query, $param);
-        endif;
-        while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
-
-            <form action="admin.php?id_acc=<?=$product['id_acc'];?>" method="post" enctype="multipart/form-data" class="form">
-                <div class="formHeader row">
-                    <h2 class="text-1 fl">Account Detail</h2>
-                    <div class="fr">
-                        <button type="submit" class="btnSave bg-1 text-fff text-bold fr" name="savechangeacc">SAVE</button>
-                    </div>
-                </div>
-
-                <div class="formBody row">
-                    <div class="column s-6">
-                        <label class="inputGroup">
-                            <span>User name</span>
-                            <span><input type="text" name="user_name" value="<?=$product['user_name'];?>"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Password</span>
-                            <span><input type="password" name="password" value=""></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Email</span>
-                            <span><input type="email" name="email" value="<?=$product['email'];?>"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Full name</span>
-                            <span><input type="text" name="fullname" value="<?=$product['fullname'];?>"></span>
-                        </label>
-                        <label class="inputGroup" for="gender">
-                            <span>Gender</span>
-                            <span>
-                                  <input list="genders" name="gender" id="gender">
-                                  <datalist id="genders">
-                                    <option value="Male">
-                                    <option value="Female">
-                                    <option value="Other">
-                                  </datalist>
-                            </span>
-
-                        </label>
-                    </div>
-                    <div class="column s-6">
-                        <label class="inputGroup">
-                            <span>Date of birth</span>
-                            <span><input type="date" name="dob" value="<?=$product['dob'];?>" maxlength="11"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Phone</span>
-                            <span><input type="number" name="phone" value="<?=$product['phone'];?>" maxlength="11"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Address</span>
-                            <span><input type="text" name="addr" value="<?=$product['addr'];?>"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Image</span>
-                            <span>
-                <input type="hidden" name="oldphoto" value="<?=$product['photo_acc'];?>">
-                <input type="file" name="photo_acc" onchange="getImg(this)" multiple><br/>
-                <img src="../images/<?=$product['photo_acc'];?>" height="200px" id="photo_acc"><br/>
-                            </span>
-                        </label>
-                    </div>
-                </div>
-            </form>
-        <?php endwhile;$db->closeconnect();?>
-        <?php if(isset($_GET['addacc'])):?>
-            <form action="admin.php?user" method="post" enctype="multipart/form-data" class="form">
-                <div class="formHeader row">
-                    <h2 class="text-1 fl">Add Account</h2>
-                    <div class="fr">
-                        <button type="submit" class="btnSave bg-1 text-fff text-bold fr" name="addacc">ADD</button><a href="" class="btnAdd fa fa-plus bg-1 text-fff"></a>
-                    </div>
-                </div>
-
-                <div class="formBody row">
-                    <div class="column s-6">
-                        <label class="inputGroup">
-                            <span>User name</span>
-                            <span><input type="text" name="user_name" ></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Password</span>
-                            <span><input type="password" name="password" ></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Email</span>
-                            <span><input type="email" name="email" ></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Full name</span>
-                            <span><input type="text" name="fullname" ></span>
-                        </label>
-                        <label class="inputGroup" for="gender">
-                            <span>Gender</span>
-                            <span>
-                                  <input list="genders" name="gender" id="gender" class="p2">
-                                  <datalist id="genders">
-                                    <option value="Male">
-                                    <option value="Female">
-                                    <option value="Other">
-                                  </datalist>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="column s-6">
-                        <label class="inputGroup">
-                            <span>Date of birth</span>
-                            <span><input type="date" name="dob"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Phone</span>
-                            <span><input type="number" name="phone" maxlength="11"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Address</span>
-                            <span><input type="text" name="addr"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Image</span>
-                            <span>
-                <input type="file" name="photo_acc" onchange="getImg(this)" multiple><br/>
-                <img src="" height="200px" id="photo_acc"><br/>
-                            </span>
-                        </label>
-                    </div>
-                </div>
-            </form>
-        <?php endif;?>
     </div>
-    <!-- END CONTAINER  -->
 </div>
+<br><br><br><br>
+<?php
+include_once "public/footer.php";
+else:
+    header('location: index.php');
+endif;
+?>
+
 </div>
+<!-- .site-wrap -->
+
+
+<!-- loader -->
+<div id="loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/>
+    </svg>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

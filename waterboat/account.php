@@ -125,8 +125,7 @@ if(isset($_COOKIE['gotoindex'])):
                     <div class="profile-img">
                         <input type="hidden" name="user_name" value="<?=$product['user_name'];?>">
                         <input type="hidden" name="oldphoto" value="<?=$product['photo_acc'];?>">
-                        <img src="images/<?=$product['photo_acc'];?>" id="photo_acc">
-                        <input type="file" name="photo_acc" onchange="changepicture();" multiple>
+                        <img src="<?= isset($product['photo_acc'])?"image/{$product['photo_acc']}":"http://placehold.it/100x100" ?>"  id="photo_acc">                        <input type="file" name="photo_acc" onchange="changepicture();" multiple>
                     </div>
                 </div>
             </div>

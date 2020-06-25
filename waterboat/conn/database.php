@@ -127,5 +127,32 @@ class database
         }
 
     }
+
+    public function insertinvoicedetails($result, $id_pro, $photo_inv, $name_pro, $date_purchase,$addr,$phone,$quantity, $price, $total)
+    {
+        try {
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "insert into invoice_details(id_inv, id_pro, photo_inv, name_pro, date_purchase, addr, phone, quantity, price, total) values(:id_inv , :id_pro , :photo_inv , :name_pro , :date_purchase , :addr , :phone, :quantity, :price, :total )";
+        $param = [
+            "id_inv"  =>$result,
+            "id_pro"    =>$id_pro,
+            "photo_inv"     =>$photo_inv,
+            "name_pro"     =>$name_pro,
+            "date_purchase"     =>$date_purchase,
+            "addr"     =>$addr,
+            "phone"     =>$phone,
+            "quantity"     =>$quantity,
+            "price"     =>$price,
+            "total"     =>$total,
+        ];
+            $this->stmt = $this->pdo->prepare($sql);
+            $this->stmt->execute($param);
+            $last_id = $this->pdo->lastInsertId();
+            return $last_id;
+        } catch (PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+
+    }
 }
 
