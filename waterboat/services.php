@@ -153,7 +153,7 @@ endif;
 
                     <div class="location-details">
                         <p>Luxury yachts</p>
-                            <a href="Lease.php?Travel" class="location-btn">60 <i class="ti-plus"></i> Location</a>
+                            <a href="Lease.php?Travel" class="location-btn">20 <i class="ti-plus"></i> Location</a>
                     </div>
                 </div>
             </div>
@@ -164,7 +164,7 @@ endif;
                     </div>
                     <div class="location-details">
                         <p>Sport Boat</p>
-                        <a href="Lease.php?Sport" class="location-btn">60 <i class="ti-plus"></i> Location</a>
+                        <a href="Lease.php?Sport" class="location-btn">20 <i class="ti-plus"></i> Location</a>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@ endif;
                     </div>
                     <div class="location-details">
                         <p>Fishing boats</p>
-                        <a href="Lease.php?Fishing" class="location-btn">50 <i class="ti-plus"></i> Location</a>
+                        <a href="Lease.php?Fishing" class="location-btn">20 <i class="ti-plus"></i> Location</a>
                     </div>
                 </div>
             </div>
