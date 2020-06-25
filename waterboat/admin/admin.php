@@ -980,7 +980,7 @@ endif;
                             <div class="cell cell-100p text-center"><a href="admin.php?id_inv=<?=$product['id_inv'];?>"><?=$product['name_pro'];?></a></div>
                             <div class="cell cell-100 text-center"><?=$product['price'];?></div>
                             <div class="cell cell-100 text-center"><?=$product['quantity'];?></div>
-                            <div class="cell cell-150 text-center"><?=date("m-d-Y h:i", strtotime($product['date_purchase']));?></div>
+                            <div class="cell cell-150 text-center"><?=date("m-d-Y h:i:s", strtotime($product['date_purchase']));?></div>
                             <div class="cell cell-100 text-center"><?=$product['phone'];?></div>
                             <div class="cell cell-200 text-center"><?=$product['total'];?></div>
                             <div class="cell cell-100 text-center">

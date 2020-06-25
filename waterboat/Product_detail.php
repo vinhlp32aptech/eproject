@@ -98,46 +98,27 @@ endif;
 if(isset($_POST['buynow'])):
     if (isset($_COOKIE['gotoindex'])):
         $total = $_POST['price_shop'] * $_POST['quantity_shop'];
-    $datetime = date('Y-m-d H:i');
-        $query = "insert into invoice(id_acc, name_pro, date_purchase, quantity, price, total) values(:id_acc, :name_pro, :date_purchase, :quantity, :price, :total)";
-        $param = [
-            "id_acc"          =>$_COOKIE['gotoindex'],
-            "name_pro"          =>$_POST['name_shop'],
-            "date_purchase"     =>$datetime,
-            "price"          =>$_POST['price_shop'],
-            "quantity"       =>$_POST['quantity_shop'],
-            "total"       =>$total,
-        ];
-        $db->insertdataparam($query, $param);
+        $id_acc = $_COOKIE['gotoindex'];
+        $name_pro = $_POST['name_shop'];
+        $date_purchase = date('Y-m-d H:i:s');
+
+ $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
         echo "<script>alert('Thanks for buying!');</script>";
 
-        $date = new DateTime($product['date_purchase']);
-
-        $query = "select id_inv from invoice where date_purchase = " . $date;
-        $stmt = $db->selectdata($query);
-        echo $stmt->rowCount();
-        echo "kkk";
-        echo $_SESSION['id_inv'];
-        while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
-            $_SESSION['id_inv'] = $product['id_inv'];
-        endwhile;
-
-        $query = "insert into invoice_details(id_inv, id_pro, photo_inv, name_pro, date_purchase, addr, phone, quantity, price, total) values(:id_inv , :id_pro , :photo_inv , :name_pro , :date_purchase , :addr , :phone, :quantity, :price, :total )";
-            $param = [
-                "id_inv"  =>$_SESSION['id_inv'],
-                "id_pro"    =>$_GET['id_pro'],
-                "photo_inv"     =>$_POST['photo_shop'],
-                "name_pro"     =>$_POST['name_shop'],
-                "date_purchase"     =>$date,
-                "addr"     =>$_SESSION['addr'],
-                "phone"     =>$_SESSION['phone'],
-                "quantity"     =>$_POST['quantity_shop'],
-                "price"     =>$_POST['price_shop'],
-                "total"     =>$total,
-            ];
-            $stmt = $db->insertdataparam($query,$param);
-
-
+                    $query = "insert into invoice_details(id_inv, id_pro, photo_inv, name_pro, date_purchase, addr, phone, quantity, price, total) values(:id_inv , :id_pro , :photo_inv , :name_pro , :date_purchase , :addr , :phone, :quantity, :price, :total )";
+                    $param = [
+                        "id_inv"  =>$result,
+                        "id_pro"    =>$_GET['id_pro'],
+                        "photo_inv"     =>$_POST['photo_shop'],
+                        "name_pro"     =>$_POST['name_shop'],
+                        "date_purchase"     =>$date_purchase,
+                        "addr"     =>$_SESSION['addr'],
+                        "phone"     =>$_SESSION['phone'],
+                        "quantity"     =>$_POST['quantity_shop'],
+                        "price"     =>$_POST['price_shop'],
+                        "total"     =>$total,
+                    ];
+                    $stmt = $db->insertdataparam($query,$param);
     else:
         echo "<script>alert('Please Sign in or Sign up to continue!');</script>";
     endif;

@@ -43,16 +43,25 @@
     if (isset($_COOKIE['gotoindex'])):
                 include_once "public/header.php";
             if(isset($_POST['savequantity'])):
-                if(isset($_COOKIE['gotoindex'])):
 
-                        $query = "update shopping_cart set quantity_shop = :quantity_shop where id_pro = {$_POST['id_pro']} && id_acc = " . $_COOKIE['gotoindex'];
+                        $query = "update shopping_cart set quantity_shop = :quantity_shop where id_pro = " .$_POST['id_pro'];
                         $param = [
                                 "quantity_shop"  => $_POST['quantity_shop'],
                         ];
                         $stmt = $db->updatedataparam($query,$param);
-                    endif;
             endif;
-                ?>
+    if(isset($_POST['delshop'])):
+
+            $query = "delete from shopping_cart  where id_pro = " .$_POST['id_pro'];
+
+            $stmt = $db->deletedata($query);
+    endif;
+            if(isset($_POST['buypro'])):
+  $date_purchase = date('Y-m-d H:i:s');
+            $id_acc = $_COOKIE['gotoindex'];
+//    $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
+endif;
+    ?>
 
             <div class="container-fluid">
                 <div class="container">
@@ -64,7 +73,10 @@
                         <?php
                         $query = "select * from shopping_cart where id_acc = " .$_COOKIE['gotoindex'];
                         $stmt = $db->selectdata($query);
-                        while ($product = $stmt->fetch(PDO::FETCH_ASSOC)): $total= $product['quantity_shop'] * $product['price_shop']; ?>
+                        $total = 0;
+                        while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+                            $total    = $product['quantity_shop'] * $product['price_shop'] + $total;
+                        ?>
                             <form action="#" method="post">
                         <table class="table table-data2">
                             <thead>
@@ -85,17 +97,17 @@
                                 </td>
                                 <td><?=$product['name_shop'];?></td>
                                 <td>
-                                    <span class="">$<?=$product['price_shop'];?></span>
+                                    <span class="">$<?php echo number_format($product['price_shop']);?></span>
                                 </td>
                                 <td>
                                     <input type="hidden" name="id_pro" value="<?=$product['id_pro'];?>">
                                     <input class="badge-light" type="number" name="quantity_shop" value="<?=$product['quantity_shop'];?>" style="width: 50px" min="1" max="999" maxlength="3">
-                                    <button href="cart.php?account&cart&savequantity" class="btn-warning" type="submit">Save</button>
+                                    <button class="btn-warning" type="submit" name="savequantity">Save</button>
                                 </td>
 
                                 <td>
                                     <div class="table-data-feature">
-                                       <button class="item" href="cart.php?account&cart&delcart" type="submit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
+                                       <button class="item" type="submit" name="delshop" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </div>
@@ -110,7 +122,7 @@
                         <hr>
                             <div class="row">
                                 <div class="col-md-12 text-right">
-                                    <div class="btn"><h4>Total: $<?=$total?></h4></div>
+                                    <div class="btn"><h4>Total: $<?php echo number_format($total);?></h4></div>
                                     <br>
                                     <br><button type="submit"  name="buypro" class="btn btn-info btn ">CONFIRM CART</button>
                                 </div>

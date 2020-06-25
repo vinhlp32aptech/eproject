@@ -141,7 +141,7 @@ endif;
 
 
                             <li>
-                                <form action="" id="demo-2">
+                                <form action="showproduct.php" id="demo-2">
                                     <input type="search" name="search" placeholder="Search">
                                 </form>
                             </li>
