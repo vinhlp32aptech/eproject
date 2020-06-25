@@ -9,7 +9,6 @@ $db = new database();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Home</title>
     <link rel="icon" href="images/logo.png">
