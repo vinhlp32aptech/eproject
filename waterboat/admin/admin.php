@@ -496,15 +496,7 @@ endif;
 
 <!--//////----------------user--------------------------------------------->
 <?php
-    elseif (isset($_SESSION['user'])):?>
-
-<body class="fixed-nav sticky-footer " id="page-top">
-
-<div class="container">
-
-    <!-- CONTAINER  -->
-    <?php
-
+    elseif (isset($_SESSION['user'])):
     //show data, search and paging
     if(isset($_GET['searchuser'])):
         $query ="select * from account where status = 1 && concat(user_name, email, phone, fullname, dob, addr) like ? ";
@@ -527,21 +519,21 @@ endif;
         $stmt = $db->selectdataparam($query,$param);
     else:
 
-    $query = "select * from account where status = 1 ";
-    $stmt = $db->selectData($query);
-    $total = $stmt->rowCount();
-    $config = [
-        'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-        'total_record'  => $total, // Tổng số record -> tong so hang
-        'limit'         => 10,// limit
-        'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
-        'link_first'    => 'admin.php',// Link trang đầu tiên
-        'range'         => 5, // Số button trang bạn muốn hiển thị
-    ];
-    $paging = new Pagination();
-    $paging->init($config);
-    $query = "select * from account where status = 1 " .$paging->get_limit();
-    $stmt = $db->selectdata($query);
+        $query = "select * from account where status = 1 ";
+        $stmt = $db->selectData($query);
+        $total = $stmt->rowCount();
+        $config = [
+            'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
+            'total_record'  => $total, // Tổng số record -> tong so hang
+            'limit'         => 10,// limit
+            'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
+            'link_first'    => 'admin.php',// Link trang đầu tiên
+            'range'         => 5, // Số button trang bạn muốn hiển thị
+        ];
+        $paging = new Pagination();
+        $paging->init($config);
+        $query = "select * from account where status = 1 " .$paging->get_limit();
+        $stmt = $db->selectdata($query);
     endif;
     ?>
 
@@ -564,11 +556,13 @@ endif;
                 <div class="row bg-1">
                     <div class="cell cell-50 text-center text-fff">ID</div>
                     <div class="cell cell-200 text-center text-fff">PHOTO</div>
-                    <div class="cell cell-100p text-center text-fff">USER_NAME</div>
-                    <div class="cell cell-100p text-center text-fff">EMAIL</div>
+                    <div class="cell cell-200 text-center text-fff">USER_NAME</div>
+                    <div class="cell cell-200 text-center text-fff">EMAIL</div>
                     <div class="cell cell-100p text-center text-fff">FULLNAME</div>
-                    <div class="cell cell-100p text-center text-fff">DOB</div>
-                    <div class="cell cell-100p text-center text-fff">PHONE</div>
+
+                    <div class="cell cell-100 text-center text-fff">DOB</div>
+
+                    <div class="cell cell-100 text-center text-fff">PHONE</div>
                     <div class="cell cell-100 text-center text-fff">EDIT</div>
                 </div>
                 <!--   BEGIN LOOP -->
@@ -580,13 +574,15 @@ endif;
                             <div class="cell cell-200 text-center">
                                 <a href="admin.php?id_acc=<?=$product['photo_acc'];?>"><img src="../images/<?=$product['photo_acc'];?>" alt="" width="100"></a>
                             </div>
-                            <div class="cell cell-100p text-center"><a href="admin.php?id_pro=<?=$product['user_name'];?>"><?=$product['user_name'];?></a></div>
-                            <div class="cell cell-100p text-center"><?=$product['email'];?></div>
+                            <div class="cell cell-200 text-center"><a href="admin.php?id_pro=<?=$product['user_name'];?>"><?=$product['user_name'];?></a></div>
+                            <div class="cell cell-200 text-center"><?=$product['email'];?></div>
                             <div class="cell cell-100p text-center"><?=$product['fullname'];?></div>
-                            <div class="cell cell-100p text-center"><?=$product['dob'];?></div>
-                            <div class="cell cell-100p text-center"><?=$product['phone'];?></div>
-                            <div class="cell cell-100 text-center">
-                                <a href="admin.php?id_acc=<?=$product['id_acc'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hideacc=<?=$product['id_acc'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
+
+                            <div class="cell cell-100 text-center"><?=$product['dob'];?></div>
+
+                            <div class="cell cell-100 text-center"><?=$product['phone'];?></div>
+
+                            <div class="cell cell-100 text-center"> <a href="admin.php?id_acc=<?=$product['id_acc'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hideacc=<?=$product['id_acc'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                             </div>
                         </li>
                     </ul>
@@ -650,7 +646,7 @@ endif;
                             </span>
 
                         </label>
-                </div>
+                    </div>
                     <div class="column s-6">
                         <label class="inputGroup">
                             <span>Date of birth</span>
@@ -743,7 +739,8 @@ endif;
     <!-- END CONTAINER  -->
 </div>
 </div>
-<?php
+
+    <?php
     else:
 //show data, search and paging
 if(isset($_GET['searchinv'])):
