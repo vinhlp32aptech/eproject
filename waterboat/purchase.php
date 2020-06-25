@@ -41,8 +41,10 @@
 
     <?php
     if (isset($_COOKIE['gotoindex'])):
-        if(isset($_GET['purchase'])):
         include_once "public/header.php";
+
+    $query = "select * from invoice_details ";
+    $stmt = $db->selectdata($query);
         ?>
 
     <div class="container-fluid">
@@ -52,6 +54,8 @@
             <h3 class="text-center">Purchase history</h3><br>
             <div class="table-responsive table-responsive-data2" >
                 <table class="table table-data2">
+                    <?php while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+                        ?>
                     <thead>
                     <tr>
                         <th>ID</th>
@@ -65,17 +69,17 @@
                     </thead>
                     <tbody>
                     <tr class="tr-shadow">
-                        <td>1</td>
+                        <td><?=$product['id_inv'];?></td>
                         <td>
-                            <img src="images/news6.jpg" width="100px" height="100px" alt="">
+                            <img src="images/<?=$product['photo_inv'];?>" width="100px" height="100px" alt="">
                         </td>
-                        <td>Azimut Magellano 43 HT</td>
+                        <td><?=$product['name_pro'];?></td>
                         <td>
-                            <span class="">$ 517 907</span>
+                            <span class="">$<?=$product['price'];?></span>
                         </td>
-                        <td><i class="far fa-calendar-alt"></i>17/1/2020</td>
-                        <td>3</td>
-                        <td>$ 1 012 000</td>
+                        <td><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;<?=$product['date_purchase']?></td>
+                        <td><?=$product['quantity'];?></td>
+                        <td>$<?php echo number_format($product['total']);?></td>
 
                     </tr>
                     <tr class="spacer"></tr>
@@ -83,6 +87,7 @@
 
 
                     </tbody>
+                    <?php endwhile;?>
                 </table>
             </div>
         </div>
@@ -91,10 +96,6 @@
         <br><br><br><br>
 
         <?php include_once "public/footer.php"?>
-
-    <?php
-    else: header('location: index.php');
-    endif;?>
     <?php
     else:
     header('location: index.php');

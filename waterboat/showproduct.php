@@ -1,44 +1,30 @@
 <?php
+include_once "conn/database.php";
+include_once "conn/Pagination.php";
+
+$db = new database();
 
 if(isset($_GET['search'])):
-    $query = "select * from product where concat(name_pro,price_pro,year_pro,code) like ?  ";
-
+    $query ="select * from product where status = 1 && concat(name_pro,price_pro,year_pro,code) like ? ";
     $param = [
         "%{$_GET['search']}%"
     ];
-
-    $stmt = $db->selectdataparam($query, $param);
-
+    $stmt = $db->selectDataParam($query, $param);
     $total = $stmt->rowCount();
     $config = [
-        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
-        'total_record'  => $total,
-        'limit'         => 6,
-        'link_full'     => (trim($_GET['search'])=="")?'showproduct.php?page={page}':"showproduct.php?page={page}&search={$_GET['search']}",
-        'link_first'    => (trim($_GET['search'])=="")?'showproduct.php':"showproduct.php?search={$_GET['search']}",
-        'range'         => 5,
-    ];
-    $paging = new Pagination();
-    $paging->init($config);
-    $query = "select * from product  where concat(name_pro,price_pro,year_pro,code) like ?  {$paging->get_limit()}";
-    $stmt = $db->selectdataparam($query, $param);
-
-else:
-    $query = "select * from product";
-    $stmt = $db->selectdata($query);
-    $total = $stmt->rowCount();
-    $config = [
-        'current_page'  => isset($_GET['page'])?$_GET['page']:1,
-        'total_record'  => $total,
-        'limit'         => 6,
-        'link_full'     => 'showproduct.php?page={page}',
-        'link_first'    => 'showproduct.php',// Link trang đầu tiên
+        'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
+        'total_record'  => $total, // Tổng số record -> tong so hang
+        'limit'         => 12,// limit
+        'link_full'     => (trim($_GET['search'])=="")?'showproduct.php?page={page}':"showproduct.php?page={page}&search={$_GET['search']}",// Link full có dạng như sau: domain/com/page/{page}
+        'link_first'    => (trim($_GET['search'])=="")?'showproduct.php':"showproduct.php?search={$_GET['search']}",// Link trang đầu tiên
         'range'         => 5, // Số button trang bạn muốn hiển thị
     ];
     $paging = new Pagination();
     $paging->init($config);
-    $query = "select * from product  {$paging->get_limit()}";
-    $stmt = $db->selectdata($query);
+    $query = "select * from product where status = 1 && concat(name_pro,price_pro,year_pro,code) like ? " .$paging->get_limit();
+    $stmt = $db->selectdataparam($query,$param);
+else:
+    header('location: index.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -70,46 +56,31 @@ endif;
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagination.css">
-
+    <link rel="stylesheet" href="css/hotline.css">
 </head>
 <body id="top">
 
 <?php include_once "public/header.php"?>
-
+<h2></h2>
 <div class="wrapper row3">
     <main class="hoc container clear">
-
-        <article class="group btmspace-80">
-            <div class="two_third first" id="fiximgV"><a href="#"><img class="borderedbox inspace-10" src="images/Lease1.jpg" alt="" height="555" width="555"></a></div>
-            <div class="one_third">
-                <h6 class="heading">Welcome to our product page</h6>
-                <h6 class="heading text-danger">32423423</h6>
-                <ul class="nospace meta">
-                    <br>
-                <p>Here we offer three different types of boats: luxury, sports and surfing.</p>
-                <p class="btmspace-30">We have been working on the market of yachts and motor boats for over 17 years which allows us provide a comprehensive solution to issues related to purchasing a motor yacht or a boat. This includes construction on request or selecting a used boat, delivery to Vietnam, customs clearance and registration. We also provide consulting services and assistance in hiring crew, finding berthing area, setting up maintenance plans&hellip;</p>
-            </div>
-        </article>
-
-        <hr class="btmspace-80">
-
-
         <ul class="nospace group overview">
             <?php
             while($product = $stmt->fetch(PDO::FETCH_ASSOC)):
-            ?>
-            <li class="one_third">
-                <article><a href="Product_detail.php"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
-                    <h6 class="heading"><?= $product['name_pro'];?></h6>
-                    <ul class="nospace meta">
-                        <li><i class="fa fa-user"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
-                        <li><i class="fa fa-tag"></i> <a href="#">Classify:<?= $product['code'];?></a></li>
-                    </ul>
-                    <p style="font-size: 20px;color: red"><i class="fa fa-dollar"></i><?= $product['price_pro'];?></p>
-                    <footer class="nospace"><a class="btn" href="#">Real More &raquo;</a></footer>
-                </article>
-            </li>
+                ?>
+                <li class="one_third">
+                    <article><a href="Product_detail.php?id_pro=<?= $product['id_pro'];?>"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
+                        <h6 class="heading"><?= $product['name_pro'];?></h6>
+                        <ul class="nospace meta">
+                            <li><i class="fa fa-calendar"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
+                            <li><i class="fa fa-tag"></i> <a href="#">Classify:<?= $product['code'];?></a></li>
+                        </ul>
+                        <p style="font-size: 20px;color: red"><i class="fa fa-dollar"></i><?= $product['price_pro'];?></p>
+                        <footer class="nospace"><a class="btn" href="Product_detail.php?id_pro=<?= $product['id_pro'];?>">Real More &raquo;</a></footer>
+                    </article>
+                </li>
             <?php
+
             endwhile;
             $db->closeConn();
             ?>

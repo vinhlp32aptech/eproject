@@ -1,4 +1,5 @@
 <?php
-$total = 2 * 3;
-echo $total;
+$a = 234234;
+echo $b = number_format($a);
+
 ?>

@@ -136,98 +136,10 @@
 
           </div>
       </div>
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <h4 class="text-serif text-primary">Team</h4>
-            <h3 class="heading-92913 text-black text-center">Our Team</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_3.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                  <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_4.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    
-
-
-
 <?php include_once "public/footer.php"?>
 
   </div>
   <!-- .site-wrap -->
-
-
   <!-- loader -->
   <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
 

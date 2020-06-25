@@ -54,9 +54,11 @@ if(isset($_POST['addcart'])):
     if (isset($_COOKIE['gotoindex'])):
         $query = "select id_pro, quantity_shop from shopping_cart where id_acc = " . $_COOKIE['gotoindex'];
         $stmt = $db->selectdata($query);
+        $total = $stmt->rowCount();
+        if($total > 0 ):
         while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
             $newquantity = $product['quantity_shop'] + $_POST['quantity_shop'];
-            if($product['id_pro'] == $_GET['id_pro']):
+            if($product['id_pro'] === $_GET['id_pro']):
                 $query = "update shopping_cart set quantity_shop=:quantity_shop where id_pro = " .$_GET['id_pro'];
                 $param = [
                     "quantity_shop"       =>$newquantity,
@@ -74,8 +76,19 @@ if(isset($_POST['addcart'])):
                 ];
                 $db->insertdataparam($query, $param);
             endif;
-
         endwhile;
+        else:
+            $query = "insert into shopping_cart(id_acc, id_pro, name_shop, price_shop, quantity_shop, photo_shop) values(:id_acc, :id_pro, :name_shop, :price_shop, :quantity_shop, :photo_shop)";
+            $param = [
+                "id_acc"          =>$_COOKIE['gotoindex'],
+                "id_pro"             =>$_GET['id_pro'],
+                "name_shop"          =>$_POST['name_shop'],
+                "price_shop"       =>$_POST['price_shop'],
+                "quantity_shop"       =>$_POST['quantity_shop'],
+                "photo_shop"       =>$_POST['photo_shop'],
+            ];
+            $db->insertdataparam($query, $param);
+        endif;
     else:
         echo "<script>alert('Please Sign in or Sign up to continue!');</script>";
     endif;
@@ -85,19 +98,27 @@ endif;
 if(isset($_POST['buynow'])):
     if (isset($_COOKIE['gotoindex'])):
         $total = $_POST['price_shop'] * $_POST['quantity_shop'];
-    $date = date('Y-m-d H:i:s');
-        $query = "insert into invoice(id_acc, photo_inv, name_pro, date_of_purchase, addr, phone, total) values(:id_acc, :photo_inv, :name_pro, :date_of_purchase, :addr, :phone, :total)";
-        $param = [
-            "id_acc"          =>$_COOKIE['gotoindex'],
-            "photo_inv"       =>$_POST['photo_shop'],
-            "name_pro"          =>$_POST['name_shop'],
-            "date_of_purchase"       =>$date,
-            "addr"       =>$_SESSION['addr'],
-            "phone"       =>$_SESSION['phone'],
-            "total"       =>$total,
-        ];
-        $db->insertdataparam($query, $param);
-//    header('location: admin.php?product');
+        $id_acc = $_COOKIE['gotoindex'];
+        $name_pro = $_POST['name_shop'];
+        $date_purchase = date('Y-m-d H:i:s');
+
+ $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
+        echo "<script>alert('Thanks for buying!');</script>";
+
+                    $query = "insert into invoice_details(id_inv, id_pro, photo_inv, name_pro, date_purchase, addr, phone, quantity, price, total) values(:id_inv , :id_pro , :photo_inv , :name_pro , :date_purchase , :addr , :phone, :quantity, :price, :total )";
+                    $param = [
+                        "id_inv"  =>$result,
+                        "id_pro"    =>$_GET['id_pro'],
+                        "photo_inv"     =>$_POST['photo_shop'],
+                        "name_pro"     =>$_POST['name_shop'],
+                        "date_purchase"     =>$date_purchase,
+                        "addr"     =>$_SESSION['addr'],
+                        "phone"     =>$_SESSION['phone'],
+                        "quantity"     =>$_POST['quantity_shop'],
+                        "price"     =>$_POST['price_shop'],
+                        "total"     =>$total,
+                    ];
+                    $stmt = $db->insertdataparam($query,$param);
     else:
         echo "<script>alert('Please Sign in or Sign up to continue!');</script>";
     endif;
@@ -231,7 +252,7 @@ endif;
                                <tbody>
 
                                <?php
-                               $query = "select model, length_overall, beam, draft_max, draft_min, bridge_clearance, deadrise, dry_weight, fuel_tanks, water_tanks, Production_materials, Exterior_design, Interior_Design, passenger_capacity, cabins, manufacturer from configuration  where id_pro = 1";
+                               $query = "select model, length_overall, beam, draft_max, draft_min, bridge_clearance, deadrise, dry_weight, fuel_tanks, water_tanks, Production_materials, Exterior_design, Interior_Design, passenger_capacity, cabins, manufacturer from configuration  where id_pro = " . $_GET['id_pro'];
                                $stmt = $db->selectData($query);
                                while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
@@ -308,12 +329,14 @@ endif;
            </div>
            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                <table>
-                   <tr>
-                       <td>               <img src="images/3.jpeg" alt="" width=100%">
-                       </td>
-                       <td>               <img src="images/3.jpeg" alt="" width="100%">
-                       </td>
-                   </tr>
+                   <?php
+                   $query = "select img from photos where id_pro = " .$_GET['id_pro'];
+                   $stmt = $db->selectdata($query);
+                   while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+                   ?>
+                       <tr>               <img src="images/<?=$product['img'];?>" alt="" width=100%">
+                       </tr>
+                   <?php endwhile;?>
                </table>
            </div>
        </div>
