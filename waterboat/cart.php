@@ -42,6 +42,16 @@
     <?php
     if (isset($_COOKIE['gotoindex'])):
                 include_once "public/header.php";
+
+    if(isset($_COOKIE['gotoindex'])):
+        $query = "select * from account where id_acc = " . $_COOKIE['gotoindex'];
+        $stmt = $db->selectdata($query);
+        while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
+            $_SESSION['addr'] = $product['addr'];
+            $_SESSION['phone'] = $product['phone'];
+        endwhile;
+    endif;
+
             if(isset($_POST['savequantity'])):
 
                         $query = "update shopping_cart set quantity_shop = :quantity_shop where id_pro = " .$_POST['id_pro'];
@@ -56,11 +66,6 @@
 
             $stmt = $db->deletedata($query);
     endif;
-            if(isset($_POST['buypro'])):
-  $date_purchase = date('Y-m-d H:i:s');
-            $id_acc = $_COOKIE['gotoindex'];
-//    $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
-endif;
     ?>
 
             <div class="container-fluid">
@@ -76,6 +81,35 @@ endif;
                         $total = 0;
                         while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
                             $total    = $product['quantity_shop'] * $product['price_shop'] + $total;
+                                if(isset($_POST['buypro'])):
+                                    if (isset($_COOKIE['gotoindex'])):
+                                        $total = $_POST['price_shop'] * $_POST['quantity_shop'];
+                                        $id_acc = $_COOKIE['gotoindex'];
+                                        $name_pro = $_POST['name_shop'];
+                                        $date_purchase = date('Y-m-d H:i:s');
+
+                                        $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
+                                        echo "<script>alert('Thanks for buying!');</script>";
+
+                                        $query = "insert into invoice_details(id_inv, id_pro, photo_inv, name_pro, date_purchase, addr, phone, quantity, price, total) values(:id_inv , :id_pro , :photo_inv , :name_pro , :date_purchase , :addr , :phone, :quantity, :price, :total )";
+                                        $param = [
+                                            "id_inv"  =>$result,
+                                            "id_pro"    =>$_POST['id_pro'],
+                                            "photo_inv"     =>$_POST['photo_shop'],
+                                            "name_pro"     =>$_POST['name_shop'],
+                                            "date_purchase"     =>$date_purchase,
+                                            "addr"     =>$_SESSION['addr'],
+                                            "phone"     =>$_SESSION['phone'],
+                                            "quantity"     =>$_POST['quantity_shop'],
+                                            "price"     =>$_POST['price_shop'],
+                                            "total"     =>$total,
+                                        ];
+                                        $stmt = $db->insertdataparam($query,$param);
+                                    else:
+                                        echo "<script>alert('Please Sign in or Sign up to continue!');</script>";
+                                    endif;
+                                endif;
+
                         ?>
                             <form action="#" method="post">
                         <table class="table table-data2">
@@ -100,7 +134,11 @@ endif;
                                     <span class="">$<?php echo number_format($product['price_shop']);?></span>
                                 </td>
                                 <td>
+                                    <input type="hidden" name="price_shop" value="<?=$product['price_shop'];?>">
+                                    <input type="hidden" name="name_shop" value="<?=$product['name_shop'];?>">
                                     <input type="hidden" name="id_pro" value="<?=$product['id_pro'];?>">
+                                    <input type="hidden" name="photo_shop" value="<?=$product['photo_shop'];?>">
+
                                     <input class="badge-light" type="number" name="quantity_shop" value="<?=$product['quantity_shop'];?>" style="width: 50px" min="1" max="999" maxlength="3">
                                     <button class="btn-warning" type="submit" name="savequantity">Save</button>
                                 </td>
@@ -117,7 +155,6 @@ endif;
                             </tr>
                             </tbody>
                         </table>
-                            </form>
                         <?php endwhile;?>
                         <hr>
                             <div class="row">
@@ -128,6 +165,8 @@ endif;
                                 </div>
 
                             </div>
+                            </form>
+
                     </div>
 
                 </div><br>

@@ -328,53 +328,6 @@ endif;
                     <input type="text" class="inputSearch" placeholder="Search" name="searchpro">
                     <button type="submit" class="btnSearch"><i class="fa fa-search"></i></button>
                 </form>
-                <!--                <div class="areaFilter fr row">-->
-                <!--                    <div class="boxSelect fr">-->
-                <!--                        <div class="titleSelect">Sort by</div>-->
-                <!--                        <ul class="optionSelect">-->
-                <!--                            <li sortIndex="0"><a href="">Alphabet</a></li>-->
-                <!--                            <li sortIndex="1"><a href="">Price, Ascending</a></li>-->
-                <!--                            <li sortIndex="2"><a href="">Price, Descending</a></li>-->
-                <!--                            <li sortIndex="3"><a href="">Latest</a></li>-->
-                <!--                        </ul>-->
-                <!--                    </div>-->
-                <!--                    <!-      FILTER -->
-                <!--                    <div class="btnFilter fr bg-fff"><span class="fa fa-filter"></span>Filter</div>-->
-                <!--                    <div class="boxFilter">-->
-                <!--                        <div class="btnFilter"><span class="fa fa-close"></span>Close</div>-->
-                <!--                        <!-          GROUP -->
-                <!--                        <div class="groupInput">-->
-                <!--                            <select name="">-->
-                <!--                                <option value="">Brand</option>-->
-                <!--                                <option value="">Brand 01</option>-->
-                <!--                                <option value="">Brand 02</option>-->
-                <!--                            </select>-->
-                <!--                            <select name="">-->
-                <!--                                <option value="">Category</option>-->
-                <!--                                <option value="">Category 01</option>-->
-                <!--                                <option value="">Category 02</option>-->
-                <!--                            </select>-->
-                <!--                            <select name="">-->
-                <!--                                <option value="">Author</option>-->
-                <!--                                <option value="">Author 01</option>-->
-                <!--                                <option value="">Author 02</option>-->
-                <!--                            </select>-->
-                <!--                        </div>-->
-                <!--                                END GROUP -->
-                <!--                        <!-           GROUP -->
-                <!--                        <div class="groupInput">-->
-                <!--                            <p class="titleInput">Price</p>-->
-                <!--                            <div id="filterPrice"></div>-->
-                <!--                            <div class="areaValue">-->
-                <!--                                <p>From</p>-->
-                <!--                                <input type="text" class="rangeValue">-->
-                <!--                                <p>To</p>-->
-                <!--                                <input type="text" class="rangeValue">-->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                                END GROUP -->
-                <!--                    </div>-->
-                <!--                </div>-->
             </div>
             <form action="#" method="GET" name="listForm" class="form scrollX">
                 <div class="formHeader row">
@@ -393,8 +346,6 @@ endif;
                         <div class="cell cell-100 text-center text-fff">STATUS</div>
                         <div class="cell cell-100 text-center text-fff">YEAR</div>
                         <div class="cell cell-100 text-center text-fff">CODE</div>
-
-                        <div class="cell cell-100 text-center text-fff"><input type="checkbox" class="checkbox checkAll" name="statusAll" target=".status"></div>
                         <div class="cell cell-100 text-center text-fff">EDIT</div>
                     </div>
                     <!--   BEGIN LOOP -->
@@ -413,11 +364,6 @@ endif;
                                 <div class="cell cell-100 text-center"><?=$product['status_pro'];?></div>
                                 <div class="cell cell-100 text-center"><?=$product['year_pro'];?></div>
                                 <div class="cell cell-100 text-center"><?=$product['code'];?></div>
-
-                                <div class="cell cell-100 text-center">
-                                    <input type="hidden" class="status" name="status" value="0">
-                                    <input type="checkbox" class="btnSwitch status" name="status">
-                                </div>
                                 <div class="cell cell-100 text-center">
                                     <a href="admin.php?id_pro=<?=$product['id_pro'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hidepro=<?=$product['id_pro'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                                 </div>
@@ -606,53 +552,6 @@ endif;
                 <input type="text" class="inputSearch" placeholder="Search" name="searchuser">
                 <button type="submit" class="btnSearch"><i class="fa fa-search"></i></button>
             </form>
-            <!--                <div class="areaFilter fr row">-->
-            <!--                    <div class="boxSelect fr">-->
-            <!--                        <div class="titleSelect">Sort by</div>-->
-            <!--                        <ul class="optionSelect">-->
-            <!--                            <li sortIndex="0"><a href="">Alphabet</a></li>-->
-            <!--                            <li sortIndex="1"><a href="">Price, Ascending</a></li>-->
-            <!--                            <li sortIndex="2"><a href="">Price, Descending</a></li>-->
-            <!--                            <li sortIndex="3"><a href="">Latest</a></li>-->
-            <!--                        </ul>-->
-            <!--                    </div>-->
-            <!--                    <!-      FILTER -->
-            <!--                    <div class="btnFilter fr bg-fff"><span class="fa fa-filter"></span>Filter</div>-->
-            <!--                    <div class="boxFilter">-->
-            <!--                        <div class="btnFilter"><span class="fa fa-close"></span>Close</div>-->
-            <!--                        <!-          GROUP -->
-            <!--                        <div class="groupInput">-->
-            <!--                            <select name="">-->
-            <!--                                <option value="">Brand</option>-->
-            <!--                                <option value="">Brand 01</option>-->
-            <!--                                <option value="">Brand 02</option>-->
-            <!--                            </select>-->
-            <!--                            <select name="">-->
-            <!--                                <option value="">Category</option>-->
-            <!--                                <option value="">Category 01</option>-->
-            <!--                                <option value="">Category 02</option>-->
-            <!--                            </select>-->
-            <!--                            <select name="">-->
-            <!--                                <option value="">Author</option>-->
-            <!--                                <option value="">Author 01</option>-->
-            <!--                                <option value="">Author 02</option>-->
-            <!--                            </select>-->
-            <!--                        </div>-->
-            <!--                                END GROUP -->
-            <!--                        <!-           GROUP -->
-            <!--                        <div class="groupInput">-->
-            <!--                            <p class="titleInput">Price</p>-->
-            <!--                            <div id="filterPrice"></div>-->
-            <!--                            <div class="areaValue">-->
-            <!--                                <p>From</p>-->
-            <!--                                <input type="text" class="rangeValue">-->
-            <!--                                <p>To</p>-->
-            <!--                                <input type="text" class="rangeValue">-->
-            <!--                            </div>-->
-            <!--                        </div>-->
-            <!--                                END GROUP -->
-            <!--                    </div>-->
-            <!--                </div>-->
         </div>
         <form action="#" method="GET" name="listForm" class="form scrollX">
             <div class="formHeader row">
@@ -666,11 +565,10 @@ endif;
                     <div class="cell cell-50 text-center text-fff">ID</div>
                     <div class="cell cell-200 text-center text-fff">PHOTO</div>
                     <div class="cell cell-100p text-center text-fff">USER_NAME</div>
-                    <div class="cell cell-200 text-center text-fff">EMAIL</div>
-                    <div class="cell cell-200 text-center text-fff">FULLNAME</div>
-                    <div class="cell cell-100 text-center text-fff">DOB</div>
-                    <div class="cell cell-150 text-center text-fff">PHONE</div>
-                    <div class="cell cell-100 text-center text-fff"><input type="checkbox" class="checkbox checkAll" name="statusAll" target=".status"></div>
+                    <div class="cell cell-100p text-center text-fff">EMAIL</div>
+                    <div class="cell cell-100p text-center text-fff">FULLNAME</div>
+                    <div class="cell cell-100p text-center text-fff">DOB</div>
+                    <div class="cell cell-100p text-center text-fff">PHONE</div>
                     <div class="cell cell-100 text-center text-fff">EDIT</div>
                 </div>
                 <!--   BEGIN LOOP -->
@@ -678,21 +576,15 @@ endif;
                 while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
                     <ul>
                         <li class="row">
-                            <div class="cell cell-50 text-center"><a href="admin.php?id_acc=<?=$product['id_acc'];?>"><?=$product['id_acc'];?></a></div>
+                            <div class="cell cell-50 text-center"><?=$product['id_acc'];?></div>
                             <div class="cell cell-200 text-center">
-                                <a href="admin.php?id_acc=<?=$product['id_acc'];?>"><img src="../images/<?=$product['photo_acc'];?>" alt="" width="100"></a>
+                                <a href="admin.php?id_acc=<?=$product['photo_acc'];?>"><img src="../images/<?=$product['photo_acc'];?>" alt="" width="100"></a>
                             </div>
-                            <div class="cell cell-100p text-center"><a href="admin.php?id_acc=<?=$product['id_acc'];?>"><?=$product['user_name'];?></a></div>
-
-                            <div class="cell cell-200 text-center"><?=$product['email'];?></div>
-                            <div class="cell cell-200 text-center"><?=$product['fullname'];?></div>
-                            <div class="cell cell-100 text-center"><?=$product['dob'];?></div>
-                            <div class="cell cell-150 text-center"><?=$product['phone'];?></div>
-
-                            <div class="cell cell-100 text-center">
-                                <input type="hidden" class="status" name="status" value="0">
-                                <input type="checkbox" class="btnSwitch status" name="status">
-                            </div>
+                            <div class="cell cell-100p text-center"><a href="admin.php?id_pro=<?=$product['user_name'];?>"><?=$product['user_name'];?></a></div>
+                            <div class="cell cell-100p text-center"><?=$product['email'];?></div>
+                            <div class="cell cell-100p text-center"><?=$product['fullname'];?></div>
+                            <div class="cell cell-100p text-center"><?=$product['dob'];?></div>
+                            <div class="cell cell-100p text-center"><?=$product['phone'];?></div>
                             <div class="cell cell-100 text-center">
                                 <a href="admin.php?id_acc=<?=$product['id_acc'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hideacc=<?=$product['id_acc'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                             </div>
@@ -702,6 +594,7 @@ endif;
 
                 <!--   END LOOP -->
             </div>
+
         </form>
         <?php if(isset($paging)):
             echo $paging->html();
@@ -899,60 +792,11 @@ endif;
                 <input type="text" class="inputSearch" placeholder="Search" name="searchinv">
                 <button type="submit" class="btnSearch"><i class="fa fa-search"></i></button>
             </form>
-            <!--                <div class="areaFilter fr row">-->
-            <!--                    <div class="boxSelect fr">-->
-            <!--                        <div class="titleSelect">Sort by</div>-->
-            <!--                        <ul class="optionSelect">-->
-            <!--                            <li sortIndex="0"><a href="">Alphabet</a></li>-->
-            <!--                            <li sortIndex="1"><a href="">Price, Ascending</a></li>-->
-            <!--                            <li sortIndex="2"><a href="">Price, Descending</a></li>-->
-            <!--                            <li sortIndex="3"><a href="">Latest</a></li>-->
-            <!--                        </ul>-->
-            <!--                    </div>-->
-            <!--                    <!-      FILTER -->
-            <!--                    <div class="btnFilter fr bg-fff"><span class="fa fa-filter"></span>Filter</div>-->
-            <!--                    <div class="boxFilter">-->
-            <!--                        <div class="btnFilter"><span class="fa fa-close"></span>Close</div>-->
-            <!--                        <!-          GROUP -->
-            <!--                        <div class="groupInput">-->
-            <!--                            <select name="">-->
-            <!--                                <option value="">Brand</option>-->
-            <!--                                <option value="">Brand 01</option>-->
-            <!--                                <option value="">Brand 02</option>-->
-            <!--                            </select>-->
-            <!--                            <select name="">-->
-            <!--                                <option value="">Category</option>-->
-            <!--                                <option value="">Category 01</option>-->
-            <!--                                <option value="">Category 02</option>-->
-            <!--                            </select>-->
-            <!--                            <select name="">-->
-            <!--                                <option value="">Author</option>-->
-            <!--                                <option value="">Author 01</option>-->
-            <!--                                <option value="">Author 02</option>-->
-            <!--                            </select>-->
-            <!--                        </div>-->
-            <!--                                END GROUP -->
-            <!--                        <!-           GROUP -->
-            <!--                        <div class="groupInput">-->
-            <!--                            <p class="titleInput">Price</p>-->
-            <!--                            <div id="filterPrice"></div>-->
-            <!--                            <div class="areaValue">-->
-            <!--                                <p>From</p>-->
-            <!--                                <input type="text" class="rangeValue">-->
-            <!--                                <p>To</p>-->
-            <!--                                <input type="text" class="rangeValue">-->
-            <!--                            </div>-->
-            <!--                        </div>-->
-            <!--                                END GROUP -->
-            <!--                    </div>-->
-            <!--                </div>-->
         </div>
         <form action="#" method="GET" name="listForm" class="form scrollX">
             <div class="formHeader row">
                 <h2 class="text-1 fl">Invoice List</h2>
-                <div class="fr">
-                    <a href="admin.php?addinv" class="btnAdd fa fa-plus bg-1 text-fff"></a>
-                </div>
+
             </div>
             <div class="table">
                 <div class="row bg-1">
@@ -964,8 +808,6 @@ endif;
                     <div class="cell cell-150 text-center text-fff">DATE_PURCHASE</div>
                     <div class="cell cell-100 text-center text-fff">PHONE</div>
                     <div class="cell cell-200 text-center text-fff">TOTAL</div>
-                    <div class="cell cell-100 text-center text-fff"><input type="checkbox" class="checkbox checkAll" name="statusAll" target=".status"></div>
-                    <div class="cell cell-100 text-center text-fff">EDIT</div>
                 </div>
                 <!--   BEGIN LOOP -->
                 <?php
@@ -983,13 +825,6 @@ endif;
                             <div class="cell cell-150 text-center"><?=date("m-d-Y h:i:s", strtotime($product['date_purchase']));?></div>
                             <div class="cell cell-100 text-center"><?=$product['phone'];?></div>
                             <div class="cell cell-200 text-center"><?=$product['total'];?></div>
-                            <div class="cell cell-100 text-center">
-                                <input type="hidden" class="status" name="status" value="0">
-                                <input type="checkbox" class="btnSwitch status" name="status">
-                            </div>
-                            <div class="cell cell-100 text-center">
-                                <a href="admin.php?id_inv=<?=$product['id_inv'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hideinv=<?=$product['id_inv'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
-                            </div>
                         </li>
                     </ul>
                 <?php endwhile; ?>
@@ -1016,9 +851,7 @@ endif;
             <form action="admin.php?id_inv=<?=$product['id_inv'];?>" method="post" enctype="multipart/form-data" class="form">
                 <div class="formHeader row">
                     <h2 class="text-1 fl">Invoice Detail</h2>
-                    <div class="fr">
-                        <button type="submit" class="btnSave bg-1 text-fff text-bold fr" name="savechangeinv">SAVE</button>
-                    </div>
+
                 </div>
 
                 <div class="formBody row">
@@ -1075,65 +908,6 @@ endif;
                 </div>
             </form>
         <?php endwhile;$db->closeconnect();?>
-        <?php if(isset($_GET['addinv'])):?>
-            <form action="admin.php?invoice" method="post" enctype="multipart/form-data" class="form">
-                <div class="formHeader row">
-                    <h2 class="text-1 fl">Add Invoice</h2>
-                    <div class="fr">
-                        <button type="submit" class="btnSave bg-1 text-fff text-bold fr" name="addinv">SAVE</button>
-                    </div>
-                </div>
-
-                <div class="formBody row">
-                    <div class="column s-6">
-                        <label class="inputGroup">
-                            <span>ID invoice</span>
-                            <span><input type="number" name="id_inv" ></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>ID product</span>
-                            <span><input type="number" name="id_pro" ></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Name</span>
-                            <span><input type="text" name="name_pro" ></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Price</span>
-                            <span><input type="number" name="price" ></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Quantity</span>
-                            <span><input type="number" name="quantity" ></span>
-                        </label>
-
-                    </div>
-                    <div class="column s-6">
-                        <label class="inputGroup">
-                            <span>Date of purchase</span>
-                            <span><input type="datetime-local" name="date_of_purchase" maxlength="4" ></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Phone</span>
-                            <span><input type="text" name="phone"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>Address</span>
-                            <span><input type="text" name="addr"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <span>TOTAL</span>
-                            <span><input type="text" name="total"></span>
-                        </label>
-                        <label class="inputGroup">
-                            <input type="file" name="photo_inv" onchange="getImg(this)" multiple><br/>
-                            <img src="" height="200px" id="photo_inv"><br/>
-                            </span>
-                        </label>
-                    </div>
-                </div>
-            </form>
-        <?php endif;?>
     </div>
     <!-- END CONTAINER  -->
 </div>
