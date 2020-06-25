@@ -124,8 +124,8 @@ endif;
 
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <a class="nav-link text-left" style="color:black" href="account.php?account">Profile</a><br>
-                                        <a class="nav-link text-left" style="color:black"href="cart.php?account&cart">Cart</a><br>
-                                        <a class="nav-link text-left" style="color:black"href="purchase.php?account&purchase">
+                                        <a class="nav-link text-left" style="color:black"href="cart.php?account">Cart</a><br>
+                                        <a class="nav-link text-left" style="color:black"href="purchase.php?account">
                                             Purchase history</a><br>
                                         <a href="signin.php?logout" class="nav-link text-left" style="color:black">Log out</a>
                                     </div>

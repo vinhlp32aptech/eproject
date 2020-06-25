@@ -41,16 +41,13 @@
 
     <?php
     if (isset($_COOKIE['gotoindex'])):
-            if(isset($_GET['cart'])):
                 include_once "public/header.php";
-            if(isset($_GET['savequantity'])):
+            if(isset($_POST['savequantity'])):
                 if(isset($_COOKIE['gotoindex'])):
 
-                        $query = "update shopping_cart set quantity_shop = :quantity_shop where id_pro = :id_pro,id_acc = :id_acc ";
+                        $query = "update shopping_cart set quantity_shop = :quantity_shop where id_pro = {$_POST['id_pro']} && id_acc = " . $_COOKIE['gotoindex'];
                         $param = [
-                                "quantity_shop"  =>  $_SESSION['quantity_cart'],
-                                "id_pro"  => $_SESSION['id_pro'],
-                                "id_acc"  => $_COOKIE['gotoindex']
+                                "quantity_shop"  => $_POST['quantity_shop'],
                         ];
                         $stmt = $db->updatedataparam($query,$param);
                     endif;
@@ -67,11 +64,8 @@
                         <?php
                         $query = "select * from shopping_cart where id_acc = " .$_COOKIE['gotoindex'];
                         $stmt = $db->selectdata($query);
-                        while ($product = $stmt->fetch(PDO::FETCH_ASSOC)): $total= $product['quantity_shop'] * $product['price_shop'];
-                        $_SESSION['quantity_cart'] = $product['quantity_shop'];
-                            $_SESSION['id_pro'] = $product['id_pro'];
-                        ?>
-                            <form action="#" method="get">
+                        while ($product = $stmt->fetch(PDO::FETCH_ASSOC)): $total= $product['quantity_shop'] * $product['price_shop']; ?>
+                            <form action="#" method="post">
                         <table class="table table-data2">
                             <thead>
                             <tr>
@@ -94,6 +88,7 @@
                                     <span class="">$<?=$product['price_shop'];?></span>
                                 </td>
                                 <td>
+                                    <input type="hidden" name="id_pro" value="<?=$product['id_pro'];?>">
                                     <input class="badge-light" type="number" name="quantity_shop" value="<?=$product['quantity_shop'];?>" style="width: 50px" min="1" max="999" maxlength="3">
                                     <button href="cart.php?account&cart&savequantity" class="btn-warning" type="submit">Save</button>
                                 </td>
@@ -130,10 +125,6 @@
 <br><br><br><br>
     <?php
     include_once "public/footer.php";
-    else:
-    header('location: index.php');
-
-endif;
     else:
     header('location: index.php');
     endif;

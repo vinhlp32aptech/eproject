@@ -41,7 +41,6 @@
 
     <?php
     if (isset($_COOKIE['gotoindex'])):
-        if(isset($_GET['purchase'])):
         include_once "public/header.php";
         ?>
 
@@ -91,10 +90,6 @@
         <br><br><br><br>
 
         <?php include_once "public/footer.php"?>
-
-    <?php
-    else: header('location: index.php');
-    endif;?>
     <?php
     else:
     header('location: index.php');
