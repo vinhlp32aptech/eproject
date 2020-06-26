@@ -114,17 +114,10 @@ endif;
                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>
                 </div>
             </div>
-            <label class="anim">
-                <input type="checkbox" class="checkbox">
-                <span>Remember Me</span>
-                <a href="ForgotPassword.php">Forgot Password</a><br>
-
-            </label>
             <div class="clear"></div>
             <div class="submit-agileits">
                 <input type="submit" value="Sign in" name="signin">
             </div>
-
         </form>
         <div class="submit-agileits">
             <h5><a style="color:#00c6d7;" href="signup.php">Sign up</a></h5>
