@@ -44,16 +44,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-  
   <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript">
