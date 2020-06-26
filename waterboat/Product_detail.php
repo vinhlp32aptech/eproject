@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title> Product information </title>
+    <title>Product-details</title>
     <link rel="icon" href="images/logo.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,6 +37,16 @@
 <?php
 if(isset($_GET['id_pro'])):
     include_once "public/header.php";
+
+//    $query = "select id_pro from product ";
+//    $stmt = $db->selectdata($query);
+//    while ($product=$stmt->fetch(PDO::FETCH_ASSOC)):
+//            if($_GET['id_pro'] === $product['id_pro']):
+//echo "sai roi";
+//else:
+//                echo "dung roi";
+//            endif;
+//    endwhile;
 else:
     header('location: services.php');
 endif;
@@ -101,24 +111,30 @@ if(isset($_POST['buynow'])):
         $id_acc = $_COOKIE['gotoindex'];
         $name_pro = $_POST['name_shop'];
         $date_purchase = date('Y-m-d H:i:s');
+        $id_pro = $_GET['id_pro'];
+        $photo_inv = $_POST['photo_shop'];
+        $quantity =$_POST['quantity_shop'];
+        $price = $_POST['price_shop'];
+        $phone = $_SESSION['phone'];
+        $addr = $_SESSION['addr'];
 
  $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
-        echo "<script>alert('Thanks for buying!');</script>";
 
-                    $query = "insert into invoice_details(id_inv, id_pro, photo_inv, name_pro, date_purchase, addr, phone, quantity, price, total) values(:id_inv , :id_pro , :photo_inv , :name_pro , :date_purchase , :addr , :phone, :quantity, :price, :total )";
-                    $param = [
-                        "id_inv"  =>$result,
-                        "id_pro"    =>$_GET['id_pro'],
-                        "photo_inv"     =>$_POST['photo_shop'],
-                        "name_pro"     =>$_POST['name_shop'],
-                        "date_purchase"     =>$date_purchase,
-                        "addr"     =>$_SESSION['addr'],
-                        "phone"     =>$_SESSION['phone'],
-                        "quantity"     =>$_POST['quantity_shop'],
-                        "price"     =>$_POST['price_shop'],
-                        "total"     =>$total,
-                    ];
-                    $stmt = $db->insertdataparam($query,$param);
+        $db->insertinvoicedetails($result, $id_pro, $photo_inv, $name_pro, $date_purchase,$addr,$phone,$quantity, $price, $total);
+
+        $query = "select quantity_pro from product where id_pro = " .$id_pro;
+       $stmt = $db->selectdata($query);
+       while ($product=$stmt->fetch(PDO::FETCH_ASSOC)):
+           if ($product['quantity_pro'] > 0):
+                $change = $product['quantity_pro'] - $quantity;
+           $db->changequantity($id_pro,$change);
+               echo "<script>alert('Thanks for shopping at Marina Fleet!');</script>";
+
+           else:
+               echo "<script>alert('Out of stock!');</script>";
+
+           endif;
+       endwhile;
     else:
         echo "<script>alert('Please Sign in or Sign up to continue!');</script>";
     endif;

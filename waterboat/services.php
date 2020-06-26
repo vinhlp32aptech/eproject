@@ -17,7 +17,7 @@ if(isset($_GET['aaa'])):
     $config = [
         'current_page'  => isset($_GET['page'])?$_GET['page']:1,
         'total_record'  => $total,
-        'limit'         => 6,
+        'limit'         => 9,
         'link_full'     => (trim($_GET['search'])=="")?'services.php?page={page}':"services.php?page={page}&search={$_GET['search']}",
         'link_first'    => (trim($_GET['search'])=="")?'services.php':"services.php?search={$_GET['search']}",
         'range'         => 5,
@@ -34,7 +34,7 @@ else:
     $config = [
         'current_page'  => isset($_GET['page'])?$_GET['page']:1,
         'total_record'  => $total,
-        'limit'         => 6,
+        'limit'         => 9,
         'link_full'     => 'services.php?page={page}',
         'link_first'    => 'services.php',// Link trang đầu tiên
         'range'         => 5, // Số button trang bạn muốn hiển thị
@@ -148,34 +148,34 @@ endif;
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-location mb-30">
                     <div class="location-img">
-                        <a href="Lease.php?Travel" ><img src="images/Luxury-yachts.jpg" alt="" height="360px" width="286px"></a>
+                        <a href="Lease.php?services&Travel" ><img src="images/Luxury-yachts.jpg" alt="" height="360px" width="286px"></a>
                     </div>
 
                     <div class="location-details">
                         <p>Luxury yachts</p>
-                            <a href="Lease.php?Travel" class="location-btn">20 <i class="ti-plus"></i> Location</a>
+                            <a href="Lease.php?services&Travel" class="location-btn"><?php echo $db->counttravel();?> <i class="ti-plus"></i> Yachts</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-location mb-30">
                     <div class="location-img">
-                        <a href="Lease.php?Sport" ><img src="images/sport-boat.jpg" alt="" height="360px" width="286px"><a/>
+                        <a href="Lease.php?services&Sport" ><img src="images/sport-boat.jpg" alt="" height="360px" width="286px"><a/>
                     </div>
                     <div class="location-details">
                         <p>Sport Boat</p>
-                        <a href="Lease.php?Sport" class="location-btn">20 <i class="ti-plus"></i> Location</a>
+                        <a href="Lease.php?services&Sport" class="location-btn"><?php echo  $db->countsport();?> <i class="ti-plus"></i> Boat</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-location mb-30">
                     <div class="location-img">
-                        <a href="Lease.php?Fishing" ><img src="images/fishing.jpg" alt="" height="360px" width="286px"><a/>
+                        <a href="Lease.php?services&Fishing" ><img src="images/fishing.jpg" alt="" height="360px" width="286px"><a/>
                     </div>
                     <div class="location-details">
                         <p>Fishing boats</p>
-                        <a href="Lease.php?Fishing" class="location-btn">20 <i class="ti-plus"></i> Location</a>
+                        <a href="Lease.php?services&Fishing" class="location-btn"><?php echo $db->countfish();?> <i class="ti-plus"></i> Boat</a>
                     </div>
                 </div>
             </div>
@@ -197,14 +197,14 @@ endif;
             while($product = $stmt->fetch(PDO::FETCH_ASSOC)):
                 ?>
                 <li class="one_third">
-                    <article><a href="Product_detail.php?id_pro=<?= $product['id_pro'];?>"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
+                    <article><a href="Product_detail.php?services&id_pro=<?= $product['id_pro'];?>"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
                         <h6 class="heading"><?= $product['name_pro'];?></h6>
                         <ul class="nospace meta">
                             <li><i class="fa fa-calendar"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
                             <li><i class="fa fa-tag"></i> <a href="#">Classify:<?= $product['code'];?></a></li>
                         </ul>
                         <p style="font-size: 20px;color: red"><i class="fa fa-dollar"></i><?= $product['price_pro'];?></p>
-                        <footer class="nospace"><a class="btn" type="submit" href="Product_detail.php?id_pro=<?= $product['id_pro'];?>">Real More &raquo;</a></footer>
+                        <footer class="nospace"><a class="btn" type="submit" href="Product_detail.php?services&id_pro=<?= $product['id_pro'];?>">Real More &raquo;</a></footer>
                     </article>
                 </li>
             <?php

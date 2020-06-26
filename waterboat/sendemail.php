@@ -25,7 +25,7 @@ if (isset($_POST['name']) && isset($_POST['email'])) {
     //Email Settings
     $mail->isHTML(true);
     $mail->setFrom($email, $name);
-    $mail->addAddress("gumsupper40@gmail.com");
+    $mail->addAddress("marinafleet2@gmail.com");
     $mail->Subject = $subject;
     $mail->Body = $body;
 

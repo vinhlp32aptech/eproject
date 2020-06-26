@@ -110,14 +110,14 @@ endif;
             while($product = $stmt->fetch(PDO::FETCH_ASSOC)):
             ?>
             <li class="one_third">
-                <article><a href="Product_detail.php?id_pro=<?= $product['id_pro'];?>"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
+                <article><a href="Product_detail.php?services&id_pro=<?= $product['id_pro'];?>"><img src="images/<?= $product['photo'];?>" alt="" height="100px" width="100px"></a>
                     <h6 class="heading"><?= $product['name_pro'];?></h6>
                     <ul class="nospace meta">
                         <li><i class="fa fa-calendar"></i> <a href="#">Year:<?= $product['year_pro'];?></a></li>
                         <li><i class="fa fa-tag"></i> <a href="#">Classify:<?= $product['code'];?></a></li>
                     </ul>
                     <p style="font-size: 20px;color: red"><i class="fa fa-dollar"></i><?= $product['price_pro'];?></p>
-                    <footer class="nospace"><a class="btn" href="Product_detail.php?id_pro=<?= $product['id_pro'];?>">Real More &raquo;</a></footer>
+                    <footer class="nospace"><a class="btn" href="Product_detail.php?services&id_pro=<?= $product['id_pro'];?>">Real More &raquo;</a></footer>
                 </article>
             </li>
             <?php
