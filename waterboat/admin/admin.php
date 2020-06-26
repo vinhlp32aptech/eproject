@@ -157,15 +157,7 @@ session_start();
 //    header('location: '. $_SERVER['REQUEST_URI']);
         endif;
         //        ----hide product
-//        if(isset($_GET['hidefeedback'])):
-//            $query = "update feedback set status = 0 where id_pro=:id_pro, id_acc = :id_acc " ;
-//            $param = [
-//                "id_pro" => $_GET['id_pro'],
-//                "id_acc" => $_GET['id_acc'],
-//            ];
-//            $stmt = $db->updatedataparam($query, $param);
-////            header('location: '. $_SERVER['REQUEST_URI']);
-//        endif;
+//
         //        ----hide product
         if(isset($_GET['hideacc'])):
             $query = "update account set status = 0 where id_acc = :id_acc" ;
@@ -201,34 +193,6 @@ session_start();
         endif;
 
 
-        /////uppdate account
-        if(isset($_POST['savechangeacc'])):
-            if($_FILES['photo_acc']['name'] != ''):
-                move_uploaded_file($_FILES['photo_acc']['tmp_name'], '../images/'.$_FILES['photo_acc']['name']);
-                $photo = $_FILES['photo_acc']['name'];
-            else:
-                $photo = $_POST['oldphoto'];
-            endif;
-
-            $query = "update account set user_name = :user_name, password = :password, email = :email, phone = :phone, fullname = :fullname, gender = :gender, dob = :dob, addr = :addr, photo_acc = :photo_acc where id_acc= :id_acc";
-            $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-            $param = [
-                "user_name"          =>$_POST['user_name'],
-                "password"             =>$hash,
-                "email"          =>$_POST['email'],
-                "phone"        =>$_POST['phone'],
-                "fullname"       =>$_POST['fullname'],
-                "gender"       =>$_POST['gender'],
-                "dob"       =>$_POST['dob'],
-                "addr"       =>$_POST['addr'],
-                "photo_acc"             =>$photo,
-                "id_acc"                =>$_GET['id_acc'],
-
-            ];
-            $db->updatedataparam($query, $param);
-            header('location: admin.php?id_acc='.$_GET['id_acc']);
-        endif;
 
         /////update data
         if(isset($_SESSION['product'])):
@@ -500,9 +464,7 @@ elseif (isset($_SESSION['user'])):
         <form action="#" method="GET" name="listForm" class="form scrollX">
             <div class="formHeader row">
                 <h2 class="text-1 fl">User List</h2>
-                <div class="fr">
-                    <a href="admin.php?addacc" class="btnAdd fa fa-plus bg-1 text-fff"></a>
-                </div>
+
             </div>
             <div class="table">
                 <div class="row bg-1">
@@ -534,7 +496,7 @@ elseif (isset($_SESSION['user'])):
 
                             <div class="cell cell-100 text-center"><?=$product['phone'];?></div>
 
-                            <div class="cell cell-100 text-center"> <a href="admin.php?id_acc=<?=$product['id_acc'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hideacc=<?=$product['id_acc'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
+                            <div class="cell cell-100 text-center"> <a href="admin.php?hideacc=<?=$product['id_acc'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                             </div>
                         </li>
                     </ul>
@@ -919,7 +881,7 @@ elseif(isset($_SESSION['invoice'])):
                     <div class="cell cell-100 text-center text-fff">ID ACCOUNT</div>
                     <div class="cell cell-200 text-center text-fff">USER_NAME</div>
                     <div class="cell cell-100p text-center text-fff">CONTENT</div>
-<!--                    <div class="cell cell-100 text-center text-fff">EDIT</div>-->
+                    <div class="cell cell-100 text-center text-fff">EDIT</div>
                 </div>
                 <!--   BEGIN LOOP -->
                 <?php
@@ -931,8 +893,8 @@ elseif(isset($_SESSION['invoice'])):
                             <div class="cell cell-100 text-center"><?=$product['id_acc'];?></div>
                             <div class="cell cell-200 text-center"><a href="admin.php?id_acc=<?=$product['id_acc'];?>"><?=$product['user_name'];?></a></div>
                             <div class="cell cell-100p text-center"><?=$product['content'];?></div>
-<!--                            <div class="cell cell-100 text-center"><a href="admin.php?id_acc=--><?//=$product['id_acc'];?><!--&id_pro=--><?//=$product['id_pro'];?><!--" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>-->
-<!--                            </div>-->
+                            <div class="cell cell-100 text-center"><a href="admin.php?id_acc=<?=$product['id_acc'];?>&id_pro=<?=$product['id_pro'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
+                            </div>
                         </li>
                     </ul>
                 <?php endwhile; ?>

@@ -36,7 +36,22 @@
 
     <link rel="stylesheet" href="css/hotline.css">
     <link rel="stylesheet" href="">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
 
+            $("#submit").click(function () {
+                var email = document.getElementById('email');
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if (!filter.test(email.value)) {
+                    alert('Email is not valid!.\nExample@gmail.com');
+                    email.focus();
+                    return false;
+                }
+                return true;
+            });
+        });
+    </script>
 
 
 </head>
@@ -48,10 +63,7 @@
     <?php include_once "public/header.php" ?>
 
 
-
-
 </div>
-
 
 
 </div>
@@ -75,7 +87,8 @@
     <div style="text-align:center" class="col-md-5">
         <br><br><br><br>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4237543370045!2d106.68827279879031!3d10.778820881379646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3a9d92c4a7%3A0x6293396afcadc8a5!2zMjEyIE5ndXnhu4VuIMSQw6xuaCBDaGnhu4N1LCBQaMaw4budbmcgNiwgUXXhuq1uIDMsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1591975922656!5m2!1svi!2s
-" width="90%" height="70%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+" width="90%" height="70%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
     </div>
     <div class="col-md-7">
         <div class="site-section1">
@@ -89,7 +102,8 @@
                     </div>
                     <div class="col-md-6 form-group">
                         <label for="subject">Tel. Number</label>
-                        <input type="tel" id="subject" class="form-control form-control-lg" maxlength="11" minlength="10">
+                        <input type="tel" id="subject" class="form-control form-control-lg" maxlength="11"
+                               minlength="10">
                     </div>
                 </div>
                 <div class="row">
@@ -100,7 +114,8 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <input type="submit" onclick="sendemail()" value="Send Message" class="btn btn-primary rounded-0 px-3 px-5">
+                        <input type="submit" onclick="sendemail()" id="submit" value="Send Message"
+                               class="btn btn-primary rounded-0 px-3 px-5">
                     </div>
                 </div>
             </div>
@@ -170,7 +185,7 @@
     </div>
 </div>
 
-<?php include_once "public/footer.php"?>
+<?php include_once "public/footer.php" ?>
 
 
 </div>
@@ -178,7 +193,13 @@
 
 
 <!-- loader -->
-<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
+<div id="loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#ff5e15"/>
+    </svg>
+</div>
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -194,8 +215,6 @@
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/jquery.sticky.js"></script>
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
-
-
 
 
 <script src="js/main.js"></script>
