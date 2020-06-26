@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title> Product information </title>
+    <title>Product-details</title>
     <link rel="icon" href="images/logo.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

@@ -108,7 +108,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 								<div class="clear"></div>
                                 <div class="form-sub-w3">
-									<input type="text" name="email"  placeholder="Email" required="" />
+                                    <input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text">
 								    <div class="icon-w3">
 									<i class="fas fa-envelope-square" aria-hidden="true"></i>
 								    </div>
@@ -126,7 +126,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<div class="clear"></div>
 
 								<div class="submit-agileits">
-									<input type="submit" name="signup" id="signup" value="Sign Up">
+									<input type="submit" name="signup" id="signup" value="Sign Up" onclick="checkEmail();">
 								</div>
 
 							</form>
@@ -158,8 +158,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/jquery.mb.YTPlayer.min.js"></script>
-
-
 
 
   <script src="js/main.js"></script>
