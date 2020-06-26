@@ -13,24 +13,28 @@ $username = trim($_POST['user_name']);
 $password = trim($_POST['password']);
 
 $query = "select user_name from account where user_name=:user_name ";
+$param = [
+        "user_name"     =>$username,
+];
+$stmt = $db->selectdataparam($query,$param);
+$countacc = $stmt->rowCount();
+    if ($countacc > 0):
+        echo "<script> alert('Account already exists!')</script>";
 
-$stmt = $db->selectdata($query);
+    else:
+        $query = "insert into account( user_name, password, email, phone) values(:user_name, :password, :email, :phone)";
+        $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $param = [
+            "user_name" => $_POST['user_name'],
+            "password" => $hash,
+            "email" => $_POST['email'],
+            "phone" => $_POST['phone']
+        ];
+        $stmt = $db->insertdataparam($query, $param);
+        echo "<script> alert('Sign up Successful. Please Sign in!')</script>";
 
-
-$account = $stmt->fetch(PDO::FETCH_ASSOC);
-
-//
-    $query = "insert into account( user_name, password, email, phone) values(:user_name, :password, :email, :phone)";
-    $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $param = [
-        "user_name" => $_POST['user_name'],
-        "password" => $hash,
-        "email" => $_POST['email'],
-        "phone" => $_POST['phone']
-    ];
-    $stmt = $db->insertdataparam($query, $param);
-    echo "<script> alert('Sign up Successful. Please Sign in!')</script>";
-endif;
+    endif;
+    endif;
 //insert data
 ?>
 
