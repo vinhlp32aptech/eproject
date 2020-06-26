@@ -168,23 +168,18 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
                 <span class="icon flaticon-mortarboard"></span>
-                <h3>Our Philosphy</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis
-                    delectus ea? Dolore, amet reprehenderit.</p>
+                <h3>In the world</h3>
+                <p>Azimut Yachts is a classic yacht builder in the boating world. YachtWorld currently has 1,513 Azimut Yachts yachts for sale, including 93 new vessels and 1,420 used yachts, listed by experienced dealerships mainly in the following countries: United States, Italy, Turkey, Spain and France.</p>
             </div>
             <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
                 <span class="icon flaticon-school-material"></span>
-                <h3>Academics Principle</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis
-                    delectus ea?
-                    Dolore, amet reprehenderit.</p>
+                <h3>Azimut History</h3>
+                <p>Azimut Yachts came about in 1969, when the young university student Paolo Vitelli founded Azimut Srl, and began chartering sailing boats. In 1970 some prestigious yachting brands appointed the company to distribute their boats in Italy.</p>
             </div>
             <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
                 <span class="icon flaticon-library"></span>
                 <h3>Key of Success</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis
-                    delectus ea?
-                    Dolore, amet reprehenderit.</p>
+                <p>The most successful salespeople take as much time as necessary to establish trust with that client. They ask good questions and listen closely to the answers. They seek to understand the customer's situation and needs before they make any attempt to talk about their product or service.</p>
             </div>
         </div>
     </div>
