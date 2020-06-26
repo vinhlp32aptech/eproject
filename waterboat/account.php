@@ -195,7 +195,7 @@ if(isset($_COOKIE['gotoindex'])):
 
                         <div class="form-group row">
                             <div class="offset-4 col-8">
-                                <button name="update" type="submit" id="update" class="btn btn-primary" onclick="checkEmail();">Update My Profile</button>
+                                <button name="update" type="submit" id="update" class="btn btn-primary">Update My Profile</button>
                             </div>
                         </div>
         </form>

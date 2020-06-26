@@ -68,6 +68,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                 }
                 return true;
             });
+            $("#signup").click(function () {
+                var email = document.getElementById('email');
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if (!filter.test(email.value)) {
+                    alert('Email is not valid!.\nExample@gmail.com');
+                    email.focus();
+                    return false;
+                }
+                return true;
+            });
         });
     </script>
 
@@ -115,22 +125,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								</div>
 								<div class="form-sub-w3">
 									<input type="text" name="phone"  placeholder="Phone Number" maxlength="11" required="" />
-
 								<div class="icon-w3">
 									<i class="fas fa-phone-square" aria-hidden="true"></i>
 								</div>
 								</div>
-
-
-
 								<div class="clear"></div>
-
 								<div class="submit-agileits">
-									<input type="submit" name="signup" id="signup" value="Sign Up" onclick="checkEmail();">
+									<input type="submit" name="signup" id="signup" value="Sign Up">
 								</div>
-
 							</form>
-
                             <div class="submit-agileits " id="link_signin" style="color: white;">
                              Do you already have an account? 
                              <a href="Signin.php">Signin now ! </a>

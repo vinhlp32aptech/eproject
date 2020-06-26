@@ -32,7 +32,7 @@ session_start();
 
 <div class="container">
 
-<!--         SIDE AREA-->
+    <!--         SIDE AREA-->
     <div class="sideArea">
         <div class="avatar">
             <?php
@@ -43,8 +43,8 @@ session_start();
                 ];
 
                 $stmt = $db->selectdataparam($query, $param);
-                else:
-                    header('location: signinad.php');
+            else:
+                header('location: signinad.php');
             endif;
             while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
@@ -56,6 +56,8 @@ session_start();
             </li>
             <li><a href="admin.php?invoice"><span class="fa fa-money"></span>INVOICE</a></li>
             <li><a href="admin.php?user"><span class="fa fa-user-o"></span>USER</a></li>
+            <li><a href="admin.php?feedback"><span class="fa fa-user-o"></span>FEEDBACK</a></li>
+
         </ul>
     </div>
     <!--     SIDE AREA -->
@@ -78,18 +80,21 @@ session_start();
 
 
 
-if(isset($_GET['user'])):
-    $_SESSION['user'] = 'kkkk';
-unset($_SESSION['invoice']); unset($_SESSION['product']);
-elseif(isset($_GET['invoice'])):
-    $_SESSION['invoice'] = $_GET['invoice'];
-    unset($_SESSION['user']); unset($_SESSION['product']);
-elseif(isset($_GET['product'])):
-    $_SESSION['product'] = $_GET['product'];
-    unset($_SESSION['user']); unset($_SESSION['invoice']);
-endif;
+        if(isset($_GET['user'])):
+            $_SESSION['user'] = 'kkkk';
+            unset($_SESSION['invoice']); unset($_SESSION['product']);
+        elseif(isset($_GET['invoice'])):
+            $_SESSION['invoice'] = $_GET['invoice'];
+            unset($_SESSION['user']); unset($_SESSION['product']);
+        elseif(isset($_GET['product'])):
+            $_SESSION['product'] = $_GET['product'];
+            unset($_SESSION['user']); unset($_SESSION['invoice']);
+        elseif(isset($_GET['feedback'])):
+            $_SESSION['feedback'] = $_GET['feedback'];
+            unset($_SESSION['user']); unset($_SESSION['invoice']); unset($_SESSION['product']);
+        endif;
 
-//////-----------------------------------------------insert data
+        //////-----------------------------------------------insert data
         //insert product-----------
         if(isset($_POST['addpro'])):
             if($_FILES['photo']['name'] != ''):
@@ -112,32 +117,7 @@ endif;
             $db->insertdataparam($query, $param);
             header('location: admin.php?product');
         endif;
-        //insert invoice-----------
 
-        if(isset($_POST['addinv'])):
-            if($_FILES['photo_inv']['name'] != ''):
-                move_uploaded_file($_FILES['photo_inv']['tmp_name'], '../images/'.$_FILES['photo_inv']['name']);
-                $photo = $_FILES['photo_inv']['name'];
-            else:
-                $photo = $_POST['oldphoto'];
-            endif;
-
-            $query = "insert into invoice_details(id_inv , id_pro  , photo_inv  , name_pro  , date_of_purchase , addr , phone, quantity, price, total ) values(:id_inv, :id_pro, :photo_inv, :name_pro, :date_of_purchase, :addr, :phone, :quantity, :price, :total)";
-            $param = [
-                "id_inv"       =>$_POST['id_inv'],
-                "id_pro"       =>$_POST['id_pro'],
-                "photo_inv"             =>$photo,
-                "name_pro"          =>$_POST['name_pro'],
-                "date_of_purchase"             =>$_POST['date_of_purchase'],
-                "addr"          =>$_POST['addr'],
-                "phone"        =>$_POST['phone'],
-                "quantity"       =>$_POST['quantity'],
-                "price"       =>$_POST['price'],
-                "total"       =>$_POST['total'],
-            ];
-            $db->updatedataparam($query, $param);
-            header('location: admin.php?invoice');
-        endif;
         //insert account-----------
         if(isset($_POST['addacc'])):
             if($_FILES['photo_acc']['name'] != ''):
@@ -166,25 +146,26 @@ endif;
             header('location: admin.php?user');
         endif;
 
-//delete data and save it
-//        ----hide product
-if(isset($_GET['hidepro'])):
-    $query = "update product set status = 0 where id_pro = :id_pro" ;
-    $param = [
-        "id_pro" => $_GET['hidepro'],
-    ];
-    $stmt = $db->updatedataparam($query, $param);
-//    header('location: '. $_SERVER['REQUEST_URI']);
-endif;
+        //delete data and save it
         //        ----hide product
-        if(isset($_GET['hideinv'])):
-            $query = "update invoice_details set status = 0 where id_inv = :id_inv" ;
+        if(isset($_GET['hidepro'])):
+            $query = "update product set status = 0 where id_pro = :id_pro" ;
             $param = [
-                "id_inv" => $_GET['hideinv'],
+                "id_pro" => $_GET['hidepro'],
             ];
             $stmt = $db->updatedataparam($query, $param);
-//            header('location: '. $_SERVER['REQUEST_URI']);
+//    header('location: '. $_SERVER['REQUEST_URI']);
         endif;
+        //        ----hide product
+//        if(isset($_GET['hidefeedback'])):
+//            $query = "update feedback set status = 0 where id_pro=:id_pro, id_acc = :id_acc " ;
+//            $param = [
+//                "id_pro" => $_GET['id_pro'],
+//                "id_acc" => $_GET['id_acc'],
+//            ];
+//            $stmt = $db->updatedataparam($query, $param);
+////            header('location: '. $_SERVER['REQUEST_URI']);
+//        endif;
         //        ----hide product
         if(isset($_GET['hideacc'])):
             $query = "update account set status = 0 where id_acc = :id_acc" ;
@@ -194,132 +175,103 @@ endif;
             $stmt = $db->updatedataparam($query, $param);
 //            header('location: '. $_SERVER['REQUEST_URI']);
         endif;
-////-------------------------update data---------------------------------------------
-//////update product
-if(isset($_POST['savechangepro'])):
-    if($_FILES['photo']['name'] != ''):
-        move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$_FILES['photo']['name']);
-        $photo = $_FILES['photo']['name'];
-    else:
-        $photo = $_POST['oldphoto'];
-    endif;
+        ////-------------------------update data---------------------------------------------
+        //////update product
+        if(isset($_POST['savechangepro'])):
+            if($_FILES['photo']['name'] != ''):
+                move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$_FILES['photo']['name']);
+                $photo = $_FILES['photo']['name'];
+            else:
+                $photo = $_POST['oldphoto'];
+            endif;
 
-    $query = "update product set photo = :photo, name_pro = :name_pro, price_pro = :price_pro, quantity_pro = :quantity_pro, status_pro = :status_pro, year_pro = :year_pro, code = :code where id_pro= :id_pro";
-    $param = [
-        "photo"             =>$photo,
-        "name_pro"          =>$_POST['name_pro'],
-        "price_pro"             =>$_POST['price_pro'],
-        "quantity_pro"          =>$_POST['quantity_pro'],
-        "status_pro"        =>$_POST['status_pro'],
-        "year_pro"       =>$_POST['year_pro'],
-        "code"       =>$_POST['code'],
-        "id_pro"                =>$_GET['id_pro']
-    ];
-    $db->updatedataparam($query, $param);
-    header('location: admin.php?id_pro='.$_GET['id_pro']);
-endif;
-
-
-/////uppdate account
-if(isset($_POST['savechangeacc'])):
-    if($_FILES['photo_acc']['name'] != ''):
-        move_uploaded_file($_FILES['photo_acc']['tmp_name'], '../images/'.$_FILES['photo_acc']['name']);
-        $photo = $_FILES['photo_acc']['name'];
-    else:
-        $photo = $_POST['oldphoto'];
-    endif;
-
-    $query = "update account set user_name = :user_name, password = :password, email = :email, phone = :phone, fullname = :fullname, gender = :gender, dob = :dob, addr = :addr, photo_acc = :photo_acc where id_acc= :id_acc";
-    $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-    $param = [
-        "user_name"          =>$_POST['user_name'],
-        "password"             =>$hash,
-        "email"          =>$_POST['email'],
-        "phone"        =>$_POST['phone'],
-        "fullname"       =>$_POST['fullname'],
-        "gender"       =>$_POST['gender'],
-        "dob"       =>$_POST['dob'],
-        "addr"       =>$_POST['addr'],
-        "photo_acc"             =>$photo,
-        "id_acc"                =>$_GET['id_acc'],
-
-    ];
-    $db->updatedataparam($query, $param);
-    header('location: admin.php?id_acc='.$_GET['id_acc']);
-endif;
-
-////// update invoice
-if(isset($_POST['savechangeinv'])):
-    if($_FILES['photo_inv']['name'] != ''):
-        move_uploaded_file($_FILES['photo_inv']['tmp_name'], '../images/'.$_FILES['photo_inv']['name']);
-        $photo = $_FILES['photo_inv']['name'];
-    else:
-        $photo = $_POST['oldphoto'];
-    endif;
-
-    $query = "update invoice_details set id_inv = :id_inv, id_pro = :id_pro, photo_inv = :photo_inv, name_pro = :name_pro, date_of_purchase = :date_of_purchase, addr = :addr, phone = :phone, quantity = :quantity, price = :price, total = :total where id_inv = :id_inv";
-    $param = [
-        "id_inv"       =>$_POST['id_inv'],
-        "id_pro"       =>$_POST['id_pro'],
-        "photo_inv"             =>$photo,
-        "name_pro"          =>$_POST['name_pro'],
-        "date_of_purchase"             =>$_POST['date_of_purchase'],
-        "addr"          =>$_POST['addr'],
-        "phone"        =>$_POST['phone'],
-        "quantity"       =>$_POST['quantity'],
-        "price"       =>$_POST['price'],
-        "total"       =>$_POST['total'],
-        "id_inv"                =>$_GET['id_inv']
-    ];
-    $db->updatedataparam($query, $param);
-    header('location: admin.php?id_inv='.$_GET['id_inv']);
-endif;
-
-/////update data
+            $query = "update product set photo = :photo, name_pro = :name_pro, price_pro = :price_pro, quantity_pro = :quantity_pro, status_pro = :status_pro, year_pro = :year_pro, code = :code where id_pro= :id_pro";
+            $param = [
+                "photo"             =>$photo,
+                "name_pro"          =>$_POST['name_pro'],
+                "price_pro"             =>$_POST['price_pro'],
+                "quantity_pro"          =>$_POST['quantity_pro'],
+                "status_pro"        =>$_POST['status_pro'],
+                "year_pro"       =>$_POST['year_pro'],
+                "code"       =>$_POST['code'],
+                "id_pro"                =>$_GET['id_pro']
+            ];
+            $db->updatedataparam($query, $param);
+            header('location: admin.php?id_pro='.$_GET['id_pro']);
+        endif;
 
 
-if(isset($_SESSION['product'])):
-///////--------------
-//show data, search and paging
-if(isset($_GET['searchpro'])):
+        /////uppdate account
+        if(isset($_POST['savechangeacc'])):
+            if($_FILES['photo_acc']['name'] != ''):
+                move_uploaded_file($_FILES['photo_acc']['tmp_name'], '../images/'.$_FILES['photo_acc']['name']);
+                $photo = $_FILES['photo_acc']['name'];
+            else:
+                $photo = $_POST['oldphoto'];
+            endif;
 
-    $query ="select * from product where status = 1 && concat(name_pro, price_pro, status_pro, year_pro, code) like ? ";
-    $param = [
-        "%{$_GET['searchpro']}%"
-    ];
-    $stmt = $db->selectDataParam($query, $param);
-    $total = $stmt->rowCount();
-    $config = [
-        'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-        'total_record'  => $total, // Tổng số record -> tong so hang
-        'limit'         => 10,// limit
-        'link_full'     => (trim($_GET['searchpro'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchpro={$_GET['searchpro']}",// Link full có dạng như sau: domain/com/page/{page}
-        'link_first'    => (trim($_GET['searchpro'])=="")?'admin.php':"admin.php?searchpro={$_GET['searchpro']}",// Link trang đầu tiên
-        'range'         => 5, // Số button trang bạn muốn hiển thị
-    ];
-    $paging = new Pagination();
-    $paging->init($config);
-    $query = "select * from product where status = 1 && concat(name_pro, price_pro, status_pro, year_pro, code) like ? " .$paging->get_limit();
-    $stmt = $db->selectdataparam($query,$param);
-else:
-$query = "select * from product where status = 1 ";
-$stmt = $db->selectData($query);
-$total = $stmt->rowCount();
-$config = [
-    'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-    'total_record'  => $total, // Tổng số record -> tong so hang
-    'limit'         => 10,// limit
-    'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
-    'link_first'    => 'admin.php',// Link trang đầu tiên
-    'range'         => 5, // Số button trang bạn muốn hiển thị
-];
-$paging = new Pagination();
-$paging->init($config);
-$query = "select * from product where status = 1 " .$paging->get_limit();
-$stmt = $db->selectdata($query);
-endif;
-?>
+            $query = "update account set user_name = :user_name, password = :password, email = :email, phone = :phone, fullname = :fullname, gender = :gender, dob = :dob, addr = :addr, photo_acc = :photo_acc where id_acc= :id_acc";
+            $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+            $param = [
+                "user_name"          =>$_POST['user_name'],
+                "password"             =>$hash,
+                "email"          =>$_POST['email'],
+                "phone"        =>$_POST['phone'],
+                "fullname"       =>$_POST['fullname'],
+                "gender"       =>$_POST['gender'],
+                "dob"       =>$_POST['dob'],
+                "addr"       =>$_POST['addr'],
+                "photo_acc"             =>$photo,
+                "id_acc"                =>$_GET['id_acc'],
+
+            ];
+            $db->updatedataparam($query, $param);
+            header('location: admin.php?id_acc='.$_GET['id_acc']);
+        endif;
+
+        /////update data
+        if(isset($_SESSION['product'])):
+        ///////--------------
+        //show data, search and paging
+        if(isset($_GET['searchpro'])):
+
+            $query ="select * from product where status = 1 && concat(name_pro, price_pro, status_pro, year_pro, code) like ? ";
+            $param = [
+                "%{$_GET['searchpro']}%"
+            ];
+            $stmt = $db->selectDataParam($query, $param);
+            $total = $stmt->rowCount();
+            $config = [
+                'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
+                'total_record'  => $total, // Tổng số record -> tong so hang
+                'limit'         => 10,// limit
+                'link_full'     => (trim($_GET['searchpro'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchpro={$_GET['searchpro']}",// Link full có dạng như sau: domain/com/page/{page}
+                'link_first'    => (trim($_GET['searchpro'])=="")?'admin.php':"admin.php?searchpro={$_GET['searchpro']}",// Link trang đầu tiên
+                'range'         => 5, // Số button trang bạn muốn hiển thị
+            ];
+            $paging = new Pagination();
+            $paging->init($config);
+            $query = "select * from product where status = 1 && concat(name_pro, price_pro, status_pro, year_pro, code) like ? " .$paging->get_limit();
+            $stmt = $db->selectdataparam($query,$param);
+        else:
+            $query = "select * from product where status = 1 ";
+            $stmt = $db->selectData($query);
+            $total = $stmt->rowCount();
+            $config = [
+                'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
+                'total_record'  => $total, // Tổng số record -> tong so hang
+                'limit'         => 10,// limit
+                'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
+                'link_first'    => 'admin.php',// Link trang đầu tiên
+                'range'         => 5, // Số button trang bạn muốn hiển thị
+            ];
+            $paging = new Pagination();
+            $paging->init($config);
+            $query = "select * from product where status = 1 " .$paging->get_limit();
+            $stmt = $db->selectdata($query);
+        endif;
+        ?>
 
         <div class="mainContent">
             <!-- LIST FORM -->
@@ -496,7 +448,7 @@ endif;
 
 <!--//////----------------user--------------------------------------------->
 <?php
-    elseif (isset($_SESSION['user'])):
+elseif (isset($_SESSION['user'])):
     //show data, search and paging
     if(isset($_GET['searchuser'])):
         $query ="select * from account where status = 1 && concat(user_name, email, phone, fullname, dob, addr) like ? ";
@@ -737,50 +689,50 @@ endif;
         <?php endif;?>
     </div>
     <!-- END CONTAINER  -->
-</div>
-</div>
+    </div>
+    </div>
 
-    <?php
-    else:
+<?php
+elseif(isset($_SESSION['invoice'])):
 //show data, search and paging
-if(isset($_GET['searchinv'])):
-    $query ="select * from invoice_details where status = 1 && concat(name_pro,price,date_purchase,addr,phone,total) like ? ";
-    $param = [
-        "%{$_GET['searchinv']}%"
-    ];
-    $stmt = $db->selectDataParam($query, $param);
-    $total = $stmt->rowCount();
-    $config = [
-        'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-        'total_record'  => $total, // Tổng số record -> tong so hang
-        'limit'         => 10,// limit
-        'link_full'     => (trim($_GET['searchinv'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchinv={$_GET['searchinv']}",// Link full có dạng như sau: domain/com/page/{page}
-        'link_first'    => (trim($_GET['searchinv'])=="")?'admin.php':"admin.php?searchinv={$_GET['searchinv']}",// Link trang đầu tiên
-        'range'         => 5, // Số button trang bạn muốn hiển thị
-    ];
-    $paging = new Pagination();
-    $paging->init($config);
-    $query = "select * from invoice_details where status = 1 && concat(name_pro,price,date_of_purchase,addr,phone,total) like ? " .$paging->get_limit();
-    $stmt = $db->selectdataparam($query,$param);
-else:
+    if(isset($_GET['searchinv'])):
+        $query ="select * from invoice_details where status = 1 && concat(name_pro,price,date_purchase,addr,phone,total) like ? ";
+        $param = [
+            "%{$_GET['searchinv']}%"
+        ];
+        $stmt = $db->selectDataParam($query, $param);
+        $total = $stmt->rowCount();
+        $config = [
+            'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
+            'total_record'  => $total, // Tổng số record -> tong so hang
+            'limit'         => 10,// limit
+            'link_full'     => (trim($_GET['searchinv'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchinv={$_GET['searchinv']}",// Link full có dạng như sau: domain/com/page/{page}
+            'link_first'    => (trim($_GET['searchinv'])=="")?'admin.php':"admin.php?searchinv={$_GET['searchinv']}",// Link trang đầu tiên
+            'range'         => 5, // Số button trang bạn muốn hiển thị
+        ];
+        $paging = new Pagination();
+        $paging->init($config);
+        $query = "select * from invoice_details where status = 1 && concat(name_pro,price,date_of_purchase,addr,phone,total) like ? " .$paging->get_limit();
+        $stmt = $db->selectdataparam($query,$param);
+    else:
 
-$query = "select * from invoice_details where status = 1 ";
-$stmt = $db->selectData($query);
-$total = $stmt->rowCount();
-$config = [
-    'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-    'total_record'  => $total, // Tổng số record -> tong so hang
-    'limit'         => 10,// limit
-    'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
-    'link_first'    => 'admin.php',// Link trang đầu tiên
-    'range'         => 5, // Số button trang bạn muốn hiển thị
-];
-$paging = new Pagination();
-$paging->init($config);
-$query = "select * from invoice_details where status = 1 " .$paging->get_limit();
-$stmt = $db->selectdata($query);
-endif;
-?>
+        $query = "select * from invoice_details where status = 1 ";
+        $stmt = $db->selectData($query);
+        $total = $stmt->rowCount();
+        $config = [
+            'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
+            'total_record'  => $total, // Tổng số record -> tong so hang
+            'limit'         => 10,// limit
+            'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
+            'link_first'    => 'admin.php',// Link trang đầu tiên
+            'range'         => 5, // Số button trang bạn muốn hiển thị
+        ];
+        $paging = new Pagination();
+        $paging->init($config);
+        $query = "select * from invoice_details where status = 1 " .$paging->get_limit();
+        $stmt = $db->selectdata($query);
+    endif;
+    ?>
 
     <div class="mainContent">
         <!-- LIST FORM -->
@@ -907,7 +859,166 @@ endif;
         <?php endwhile;$db->closeconnect();?>
     </div>
     <!-- END CONTAINER  -->
-</div>
+    </div>
+<?php else:
+    if(isset($_GET['searchfeedback'])):
+    $query ="select * from feedback where status = 1 && concat(id_acc,id_pro,user_name) like ? ";
+    $param = [
+    "%{$_GET['searchfeedback']}%"
+    ];
+    $stmt = $db->selectDataParam($query, $param);
+    $total = $stmt->rowCount();
+    $config = [
+    'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
+    'total_record'  => $total, // Tổng số record -> tong so hang
+    'limit'         => 10,// limit
+    'link_full'     => (trim($_GET['searchfeedback'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchfeedback={$_GET['searchfeedback']}",// Link full có dạng như sau: domain/com/page/{page}
+    'link_first'    => (trim($_GET['searchfeedback'])=="")?'admin.php':"admin.php?searchfeedback={$_GET['searchfeedback']}",// Link trang đầu tiên
+    'range'         => 5, // Số button trang bạn muốn hiển thị
+    ];
+    $paging = new Pagination();
+    $paging->init($config);
+    $query = "select * from feedback where status = 1 && concat(id_acc,id_pro,user_name) like ? " .$paging->get_limit();
+    $stmt = $db->selectdataparam($query,$param);
+    else:
+
+    $query = "select * from feedback where status = 1 ";
+    $stmt = $db->selectData($query);
+    $total = $stmt->rowCount();
+    $config = [
+    'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
+    'total_record'  => $total, // Tổng số record -> tong so hang
+    'limit'         => 10,// limit
+    'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
+    'link_first'    => 'admin.php',// Link trang đầu tiên
+    'range'         => 5, // Số button trang bạn muốn hiển thị
+    ];
+    $paging = new Pagination();
+    $paging->init($config);
+    $query = "select * from feedback where status = 1 " .$paging->get_limit();
+    $stmt = $db->selectdata($query);
+    endif;
+    ?>
+
+    <div class="mainContent">
+        <!-- LIST FORM -->
+        <div class="row filterGroup">
+            <form action="#" method="get" class="formSearch fl">
+                <input type="text" class="inputSearch" placeholder="Search" name="searchfeedback">
+                <button type="submit" class="btnSearch"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <form action="#" method="GET" name="listForm" class="form scrollX">
+            <div class="formHeader row">
+                <h2 class="text-1 fl">Feedback List</h2>
+
+            </div>
+            <div class="table">
+                <div class="row bg-1">
+                    <div class="cell cell-100 text-center text-fff">ID PRODUCT</div>
+                    <div class="cell cell-100 text-center text-fff">ID ACCOUNT</div>
+                    <div class="cell cell-200 text-center text-fff">USER_NAME</div>
+                    <div class="cell cell-100p text-center text-fff">CONTENT</div>
+<!--                    <div class="cell cell-100 text-center text-fff">EDIT</div>-->
+                </div>
+                <!--   BEGIN LOOP -->
+                <?php
+                while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
+
+                    <ul>
+                        <li class="row">
+                            <div class="cell cell-100 text-center"><?=$product['id_pro'];?></div>
+                            <div class="cell cell-100 text-center"><?=$product['id_acc'];?></div>
+                            <div class="cell cell-200 text-center"><a href="admin.php?id_acc=<?=$product['id_acc'];?>"><?=$product['user_name'];?></a></div>
+                            <div class="cell cell-100p text-center"><?=$product['content'];?></div>
+<!--                            <div class="cell cell-100 text-center"><a href="admin.php?id_acc=--><?//=$product['id_acc'];?><!--&id_pro=--><?//=$product['id_pro'];?><!--" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>-->
+<!--                            </div>-->
+                        </li>
+                    </ul>
+                <?php endwhile; ?>
+
+                <!--   END LOOP -->
+            </div>
+        </form>
+        <?php if(isset($paging)):
+            echo $paging->html();
+        endif; ?>
+
+        <!-- DETAIL FORM -->
+        <?php
+        if(isset($_GET['id_inv'])):
+            $query =  "select * from invoice_details where id_inv = :id_inv";
+            $param = [
+                "id_inv"=>$_GET['id_inv']
+            ];
+
+            $stmt = $db->selectdataparam($query, $param);
+        endif;
+        while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
+
+            <form action="admin.php?id_inv=<?=$product['id_inv'];?>" method="post" enctype="multipart/form-data" class="form">
+                <div class="formHeader row">
+                    <h2 class="text-1 fl">Invoice Detail</h2>
+
+                </div>
+
+                <div class="formBody row">
+                    <div class="column s-6">
+                        <label class="inputGroup">
+                            <span>ID invoice</span>
+                            <span><input type="number" name="id_inv" value="<?=$product['id_inv'];?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>ID product</span>
+                            <span><input type="number" name="id_pro" value="<?=$product['id_pro'];?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Name</span>
+                            <span><input type="text" name="name_pro" value="<?=$product['name_pro'];?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Price</span>
+                            <span><input type="number" name="price" value="<?=$product['price'];?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Quantity</span>
+                            <span><input type="number" name="quantity" value="<?=$product['quantity'];?>"></span>
+                        </label>
+
+                    </div>
+                    <div class="column s-6">
+                        <label class="inputGroup">
+                            <span>Date of purchase</span>
+                            <span><input type="datetime-local" name="date_of_purchase" value="<?=date("m-d-Y h:i", strtotime($product['date_of_purchase']));?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Phone</span>
+                            <span><input type="tel" name="phone" value="<?=$product['phone'];?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Address</span>
+                            <span><input type="text" name="addr" value="<?=$product['addr'];?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>TOTAL</span>
+                            <span><input type="number" name="total" value="<?=$product['total'];?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Image</span>
+                            <!--                            <input type="hidden" name="img" value="src">-->
+                            <span>
+                <input type="hidden" name="oldphoto" value="<?=$product['photo_inv'];?>">
+                <input type="file" name="photo_inv" onchange="getImg(this)" multiple><br/>
+                <img src="../images/<?=$product['photo_inv'];?>" height="200px" id="photo_inv"><br/>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        <?php endwhile;$db->closeconnect();?>
+    </div>
+    <!-- END CONTAINER  -->
+    </div>
 <?php endif;?>
 </div>
 </div>
