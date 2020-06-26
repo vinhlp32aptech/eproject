@@ -77,18 +77,18 @@
 //            echo $product['id_pro'];
 //        endwhile;
     while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
-        $name_pro = $product['name_shop'];
-        $id_pro = $product['id_pro'];
-        $photo_inv = $product['photo_shop'];
-        $quantity = $product['quantity_shop'];
-        $price = $product['price_shop'];
-        $phone = $_SESSION['phone'];
-        $addr = $_SESSION['addr'];
-        $total = $product['quantity_shop'] * $product['price_shop'];
+    echo    $name_pro = $product['name_shop'];
+      echo  $id_pro = $product['id_pro'];
+        echo    $photo_inv = $product['photo_shop'];
+        echo   $quantity = $product['quantity_shop'];
+        echo    $price = $product['price_shop'];
+        echo   $phone = $_SESSION['phone'];
+        echo   $addr = $_SESSION['addr'];
+        echo  $total = $product['quantity_shop'] * $product['price_shop'];
         $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
         $db->insertinvoicedetails($result, $id_pro, $photo_inv, $name_pro, $date_purchase,$addr,$phone,$quantity, $price, $total);
-        $query = "select quantity_pro from product where id_pro = " .$id_pro;
-        $stmt = $db->selectdata($query);
+//        $query = "select quantity_pro from product where id_pro = " .$id_pro;
+//        $stmt = $db->selectdata($query);
 //        while ($product=$stmt->fetch(PDO::FETCH_ASSOC)):
 //            if ($product['quantity_pro'] > 0):
 //                $change = $product['quantity_pro'] - $quantity;
