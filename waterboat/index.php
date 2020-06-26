@@ -4,7 +4,7 @@ include_once "conn/Pagination.php";
 
 $db = new database();
 
-    $query = "select * from product where status = 1 limit 9 ";
+    $query = "select * from product where status = 1 order by quantity_pro limit 9 ";
     $stmt = $db->selectdata($query);
 ?>
 <!DOCTYPE html>
