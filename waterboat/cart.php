@@ -73,9 +73,7 @@
 
     $query = "select * from shopping_cart where id_acc = " .$_COOKIE['gotoindex'];
     $stmt = $db->selectdata($query);
-//        while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
-//            echo $product['id_pro'];
-//        endwhile;
+
     while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
     echo    $name_pro = $product['name_shop'];
       echo  $id_pro = $product['id_pro'];
@@ -87,20 +85,17 @@
         echo  $total = $product['quantity_shop'] * $product['price_shop'];
         $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
         $db->insertinvoicedetails($result, $id_pro, $photo_inv, $name_pro, $date_purchase,$addr,$phone,$quantity, $price, $total);
-//        $query = "select quantity_pro from product where id_pro = " .$id_pro;
-//        $stmt = $db->selectdata($query);
-//        while ($product=$stmt->fetch(PDO::FETCH_ASSOC)):
-//            if ($product['quantity_pro'] > 0):
-//                $change = $product['quantity_pro'] - $quantity;
-//                $db->changequantity($id_pro,$change);
-//                echo "<script>alert('Thanks for shopping at Marina Fleet!');</script>";
-//
-//            else:
-//                echo "<script>alert('Out of stock!');</script>";
-//            endif;
-//        endwhile;
-
-//        $db->deletecart();
+        $a = "select quantity_pro from product where id_pro = " .$id_pro;
+        $b = $db->selectdata($a);
+        while ($c=$b->fetch(PDO::FETCH_ASSOC)):
+            if ($c['quantity_pro'] > 0):
+                $change = $c['quantity_pro'] - $quantity;
+                $db->changequantity($id_pro,$change);
+            else:
+                echo "<script>alert('Out of stock!');</script>";
+            endif;
+        endwhile;
+        $db->deletecart();
     endwhile;
 
     endif;
