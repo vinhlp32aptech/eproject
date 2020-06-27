@@ -70,7 +70,7 @@
           </div>
       </div>
 
-      <div class="site-section bg-image overlay" style="background-image: url('images/hero_1.jpg');">
+      <div class="site-section bg-image overlay" style="background-image: url('images/Lease4.jpg');">
           <div class="container">
               <div class="row">
                   <div class="col">

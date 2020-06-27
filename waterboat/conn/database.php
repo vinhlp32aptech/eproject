@@ -110,10 +110,11 @@ class database
     {
         try {
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO invoice (id_acc, name_pro, date_purchase, total)
-  VALUES (:id_acc, :name_pro, :date_purchase, :total)";
+            $sql = "INSERT INTO invoice (id_acc, invoice_no, name_pro, date_purchase, total)
+  VALUES (:id_acc, :invoice_no, :name_pro, :date_purchase, :total)";
             $param = [
                 "id_acc"    =>$id_acc,
+                "invoice_no"    => 0,
                 "name_pro"    =>$name_pro,
                 "date_purchase"    =>$date_purchase,
                 "total"    =>$total,
@@ -132,10 +133,11 @@ class database
     {
         try {
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "insert into invoice_details(id_inv, id_pro, photo_inv, name_pro, date_purchase, addr, phone, quantity, price, total) values(:id_inv , :id_pro , :photo_inv , :name_pro , :date_purchase , :addr , :phone, :quantity, :price, :total )";
+        $sql = "insert into invoice_details(id_inv, id_pro, invoice_no,  photo_inv, name_pro, date_purchase, addr, phone, quantity, price, total) values(:id_inv , :id_pro , :invoice_no,  :photo_inv , :name_pro , :date_purchase , :addr , :phone, :quantity, :price, :total )";
         $param = [
             "id_inv"  =>$result,
             "id_pro"    =>$id_pro,
+            "invoice_no"      => 0,
             "photo_inv"     =>$photo_inv,
             "name_pro"     =>$name_pro,
             "date_purchase"     =>$date_purchase,

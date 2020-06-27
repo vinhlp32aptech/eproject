@@ -21,10 +21,10 @@ if (isset($_POST['login'])):
     $account = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($account > 0):
         $_SESSION['gotoadmin'] = $account['user_name'];
-        if ($username === $account['user_name'] && password_verify($password, $account['password'])):
+        if ($username === $account['user_name'] && $password === $account['password']):
             header('location: admin.php?product');
         else:
-            if (password_verify($password, $account['password'])):
+            if ($password === $account['password']):
 
                 header('location: admin.php?product');
 

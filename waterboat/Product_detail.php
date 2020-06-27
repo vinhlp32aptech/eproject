@@ -124,6 +124,18 @@ if (isset($_POST['buynow'])):
 
             endif;
         endwhile;
+        $invoice_no = $_COOKIE['gotoindex'] + $result;
+        $upinvoice = "update invoice  set invoice_no=:invoice_no where invoice_no = 0 ";
+        $dateinvoice =[
+            "invoice_no"        => $invoice_no,
+        ];
+        $db->updatedataparam($upinvoice,$dateinvoice);
+
+        $updetail = "update invoice_details set invoice_no=:invoice_no where invoice_no = 0 ";
+        $datedetail =[
+            "invoice_no"        => $invoice_no,
+        ];
+        $db->updatedataparam($updetail,$datedetail);
     else:
         echo "<script>alert('Please Sign in or Sign up to continue!');</script>";
     endif;

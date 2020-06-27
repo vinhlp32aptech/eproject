@@ -69,7 +69,7 @@
 </div>
 
 
-<div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/hero_1.jpg');">
+<div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/VERTIGE-01-e1542791616891.jpg');">
     <div class="container">
         <div class="row align-items-center text-center border">
             <div class="col-lg-12 mt-5" data-aos="fade-up">
@@ -163,7 +163,7 @@
         }
     </script>
 </div>
-<div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');">
+<div class="section-bg style-1" style="background-image: url('images/VERTIGE-01-e1542791616891.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
