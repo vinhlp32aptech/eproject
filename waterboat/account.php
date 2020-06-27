@@ -47,7 +47,7 @@ if(isset($_COOKIE['gotoindex'])):
 
             $("#update").click(function () {
                 var email = document.getElementById('email');
-                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                var filter =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 if (!filter.test(email.value)) {
                     alert('Email is not valid!.\nExample@gmail.com');
                     email.focus();
