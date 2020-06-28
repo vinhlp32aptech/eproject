@@ -195,11 +195,10 @@ session_start();
 
 
         /////update data
-        if(isset($_SESSION['product'])):
+        if(isset($_SESSION['product']) || isset($_GET['id_pro'])):
         ///////--------------
         //show data, search and paging
         if(isset($_GET['searchpro'])):
-
             $query ="select * from product where status = 1 && concat(name_pro, price_pro, status_pro, year_pro, code) like ? ";
             $param = [
                 "%{$_GET['searchpro']}%"
@@ -214,6 +213,9 @@ session_start();
                 'link_first'    => (trim($_GET['searchpro'])=="")?'admin.php':"admin.php?searchpro={$_GET['searchpro']}",// Link trang đầu tiên
                 'range'         => 5, // Số button trang bạn muốn hiển thị
             ];
+            if (isset($_GET['page'])):
+                $_SESSION['page']  = $_GET['page'];
+            endif;
             $paging = new Pagination();
             $paging->init($config);
             $query = "select * from product where status = 1 && concat(name_pro, price_pro, status_pro, year_pro, code) like ? " .$paging->get_limit();
@@ -272,7 +274,8 @@ session_start();
                             <li class="row">
                                 <div class="cell cell-50 text-center"><?=$product['id_pro'];?></div>
                                 <div class="cell cell-200 text-center">
-                                    <a href="admin.php?id_pro=<?=$product['id_pro'];?>"><img src="../images/<?=$product['photo'];?>" alt="" width="100"></a>
+                                    <a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: ''; ?>&id_pro=<?=$product['id_pro'];?>&searchpro=<?= isset($_GET['searchpro'])?$_GET['searchpro']: ''; ?>"><img src="../images/<?=$product['photo'];?>" alt="" width="100"></a>
+
                                 </div>
                                 <div class="cell cell-100p text-center"><a href="admin.php?id_pro=<?=$product['id_pro'];?>"><?=$product['name_pro'];?></a></div>
                                 <div class="cell cell-100 text-center"><?=$product['price_pro'];?></div>
