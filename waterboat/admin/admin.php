@@ -1,5 +1,4 @@
 <?php
-
 include_once "../conn/database.php";
 include_once "../conn/Pagination.php";
 $db = new database();
@@ -79,7 +78,7 @@ session_start();
         <?php
 
 
-
+//create session
         if(isset($_GET['user'])):
             $_SESSION['user'] = 'kkkk';
             unset($_SESSION['invoice']); unset($_SESSION['product']);
@@ -154,18 +153,23 @@ session_start();
                 "id_pro" => $_GET['hidepro'],
             ];
             $stmt = $db->updatedataparam($query, $param);
-//    header('location: '. $_SERVER['REQUEST_URI']);
         endif;
-        //        ----hide product
 //
-        //        ----hide product
+        //        ----hide account
         if(isset($_GET['hideacc'])):
             $query = "update account set status = 0 where id_acc = :id_acc" ;
             $param = [
                 "id_acc" => $_GET['hideacc'],
             ];
             $stmt = $db->updatedataparam($query, $param);
-//            header('location: '. $_SERVER['REQUEST_URI']);
+        endif;
+        //        ----hide feedback
+        if(isset($_GET['hidefeedback'])):
+            $query = "update feedback set status = 0 where id_feedback = :id_feedback" ;
+            $param = [
+                "id_feedback" => $_GET['hidefeedback'],
+            ];
+            $stmt = $db->updatedataparam($query, $param);
         endif;
         ////-------------------------update data---------------------------------------------
         //////update product
@@ -195,11 +199,10 @@ session_start();
 
 
         /////update data
-        if(isset($_SESSION['product'])):
+        if(isset($_SESSION['product']) || isset($_GET['id_pro'])):
         ///////--------------
         //show data, search and paging
         if(isset($_GET['searchpro'])):
-
             $query ="select * from product where status = 1 && concat(name_pro, price_pro, status_pro, year_pro, code) like ? ";
             $param = [
                 "%{$_GET['searchpro']}%"
@@ -207,13 +210,16 @@ session_start();
             $stmt = $db->selectDataParam($query, $param);
             $total = $stmt->rowCount();
             $config = [
-                'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-                'total_record'  => $total, // Tổng số record -> tong so hang
+                'current_page'  => isset($_GET['page'])?$_GET['page']: 1,
+                'total_record'  => $total,
                 'limit'         => 10,// limit
-                'link_full'     => (trim($_GET['searchpro'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchpro={$_GET['searchpro']}",// Link full có dạng như sau: domain/com/page/{page}
-                'link_first'    => (trim($_GET['searchpro'])=="")?'admin.php':"admin.php?searchpro={$_GET['searchpro']}",// Link trang đầu tiên
-                'range'         => 5, // Số button trang bạn muốn hiển thị
+                'link_full'     => (trim($_GET['searchpro'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchpro={$_GET['searchpro']}",
+                'link_first'    => (trim($_GET['searchpro'])=="")?'admin.php':"admin.php?searchpro={$_GET['searchpro']}",
+                'range'         => 5,
             ];
+            if (isset($_GET['page'])):
+                $_SESSION['page']  = $_GET['page'];
+            endif;
             $paging = new Pagination();
             $paging->init($config);
             $query = "select * from product where status = 1 && concat(name_pro, price_pro, status_pro, year_pro, code) like ? " .$paging->get_limit();
@@ -223,12 +229,12 @@ session_start();
             $stmt = $db->selectData($query);
             $total = $stmt->rowCount();
             $config = [
-                'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-                'total_record'  => $total, // Tổng số record -> tong so hang
+                'current_page'  => isset($_GET['page'])?$_GET['page']: 1,
+                'total_record'  => $total,
                 'limit'         => 10,// limit
-                'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
-                'link_first'    => 'admin.php',// Link trang đầu tiên
-                'range'         => 5, // Số button trang bạn muốn hiển thị
+                'link_full'     => 'admin.php?page={page}',
+                'link_first'    => 'admin.php',
+                'range'         => 5,
             ];
             $paging = new Pagination();
             $paging->init($config);
@@ -272,16 +278,17 @@ session_start();
                             <li class="row">
                                 <div class="cell cell-50 text-center"><?=$product['id_pro'];?></div>
                                 <div class="cell cell-200 text-center">
-                                    <a href="admin.php?id_pro=<?=$product['id_pro'];?>"><img src="../images/<?=$product['photo'];?>" alt="" width="100"></a>
+                                    <a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&id_pro=<?=$product['id_pro'];?>&searchpro=<?= isset($_GET['searchpro'])?$_GET['searchpro']: ''; ?>"><img src="../images/<?=$product['photo'];?>" alt="" width="100"></a>
+
                                 </div>
-                                <div class="cell cell-100p text-center"><a href="admin.php?id_pro=<?=$product['id_pro'];?>"><?=$product['name_pro'];?></a></div>
+                                <div class="cell cell-100p text-center"><a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&id_pro=<?=$product['id_pro'];?>&searchpro=<?= isset($_GET['searchpro'])?$_GET['searchpro']: ''; ?>"><?=$product['name_pro'];?></a></div>
                                 <div class="cell cell-100 text-center"><?=$product['price_pro'];?></div>
                                 <div class="cell cell-100 text-center"><?=$product['quantity_pro'];?></div>
                                 <div class="cell cell-100 text-center"><?=$product['status_pro'];?></div>
                                 <div class="cell cell-100 text-center"><?=$product['year_pro'];?></div>
                                 <div class="cell cell-100 text-center"><?=$product['code'];?></div>
                                 <div class="cell cell-100 text-center">
-                                    <a href="admin.php?id_pro=<?=$product['id_pro'];?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?hidepro=<?=$product['id_pro'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
+                                    <a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&id_pro=<?=$product['id_pro'];?>&searchpro=<?= isset($_GET['searchpro'])?$_GET['searchpro']: ''; ?>" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&hidepro=<?=$product['id_pro'];?>&searchpro=<?= isset($_GET['searchpro'])?$_GET['searchpro']: ''; ?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                                 </div>
                             </li>
                         </ul>
@@ -344,7 +351,6 @@ session_start();
                             </label>
                             <label class="inputGroup">
                                 <span>Image</span>
-                                <!--                            <input type="hidden" name="img" value="src">-->
                                 <span>
                 <input type="hidden" name="oldphoto" value="<?=$product['photo'];?>">
                 <input type="file" name="photo" onchange="getImg(this)" multiple><br/>
@@ -394,7 +400,6 @@ session_start();
                             </label>
                             <label class="inputGroup">
                                 <span>Image</span>
-                                <!--                            <input type="hidden" name="img" value="src">-->
                                 <span>
                 <input type="hidden" name="oldphoto" >
                 <input type="file" name="photo" onchange="getImg(this)" multiple><br/>
@@ -414,20 +419,20 @@ session_start();
 <?php
 elseif (isset($_SESSION['user'])):
     //show data, search and paging
-    if(isset($_GET['searchuser'])):
+    if(isset($_GET['searchacc'])):
         $query ="select * from account where status = 1 && concat(user_name, email, phone, fullname, dob, addr) like ? ";
         $param = [
-            "%{$_GET['searchuser']}%"
+            "%{$_GET['searchacc']}%"
         ];
         $stmt = $db->selectDataParam($query, $param);
         $total = $stmt->rowCount();
         $config = [
-            'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-            'total_record'  => $total, // Tổng số record -> tong so hang
+            'current_page'  => isset($_GET['page'])?$_GET['page']: 1,
+            'total_record'  => $total,
             'limit'         => 10,// limit
-            'link_full'     => (trim($_GET['searchuser'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchuser={$_GET['searchuser']}",// Link full có dạng như sau: domain/com/page/{page}
-            'link_first'    => (trim($_GET['searchuser'])=="")?'admin.php':"admin.php?searchuser={$_GET['searchuser']}",// Link trang đầu tiên
-            'range'         => 5, // Số button trang bạn muốn hiển thị
+            'link_full'     => (trim($_GET['searchacc'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchacc={$_GET['searchacc']}",
+            'link_first'    => (trim($_GET['searchacc'])=="")?'admin.php':"admin.php?searchacc={$_GET['searchacc']}",
+            'range'         => 5,
         ];
         $paging = new Pagination();
         $paging->init($config);
@@ -439,12 +444,12 @@ elseif (isset($_SESSION['user'])):
         $stmt = $db->selectData($query);
         $total = $stmt->rowCount();
         $config = [
-            'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-            'total_record'  => $total, // Tổng số record -> tong so hang
+            'current_page'  => isset($_GET['page'])?$_GET['page']: 1,
+            'total_record'  => $total,
             'limit'         => 10,// limit
-            'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
-            'link_first'    => 'admin.php',// Link trang đầu tiên
-            'range'         => 5, // Số button trang bạn muốn hiển thị
+            'link_full'     => 'admin.php?page={page}',
+            'link_first'    => 'admin.php',
+            'range'         => 5,
         ];
         $paging = new Pagination();
         $paging->init($config);
@@ -457,7 +462,7 @@ elseif (isset($_SESSION['user'])):
         <!-- LIST FORM -->
         <div class="row filterGroup">
             <form action="#" method="get" class="formSearch fl">
-                <input type="text" class="inputSearch" placeholder="Search" name="searchuser">
+                <input type="text" class="inputSearch" placeholder="Search" name="searchacc">
                 <button type="submit" class="btnSearch"><i class="fa fa-search"></i></button>
             </form>
         </div>
@@ -486,9 +491,9 @@ elseif (isset($_SESSION['user'])):
                         <li class="row">
                             <div class="cell cell-50 text-center"><?=$product['id_acc'];?></div>
                             <div class="cell cell-200 text-center">
-                                <a href="admin.php?id_acc=<?=$product['id_acc'];?>"><img src="../images/<?=$product['photo_acc'];?>" alt="" width="100"></a>
+                                <a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&id_acc=<?=$product['id_acc'];?>&searchacc=<?= isset($_GET['searchacc'])?$_GET['searchacc']: ''; ?>"><img src="../images/<?=$product['photo_acc'];?>" alt="" width="100"></a>
                             </div>
-                            <div class="cell cell-200 text-center"><a href="admin.php?id_acc=<?=$product['id_acc'];?>"><?=$product['user_name'];?></a></div>
+                            <div class="cell cell-200 text-center"><a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&id_acc=<?=$product['id_acc'];?>&searchacc=<?= isset($_GET['searchacc'])?$_GET['searchacc']: ''; ?>"><?=$product['user_name'];?></a></div>
                             <div class="cell cell-200 text-center"><?=$product['email'];?></div>
                             <div class="cell cell-100p text-center"><?=$product['fullname'];?></div>
 
@@ -496,7 +501,7 @@ elseif (isset($_SESSION['user'])):
 
                             <div class="cell cell-100 text-center"><?=$product['phone'];?></div>
 
-                            <div class="cell cell-100 text-center"> <a href="admin.php?hideacc=<?=$product['id_acc'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
+                            <div class="cell cell-100 text-center"> <a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&hideacc=<?=$product['id_acc'];?>&searchpro=<?= isset($_GET['searchpro'])?$_GET['searchpro']: ''; ?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                             </div>
                         </li>
                     </ul>
@@ -594,16 +599,16 @@ elseif(isset($_SESSION['invoice'])):
         $stmt = $db->selectDataParam($query, $param);
         $total = $stmt->rowCount();
         $config = [
-            'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-            'total_record'  => $total, // Tổng số record -> tong so hang
+            'current_page'  => isset($_GET['page'])?$_GET['page']: 1,
+            'total_record'  => $total,
             'limit'         => 10,// limit
-            'link_full'     => (trim($_GET['searchinv'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchinv={$_GET['searchinv']}",// Link full có dạng như sau: domain/com/page/{page}
-            'link_first'    => (trim($_GET['searchinv'])=="")?'admin.php':"admin.php?searchinv={$_GET['searchinv']}",// Link trang đầu tiên
-            'range'         => 5, // Số button trang bạn muốn hiển thị
+            'link_full'     => (trim($_GET['searchinv'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchinv={$_GET['searchinv']}",
+            'link_first'    => (trim($_GET['searchinv'])=="")?'admin.php':"admin.php?searchinv={$_GET['searchinv']}",
+            'range'         => 5,
         ];
         $paging = new Pagination();
         $paging->init($config);
-        $query = "select * from invoice_details where status = 1 && concat(name_pro,price,date_of_purchase,addr,phone,total) like ? " .$paging->get_limit();
+        $query = "select * from invoice_details where status = 1 && concat(name_pro,price,date_purchase,addr,phone,total) like ? " .$paging->get_limit();
         $stmt = $db->selectdataparam($query,$param);
     else:
 
@@ -611,12 +616,12 @@ elseif(isset($_SESSION['invoice'])):
         $stmt = $db->selectData($query);
         $total = $stmt->rowCount();
         $config = [
-            'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-            'total_record'  => $total, // Tổng số record -> tong so hang
+            'current_page'  => isset($_GET['page'])?$_GET['page']: 1,
+            'total_record'  => $total,
             'limit'         => 10,// limit
-            'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
-            'link_first'    => 'admin.php',// Link trang đầu tiên
-            'range'         => 5, // Số button trang bạn muốn hiển thị
+            'link_full'     => 'admin.php?page={page}',
+            'link_first'    => 'admin.php',
+            'range'         => 5,
         ];
         $paging = new Pagination();
         $paging->init($config);
@@ -659,9 +664,9 @@ elseif(isset($_SESSION['invoice'])):
                             <div class="cell cell-50 text-center"><?=$product['id_inv'];?></div>
                             <div class="cell cell-100 text-center"><?=$product['invoice_no'];?></div>
                             <div class="cell cell-100 text-center">
-                                <a href="admin.php?id_inv=<?=$product['id_inv'];?>"><img src="../images/<?=$product['photo_inv'];?>" alt="" width="100"></a>
+                                <a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&id_inv=<?=$product['id_inv'];?>&searchinv=<?= isset($_GET['searchinv'])?$_GET['searchinv']: ''; ?>"><img src="../images/<?=$product['photo_inv'];?>" alt="" width="100"></a>
                             </div>
-                            <div class="cell cell-100p text-center"><a href="admin.php?id_inv=<?=$product['id_inv'];?>"><?=$product['name_pro'];?></a></div>
+                            <div class="cell cell-100p text-center"><a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&id_inv=<?=$product['id_inv'];?>&searchinv=<?= isset($_GET['searchinv'])?$_GET['searchinv']: ''; ?>"><?=$product['name_pro'];?></a></div>
                             <div class="cell cell-100 text-center"><?=$product['price'];?></div>
                             <div class="cell cell-100 text-center"><?=$product['quantity'];?></div>
                             <div class="cell cell-150 text-center"><?=date("m-d-Y h:i:s", strtotime($product['date_purchase']));?></div>
@@ -690,7 +695,7 @@ elseif(isset($_SESSION['invoice'])):
         endif;
         while($product = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
-            <form action="admin.php?id_inv=<?=$product['id_inv'];?>" method="post" enctype="multipart/form-data" class="form">
+            <form action="#" method="post" enctype="multipart/form-data" class="form">
                 <div class="formHeader row">
                     <h2 class="text-1 fl">Invoice Detail</h2>
 
@@ -705,6 +710,10 @@ elseif(isset($_SESSION['invoice'])):
                         <label class="inputGroup">
                             <span>ID product</span>
                             <span><input type="number" name="id_pro" value="<?=$product['id_pro'];?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Invoice_no</span>
+                            <span><input type="number" name="invoice_no" value="<?=$product['invoice_no'];?>"></span>
                         </label>
                         <label class="inputGroup">
                             <span>Name</span>
@@ -739,7 +748,6 @@ elseif(isset($_SESSION['invoice'])):
                         </label>
                         <label class="inputGroup">
                             <span>Image</span>
-                            <!--                            <input type="hidden" name="img" value="src">-->
                             <span>
                 <input type="hidden" name="oldphoto" value="<?=$product['photo_inv'];?>">
                 <img src="../images/<?=$product['photo_inv'];?>" height="200px" id="photo_inv"><br/>
@@ -761,12 +769,12 @@ elseif(isset($_SESSION['invoice'])):
     $stmt = $db->selectDataParam($query, $param);
     $total = $stmt->rowCount();
     $config = [
-    'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-    'total_record'  => $total, // Tổng số record -> tong so hang
+    'current_page'  => isset($_GET['page'])?$_GET['page']: 1,
+    'total_record'  => $total,
     'limit'         => 10,// limit
-    'link_full'     => (trim($_GET['searchfeedback'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchfeedback={$_GET['searchfeedback']}",// Link full có dạng như sau: domain/com/page/{page}
-    'link_first'    => (trim($_GET['searchfeedback'])=="")?'admin.php':"admin.php?searchfeedback={$_GET['searchfeedback']}",// Link trang đầu tiên
-    'range'         => 5, // Số button trang bạn muốn hiển thị
+    'link_full'     => (trim($_GET['searchfeedback'])=="")?'admin.php?page={page}':"admin.php?page={page}&searchfeedback={$_GET['searchfeedback']}",
+    'link_first'    => (trim($_GET['searchfeedback'])=="")?'admin.php':"admin.php?searchfeedback={$_GET['searchfeedback']}",
+    'range'         => 5,
     ];
     $paging = new Pagination();
     $paging->init($config);
@@ -778,12 +786,12 @@ elseif(isset($_SESSION['invoice'])):
     $stmt = $db->selectData($query);
     $total = $stmt->rowCount();
     $config = [
-    'current_page'  => isset($_GET['page'])?$_GET['page']: 1, // Trang hiện tại
-    'total_record'  => $total, // Tổng số record -> tong so hang
+    'current_page'  => isset($_GET['page'])?$_GET['page']: 1,
+    'total_record'  => $total,
     'limit'         => 10,// limit
-    'link_full'     => 'admin.php?page={page}',// Link full có dạng như sau: domain/com/page/{page}
-    'link_first'    => 'admin.php',// Link trang đầu tiên
-    'range'         => 5, // Số button trang bạn muốn hiển thị
+    'link_full'     => 'admin.php?page={page}',
+    'link_first'    => 'admin.php',
+    'range'         => 5,
     ];
     $paging = new Pagination();
     $paging->init($config);
@@ -807,6 +815,7 @@ elseif(isset($_SESSION['invoice'])):
             </div>
             <div class="table">
                 <div class="row bg-1">
+                    <div class="cell cell-100 text-center text-fff">ID FEEDBACK</div>
                     <div class="cell cell-100 text-center text-fff">ID PRODUCT</div>
                     <div class="cell cell-100 text-center text-fff">ID ACCOUNT</div>
                     <div class="cell cell-200 text-center text-fff">USER_NAME</div>
@@ -819,11 +828,12 @@ elseif(isset($_SESSION['invoice'])):
 
                     <ul>
                         <li class="row">
+                            <div class="cell cell-100 text-center"><?=$product['id_feedback'];?></div>
                             <div class="cell cell-100 text-center"><?=$product['id_pro'];?></div>
                             <div class="cell cell-100 text-center"><?=$product['id_acc'];?></div>
-                            <div class="cell cell-200 text-center"><a href="admin.php?id_feedback=<?=$product['id_feedback'];?>"><?=$product['user_name'];?></a></div>
+                            <div class="cell cell-200 text-center"><a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&id_feedback=<?=$product['id_feedback'];?>&searchfeedback=<?= isset($_GET['searchfeedback'])?$_GET['searchfeedback']: ''; ?>"><?=$product['user_name'];?></a></div>
                             <div class="cell cell-100p text-center"><?=$product['content'];?></div>
-                            <div class="cell cell-100 text-center"><a href="admin.php?id_feedback=<?=$product['id_feedback'];?>&id_pro=<?=$product['id_pro'];?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
+                            <div class="cell cell-100 text-center"><a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&hidefeedback=<?=$product['id_feedback'];?>&searchfeedback=<?= isset($_GET['searchfeedback'])?$_GET['searchfeedback']: ''; ?>" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a>
                             </div>
                         </li>
                     </ul>
@@ -858,11 +868,15 @@ elseif(isset($_SESSION['invoice'])):
                     <div class="column s-4">
                         <label class="inputGroup">
                             <span>ID feedback</span>
-                            <span><input type="number" name="id_inv" value="<?=$product['id_feedback'];?>"></span>
+                            <span><input type="number" name="id_feedback" value="<?=$product['id_feedback'];?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>ID Product</span>
+                            <span><input type="number" name="id_pro" value="<?=$product['id_pro'];?>"></span>
                         </label>
                         <label class="inputGroup">
                             <span>ID Account</span>
-                            <span><input type="number" name="id_pro" value="<?=$product['id_acc'];?>"></span>
+                            <span><input type="number" name="id_acc" value="<?=$product['id_acc'];?>"></span>
                         </label>
                         <label class="inputGroup">
                             <span>User name</span>
