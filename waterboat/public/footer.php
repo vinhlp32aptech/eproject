@@ -6,14 +6,14 @@
             <div class="col-lg-3">
                 <a href="index.php"><p class="mb-4"><img src="images/logo.png" alt="Image" class="img-fluid"></p></a>
                 <p>We are proud to be distributors largest yacht in the world.</p>
-                <p><a href="about.php">Learn More</a></p>
+                <p><a href="about.php?about">Learn More</a></p>
             </div>
             <div class="col-lg-3">
                 <h3 class="footer-heading"><span>Our Services</span></h3>
                 <ul class="list-unstyled footercolor">
-                    <li><a href="services.php">Travel</a></li>
-                    <li><a href="services.php">Construction</a></li>
-                    <li><a href="services.php">Remodeling</a></li>
+                    <li><a href="services.php?services">Travel</a></li>
+                    <li><a href="services.php?services">Construction</a></li>
+                    <li><a href="services.php?services">Remodeling</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">

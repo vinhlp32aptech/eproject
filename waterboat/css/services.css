@@ -511,14 +511,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: normal
 }
 
-p {
-    font-family: "Sulphur Point", sans-serif;
-    color: white;
-    font-size: 16px;
-    line-height: 30px;
-    margin-bottom: 15px;
-    font-weight: normal
-}
+
 
 .bg-img-1 {
     background-image: url(../img/slider/slider-img-1.jpg)

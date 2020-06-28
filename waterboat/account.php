@@ -47,7 +47,7 @@ if(isset($_COOKIE['gotoindex'])):
 
             $("#update").click(function () {
                 var email = document.getElementById('email');
-                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                var filter =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 if (!filter.test(email.value)) {
                     alert('Email is not valid!.\nExample@gmail.com');
                     email.focus();
@@ -135,8 +135,8 @@ if(isset($_COOKIE['gotoindex'])):
                 <div class="profile-sidebar">
                     <div class="profile-img">
                         <input type="hidden" name="user_name" value="<?=$product['user_name'];?>">
-                        <input type="hidden" name="oldphoto" value="<?= isset($product['photo_acc'])?"images/{$product['photo_acc']}":"images/101" ?>">
-                        <img src="<?= isset($product['photo_acc'])?"images/{$product['photo_acc']}":"http://placehold.it/100x100" ?>"  id="photo_acc">                        <input type="file" name="photo_acc" onchange="changepicture();" multiple>
+                        <input type="hidden" name="oldphoto" value="<?= isset($product['photo_acc'])?"images/{$product['photo_acc']}":"images/100x100.png" ?>">
+                        <img src="<?= isset($product['photo_acc'])?"images/{$product['photo_acc']}":"images/100x100.png" ?>"  id="photo_acc">                        <input type="file" name="photo_acc" onchange="changepicture();" multiple>
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@ if(isset($_COOKIE['gotoindex'])):
                         <div class="form-group row">
                             <label for="dob" class="col-4 col-form-label">Date of birth</label>
                             <div class="col-8">
-                                <input id="dob" name="dob" placeholder="Date of birth" class="form-control here"  type="date" value="<?=$product['dob']?>">
+                                <input id="dob" name="dob" placeholder="Date of birth" class="form-control here"  type="date" value="<?=$product['dob']?>" required>
                             </div>
                         </div>
                         <div class="form-group row">

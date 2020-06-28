@@ -42,7 +42,7 @@
 
             $("#submit").click(function () {
                 var email = document.getElementById('email');
-                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                var filter =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 if (!filter.test(email.value)) {
                     alert('Email is not valid!.\nExample@gmail.com');
                     email.focus();
@@ -69,7 +69,7 @@
 </div>
 
 
-<div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/hero_1.jpg');">
+<div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/VERTIGE-01-e1542791616891.jpg');">
     <div class="container">
         <div class="row align-items-center text-center border">
             <div class="col-lg-12 mt-5" data-aos="fade-up">
@@ -163,7 +163,7 @@
         }
     </script>
 </div>
-<div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');">
+<div class="section-bg style-1" style="background-image: url('images/VERTIGE-01-e1542791616891.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">

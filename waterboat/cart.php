@@ -75,31 +75,54 @@
     $stmt = $db->selectdata($query);
 
     while ($product = $stmt->fetch(PDO::FETCH_ASSOC)):
-    echo    $name_pro = $product['name_shop'];
-      echo  $id_pro = $product['id_pro'];
-        echo    $photo_inv = $product['photo_shop'];
-        echo   $quantity = $product['quantity_shop'];
-        echo    $price = $product['price_shop'];
-        echo   $phone = $_SESSION['phone'];
-        echo   $addr = $_SESSION['addr'];
-        echo  $total = $product['quantity_shop'] * $product['price_shop'];
+        $checkquan = "select quantity_pro from product where id_pro = " .$product['id_pro'];
+        $num = $db->selectdata($checkquan);
+       while ($aa = $num->fetch(PDO::FETCH_ASSOC)):
+            if($aa['quantity_pro'] > 0):
+        $name_pro = $product['name_shop'];
+        $id_pro = $product['id_pro'];
+            $photo_inv = $product['photo_shop'];
+           $quantity = $product['quantity_shop'];
+            $price = $product['price_shop'];
+           $phone = $_SESSION['phone'];
+           $addr = $_SESSION['addr'];
+          $total = $product['quantity_shop'] * $product['price_shop'];
         $result =  $db->insertinvoice($id_acc, $name_pro, $date_purchase, $total);
+
         $db->insertinvoicedetails($result, $id_pro, $photo_inv, $name_pro, $date_purchase,$addr,$phone,$quantity, $price, $total);
         $a = "select quantity_pro from product where id_pro = " .$id_pro;
         $b = $db->selectdata($a);
         while ($c=$b->fetch(PDO::FETCH_ASSOC)):
+
             if ($c['quantity_pro'] > 0):
                 $change = $c['quantity_pro'] - $quantity;
                 $db->changequantity($id_pro,$change);
-            else:
-                echo "<script>alert('Out of stock!');</script>";
             endif;
+        endwhile;
+        else:
+            echo "<script>alert('Out of stock!');</script>";
+        endif;
         endwhile;
         $db->deletecart();
     endwhile;
+        if( isset($result)):
+            $invoice_no = $_COOKIE['gotoindex'] + $result;
 
+            $upinvoice = "update invoice  set invoice_no=:invoice_no where invoice_no = 0 ";
+            $dateinvoice =[
+                    "invoice_no"        => $invoice_no,
+            ];
+            $db->updatedataparam($upinvoice,$dateinvoice);
+
+            $updetail = "update invoice_details set invoice_no=:invoice_no where invoice_no = 0 ";
+            $datedetail =[
+                "invoice_no"        => $invoice_no,
+            ];
+            $db->updatedataparam($updetail,$datedetail);
+            endif;
     endif;
     ?>
+
 
     <div class="container-fluid">
         <div class="container">

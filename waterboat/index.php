@@ -213,7 +213,7 @@ $stmt = $db->selectdata($query);
                         ?>
                         <li class="one_third">
                             <article>
-                                <a href="Product_detail.php?id_pro=<?= $product['id_pro']; ?>"> <img
+                                <a href="Product_detail.php?services&id_pro=<?= $product['id_pro']; ?>"> <img
                                             style="position: absolute;height:100px; width:100px ;"
                                             src="images/bestseller1.png">
                                     <img src="images/<?= $product['photo']; ?>" height="100px" width="100px">
@@ -227,7 +227,7 @@ $stmt = $db->selectdata($query);
                                 <p style="font-size: 20px;color: red"><i
                                             class="fa fa-dollar"></i><?= $product['price_pro']; ?></p>
                                 <footer class="nospace"><a class="btn" type="submit"
-                                                           href="Product_detail.php?id_pro=<?= $product['id_pro']; ?>">Real
+                                                           href="Product_detail.php?servies&id_pro=<?= $product['id_pro']; ?>">Real
                                         More &raquo;</a></footer>
                             </article>
                         </li>

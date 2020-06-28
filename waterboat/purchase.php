@@ -44,7 +44,7 @@
     if (isset($_COOKIE['gotoindex'])):
         include_once "public/header.php";
 
-        $query = "select invoice_details.id_inv, invoice_details.photo_inv, invoice_details.name_pro, invoice_details.date_purchase, invoice_details.quantity, invoice_details.price, invoice_details.total from invoice right join invoice_details on invoice.id_inv = invoice_details.id_inv where id_acc = " . $_COOKIE['gotoindex'];
+        $query = "select invoice_details.invoice_no, invoice_details.photo_inv, invoice_details.name_pro, invoice_details.date_purchase, invoice_details.quantity, invoice_details.price, invoice_details.total from invoice right join invoice_details on invoice.id_inv = invoice_details.id_inv where id_acc = " . $_COOKIE['gotoindex'];
         $stmt = $db->selectdata($query);
         ?>
 
@@ -70,7 +70,7 @@
                                 </thead>
                                 <tbody>
                                 <tr class="tr-shadow">
-                                    <td><?= $product['id_inv']; ?></td>
+                                    <td><?= $product['invoice_no']; ?></td>
                                     <td>
                                         <img src="images/<?= $product['photo_inv']; ?>" width="100px" height="100px"
                                              alt="">
