@@ -815,6 +815,7 @@ elseif(isset($_SESSION['invoice'])):
             </div>
             <div class="table">
                 <div class="row bg-1">
+                    <div class="cell cell-100 text-center text-fff">ID FEEDBACK</div>
                     <div class="cell cell-100 text-center text-fff">ID PRODUCT</div>
                     <div class="cell cell-100 text-center text-fff">ID ACCOUNT</div>
                     <div class="cell cell-200 text-center text-fff">USER_NAME</div>
@@ -827,6 +828,7 @@ elseif(isset($_SESSION['invoice'])):
 
                     <ul>
                         <li class="row">
+                            <div class="cell cell-100 text-center"><?=$product['id_feedback'];?></div>
                             <div class="cell cell-100 text-center"><?=$product['id_pro'];?></div>
                             <div class="cell cell-100 text-center"><?=$product['id_acc'];?></div>
                             <div class="cell cell-200 text-center"><a href="admin.php?page=<?= isset($_GET['page'])?$_GET['page']: 1; ?>&id_feedback=<?=$product['id_feedback'];?>&searchfeedback=<?= isset($_GET['searchfeedback'])?$_GET['searchfeedback']: ''; ?>"><?=$product['user_name'];?></a></div>
@@ -866,11 +868,15 @@ elseif(isset($_SESSION['invoice'])):
                     <div class="column s-4">
                         <label class="inputGroup">
                             <span>ID feedback</span>
-                            <span><input type="number" name="id_inv" value="<?=$product['id_feedback'];?>"></span>
+                            <span><input type="number" name="id_feedback" value="<?=$product['id_feedback'];?>"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>ID Product</span>
+                            <span><input type="number" name="id_pro" value="<?=$product['id_pro'];?>"></span>
                         </label>
                         <label class="inputGroup">
                             <span>ID Account</span>
-                            <span><input type="number" name="id_pro" value="<?=$product['id_acc'];?>"></span>
+                            <span><input type="number" name="id_acc" value="<?=$product['id_acc'];?>"></span>
                         </label>
                         <label class="inputGroup">
                             <span>User name</span>
